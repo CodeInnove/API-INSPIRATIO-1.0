@@ -1,5 +1,5 @@
 import { Schema, Document } from 'mongoose';
-import { IFunctionalIndependencyMetric } from "../features/functionalIndependencyMetrics/types/functionalIndependecyMetrics";
+import { IFunctionalIndependencyMetric } from "../features/graphics/functionalIndependencyMetrics/types/functionalIndependecyMetrics";
 
 export const FunctionalIndependencyMetricsSchema = new Schema({
   _id: { type: Schema.Types.ObjectId, required: true, auto: true },
