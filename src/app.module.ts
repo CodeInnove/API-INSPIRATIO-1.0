@@ -73,7 +73,6 @@ import { MchatRModule } from './features/graphics/mchat-r/mchat-r.module';
     childhoodAutismRatingScaleModule,
     AnamneseGeneralModule,
     MchatRModule
-    
   ],
   controllers: [AppController],
   providers: [AppService],
