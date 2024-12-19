@@ -1,6 +1,6 @@
 import { Schema, Document } from 'mongoose';
-import { IFunctionalIndependencyMetric } from "../features/functionalIndependencyMetrics/types/functionalIndependecyMetrics";
-import { IchildhoodAutismRatingScale } from 'src/features/childhoodAutismRatingScale/types/childhoodAutismRatingScale';
+import { IFunctionalIndependencyMetric } from "../features/graphics/functionalIndependencyMetrics/types/functionalIndependecyMetrics";
+import { IchildhoodAutismRatingScale } from 'src/features/graphics/childhoodAutismRatingScale/types/childhoodAutismRatingScale';
 
 export const Cars = new Schema({
   _id: { type: Schema.Types.ObjectId, required: true, auto: true },

@@ -1,5 +1,5 @@
 import { Schema, Document } from 'mongoose';
-import { IGeneralAnamnese } from 'src/features/anamnese_general/types/generalAnamnese';
+import { IGeneralAnamnese } from 'src/features/reports/anamnese_general/types/generalAnamnese';
 
 
 export const generalAnamnese = new Schema({

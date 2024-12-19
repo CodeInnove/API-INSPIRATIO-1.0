@@ -13,9 +13,10 @@ import { MailerModule } from '@nestjs-modules/mailer';
 import { HandlebarsAdapter } from '@nestjs-modules/mailer/dist/adapters/handlebars.adapter';
 import { SpecialityModule } from './features/speciality/speciality.module';
 import { ConsultationModule } from './features/consultation/consultation.module';
-import { FunctionalIndependencyMetricsModule } from './features/functionalIndependencyMetrics/functionalIndependencyMetrics.module';
-import { childhoodAutismRatingScaleModule } from './features/childhoodAutismRatingScale/childhoodAutismRatingScale.module';
-import { AnamneseGeneralModule } from './features/anamnese_general/anamnese_general.module';
+import { FunctionalIndependencyMetricsModule } from './features/graphics/functionalIndependencyMetrics/functionalIndependencyMetrics.module';
+import { childhoodAutismRatingScaleModule } from './features/graphics/childhoodAutismRatingScale/childhoodAutismRatingScale.module';
+import { AnamneseGeneralModule } from './features/reports/anamnese_general/anamnese_general.module';
+import { MchatRModule } from './features/graphics/mchat-r/mchat-r.module';
 
 @Module({
   imports: [
@@ -70,8 +71,8 @@ import { AnamneseGeneralModule } from './features/anamnese_general/anamnese_gene
     ConsultationModule,
     FunctionalIndependencyMetricsModule,
     childhoodAutismRatingScaleModule,
-    AnamneseGeneralModule
-    
+    AnamneseGeneralModule,
+    MchatRModule
   ],
   controllers: [AppController],
   providers: [AppService],
