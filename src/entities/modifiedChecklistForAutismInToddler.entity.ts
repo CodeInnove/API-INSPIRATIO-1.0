@@ -1,5 +1,4 @@
 import { Schema, Document } from 'mongoose';
-import { IFunctionalIndependencyMetric } from "../features/functionalIndependencyMetrics/types/functionalIndependecyMetrics";
 import { ImodifiedChecklistForAutismInToddlers } from 'src/features/modifiedChecklistForAutismInToddlers/types/modifiedChecklistForAutismInToddlers';
 
 export const modifiedChecklistForAutismInToddler = new Schema({
