@@ -15,6 +15,7 @@ import { SpecialityModule } from './features/speciality/speciality.module';
 import { ConsultationModule } from './features/consultation/consultation.module';
 import { FunctionalIndependencyMetricsModule } from './features/functionalIndependencyMetrics/functionalIndependencyMetrics.module';
 import { childhoodAutismRatingScaleModule } from './features/childhoodAutismRatingScale/childhoodAutismRatingScale.module';
+import { AnamneseGeneralModule } from './features/anamnese_general/anamnese_general.module';
 
 @Module({
   imports: [
@@ -68,7 +69,8 @@ import { childhoodAutismRatingScaleModule } from './features/childhoodAutismRati
     SpecialityModule,
     ConsultationModule,
     FunctionalIndependencyMetricsModule,
-    childhoodAutismRatingScaleModule
+    childhoodAutismRatingScaleModule,
+    AnamneseGeneralModule
     
   ],
   controllers: [AppController],
