@@ -1,10 +1,10 @@
 import { Injectable } from '@nestjs/common';
-import { CreateAnamneseGeneralDto } from './dto/create-anamnese_general.dto';
+import { CreateGeneralAnamneseDto } from './dto/create-anamnese_general.dto';
 import { UpdateAnamneseGeneralDto } from './dto/update-anamnese_general.dto';
 
 @Injectable()
 export class AnamneseGeneralService {
-  create(createAnamneseGeneralDto: CreateAnamneseGeneralDto) {
+  create(createAnamneseGeneralDto: CreateGeneralAnamneseDto) {
     return 'This action adds a new anamneseGeneral';
   }
 

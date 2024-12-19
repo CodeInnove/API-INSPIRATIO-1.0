@@ -1,5 +1,4 @@
 import { Schema, Document } from 'mongoose';
-import { AddressDto } from 'src/commons/dtos/Address.dto';
 import { IGeneralAnamnese } from 'src/features/anamnese_general/types/generalAnamnese';
 
 

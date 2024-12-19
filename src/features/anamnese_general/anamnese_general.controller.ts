@@ -1,6 +1,6 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
 import { AnamneseGeneralService } from './anamnese_general.service';
-import { CreateAnamneseGeneralDto } from './dto/create-anamnese_general.dto';
+import { CreateGeneralAnamneseDto } from './dto/create-anamnese_general.dto';
 import { UpdateAnamneseGeneralDto } from './dto/update-anamnese_general.dto';
 
 @Controller('anamnese-general')
@@ -8,7 +8,7 @@ export class AnamneseGeneralController {
   constructor(private readonly anamneseGeneralService: AnamneseGeneralService) {}
 
   @Post()
-  create(@Body() createAnamneseGeneralDto: CreateAnamneseGeneralDto) {
+  create(@Body() createAnamneseGeneralDto: CreateGeneralAnamneseDto) {
     return this.anamneseGeneralService.create(createAnamneseGeneralDto);
   }
 
