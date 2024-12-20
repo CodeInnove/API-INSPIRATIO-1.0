@@ -1,11 +1,5 @@
     export interface ISociallySavvyChecklist{
-    identification: {
-        patient: string;
-        dateBirth: string;
-        age: number;
-        sex: string;
-        dateOfApplication: string;
-        };
+        
     jointAtention:[{
         questionOne: {
         zeroScale: string;

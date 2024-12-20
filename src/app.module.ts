@@ -19,6 +19,7 @@ import { AnamneseGeneralModule } from './features/reports/anamnese_general/anamn
 import { MchatRModule } from './features/graphics/mchat-r/mchat-r.module';
 import { AutismBehaviorChecklistModule } from './features/autism-behavior-checklist/autismBehaviorChecklist.module';
 import { SociallySavvyChecklistModule } from './features/socially-savvy-checklist/sociallySavvyChecklist.module';
+import { BehaviorQuestionnaireAndSocialCommunicationModule } from './features/behavior-questionnaire-and-social-communication/behaviorQuestionnaireAndSocialCommunication.module';
 
 @Module({
   imports: [
@@ -76,7 +77,8 @@ import { SociallySavvyChecklistModule } from './features/socially-savvy-checklis
     AnamneseGeneralModule,
     MchatRModule,
     AutismBehaviorChecklistModule,
-    SociallySavvyChecklistModule
+    SociallySavvyChecklistModule,
+    BehaviorQuestionnaireAndSocialCommunicationModule
   ],
   controllers: [AppController],
   providers: [AppService],

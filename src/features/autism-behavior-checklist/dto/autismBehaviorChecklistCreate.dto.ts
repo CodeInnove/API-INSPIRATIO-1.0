@@ -347,6 +347,6 @@ export class CreateAutismBehaviorChecklistDto {
   @ValidateNested()
   @Type(() => QuestionsDTO)
   @ApiProperty({ type: QuestionsDTO })
-  questionsDTO: QuestionsDTO;
+  questions: QuestionsDTO;
 
 }
