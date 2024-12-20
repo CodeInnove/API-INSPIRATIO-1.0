@@ -18,6 +18,7 @@ import { childhoodAutismRatingScaleModule } from './features/graphics/childhoodA
 import { AnamneseGeneralModule } from './features/reports/anamnese_general/anamnese_general.module';
 import { MchatRModule } from './features/graphics/mchat-r/mchat-r.module';
 import { AutismBehaviorChecklistModule } from './features/autism-behavior-checklist/autismBehaviorChecklist.module';
+import { SociallySavvyChecklistModule } from './features/socially-savvy-checklist/sociallySavvyChecklist.module';
 
 @Module({
   imports: [
@@ -74,7 +75,8 @@ import { AutismBehaviorChecklistModule } from './features/autism-behavior-checkl
     childhoodAutismRatingScaleModule,
     AnamneseGeneralModule,
     MchatRModule,
-    AutismBehaviorChecklistModule
+    AutismBehaviorChecklistModule,
+    SociallySavvyChecklistModule
   ],
   controllers: [AppController],
   providers: [AppService],

@@ -5,23 +5,23 @@ import { Type } from 'class-transformer';
 class AnswerDTO {
     @IsNotEmpty()
     @ApiProperty()
-    es: string;
+    es: number;
   
     @IsNotEmpty()
     @ApiProperty()
-    re: string;
+    re: number;
   
     @IsNotEmpty()
     @ApiProperty()
-    co: string;
+    co: number;
 
     @IsNotEmpty()
     @ApiProperty()
-    lg: string;
+    lg: number;
 
     @IsNotEmpty()
     @ApiProperty()
-    ps: string;
+    ps: number;
   }
 
 class QuestionsDTO {
