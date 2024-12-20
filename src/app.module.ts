@@ -17,6 +17,7 @@ import { FunctionalIndependencyMetricsModule } from './features/graphics/functio
 import { childhoodAutismRatingScaleModule } from './features/graphics/childhoodAutismRatingScale/childhoodAutismRatingScale.module';
 import { AnamneseGeneralModule } from './features/reports/anamnese_general/anamnese_general.module';
 import { MchatRModule } from './features/graphics/mchat-r/mchat-r.module';
+import { AflsModule } from './features/afls/afls.module';
 
 @Module({
   imports: [
@@ -72,7 +73,8 @@ import { MchatRModule } from './features/graphics/mchat-r/mchat-r.module';
     FunctionalIndependencyMetricsModule,
     childhoodAutismRatingScaleModule,
     AnamneseGeneralModule,
-    MchatRModule
+    MchatRModule,
+    AflsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
