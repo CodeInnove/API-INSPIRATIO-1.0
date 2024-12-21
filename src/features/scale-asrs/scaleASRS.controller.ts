@@ -1,7 +1,7 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
-import { ScaleAsrsService } from './scale-asrs.service';
-import { CreateScaleAsrDto } from './dto/create-scale-asr.dto';
-import { UpdateScaleAsrDto } from './dto/update-scale-asr.dto';
+import { ScaleAsrsService } from './scaleASRS.service';
+import { CreateScaleAsrDto } from './dto/scaleASRSCreate.dto';
+import { UpdateScaleAsrDto } from './dto/scaleASRSUpdate.dto';
 
 @Controller('scale-asrs')
 export class ScaleAsrsController {

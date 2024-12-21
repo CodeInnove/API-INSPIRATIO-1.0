@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import { CreateScaleAsrDto } from './dto/create-scale-asr.dto';
-import { UpdateScaleAsrDto } from './dto/update-scale-asr.dto';
+import { CreateScaleAsrDto } from './dto/scaleASRSCreate.dto';
+import { UpdateScaleAsrDto } from './dto/scaleASRSUpdate.dto';
 
 @Injectable()
 export class ScaleAsrsService {

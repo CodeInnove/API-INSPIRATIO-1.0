@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
-import { ScaleAsrsService } from './scale-asrs.service';
-import { ScaleAsrsController } from './scale-asrs.controller';
+import { ScaleAsrsService } from './scaleASRS.service';
+import { ScaleAsrsController } from './scaleASRS.controller';
 
 @Module({
   controllers: [ScaleAsrsController],
