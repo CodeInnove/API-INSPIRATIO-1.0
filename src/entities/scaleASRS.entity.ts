@@ -1,7 +1,7 @@
 import { Schema, Document } from 'mongoose';
 import { IScaleASRS } from 'src/features/scale-asrs/types/scaleASRS';
 
-export const ScaleASRSSchema = new Schema({
+export const ScaleAsrsSchema = new Schema({
   identification: {
     patient: { type: Schema.Types.ObjectId, ref: "User" },
     dateOfApplication: { type: String, required: true },
@@ -129,4 +129,4 @@ export const ScaleASRSSchema = new Schema({
     totalGroupB: { type: Number, default: 0 }
 }});
 
-export interface IScaleASRSEntity extends Omit<IScaleASRS, '_id'>, Document {}
+export interface IScaleAsrsEntity extends Omit<IScaleASRS, '_id'>, Document {}

@@ -57,6 +57,9 @@ export interface IScaleASRS{
       optionThree: number;
       optionFour: number;
       optionFive: number;
+      },
+    totalGroupA:{
+      resultGroupA: number;
       }];
 
   groupB:[{
@@ -109,6 +112,17 @@ export interface IScaleASRS{
       optionThree: number;
       optionFour: number;
       optionFive: number;
-      }];
+      },
+
+      questionEight: {
+        optionOne: number;
+        optionTwo: number;
+        optionThree: number;
+        optionFour: number;
+        optionFive: number;
+      },
+      totalGroupA:{
+        resultGroupA: number;
+        }];
 
 }

@@ -1,29 +1,29 @@
 import { Injectable } from "@nestjs/common";
-import { ScaleASRSRepository } from "./scaleASRS.repository";
+import { ScaleAsrsRepository } from "./scaleASRS.repository";
 
 @Injectable()
-export class ScaleASRSService {
+export class ScaleAsrsService {
   constructor(
-    private readonly scaleASRSRepository: ScaleASRSRepository
+    private readonly scaleAsrsRepository: ScaleAsrsRepository
   ) {}
 
   async create(data: any) {
-    return this.scaleASRSRepository.create(data);
+    return this.scaleAsrsRepository.create(data);
   }
 
   async findAll() {
-    return this.scaleASRSRepository.findAll();
+    return this.scaleAsrsRepository.findAll();
   }
 
   async findById(id: string) {
-    return this.scaleASRSRepository.findById(id);
+    return this.scaleAsrsRepository.findById(id);
   }
 
   async update(id: string, data: any) {
-    return this.scaleASRSRepository.update(id, data);
+    return this.scaleAsrsRepository.update(id, data);
   }
 
   async delete(id: string) {
-    return this.scaleASRSRepository.delete(id);
+    return this.scaleAsrsRepository.delete(id);
   }
 }

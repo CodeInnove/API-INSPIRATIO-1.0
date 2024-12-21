@@ -109,7 +109,7 @@ class GroupBDTO {
     questionEight: ChooseScaleAsrsDTO;
 }
 
-  export class CreateScaleASRSDTO {
+  export class CreateScaleAsrsDTO {
     @ValidateNested()
     @Type(() => GroupADTO)
     @ApiProperty({ type: GroupADTO })
