@@ -1,9 +1,16 @@
-import { Module } from '@nestjs/common';
-import { ScaleAsrsService } from './scaleASRS.service';
-import { ScaleAsrsController } from './scaleASRS.controller';
+import { Module } from "@nestjs/common";
+import { ScaleASRSService } from "./scaleASRS.service";
+import { ScaleASRSController } from "./scaleASRS.controller";
+import { ScaleASRSRepository } from "./scaleASRS.repository";
+import { MongooseModule } from "@nestjs/mongoose";
+import { ScaleASRSSchema } from "src/entities/scaleASRS.entity";
 
 @Module({
-  controllers: [ScaleAsrsController],
-  providers: [ScaleAsrsService],
+  imports: [
+    MongooseModule.forFeature([{ name: 'ScaleASRS', schema: ScaleASRSSchema }]),
+  ],
+  providers: [ScaleASRSService, ScaleASRSRepository],
+  controllers: [ScaleASRSController],
+  exports: [],
 })
-export class ScaleAsrsModule {}
+export class ScaleASRSModule {}

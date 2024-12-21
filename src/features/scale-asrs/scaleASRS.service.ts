@@ -1,26 +1,29 @@
-import { Injectable } from '@nestjs/common';
-import { CreateScaleAsrDto } from './dto/scaleASRSCreate.dto';
-import { UpdateScaleAsrDto } from './dto/scaleASRSUpdate.dto';
+import { Injectable } from "@nestjs/common";
+import { ScaleASRSRepository } from "./scaleASRS.repository";
 
 @Injectable()
-export class ScaleAsrsService {
-  create(createScaleAsrDto: CreateScaleAsrDto) {
-    return 'This action adds a new scaleAsr';
+export class ScaleASRSService {
+  constructor(
+    private readonly scaleASRSRepository: ScaleASRSRepository
+  ) {}
+
+  async create(data: any) {
+    return this.scaleASRSRepository.create(data);
   }
 
-  findAll() {
-    return `This action returns all scaleAsrs`;
+  async findAll() {
+    return this.scaleASRSRepository.findAll();
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} scaleAsr`;
+  async findById(id: string) {
+    return this.scaleASRSRepository.findById(id);
   }
 
-  update(id: number, updateScaleAsrDto: UpdateScaleAsrDto) {
-    return `This action updates a #${id} scaleAsr`;
+  async update(id: string, data: any) {
+    return this.scaleASRSRepository.update(id, data);
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} scaleAsr`;
+  async delete(id: string) {
+    return this.scaleASRSRepository.delete(id);
   }
 }

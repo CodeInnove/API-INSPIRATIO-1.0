@@ -1,34 +1,37 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
-import { ScaleAsrsService } from './scaleASRS.service';
-import { CreateScaleAsrDto } from './dto/scaleASRSCreate.dto';
-import { UpdateScaleAsrDto } from './dto/scaleASRSUpdate.dto';
+import { Body, Controller, Delete, Get, Param, Post, Put } from "@nestjs/common";
+import { ApiTags } from "@nestjs/swagger";
+import { CreateScaleAsrsDTO } from "./dto/scaleASRSCreate.dto";
+import { UpdateScaleAsrDto } from "./dto/scaleASRSUpdate.dto";
+import { ScaleASRSService } from "./scaleASRS.service";
 
+@ApiTags('Scale ASRS')
 @Controller('scale-asrs')
-export class ScaleAsrsController {
-  constructor(private readonly scaleAsrsService: ScaleAsrsService) {}
+export class ScaleASRSController {
+  constructor(private readonly scaleASRSService: ScaleASRSService) {}
 
   @Post()
-  create(@Body() createScaleAsrDto: CreateScaleAsrDto) {
-    return this.scaleAsrsService.create(createScaleAsrDto);
+  create(@Body() data: CreateScaleAsrsDTO) {
+    return this.scaleASRSService.create(data);
   }
 
   @Get()
   findAll() {
-    return this.scaleAsrsService.findAll();
+    return this.scaleASRSService.findAll();
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.scaleAsrsService.findOne(+id);
+  findById(@Param('id') id: string) {
+    return this.scaleASRSService.findById(id);
   }
 
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateScaleAsrDto: UpdateScaleAsrDto) {
-    return this.scaleAsrsService.update(+id, updateScaleAsrDto);
+  @Put(':id')
+  update(@Param('id') id: string, @Body() data: UpdateScaleAsrDto) {
+    return this.scaleASRSService.update(id, data);
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.scaleAsrsService.remove(+id);
+  delete(@Param('id') id: string) {
+    return this.scaleASRSService.delete(id);
   }
 }
+
