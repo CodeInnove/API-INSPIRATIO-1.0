@@ -19,6 +19,7 @@ import { AnamneseGeneralModule } from './features/reports/anamnese_general/anamn
 import { MchatRModule } from './features/graphics/mchat-r/mchat-r.module';
 import { AssessmentOfFunctionalLivingSkillsModule } from './features/graphics/assessment-of-functional-living-skills/assessment-of-functional-living-skills.module';
 import { VerbalBehaviorMilestonesAssessmentAndPlacementProgramModule } from './features/graphics/verbal-behavior-milestones-assessment-and-placement-program/verbal-behavior-milestones-assessment-and-placement-program.module';
+import { ScaleAsrsModule } from './features/scale-asrs/scaleASRS.module';
 
 @Module({
   imports: [
@@ -77,6 +78,7 @@ import { VerbalBehaviorMilestonesAssessmentAndPlacementProgramModule } from './f
     MchatRModule,
     AssessmentOfFunctionalLivingSkillsModule,
     VerbalBehaviorMilestonesAssessmentAndPlacementProgramModule,
+    ScaleAsrsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
