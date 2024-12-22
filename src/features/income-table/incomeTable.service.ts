@@ -1,26 +1,29 @@
-import { Injectable } from '@nestjs/common';
-import { CreateIncomeTableDto } from './dto/incomeTableCreate.dto';
-import { UpdateIncomeTableDto } from './dto/incomeTableUpdate.dto';
+import { Injectable } from "@nestjs/common";
+import { IncomeTableRepository } from "./incomeTables.repository";
 
 @Injectable()
 export class IncomeTableService {
-  create(createIncomeTableDto: CreateIncomeTableDto) {
-    return 'This action adds a new incomeTable';
+  constructor(
+    private readonly incomeTableRepository: IncomeTableRepository
+  ) {}
+
+  async create(data: any) {
+    return this.incomeTableRepository.create(data);
   }
 
-  findAll() {
-    return `This action returns all incomeTable`;
+  async findAll() {
+    return this.incomeTableRepository.findAll();
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} incomeTable`;
+  async findById(id: string) {
+    return this.incomeTableRepository.findById(id);
   }
 
-  update(id: number, updateIncomeTableDto: UpdateIncomeTableDto) {
-    return `This action updates a #${id} incomeTable`;
+  async update(id: string, data: any) {
+    return this.incomeTableRepository.update(id, data);
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} incomeTable`;
+  async delete(id: string) {
+    return this.incomeTableRepository.delete(id);
   }
 }

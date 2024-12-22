@@ -1,15 +1,17 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
-import { IncomeTableService } from './incomeTable.service';
-import { CreateIncomeTableDto } from './dto/incomeTableCreate.dto';
-import { UpdateIncomeTableDto } from './dto/incomeTableUpdate.dto';
+import { Body, Controller, Delete, Get, Param, Post, Put } from "@nestjs/common";
+import { ApiTags } from "@nestjs/swagger";
+import { CreateIncomeTableDTO } from "./dto/incomeTableCreate.dto";
+import { UpdateIncomeTableDto } from "./dto/incomeTableUpdate.dto";
+import { IncomeTableService } from "./incomeTable.service";
 
+@ApiTags('Income Table')
 @Controller('income-table')
 export class IncomeTableController {
   constructor(private readonly incomeTableService: IncomeTableService) {}
 
   @Post()
-  create(@Body() createIncomeTableDto: CreateIncomeTableDto) {
-    return this.incomeTableService.create(createIncomeTableDto);
+  create(@Body() data: CreateIncomeTableDTO) {
+    return this.incomeTableService.create(data);
   }
 
   @Get()
@@ -18,17 +20,18 @@ export class IncomeTableController {
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.incomeTableService.findOne(+id);
+  findById(@Param('id') id: string) {
+    return this.incomeTableService.findById(id);
   }
 
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateIncomeTableDto: UpdateIncomeTableDto) {
-    return this.incomeTableService.update(+id, updateIncomeTableDto);
+  @Put(':id')
+  update(@Param('id') id: string, @Body() data: UpdateIncomeTableDto) {
+    return this.incomeTableService.update(id, data);
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.incomeTableService.remove(+id);
+  delete(@Param('id') id: string) {
+    return this.incomeTableService.delete(id);
   }
 }
+
