@@ -20,8 +20,12 @@ import { MchatRModule } from './features/graphics/mchat-r/mchat-r.module';
 import { AutismBehaviorChecklistModule } from './features/autism-behavior-checklist/autismBehaviorChecklist.module';
 import { SociallySavvyChecklistModule } from './features/socially-savvy-checklist/sociallySavvyChecklist.module';
 import { BehaviorQuestionnaireAndSocialCommunicationModule } from './features/behavior-questionnaire-and-social-communication/behaviorQuestionnaireAndSocialCommunication.module';
+import { AflsModule } from './features/afls/afls.module';
 import { AssessmentOfFunctionalLivingSkillsModule } from './features/graphics/assessment-of-functional-living-skills/assessment-of-functional-living-skills.module';
 import { VerbalBehaviorMilestonesAssessmentAndPlacementProgramModule } from './features/graphics/verbal-behavior-milestones-assessment-and-placement-program/verbal-behavior-milestones-assessment-and-placement-program.module';
+import { ScaleAsrsModule } from './features/scale-asrs/scaleASRS.module';
+import { PsychopedagogicalAnamnesisModule } from './features/psychopedagogical-anamnesis/psychopedagogicalAnamnesis.module';
+
 
 @Module({
   imports: [
@@ -78,11 +82,15 @@ import { VerbalBehaviorMilestonesAssessmentAndPlacementProgramModule } from './f
     childhoodAutismRatingScaleModule,
     AnamneseGeneralModule,
     MchatRModule,
+    fonoaudiologiaRelatorios
     AutismBehaviorChecklistModule,
     SociallySavvyChecklistModule,
     BehaviorQuestionnaireAndSocialCommunicationModule
+    AflsModule,
     AssessmentOfFunctionalLivingSkillsModule,
     VerbalBehaviorMilestonesAssessmentAndPlacementProgramModule,
+    ScaleAsrsModule,
+    PsychopedagogicalAnamnesisModule,
   ],
   controllers: [AppController],
   providers: [AppService],
