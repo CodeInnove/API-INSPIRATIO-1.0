@@ -21,7 +21,9 @@ import { AflsModule } from './features/afls/afls.module';
 import { AssessmentOfFunctionalLivingSkillsModule } from './features/graphics/assessment-of-functional-living-skills/assessment-of-functional-living-skills.module';
 import { VerbalBehaviorMilestonesAssessmentAndPlacementProgramModule } from './features/graphics/verbal-behavior-milestones-assessment-and-placement-program/verbal-behavior-milestones-assessment-and-placement-program.module';
 import { ScaleAsrsModule } from './features/scale-asrs/scaleASRS.module';
+import { IncomeTableModule } from './features/income-table/incomeTable.module';
 import { PsychopedagogicalAnamnesisModule } from './features/psychopedagogical-anamnesis/psychopedagogicalAnamnesis.module';
+
 
 
 @Module({
@@ -83,6 +85,7 @@ import { PsychopedagogicalAnamnesisModule } from './features/psychopedagogical-a
     AssessmentOfFunctionalLivingSkillsModule,
     VerbalBehaviorMilestonesAssessmentAndPlacementProgramModule,
     ScaleAsrsModule,
+    IncomeTableModule,
     PsychopedagogicalAnamnesisModule,
   ],
   controllers: [AppController],
