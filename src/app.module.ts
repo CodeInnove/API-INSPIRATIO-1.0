@@ -17,9 +17,11 @@ import { FunctionalIndependencyMetricsModule } from './features/graphics/functio
 import { childhoodAutismRatingScaleModule } from './features/graphics/childhoodAutismRatingScale/childhoodAutismRatingScale.module';
 import { AnamneseGeneralModule } from './features/reports/anamnese_general/anamnese_general.module';
 import { MchatRModule } from './features/graphics/mchat-r/mchat-r.module';
+import { AflsModule } from './features/afls/afls.module';
 import { AssessmentOfFunctionalLivingSkillsModule } from './features/graphics/assessment-of-functional-living-skills/assessment-of-functional-living-skills.module';
 import { VerbalBehaviorMilestonesAssessmentAndPlacementProgramModule } from './features/graphics/verbal-behavior-milestones-assessment-and-placement-program/verbal-behavior-milestones-assessment-and-placement-program.module';
 import { ScaleAsrsModule } from './features/scale-asrs/scaleASRS.module';
+
 
 @Module({
   imports: [
@@ -76,6 +78,7 @@ import { ScaleAsrsModule } from './features/scale-asrs/scaleASRS.module';
     childhoodAutismRatingScaleModule,
     AnamneseGeneralModule,
     MchatRModule,
+    AflsModule,
     AssessmentOfFunctionalLivingSkillsModule,
     VerbalBehaviorMilestonesAssessmentAndPlacementProgramModule,
     ScaleAsrsModule,
