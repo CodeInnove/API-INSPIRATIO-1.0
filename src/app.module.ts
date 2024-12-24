@@ -21,6 +21,7 @@ import { AflsModule } from './features/afls/afls.module';
 import { AssessmentOfFunctionalLivingSkillsModule } from './features/graphics/assessment-of-functional-living-skills/assessment-of-functional-living-skills.module';
 import { ScaleAsrsModule } from './features/scale-asrs/scaleASRS.module';
 import { PsychopedagogicalAnamnesisModule } from './features/psychopedagogical-anamnesis/psychopedagogicalAnamnesis.module';
+import { AnamnesisForCerebralPalsyModule } from './features/anamnesis-for-cerebral-palsy/anamnesis-for-cerebral-palsy.module';
 
 
 @Module({
@@ -82,6 +83,7 @@ import { PsychopedagogicalAnamnesisModule } from './features/psychopedagogical-a
     AssessmentOfFunctionalLivingSkillsModule,
     ScaleAsrsModule,
     PsychopedagogicalAnamnesisModule,
+    AnamnesisForCerebralPalsyModule,
   ],
   controllers: [AppController],
   providers: [AppService],
