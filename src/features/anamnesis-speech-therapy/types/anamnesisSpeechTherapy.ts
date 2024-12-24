@@ -10,29 +10,29 @@ export interface IAnamnesisSpeechTherapy{
         nationality: string;
         schoolName: string;
         schoolPeriod: string;
-        affiliation: {
-            fatherName: string;
-            ageFather: number;
-            fatherProfession: string;
-            schooling: string;
-            motherName: string;
-            ageMother: number;
-            motherProfession: string;
-            schoolingMother: string;
-            brotherName: string;
-            brotherAge: number;
+    affiliation: {
+        fatherName: string;
+        ageFather: number;
+        fatherProfession: string;
+        schooling: string;
+        motherName: string;
+        ageMother: number;
+        motherProfession: string;
+        schoolingMother: string;
+        brotherName: string;
+        brotherAge: number;
         };
-        address: {
-            street: string;
-            number: string;
-            city: string;
-            state: string;
-            zipCode: string;
-            fone: string;
-            responsible: string;
-            forwarded: string;
-            dateAnamnese: string;
-            professional: string;
+    address: {
+        street: string;
+        number: string;
+        city: string;
+        state: string;
+        zipCode: string;
+        fone: string;
+        responsible: string;
+        forwarded: string;
+        dateAnamnese: string;
+        professional: string;
         };
     }
 
@@ -49,33 +49,18 @@ export interface IAnamnesisSpeechTherapy{
         questionGestation: string;
         questionTypeOfDelivery: string;
         questionComplications: string;
-        questionHasUsedAnyMedication:[{
-            optionYes: string;
-            optionNo: string;
-        }];
-        questionUnderMedicalAdvice:[{
-            optionYes: string;
-            optionNo: string;
-        }];
+        questionHasUsedAnyMedication: string;
+        questionUnderMedicalAdvice: string;
         questionWhichMedicine: string;
-        questionDidYouHavePrenatalCare:[{
-            optionYes: string;
-            optionNo: string;
-        }];
+        questionDidYouHavePrenatalCare: string;
         questionWhy: string;
-        questionDidTheChildHaveAnyProblems:[{
-            optionYes: string;
-            optionNo: string;
-        }];
+        questionDidTheChildHaveAnyProblems: string;
         questionWhatProblem: string;};
 
 
 
       groupCircumstantial:{
-        questionParentsWorkingHours:[{
-            fathersWorkingHours: string;
-            motherWorkingHours: string;
-        }];
+        questionParentsWorkingHours: string;
         questionWhoDoesTheChildStayWith: string;
         questionWeeklyRoutine: string;
     };
@@ -115,41 +100,18 @@ export interface IAnamnesisSpeechTherapy{
 
         groupEngine:{
             questionHeHeldHisHead: string;
-            questionSatWithSupport:[{
-                optionYes: string;
-                optionNo: string;
-            }];
-            questionSatWithoutSupport:[{
-                optionYes: string;
-                optionNo: string;
-            }];
-            questionCrawled:[{
-                optionYes: string;
-                optionNo: string;
-            }];
-            questionBeen:[{
-                optionYes: string;
-                optionNo: string;
-            }];
+            questionSatWithSupport: string;
+            questionSatWithoutSupport: string;
+            questionCrawled: string;
+            questionBeen: string;
             questionDaytimeSphincterControl: string;
             questionNightSphincterControl: string;
-            questionFallALot:[{
-                optionYes: string;
-                optionNo: string;
-            }];
-            questionDidYouBumpIntoEverything:[{
-                optionYes: string;
-                optionNo: string;
-            }];
-            questionSpeechBabbling:[{
-                optionYes: string;
-                optionNo: string;
-            }];
+            questionFallALot: string;
+            questionDidYouBumpIntoEverything: string;
+            questionSpeechBabbling: string;
             questionWhen: string;
-            questionWasItAQuietBaby:[{
-                optionYes: string;
-                optionNo: string;
-            }]};
+            questionWasItAQuietBaby: string;
+        }
 
 
 
@@ -158,20 +120,10 @@ export interface IAnamnesisSpeechTherapy{
             questionMastication: string;
             questionSwallowing: string;
             questionRespiration: string;
-            questionDoesItHaveNoise:[{
-                optionYes: string;
-                optionNo: string;
-            }];
-            questionEffort:[{
-                optionYes: string;
-                optionNo: string;
-            }];
+            questionDoesItHaveNoise: string;
+            questionEffort: string;
             questionLeftHandedOrRightHanded: string;
-            questionUsed:[{
-                optionPacifier: string;
-                optionBottle: string;
-                optionFinger: string;
-            }];
+            questionUsed: string;
             questionUntilWhen: string;
             questionOtherHabits: string;
             };
@@ -180,41 +132,18 @@ export interface IAnamnesisSpeechTherapy{
 
         groupIdeomotor:{
             questionDoYouShowerAlone: string;
-            questionDoYouEatAlone:[{
-                optionYes: string;
-                optionNo: string;
-            }]
+            questionDoYouEatAlone: string;
             questionSinceWhen: string;
             questionWhatDoYouUse: string;
             questionWithWhatHand: string;
-            questionDoYouPlayBall:[{
-                optionYes: string;
-                optionNo: string;
-            }]
-            questionJumpRope:[{
-                optionYes: string;
-                optionNo: string;
-            }]
-            questionDoYouBrushYourTeethAlone:[{
-                optionYes: string;
-                optionNo: string;
-            }]
-            questionDoYouDressAlone:[{
-                optionYes: string;
-                optionNo: string;
-            }]
-            questionDoYouPutOnYourShoes:[{
-                optionYes: string;
-                optionNo: string;
-            }]
-            questionLaceUpYourSneakers:[{
-                optionYes: string;
-                optionNo: string;
-            }]
-            questionZipUp:[{
-                optionYes: string;
-                optionNo: string;
-            }]};
+            questionDoYouPlayBall: string;
+            questionJumpRope: string;
+            questionDoYouBrushYourTeethAlone: string;
+            questionDoYouDressAlone: string;
+            questionDoYouPutOnYourShoes: string;
+            questionLaceUpYourSneakers: string;
+            questionZipUp: string;
+        }
         
 
         groupIdeatorious:{
