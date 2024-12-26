@@ -21,15 +21,12 @@ import { AutismBehaviorChecklistModule } from './features/autism-behavior-checkl
 import { SociallySavvyChecklistModule } from './features/socially-savvy-checklist/sociallySavvyChecklist.module';
 import { BehaviorQuestionnaireAndSocialCommunicationModule } from './features/behavior-questionnaire-and-social-communication/behaviorQuestionnaireAndSocialCommunication.module';
 import { AflsModule } from './features/afls/afls.module';
-import { AssessmentOfFunctionalLivingSkillsModule } from './features/graphics/assessment-of-functional-living-skills/assessment-of-functional-living-skills.module';
 import { ScaleAsrsModule } from './features/scale-asrs/scaleASRS.module';
-import { IncomeTableModule } from './features/income-table/incomeTable.module';
-import { AnamnesisSpeechTherapyModule } from './features/anamnesis-speech-therapy/anamnesisSpeechTherapy.module';
+import { IncomeTablesModule } from './features/income-table/incomeTable.module';
 import { IntraverbalAssessmentModule } from './features/intraverbal-assessment/intraverbalAssessment.module';
 import { PhonologicalDiscriminationTestApplicationNotebookModule } from './features/phonological-discrimination-test-application-notebook/phonologicalDiscriminationTestApplicationNotebook.module';
-import { PsychopedagogicalAnamnesisModule } from './features/psychopedagogical-anamnesis/psychopedagogicalAnamnesis.module';
 import { ScaleMchatModule } from './features/scale-mchat/scaleMchat.module';
-import { PsychopedagogicalAnamnesisModule } from './features/psychopedagogical-anamnesis/psychopedagogicalAnamnesis.module';
+import { PsychopedagogicalAnamnesisModule } from './features/psychopedagogical-anamnesis/psychopedagogicalAnamnesis.module'; 
 import { AnamnesisForCerebralPalsyModule } from './features/anamnesis-for-cerebral-palsy/anamnesis-for-cerebral-palsy.module';
 
 
@@ -89,15 +86,12 @@ import { AnamnesisForCerebralPalsyModule } from './features/anamnesis-for-cerebr
     childhoodAutismRatingScaleModule,
     AnamneseGeneralModule,
     MchatRModule,
-    fonoaudiologiaRelatorios
     AutismBehaviorChecklistModule,
     SociallySavvyChecklistModule,
-    BehaviorQuestionnaireAndSocialCommunicationModule
+    BehaviorQuestionnaireAndSocialCommunicationModule,
     AflsModule,
-    AssessmentOfFunctionalLivingSkillsModule,
     ScaleAsrsModule,
-    IncomeTableModule,
-    AnamnesisSpeechTherapyModule,
+    IncomeTablesModule,
     PsychopedagogicalAnamnesisModule,
     IntraverbalAssessmentModule,
     PhonologicalDiscriminationTestApplicationNotebookModule,
