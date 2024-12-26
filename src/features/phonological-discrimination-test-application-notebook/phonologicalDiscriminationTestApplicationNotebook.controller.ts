@@ -1,6 +1,6 @@
 import { Body, Controller, Delete, Get, Param, Post, Put } from "@nestjs/common";
 import { ApiTags } from "@nestjs/swagger";
-import { CreatePhonologicalDiscriminationTestApplicationNotebookDTO } from "./dto/phonologicalDiscriminationTestApplicationNotebookCreate.dto";
+import { CreatePhonologicalDiscriminationTestApplicationNotebookDto } from "./dto/phonologicalDiscriminationTestApplicationNotebookCreate.dto";
 import { UpdatePhonologicalDiscriminationTestApplicationNotebookDto } from "./dto/phonologicalDiscriminationTestApplicationNotebookUpdate.dto";
 import { PhonologicalDiscriminationTestApplicationNotebookService } from "./phonologicalDiscriminationTestApplicationNotebook.service";
 
@@ -10,7 +10,7 @@ export class PhonologicalDiscriminationTestApplicationNotebookController {
   constructor(private readonly phonologicalDiscriminationTestApplicationNotebookService: PhonologicalDiscriminationTestApplicationNotebookService) {}
 
   @Post()
-  create(@Body() data: CreatePhonologicalDiscriminationTestApplicationNotebookDTO) {
+  create(@Body() data: CreatePhonologicalDiscriminationTestApplicationNotebookDto) {
     return this.phonologicalDiscriminationTestApplicationNotebookService.create(data);
   }
 

@@ -436,7 +436,7 @@ class GroupIssuesWithMultipleParts2DTO {
 
 }
 
-  export class CreateIntraverbalAssessmentDTO {
+  export class CreateIntraverbalAssessmentDto {
     @ValidateNested()
     @Type(() => GroupAnimalSoundsAndCompleteSongsDTO)
     @ApiProperty({ type: GroupAnimalSoundsAndCompleteSongsDTO })

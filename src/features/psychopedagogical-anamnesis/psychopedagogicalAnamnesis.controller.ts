@@ -1,6 +1,6 @@
 import { Body, Controller, Delete, Get, Param, Post, Put } from "@nestjs/common";
 import { ApiTags } from "@nestjs/swagger";
-import { CreatePsychopedagogicalAnamnesisDTO } from "./dto/psychopedagogicalAnamnesisCreate.dto";
+import { CreatePsychopedagogicalAnamnesisDto } from "./dto/psychopedagogicalAnamnesisCreate.dto";
 import { UpdatePsychopedagogicalAnamnesisDto } from "./dto/psychopedagogicalAnamnesisUpdate.dto";
 import { PsychopedagogicalAnamnesisService } from "./psychopedagogicalAnamnesis.service";
 
@@ -10,7 +10,7 @@ export class PsychopedagogicalAnamnesisController {
   constructor(private readonly psychopedagogicalAnamnesisService: PsychopedagogicalAnamnesisService) {}
 
   @Post()
-  create(@Body() data: CreatePsychopedagogicalAnamnesisDTO) {
+  create(@Body() data: CreatePsychopedagogicalAnamnesisDto) {
     return this.psychopedagogicalAnamnesisService.create(data);
   }
 

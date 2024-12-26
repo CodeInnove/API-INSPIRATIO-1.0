@@ -1,44 +1,46 @@
 
-export interface IGeneralAnamnese {
-  identification: {
-      patient: string; // ObjectId as string
-      dateBirth: string;
-      age: number;
-      maritalStatus: string;
-      sex: string;
-      naturalization: string;
-      nationality: string;
-      schoolName: string;
-      schoolPeriod: string;
-      affiliation: {
-          fatherName: string;
-          ageFather: number;
-          FatherProfession: string;
-          schooling: string;
-          motherName: string;
-          ageMother: number;
-          MotherProfession: string;
-          schoolingMother: string;
-          brotherName: string;
-          brotherAge: number;
-      };
-      address: {
-          street: string;
-          number: string;
-          city: string;
-          state: string;
-          zipCode: string;
-          fone: string;
-          responsible: string;
-          forwarded: string;
-          dateAnamnese: Date;
-          professional: string;
-      };
-  };
-  complaintAndDuration: {
-      empty: string;
-  };
-  background: {
+export interface IIidentification {
+    dateBirth: string;
+    age: number;
+    maritalStatus: string;
+    sex: string;
+    naturalization: string;
+    nationality: string;
+    schoolName: string;
+    schoolPeriod: string;
+    patient: string; // ObjectId as string
+}
+export interface IAffiliation {
+    ageFather: number;
+    FatherProfession: string;
+    schooling: string;
+    motherName: string;
+    ageMother: number;
+    MotherProfession: string;
+    schoolingMother: string;
+    brotherName: string;
+    brotherAge: number;
+    fatherName: string;
+};
+export interface IAddress {
+    number: string;
+    city: string;
+    state: string;
+    zipCode: string;
+    fone: string;
+    responsible: string;
+    forwarded: string;
+    dateAnamnese: Date;
+    professional: string;
+    street: string;
+};
+
+
+export interface IComplaintAndDuration {
+    empty: string;
+}
+  
+export interface IBackground {
       constitutional: {
           gestation: string;
           childbirth: string;
@@ -56,8 +58,8 @@ export interface IGeneralAnamnese {
           responsibleChild: string; // Com quem a criança fica?
           weeklyRoutine: string;
       };
-  };
-  development: {
+}
+export interface IDevelopment {
       physical: {
           semantics: {
               sleep: string;
@@ -82,10 +84,9 @@ export interface IGeneralAnamnese {
               seizures: string;
               otherProblema: string;
           };
-      };
-      // Additional fields for motor, neurovegetativeFunctions, Ideomotor, Ideatory...
-  };
-  socioCultural: {
+      }// Additional fields for motor, neurovegetativeFunctions, Ideomotor, Ideatory...
+  }
+export interface ISocioCultural {
       interactive: {
           relationshipWithParents: string;
           relationshipWithAdults: string;
@@ -108,7 +109,16 @@ export interface IGeneralAnamnese {
           adaptWell: string;
           howBehave: string;
           respondYourName: string;
+          importantObservations: string;
       };
   };
-  importantObservations: string;
-}
+
+export interface IGeneralAnamnese {
+    identification: IIidentification;
+    affiliation: IAffiliation;
+    address: IAddress;
+    complaintAndDuration: IComplaintAndDuration;
+    background: IBackground;
+    development: IDevelopment;
+    socioCultural: ISocioCultural;
+  }

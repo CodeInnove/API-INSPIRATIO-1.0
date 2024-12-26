@@ -141,7 +141,7 @@ class incomeTablesPartTwoDTO {
   fineMotorCoordination: string;
 }
 
-  export class CreateIncomeTableDTO {
+  export class CreateTableDto {
     @ValidateNested()
     @Type(() => incomeTablesPartOneDTO)
     @ApiProperty({ type: incomeTablesPartOneDTO })

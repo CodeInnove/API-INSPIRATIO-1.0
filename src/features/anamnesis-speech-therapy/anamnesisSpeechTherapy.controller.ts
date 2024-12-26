@@ -1,6 +1,6 @@
 import { Body, Controller, Delete, Get, Param, Post, Put } from "@nestjs/common";
 import { ApiTags } from "@nestjs/swagger";
-import { CreateAnamnesisSpeechTherapyDTO } from "./dto/anamnesisSpeechTherapyCreate.dto";
+import { CreateAnamnesisSpeechTherapyDto } from "./dto/anamnesisSpeechTherapyCreate.dto";
 import { UpdateAnamnesisSpeechTherapyDto } from "./dto/anamnesisSpeechTherapyUpdate.dto";
 import { AnamnesisSpeechTherapyService } from "./anamnesisSpeechTherapy.service";
 
@@ -10,7 +10,7 @@ export class AnamnesisSpeechTherapyController {
   constructor(private readonly anamnesisSpeechTherapyService: AnamnesisSpeechTherapyService) {}
 
   @Post()
-  create(@Body() data: CreateAnamnesisSpeechTherapyDTO) {
+  create(@Body() data: CreateAnamnesisSpeechTherapyDto) {
     return this.anamnesisSpeechTherapyService.create(data);
   }
 

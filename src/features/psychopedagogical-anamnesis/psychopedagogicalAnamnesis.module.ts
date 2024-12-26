@@ -7,8 +7,9 @@ import { PsychopedagogicalAnamnesisSchema } from "src/entities/psychopedagogical
 
 @Module({
   imports: [
-    MongooseModule.forFeature([{ name: 'psychopedagogicalAnamnesis', schema: PsychopedagogicalAnamnesisSchema }]),
-  ],
+    MongooseModule.forFeature([
+      { name: 'psychopedagogicalAnamnesis', schema: PsychopedagogicalAnamnesisSchema }
+    ])],
   providers: [PsychopedagogicalAnamnesisService, PsychopedagogicalAnamnesisRepository],
   controllers: [PsychopedagogicalAnamnesisController],
   exports: [],

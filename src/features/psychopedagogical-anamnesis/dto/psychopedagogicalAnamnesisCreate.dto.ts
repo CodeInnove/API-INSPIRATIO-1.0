@@ -513,7 +513,7 @@ class FinishFormsDTO{
 
     }
 
-export class CreatePsychopedagogicalAnamnesisDTO {
+export class CreatePsychopedagogicalAnamnesisDto {
     @ValidateNested()
     @Type(() => IdentificationDTO)
     @ApiProperty({ type: IdentificationDTO })

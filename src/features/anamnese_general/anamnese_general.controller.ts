@@ -1,34 +1,36 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
-import { AnamneseGeneralService } from './anamnese_general.service';
-import { CreateGeneralAnamneseDto } from './dto/create-anamnese_general.dto';
+import { Controller, Get, Post, Body, Patch, Param, Delete, Put } from '@nestjs/common';
+import { GeneralAnamneseService } from './anamnese_general.service';
+import { CreateAnamneseGeneralDto } from './dto/create-anamnese_general.dto';
 import { UpdateAnamneseGeneralDto } from './dto/update-anamnese_general.dto';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Anamnese General')
 @Controller('anamnese-general')
 export class AnamneseGeneralController {
-  constructor(private readonly anamneseGeneralService: AnamneseGeneralService) {}
+  constructor(private readonly anamneseGeneralService: GeneralAnamneseService) {}
 
   @Post()
-  create(@Body() createAnamneseGeneralDto: CreateGeneralAnamneseDto) {
-    return this.anamneseGeneralService.create(createAnamneseGeneralDto);
+  async create(@Body() data: CreateAnamneseGeneralDto) {
+    return this.anamneseGeneralService.create(data);
   }
 
   @Get()
-  findAll() {
+  async findAll() {
     return this.anamneseGeneralService.findAll();
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.anamneseGeneralService.findOne(+id);
+  async findOne(@Param('id') id: string) {
+    return this.anamneseGeneralService.findOne(id);
   }
 
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateAnamneseGeneralDto: UpdateAnamneseGeneralDto) {
-    return this.anamneseGeneralService.update(+id, updateAnamneseGeneralDto);
+  @Put(':id')
+  async update(@Param('id') id: string, @Body() data: CreateAnamneseGeneralDto) {
+    return this.anamneseGeneralService.update(id, data);
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.anamneseGeneralService.remove(+id);
+  async delete(@Param('id') id: string) {
+    return this.anamneseGeneralService.delete(id);
   }
 }

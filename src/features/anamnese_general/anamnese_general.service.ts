@@ -1,26 +1,54 @@
-import { Injectable } from '@nestjs/common';
-import { CreateGeneralAnamneseDto } from './dto/create-anamnese_general.dto';
-import { UpdateAnamneseGeneralDto } from './dto/update-anamnese_general.dto';
+import { HttpException, HttpStatus, Injectable } from "@nestjs/common";
+import { CreateAnamneseGeneralDto } from "./dto/create-anamnese_general.dto";
+import { UpdateAnamneseGeneralDto } from "./dto/update-anamnese_general.dto";
+import { IGeneralAnamneseEntity } from "src/entities/anamnese_general.entity";
+import { GeneralAnamneseRepository } from "./anamnese_geral.repository";
+
+
 
 @Injectable()
-export class AnamneseGeneralService {
-  create(createAnamneseGeneralDto: CreateGeneralAnamneseDto) {
-    return 'This action adds a new anamneseGeneral';
+export class GeneralAnamneseService {
+  constructor(
+    private readonly generalAnamneseRepository: GeneralAnamneseRepository
+  ) {}
+
+  async create(generalAnamnese: CreateAnamneseGeneralDto): Promise<IGeneralAnamneseEntity> {
+    try {
+      return await this.generalAnamneseRepository.create(generalAnamnese);
+    } catch (error) {
+      throw new HttpException(error, HttpStatus.BAD_REQUEST);
+    }
   }
 
-  findAll() {
-    return `This action returns all anamneseGeneral`;
+  async findAll(): Promise<IGeneralAnamneseEntity[]> {
+    try {
+      return await this.generalAnamneseRepository.findAll();
+    } catch (error) {
+      throw new HttpException(error, HttpStatus.BAD_REQUEST);
+    }
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} anamneseGeneral`;
+  async findOne(id: string): Promise<IGeneralAnamneseEntity> {
+    try {
+      return await this.generalAnamneseRepository.findOne(id);
+    } catch (error) {
+      throw new HttpException(error, HttpStatus.BAD_REQUEST);
+    }
   }
 
-  update(id: number, updateAnamneseGeneralDto: UpdateAnamneseGeneralDto) {
-    return `This action updates a #${id} anamneseGeneral`;
+  async update(id: string, anamneseUpdate: UpdateAnamneseGeneralDto): Promise<IGeneralAnamneseEntity> {
+    try {
+      return await this.generalAnamneseRepository.update(id, anamneseUpdate);
+    } catch (error) {
+      throw new HttpException(error, HttpStatus.BAD_REQUEST);
+    }
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} anamneseGeneral`;
+  async delete(id: string): Promise<IGeneralAnamneseEntity> {
+    try {
+      return await this.generalAnamneseRepository.delete(id);
+    } catch (error) {
+      throw new HttpException(error, HttpStatus.BAD_REQUEST);
+    }
   }
 }

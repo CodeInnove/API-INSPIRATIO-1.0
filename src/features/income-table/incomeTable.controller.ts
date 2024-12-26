@@ -1,6 +1,6 @@
 import { Body, Controller, Delete, Get, Param, Post, Put } from "@nestjs/common";
 import { ApiTags } from "@nestjs/swagger";
-import { CreateIncomeTableDTO } from "./dto/incomeTableCreate.dto";
+import { CreateTableDto } from "./dto/incomeTableCreate.dto";
 import { UpdateIncomeTableDto } from "./dto/incomeTableUpdate.dto";
 import { IncomeTableService } from "./incomeTable.service";
 
@@ -10,7 +10,7 @@ export class IncomeTableController {
   constructor(private readonly incomeTableService: IncomeTableService) {}
 
   @Post()
-  create(@Body() data: CreateIncomeTableDTO) {
+  create(@Body() data: CreateTableDto) {
     return this.incomeTableService.create(data);
   }
 

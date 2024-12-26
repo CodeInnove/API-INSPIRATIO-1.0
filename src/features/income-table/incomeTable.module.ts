@@ -1,16 +1,16 @@
 import { Module } from "@nestjs/common";
-import { IncomeTablesService } from "./incomeTable.service";
-import { IncomeTablesController } from "./incomeTable.controller";
-import { IncomeTablesRepository } from "./incomeTables.repository";
+import { IncomeTableService } from "./incomeTable.service";
+import { IncomeTableController } from "./incomeTable.controller";
+import { IncomeTableRepository } from "./incomeTables.repository";
 import { MongooseModule } from "@nestjs/mongoose";
-import { IncomeTablesSchema } from "src/entities/incomeTable.entity";
+import { IncomeTableSchema } from "src/entities/incomeTable.entity";
 
 @Module({
   imports: [
-    MongooseModule.forFeature([{ name: 'IncomeTable', schema: IncomeTablesSchema }]),
+    MongooseModule.forFeature([{ name: 'IncomeTable', schema: IncomeTableSchema }]),
   ],
-  providers: [IncomeTablesService, IncomeTablesRepository],
-  controllers: [IncomeTablesController],
+  providers: [IncomeTableService, IncomeTableRepository],
+  controllers: [IncomeTableController],
   exports: [],
 })
 export class IncomeTablesModule {}

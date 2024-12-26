@@ -1,34 +1,38 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
-import { AutismBehaviorChecklistService } from './autismBehaviorChecklist.service';
-import { CreateAutismBehaviorChecklistDto } from './dto/autismBehaviorChecklistCreate.dto';
-import { UpdateAutismBehaviorChecklistDto } from './dto/autismBehaviorChecklistUpdate.dto';
+import { Body, Controller, Delete, Get, Param, Post, Put } from "@nestjs/common";
+import { ApiTags } from "@nestjs/swagger";
+import { AutismBehaviorChecklistService } from "./autismBehaviorChecklist.service";
+import { CreateAutismBehaviorChecklistDto } from "./dto/autismBehaviorChecklistCreate.dto";
+import { IAutismBehaviorChecklistEntity } from "src/entities/autismBehaviorChecklist.entity";
 
+@ApiTags('Autism Behavior Checklist')
 @Controller('autism-behavior-checklist')
 export class AutismBehaviorChecklistController {
-  constructor(private readonly autismBehaviorChecklistService: AutismBehaviorChecklistService) {}
+  constructor(
+    private readonly autismBehaviorChecklistService: AutismBehaviorChecklistService
+  ) {}
 
   @Post()
-  create(@Body() createAutismBehaviorChecklistDto: CreateAutismBehaviorChecklistDto) {
-    return this.autismBehaviorChecklistService.create(createAutismBehaviorChecklistDto);
+  async create(@Body() data: CreateAutismBehaviorChecklistDto): Promise<IAutismBehaviorChecklistEntity> {
+    return await this.autismBehaviorChecklistService.create(data);
   }
 
   @Get()
-  findAll() {
-    return this.autismBehaviorChecklistService.findAll();
+  async findAll(): Promise<IAutismBehaviorChecklistEntity[]> {
+    return await this.autismBehaviorChecklistService.findAll();
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.autismBehaviorChecklistService.findOne(+id);
+  async findOne(@Param() id: string): Promise<IAutismBehaviorChecklistEntity> {
+    return await this.autismBehaviorChecklistService.findOne(id);
   }
 
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateAutismBehaviorChecklistDto: UpdateAutismBehaviorChecklistDto) {
-    return this.autismBehaviorChecklistService.update(+id, updateAutismBehaviorChecklistDto);
+  @Put(':id')
+  async update(@Param() id: string, @Body() data: CreateAutismBehaviorChecklistDto): Promise<IAutismBehaviorChecklistEntity> {
+    return await this.autismBehaviorChecklistService.update(id, data);
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.autismBehaviorChecklistService.remove(+id);
+  async delete(@Param() id: string): Promise<IAutismBehaviorChecklistEntity> {
+    return await this.autismBehaviorChecklistService.delete(id);
   }
 }
