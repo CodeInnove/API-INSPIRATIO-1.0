@@ -6,7 +6,7 @@ import { IPsychopedagogicalAnamnesisEntity } from "src/entities/psychopedagogica
 @Injectable()
 export class PsychopedagogicalAnamnesisRepository {
   constructor(
-    @InjectModel('PsychopedagogicalAnamnesis') private readonly psychopedagogicalAnamnesisModel: Model<IPsychopedagogicalAnamnesisEntity>
+    @InjectModel('psychopedagogicalAnamnesis') private readonly psychopedagogicalAnamnesisModel: Model<IPsychopedagogicalAnamnesisEntity>
   ) {}
 
   async create(data: IPsychopedagogicalAnamnesisEntity): Promise<IPsychopedagogicalAnamnesisEntity> {
