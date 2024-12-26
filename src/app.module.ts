@@ -15,7 +15,6 @@ import { SpecialityModule } from './features/speciality/speciality.module';
 import { ConsultationModule } from './features/consultation/consultation.module';
 import { FunctionalIndependencyMetricsModule } from './features/graphics/functionalIndependencyMetrics/functionalIndependencyMetrics.module';
 import { childhoodAutismRatingScaleModule } from './features/graphics/childhoodAutismRatingScale/childhoodAutismRatingScale.module';
-import { AnamneseGeneralModule } from './features/anamnese_general/anamnese_general.module';
 import { MchatRModule } from './features/graphics/mchat-r/mchat-r.module';
 import { AutismBehaviorChecklistModule } from './features/autism-behavior-checklist/autismBehaviorChecklist.module';
 import { SociallySavvyChecklistModule } from './features/socially-savvy-checklist/sociallySavvyChecklist.module';
@@ -85,7 +84,6 @@ import { AnamnesisSpeechTherapyModule } from './features/anamnesis-speech-therap
     ConsultationModule,
     FunctionalIndependencyMetricsModule,
     childhoodAutismRatingScaleModule,
-    AnamneseGeneralModule,
     MchatRModule,
     AutismBehaviorChecklistModule,
     SociallySavvyChecklistModule,
