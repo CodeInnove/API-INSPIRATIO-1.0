@@ -121,8 +121,8 @@ export interface IScaleASRS{
         optionFour: number;
         optionFive: number;
       },
-      totalGroupA:{
-        resultGroupA: number;
+      totalGroupB:{
+        resultGroupB: number;
         }];
 
 }
