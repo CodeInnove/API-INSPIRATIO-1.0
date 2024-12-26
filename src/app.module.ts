@@ -23,12 +23,14 @@ import { BehaviorQuestionnaireAndSocialCommunicationModule } from './features/be
 import { AflsModule } from './features/afls/afls.module';
 import { AssessmentOfFunctionalLivingSkillsModule } from './features/graphics/assessment-of-functional-living-skills/assessment-of-functional-living-skills.module';
 import { ScaleAsrsModule } from './features/scale-asrs/scaleASRS.module';
+import { AnamnesisSpeechTherapyModule } from './features/anamnesis-speech-therapy/anamnesisSpeechTherapy.module';
 import { IntraverbalAssessmentModule } from './features/intraverbal-assessment/intraverbalAssessment.module';
 import { PhonologicalDiscriminationTestApplicationNotebookModule } from './features/phonological-discrimination-test-application-notebook/phonologicalDiscriminationTestApplicationNotebook.module';
 import { PsychopedagogicalAnamnesisModule } from './features/psychopedagogical-anamnesis/psychopedagogicalAnamnesis.module';
 import { ScaleMchatModule } from './features/scale-mchat/scaleMchat.module';
 import { PsychopedagogicalAnamnesisModule } from './features/psychopedagogical-anamnesis/psychopedagogicalAnamnesis.module';
 import { AnamnesisForCerebralPalsyModule } from './features/anamnesis-for-cerebral-palsy/anamnesis-for-cerebral-palsy.module';
+
 
 @Module({
   imports: [
@@ -92,6 +94,8 @@ import { AnamnesisForCerebralPalsyModule } from './features/anamnesis-for-cerebr
     AflsModule,
     AssessmentOfFunctionalLivingSkillsModule,
     ScaleAsrsModule,
+    AnamnesisSpeechTherapyModule,
+    PsychopedagogicalAnamnesisModule,
     IntraverbalAssessmentModule,
     PhonologicalDiscriminationTestApplicationNotebookModule,
     ScaleMchatModule,
