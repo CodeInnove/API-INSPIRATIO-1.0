@@ -129,7 +129,7 @@ class ChoosePhonologicalDiscriminationTestApplicationNotebookDTO {
     question23: ChoosePhonologicalDiscriminationTestApplicationNotebookDTO;
 }
 
-  export class CreatePhonologicalDiscriminationTestApplicationNotebookDTO {
+  export class CreatePhonologicalDiscriminationTestApplicationNotebookDto {
     @ValidateNested()
     @Type(() => QuestionsPhonologicalDiscriminationTestApplicationNotebookDTO)
     @ApiProperty({ type: QuestionsPhonologicalDiscriminationTestApplicationNotebookDTO })

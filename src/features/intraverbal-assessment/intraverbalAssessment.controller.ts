@@ -1,6 +1,6 @@
 import { Body, Controller, Delete, Get, Param, Post, Put } from "@nestjs/common";
 import { ApiTags } from "@nestjs/swagger";
-import { CreateIntraverbalAssessmentDTO } from "./dto/intraverbalAssessmentCreate.dto";
+import { CreateIntraverbalAssessmentDto } from "./dto/intraverbalAssessmentCreate.dto";
 import { UpdateIntraverbalAssessmentDto } from "./dto/intraverbalAssessmentUpdate.dto";
 import { IntraverbalAssessmentService } from "./intraverbalAssessment.service";
 
@@ -10,7 +10,7 @@ export class IntraverbalAssessmentController {
   constructor(private readonly intraverbalAssessmentService: IntraverbalAssessmentService) {}
 
   @Post()
-  create(@Body() data: CreateIntraverbalAssessmentDTO) {
+  create(@Body() data: CreateIntraverbalAssessmentDto) {
     return this.intraverbalAssessmentService.create(data);
   }
 

@@ -28,6 +28,7 @@ import { PhonologicalDiscriminationTestApplicationNotebookModule } from './featu
 import { ScaleMchatModule } from './features/scale-mchat/scaleMchat.module';
 import { PsychopedagogicalAnamnesisModule } from './features/psychopedagogical-anamnesis/psychopedagogicalAnamnesis.module'; 
 import { AnamnesisForCerebralPalsyModule } from './features/anamnesis-for-cerebral-palsy/anamnesis-for-cerebral-palsy.module';
+import { PortageGuidetoPreschoolEducationModule } from './features/portage-guideto-preschool-education/portage-guideto-preschool-education.module';
 
 
 
@@ -98,6 +99,7 @@ import { AnamnesisForCerebralPalsyModule } from './features/anamnesis-for-cerebr
     ScaleMchatModule,
     PsychopedagogicalAnamnesisModule,
     AnamnesisForCerebralPalsyModule,
+    PortageGuidetoPreschoolEducationModule,
   ],
   controllers: [AppController],
   providers: [AppService],

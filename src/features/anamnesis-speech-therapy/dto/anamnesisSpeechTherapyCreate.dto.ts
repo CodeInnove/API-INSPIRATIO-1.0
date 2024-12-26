@@ -657,7 +657,7 @@ class DevelopmentDTO{
 
     }
 
-export class CreateAnamnesisSpeechTherapyDTO {
+export class CreateAnamnesisSpeechTherapyDto {
     @ValidateNested()
     @Type(() => IdentificationDTO)
     @ApiProperty({ type: IdentificationDTO })

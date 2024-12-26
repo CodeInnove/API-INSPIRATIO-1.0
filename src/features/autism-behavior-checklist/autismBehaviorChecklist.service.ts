@@ -1,26 +1,53 @@
-import { Injectable } from '@nestjs/common';
-import { CreateAutismBehaviorChecklistDto } from './dto/autismBehaviorChecklistCreate.dto';
-import { UpdateAutismBehaviorChecklistDto } from './dto/autismBehaviorChecklistUpdate.dto';
+import { HttpException, HttpStatus, Injectable } from "@nestjs/common";
+import { IAutismBehaviorChecklistEntity } from "src/entities/autismBehaviorChecklist.entity";
+import { UpdateAutismBehaviorChecklistDto } from "./dto/autismBehaviorChecklistUpdate.dto";
+import { CreateAutismBehaviorChecklistDto } from "./dto/autismBehaviorChecklistCreate.dto";
+import { AutismBehaviorChecklistRepository } from "./autismBehavioChecklist.repository";
+
 
 @Injectable()
 export class AutismBehaviorChecklistService {
-  create(createAutismBehaviorChecklistDto: CreateAutismBehaviorChecklistDto) {
-    return 'This action adds a new autismBehaviorChecklist';
+  constructor(
+    private readonly autismBehaviorChecklistRepository: AutismBehaviorChecklistRepository
+  ) {}
+
+  async create(autismBehaviorChecklist: CreateAutismBehaviorChecklistDto): Promise<IAutismBehaviorChecklistEntity> {
+    try {
+      return await this.autismBehaviorChecklistRepository.create(autismBehaviorChecklist);
+    } catch (error) {
+      throw new HttpException(error, HttpStatus.BAD_REQUEST);
+    }
   }
 
-  findAll() {
-    return `This action returns all autismBehaviorChecklist`;
+  async findAll(): Promise<IAutismBehaviorChecklistEntity[]> {
+    try {
+      return await this.autismBehaviorChecklistRepository.findAll();
+    } catch (error) {
+      throw new HttpException(error, HttpStatus.BAD_REQUEST);
+    }
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} autismBehaviorChecklist`;
+  async findOne(id: string): Promise<IAutismBehaviorChecklistEntity> {
+    try {
+      return await this.autismBehaviorChecklistRepository.findOne(id);
+    } catch (error) {
+      throw new HttpException(error, HttpStatus.BAD_REQUEST);
+    }
   }
 
-  update(id: number, updateAutismBehaviorChecklistDto: UpdateAutismBehaviorChecklistDto) {
-    return `This action updates a #${id} autismBehaviorChecklist`;
+  async update(id: string, autismBehaviorChecklist: UpdateAutismBehaviorChecklistDto): Promise<IAutismBehaviorChecklistEntity> {
+    try {
+      return await this.autismBehaviorChecklistRepository.update(id, autismBehaviorChecklist);
+    } catch (error) {
+      throw new HttpException(error, HttpStatus.BAD_REQUEST);
+    }
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} autismBehaviorChecklist`;
+  async delete(id: string): Promise<IAutismBehaviorChecklistEntity> {
+    try {
+      return await this.autismBehaviorChecklistRepository.delete(id);
+    } catch (error) {
+      throw new HttpException(error, HttpStatus.BAD_REQUEST);
+    }
   }
 }

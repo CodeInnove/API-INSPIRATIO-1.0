@@ -129,7 +129,7 @@ class ChooseScaleMchatDTO {
     question23: ChooseScaleMchatDTO;
 
   }
-  export class CreateScaleMchatDTO {
+  export class CreateScaleMchatDto {
     @ValidateNested()
     @Type(() => QuestionsScaleMchatDTO)
     @ApiProperty({ type: QuestionsScaleMchatDTO })

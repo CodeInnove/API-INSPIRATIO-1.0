@@ -335,7 +335,7 @@ class ScoreDTO {
   
   }
 
-  class TotalResultDTO {
+  export class TotalResultDTO {
 
     @IsNotEmpty()
     @ApiProperty()

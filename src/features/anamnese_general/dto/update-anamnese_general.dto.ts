@@ -1,5 +1,5 @@
 import { PartialType } from '@nestjs/swagger';
-import { AffiliationDto, complaintAndDuration } from './create-anamnese_general.dto';
+import {CreateAnamneseGeneralDto } from './create-anamnese_general.dto';
 
 
-export class UpdateAnamneseGeneralDto extends PartialType(AffiliationDto) {}
+export class UpdateAnamneseGeneralDto extends PartialType(CreateAnamneseGeneralDto) {}
