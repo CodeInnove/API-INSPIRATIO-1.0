@@ -13,4 +13,4 @@ import { AnamnesisSpeechTherapySchema } from "src/entities/anamnesisSpeechTherap
   controllers: [AnamnesisSpeechTherapyController],
   exports: [],
 })
-export class ScaleAsrsModule {}
+export class AnamnesisSpeechTherapyModule {}

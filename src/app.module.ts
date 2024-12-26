@@ -29,7 +29,7 @@ import { ScaleMchatModule } from './features/scale-mchat/scaleMchat.module';
 import { PsychopedagogicalAnamnesisModule } from './features/psychopedagogical-anamnesis/psychopedagogicalAnamnesis.module'; 
 import { AnamnesisForCerebralPalsyModule } from './features/anamnesis-for-cerebral-palsy/anamnesis-for-cerebral-palsy.module';
 import { PortageGuidetoPreschoolEducationModule } from './features/portage-guideto-preschool-education/portage-guideto-preschool-education.module';
-
+import { AnamnesisSpeechTherapyModule } from './features/anamnesis-speech-therapy/anamnesisSpeechTherapy.module';
 
 
 @Module({
@@ -100,6 +100,7 @@ import { PortageGuidetoPreschoolEducationModule } from './features/portage-guide
     PsychopedagogicalAnamnesisModule,
     AnamnesisForCerebralPalsyModule,
     PortageGuidetoPreschoolEducationModule,
+    AnamnesisSpeechTherapyModule,
   ],
   controllers: [AppController],
   providers: [AppService],
