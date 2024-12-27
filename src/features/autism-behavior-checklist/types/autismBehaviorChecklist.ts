@@ -1,421 +1,68 @@
-export interface IAutismBehaviorChecklist{
-    identification: {
-        patient: string;
-        dateBirth: string;
-        evaluator: string;
-        age: number;
-        sex: string;
-        dateOfApplication: string;
-    };
-    questionOne: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionTwo: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionThree: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionFour: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionFive: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionSix: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionSeven: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionEight: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionNine: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionTen: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionEleven: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionTwelve: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionThirteen: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionFourteen: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionFifteen: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionSixteen: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionSeventeen: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionEighteen: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionNineteen: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionTwenty: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionTwentyOne: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionTwentyTwo: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionTwentyThree: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionTwentyFour: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionTwentyFive: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionTwentySix: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionTwentySeven: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionTwentyEight: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionTwentyNine: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionThirty: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionThirtyOne: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionThirtyTwo: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionThirtyThree: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionThirtyFour: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionThirtyFive: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionThirtySix: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionThirtySeven: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionThirtyEight: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionThirtyNine: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionForty: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionFortyOne: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionFortyTwo: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionFortyThree: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionFortyFour: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionFortyFive: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionFortySix: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionFortySeven: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionFortyEight: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionFortyNine: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionFifty: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionFiftyOne: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionFiftyTwo: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionFiftyThree: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionFiftyFour: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionFiftyFive: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionFiftySix: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    questionFiftySeven: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
-    
-    score: {
-        es: number;
-        re: number;
-        co: number;
-        lg: number;
-        ps: number;
-    };
 
-    totalResult: {
-        resultTotal: number;
-    }
+export interface IAutismBehaviorChecklistQuestion {
+  es: number | null;
+  re: number | null;
+  co: number | null;
+  lg: number | null;
+  ps: number | null;
+}
+
+export interface IAutismBehaviorChecklist {
+    spinsAroundForLongPeriods: IAutismBehaviorChecklistQuestion
+    learnsTaskButForgetsQuickly: IAutismBehaviorChecklistQuestion
+    rarelyRespondsNonverbalSocialStimuli: IAutismBehaviorChecklistQuestion
+    absenceOfResponseToVerbalRequests: IAutismBehaviorChecklistQuestion
+    usesToysInappropriately: IAutismBehaviorChecklistQuestion
+    poorUseOfVisualDiscrimination: IAutismBehaviorChecklistQuestion
+    absenceOfSocialSmile: IAutismBehaviorChecklistQuestion
+    inappropriateUseOfPronouns: IAutismBehaviorChecklistQuestion
+    insistsOnKeepingCertainObjects: IAutismBehaviorChecklistQuestion
+    seemsNotToListen: IAutismBehaviorChecklistQuestion
+    monotonousAndRythmLessSpeech: IAutismBehaviorChecklistQuestion
+    swaysForLongPeriods: IAutismBehaviorChecklistQuestion
+    doesNotReachToBickUp: IAutismBehaviorChecklistQuestion
+    strongReactionsToEnvironmentalChanges: IAutismBehaviorChecklistQuestion
+    lackOfAttentionToOwnName: IAutismBehaviorChecklistQuestion
+    runsInterruptingWithSpins: IAutismBehaviorChecklistQuestion
+    absenceOfResponseToFacialExpression: IAutismBehaviorChecklistQuestion
+    rarelyUsesYesOrI: IAutismBehaviorChecklistQuestion
+    possessesSkillInOneAreaOfDevelopment: IAutismBehaviorChecklistQuestion
+    absenceOfResponseToVerbalRequestsInvolvingSpaceReferences: IAutismBehaviorChecklistQuestion
+    startleReactionToLoudSound: IAutismBehaviorChecklistQuestion
+    wavesHands: IAutismBehaviorChecklistQuestion
+    intenseTantrums: IAutismBehaviorChecklistQuestion
+    activelyAvoidsEyeContact: IAutismBehaviorChecklistQuestion
+    resistsToTouchOrCarry: IAutismBehaviorChecklistQuestion
+    doesNotReactToPainfulStimuli: IAutismBehaviorChecklistQuestion
+    difficultAndRigidToCarry: IAutismBehaviorChecklistQuestion
+    flaccidWhenCarried: IAutismBehaviorChecklistQuestion
+    pointsToIndicateDesiredObject: IAutismBehaviorChecklistQuestion
+    walksOnTiptoes: IAutismBehaviorChecklistQuestion
+    hurtsOthersByBitingAndHitting: IAutismBehaviorChecklistQuestion
+    repeatsTheSamePhraseManyTimes: IAutismBehaviorChecklistQuestion
+    absenceOfImitationOfOtherChildrensPlay: IAutismBehaviorChecklistQuestion
+    absenceOfBlinkingReaction: IAutismBehaviorChecklistQuestion
+    hurtsSelfByBitingAndHittingHead: IAutismBehaviorChecklistQuestion
+    doesNotWaitToBeServed: IAutismBehaviorChecklistQuestion
+    doesNotPointToMoreThanFiveObjects:IAutismBehaviorChecklistQuestion
+    difficultyMakingFriends: IAutismBehaviorChecklistQuestion
+    coversEarsForSeveralSounds: IAutismBehaviorChecklistQuestion
+    spinsAndHitsObjectsManyTimes: IAutismBehaviorChecklistQuestion
+    difficultyToiletTraining: IAutismBehaviorChecklistQuestion
+    uses0To5WordsToIndicateNeeds: IAutismBehaviorChecklistQuestion
+    frequentlyAnxiousOrFearful:IAutismBehaviorChecklistQuestion
+    frownsCoversOrTurnsEyes: IAutismBehaviorChecklistQuestion
+    doesNotDressWithoutHelp: IAutismBehaviorChecklistQuestion
+    constantlyRepeatsSameWordsOrSounds: IAutismBehaviorChecklistQuestion
+    looksThroughPeople: IAutismBehaviorChecklistQuestion
+    repeatsQuestionsAndPhrasesSaidByOthers: IAutismBehaviorChecklistQuestion
+    frequentlyUnawareOfDangers: IAutismBehaviorChecklistQuestion
+    prefersToManipulateInanimateObjects: IAutismBehaviorChecklistQuestion
+    touchesSmellsOrLicksObjects: IAutismBehaviorChecklistQuestion
+    frequentlyDoesNotReactToNewPeople: IAutismBehaviorChecklistQuestion
+    repeatsSequencesOfComplicatedBehaviors: IAutismBehaviorChecklistQuestion
+    destructiveWithToysAndFamilyStuff: IAutismBehaviorChecklistQuestion
+    delayIdentifiedBefore30Months: IAutismBehaviorChecklistQuestion
+    usesMoreThan15AndLessThan30PhrasesDaily: IAutismBehaviorChecklistQuestion
+    staresAtTheEnvironmentForLongPeriods: IAutismBehaviorChecklistQuestion
 }
