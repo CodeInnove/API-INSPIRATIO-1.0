@@ -236,7 +236,7 @@ class ScoreAsqDTO {
 
 }
 
-export class CreateBehaviorQuestionnaireAndSocialCommunicationDto {
+export class CreateBehaviorQuestionDto {
   @ValidateNested()
   @Type(() => QuestionsAsqDTO)
   @ApiProperty({ type: QuestionsAsqDTO })

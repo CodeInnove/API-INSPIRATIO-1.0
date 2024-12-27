@@ -6,7 +6,7 @@ import { IBehaviorQuestionnaireAndSocialCommunicationEntity } from "src/entities
 @Injectable()
 export class BehaviorQuestionnaireAndSocialCommunicationRepository {
   constructor(
-    @InjectModel('BehaviorQuestionnaireAndSocialCommunication') private readonly behaviorQuestionnaireAndSocialCommunicationModel: Model<IBehaviorQuestionnaireAndSocialCommunicationEntity>
+    @InjectModel('behaviorQuestionnaireAndSocialCommunication') private readonly behaviorQuestionnaireAndSocialCommunicationModel: Model<IBehaviorQuestionnaireAndSocialCommunicationEntity>
   ) {}
 
   async create(data: IBehaviorQuestionnaireAndSocialCommunicationEntity): Promise<IBehaviorQuestionnaireAndSocialCommunicationEntity> {

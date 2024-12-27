@@ -7,7 +7,7 @@ import { BehaviorQuestionnaireAndSocialCommunicationSchema } from "src/entities/
 
 @Module({
   imports: [
-    MongooseModule.forFeature([{ name: 'BehaviorQuestionnaireAndSocialCommunication', schema: BehaviorQuestionnaireAndSocialCommunicationSchema }]),
+    MongooseModule.forFeature([{ name: 'behaviorQuestionnaireAndSocialCommunication', schema: BehaviorQuestionnaireAndSocialCommunicationSchema }]),
   ],
   providers: [BehaviorQuestionnaireAndSocialCommunicationService, BehaviorQuestionnaireAndSocialCommunicationRepository],
   controllers: [BehaviorQuestionnaireAndSocialCommunicationController],
