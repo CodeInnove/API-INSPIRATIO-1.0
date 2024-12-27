@@ -43,9 +43,13 @@ export const AnamnesisSpeechTherapySchema = new Schema({
         //anamnesisDate: {type: String},
         //professional: {type: Schema.Types.ObjectId, ref: "User"},
       //},
-      complaintAndDuration: String,
+    
+      complaintAndDurations: {
+          complaintAndDuration: {type: String},
+    },
+
+
       antecedents: {
-        constitutional: {
           gestation: {type: String},
           typeOfDelivery: {type: String},
           complications: {type: String},
@@ -56,16 +60,11 @@ export const AnamnesisSpeechTherapySchema = new Schema({
             prenatalCareWhy: {type: String},
             childProblem: {type: String, enum: ['Sim', 'Não']},
             whichProblem: {type: String},
-          },
-        },
-        circumstantial: {
             parentsWorkHours: {type: String},
             childCaregiver: {type: String},
             weeklyRoutine: {type: String},
         },
       development: {
-        physical: {
-          somatic: {
             sleep: {type: String},
             disease: {type: String},
             hearingEarInfection: {type: String},
@@ -89,22 +88,17 @@ export const AnamnesisSpeechTherapySchema = new Schema({
             fainting: {type: String},
             convulsions: {type: String},
             otherProblems: {type: String},
-          },
-          motor: {
             heldHeadUp: {type: String},
-              satWithSupport: {type: String},
-              satWithoutSupport: {type: String},
-              crawled: {type: String},
-              walked: {type: String},
-              diurnalSphincterControl: {type: String},
-              nocturnalSphincterControl: {type: String},
-              fellALot: {type: String},
-              bumpedIntoThings: {type: String},
-              speechBabblingWhen: {type: String},
-              quietBaby: {type: String},
-          },
-        },
-        neurovegetativeFunctions: {
+            satWithSupport: {type: String},
+            satWithoutSupport: {type: String},
+            crawled: {type: String},
+            walked: {type: String},
+            diurnalSphincterControl: {type: String},
+            nocturnalSphincterControl: {type: String},
+            fellALot: {type: String},
+            bumpedIntoThings: {type: String},
+            speechBabblingWhen: {type: String},
+            quietBaby: {type: String},
             suction: {type: String},
             chewing: {type: String},
             swallowing: {type: String},
@@ -115,8 +109,6 @@ export const AnamnesisSpeechTherapySchema = new Schema({
             usedPacifierBottleFinger: {type: String, enum: ['Chupeta', 'Mamadeira', 'Dedo']},
             untilWhenUsed: {type: String},
             otherHabits: {type: String},
-        },
-        ideomotor: {
             bathesAlone: {type: String},
             eatsAlone: {type: String},
             sinceWhenEatsAlone: {type: String},
@@ -129,22 +121,16 @@ export const AnamnesisSpeechTherapySchema = new Schema({
             putsOnShoes: {type: String},
             tiesShoes: {type: String},
             closesZipper: {type: String},
-        },
-          ideatory: {
             hasOwnInitiative: {type: String},
             demonstratesWishes: {type: String},
             whatDoesWhenAlone: {type: String},
             howSolvesProblems: {type: String},
-          }
       },
         socioCultural:{
-          interactive:{
-          relationshipWithParents: {type: String},
-          relationshipWithAdults: {type: String},
-          relationshipWithOtherChildren: {type: String},
-          whoAreYourBestFriends: {type: String},
-        },
-        integrative:{
+            relationshipWithParents: {type: String},
+            relationshipWithAdults: {type: String},
+            relationshipWithOtherChildren: {type: String},
+            whoAreYourBestFriends: {type: String},
             whatLikes: {type: String},
             muchChargedToSpeakCorrectly: {type: String},
             familyWithSpeechDifficulty: {type: String},
@@ -160,9 +146,10 @@ export const AnamnesisSpeechTherapySchema = new Schema({
             hadGoodAdaptation: {type: String},
             howIsTheirBehavior: {type: String},
             answersByName: {type: String},
-          }
         },
-        importantObservations:  {type: String},
+        importantObservations: {  
+            importantObservations: {type: String},
+        }
     });
     
 
