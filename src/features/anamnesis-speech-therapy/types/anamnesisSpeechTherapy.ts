@@ -20,9 +20,10 @@ export interface IAnamnesisSpeechTherapy{
             motherAge: number,
             motherProfession: string,
             motherEducation: string,
-            siblingsNames: [{
-            age: number
-        }]
+            siblingsNamesOne: string,
+            ageSiblingsNamesOne: number,
+            siblingsNamesTwo: string,
+            ageSiblingsNamesTwo: number,
     },
     address: {
         street: string,
@@ -37,13 +38,13 @@ export interface IAnamnesisSpeechTherapy{
         professional: string
         },
 
+    export interface IcomplaintAndDurations{
     complaintAndDuration: string,
-    
-    antecedents: {
-        constitutional: {
+    },
+
+    export interface Iantecedents: {
             gestation: string,
             typeOfDelivery: string,
-            complications: {
             usedMedication: string,
             medicalGuidance: string,
             whichMedication: string,
@@ -51,19 +52,11 @@ export interface IAnamnesisSpeechTherapy{
             prenatalCareWhy: string,
             childProblem: string,
             whichProblem: string,
-            },
+            parentsWorkHours: string,
+            childCaregiver: string,
+            weeklyRoutine: string,
     },
-    circumstantial: {
-        socioCultural: {
-        parentsWorkHours: string,
-        childCaregiver: string,
-        weeklyRoutine: string,
-        },
-    },
-    },
-    development: {
-    physical: {
-        somatic: {
+    export interface Idevelopment: {
             sleep: string,
             disease: string,
             hearingEarInfection: string,
@@ -87,8 +80,6 @@ export interface IAnamnesisSpeechTherapy{
             fainting: string,
             convulsions: string,
             otherProblems: string,
-        },
-        motor: {
             heldHeadUp: string,
             satWithSupport: string,
             satWithoutSupport: string,
@@ -100,48 +91,37 @@ export interface IAnamnesisSpeechTherapy{
             bumpedIntoThings: string,
             speechBabblingWhen: string,
             quietBaby: string
-        },
+            suction: string,
+            chewing: string,
+            swallowing: string,
+            breathing: string,
+            presentsNoiseEffort: string,
+            leftOrRightHanded: string,
+            usedPacifierBottleFinger: string,
+            untilWhenUsedPacifierBottleFinger: string,
+            otherHabits: string
+            bathesAlone: string,
+            eatsAlone: string,
+            sinceWhenEatsAlone: string,
+            whatDoesItUse: string,
+            whichHandEatsWith: string,
+            playsBall: string,
+            jumpsRope: string,
+            brushesTeethAlone: string,
+            dressesAlone: string,
+            putsOnShoes: string,
+            tiesShoes: string,
+            closesZipper: string
+            hasOwnInitiative: string,
+            demonstratesWishes: string,
+            whatDoesWhenAlone: string,
+            howSolvesProblems: string
     },
-    neurovegetativeFunctions: {
-        suction: string,
-        chewing: string,
-        swallowing: string,
-        breathing: string,
-        presentsNoiseEffort: string,
-        leftOrRightHanded: string,
-        usedPacifierBottleFinger: string,
-        untilWhenUsedPacifierBottleFinger: string,
-        otherHabits: string
-    },
-    ideomotor: {
-        bathesAlone: string,
-        eatsAlone: string,
-        sinceWhenEatsAlone: string,
-        whatDoesItUse: string,
-        whichHandEatsWith: string,
-        playsBall: string,
-        jumpsRope: string,
-        brushesTeethAlone: string,
-        dressesAlone: string,
-        putsOnShoes: string,
-        tiesShoes: string,
-        closesZipper: string
-    },
-        ideatory: {
-        hasOwnInitiative: string,
-        demonstratesWishes: string,
-        whatDoesWhenAlone: string,
-        howSolvesProblems: string
-        }
-    },
-    socioCultural:{
-        interactive:{
+    export interface IsocioCultural:{
         relationshipWithParents: string,
         relationshipWithAdults: string,
         relationshipWithOtherChildren: string,
         whoAreYourBestFriends: string
-    },
-        integrative:{
         whatLikes: string,
         muchChargedToSpeakCorrectly: string,
         familyWithSpeechDifficulty: string,
@@ -157,7 +137,17 @@ export interface IAnamnesisSpeechTherapy{
         hadGoodAdaptation: string,
         howIsTheirBehavior: string,
         answersByName: string
-        }
     },
-    importantObservations: string
+        
+    export interface IimportantObservations: {
+        importantObservation: string
+    },
+
+    export interface AnamnesisSpeechTherapy {
+        complaintAndDuration: IcomplaintAndDurations,
+        antecedents: Iantecedents,
+        development: Idevelopment,
+        socioCultural: IsocioCultural,
+        importantObservations: IimportantObservations,
+    }
 };
