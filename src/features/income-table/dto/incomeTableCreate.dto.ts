@@ -25,52 +25,52 @@ class ChooseIncomeTableDTO {
     @ValidateNested()
     @Type(() => ChooseIncomeTableDTO)
     @ApiProperty({ type: ChooseIncomeTableDTO })
-    recognizesAndIdentifiesNumbers: string;
+    recognizesAndIdentifiesNumbers: ChooseIncomeTableDTO;
 
     @ValidateNested()
     @Type(() => ChooseIncomeTableDTO)
     @ApiProperty({ type: ChooseIncomeTableDTO })
-		directedWriting: string;
+		directedWriting: ChooseIncomeTableDTO;
 
     @ValidateNested()
     @Type(() => ChooseIncomeTableDTO)
     @ApiProperty({ type: ChooseIncomeTableDTO })
-    spontaneousWriting: string;
+    spontaneousWriting: ChooseIncomeTableDTO;
 
     @ValidateNested()
     @Type(() => ChooseIncomeTableDTO)
     @ApiProperty({ type: ChooseIncomeTableDTO })
-    readingAndWriting: string;
+    readingAndWriting: ChooseIncomeTableDTO;
 
     @ValidateNested()
     @Type(() => ChooseIncomeTableDTO)
     @ApiProperty({ type: ChooseIncomeTableDTO })
-    readingAndUnderstanding: string;
+    readingAndUnderstanding: ChooseIncomeTableDTO;
 
     @ValidateNested()
     @Type(() => ChooseIncomeTableDTO)
     @ApiProperty({ type: ChooseIncomeTableDTO })
-    textProductionRegistration: string;
+    textProductionRegistration: ChooseIncomeTableDTO;
 
     @ValidateNested()
     @Type(() => ChooseIncomeTableDTO)
     @ApiProperty({ type: ChooseIncomeTableDTO })
-    textualStructuring: string;
+    textualStructuring: ChooseIncomeTableDTO;
 
     @ValidateNested()
     @Type(() => ChooseIncomeTableDTO)
     @ApiProperty({ type: ChooseIncomeTableDTO })
-    oralTextProduction: string;
+    oralTextProduction: ChooseIncomeTableDTO;
 
     @ValidateNested()
     @Type(() => ChooseIncomeTableDTO)
     @ApiProperty({ type: ChooseIncomeTableDTO })
-    largerNumbers: string;
+    largerNumbers: ChooseIncomeTableDTO;
 
     @ValidateNested()
     @Type(() => ChooseIncomeTableDTO)
     @ApiProperty({ type: ChooseIncomeTableDTO })
-    troubleshooting: string;
+    troubleshooting: ChooseIncomeTableDTO;
 
 }
 
@@ -78,67 +78,67 @@ class incomeTablesPartTwoDTO {
   @ValidateNested()
   @Type(() => ChooseIncomeTableDTO)
   @ApiProperty({ type: ChooseIncomeTableDTO })
-  bodyScheme: string;
+  bodyScheme: ChooseIncomeTableDTO;
 
   @ValidateNested()
   @Type(() => ChooseIncomeTableDTO)
   @ApiProperty({ type: ChooseIncomeTableDTO })
-  sidePointing: string;
+  sidePointing: ChooseIncomeTableDTO;
 
   @ValidateNested()
   @Type(() => ChooseIncomeTableDTO)
   @ApiProperty({ type: ChooseIncomeTableDTO })
-  position: string;
+  position: ChooseIncomeTableDTO;
 
   @ValidateNested()
   @Type(() => ChooseIncomeTableDTO)
   @ApiProperty({ type: ChooseIncomeTableDTO })
-  direction: string;
+  direction: ChooseIncomeTableDTO;
 
   @ValidateNested()
   @Type(() => ChooseIncomeTableDTO)
   @ApiProperty({ type: ChooseIncomeTableDTO })
-  space: string;
+  space: ChooseIncomeTableDTO;
 
   @ValidateNested()
   @Type(() => ChooseIncomeTableDTO)
   @ApiProperty({ type: ChooseIncomeTableDTO })
-  size: string;
+  size: ChooseIncomeTableDTO;
 
   @ValidateNested()
   @Type(() => ChooseIncomeTableDTO)
   @ApiProperty({ type: ChooseIncomeTableDTO })
-  quantity: string;
+  quantity: ChooseIncomeTableDTO;
 
   @ValidateNested()
   @Type(() => ChooseIncomeTableDTO)
   @ApiProperty({ type: ChooseIncomeTableDTO })
-  shape: string;
+  shape: ChooseIncomeTableDTO;
 
   @ValidateNested()
   @Type(() => ChooseIncomeTableDTO)
   @ApiProperty({ type: ChooseIncomeTableDTO })
-  visualDiscrimination: string;
+  visualDiscrimination: ChooseIncomeTableDTO;
 
   @ValidateNested()
   @Type(() => ChooseIncomeTableDTO)
   @ApiProperty({ type: ChooseIncomeTableDTO })
-  hearingDiscrimination: string;
+  hearingDiscrimination: ChooseIncomeTableDTO;
 
   @ValidateNested()
   @Type(() => ChooseIncomeTableDTO)
   @ApiProperty({ type: ChooseIncomeTableDTO })
-  verbalizationOfWords: string;
+  verbalizationOfWords: ChooseIncomeTableDTO;
 
   @ValidateNested()
   @Type(() => ChooseIncomeTableDTO)
   @ApiProperty({ type: ChooseIncomeTableDTO })
-  synthesisAnalysis: string;
+  synthesisAnalysis: ChooseIncomeTableDTO;
 
   @ValidateNested()
   @Type(() => ChooseIncomeTableDTO)
   @ApiProperty({ type: ChooseIncomeTableDTO })
-  fineMotorCoordination: string;
+  fineMotorCoordination: ChooseIncomeTableDTO;
 }
 
   export class CreateTableDto {
@@ -150,6 +150,6 @@ class incomeTablesPartTwoDTO {
 	@ValidateNested()
     @Type(() => incomeTablesPartTwoDTO)
     @ApiProperty({ type: incomeTablesPartTwoDTO })
-    incomeTablesPartTwo: incomeTablesPartTwoDTO;
+    GroupB: incomeTablesPartTwoDTO;
   
   }

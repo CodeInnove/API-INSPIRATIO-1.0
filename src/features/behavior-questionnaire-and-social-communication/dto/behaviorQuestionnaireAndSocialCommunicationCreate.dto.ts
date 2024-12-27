@@ -5,11 +5,11 @@ import { Type } from 'class-transformer';
 class AnswerAsqDTO {
     @IsNotEmpty()
     @ApiProperty()
-    yes: string;
+    yes: number;
 
     @IsNotEmpty()
     @ApiProperty()
-    no: string;
+    no: number;
   }
 
 class QuestionsAsqDTO{
@@ -232,7 +232,7 @@ class ScoreAsqDTO {
 
     @IsNotEmpty()
     @ApiProperty()
-    resultTotalAsq: number;
+    resultTotalAsq: ScoreAsqDTO;
 
 }
 
@@ -241,5 +241,12 @@ export class CreateBehaviorQuestionnaireAndSocialCommunicationDto {
   @Type(() => QuestionsAsqDTO)
   @ApiProperty({ type: QuestionsAsqDTO })
   questions: QuestionsAsqDTO;
+
+  /*@ValidateNested()
+  @Type(() => TotalResultAsqDTO)
+  @ApiProperty({ type: TotalResultAsqDTO })
+  TotalResultAsqDTO: TotalResultAsqDTO;
+*/
+
 
 }

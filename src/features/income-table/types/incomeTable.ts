@@ -1,34 +1,47 @@
-export interface IIncomeTable{
-    
-    incomeTablesPartOne:{
-        recognizesAndIdentifiesLetters: string;
-        recognizesAndIdentifiesNumbers: string;
-        directedWriting: string;
-        spontaneousWriting: string;
-        readingAndWriting: string;
-        readingAndUnderstanding: string;
-        textProductionRegistration: string;
-        textualStructuring: string;
-        oralTextProduction: string;
-        largerNumbers: string;
-        troubleshooting: string;
-    };
+export interface IIncomeTablesPartOne{
+        recognizesAndIdentifiesLetters: IIncomeTableResponse,
+        recognizesAndIdentifiesNumbers: IIncomeTableResponse,
+        directedWriting: IIncomeTableResponse,
+        spontaneousWriting: IIncomeTableResponse,
+        readingAndWriting: IIncomeTableResponse,
+        readingAndComprehension: IIncomeTableResponse,
+        textProductionRecord: IIncomeTableResponse,
+        textualStructuring: IIncomeTableResponse,
+        oralTextProduction: IIncomeTableResponse,
+        numbersGreaterMagnitude: IIncomeTableResponse,
+        problemSolving: IIncomeTableResponse,
+   
+}
 
-
-
-    incomeTablesPartTwo:{
-        bodyScheme: string;
-        sidePointing: string;
-        position: string;
-        direction: string;
-        space: string;
-        size: string;
-        quantity: string;
-        shape: string;
-        visualDiscrimination: string;
-        hearingDiscrimination: string;
-        verbalizationOfWords: string;
-        synthesisAnalysis: string;
-        fineMotorCoordination: string;
+export interface IIncomeTablesPartTwo {
+        bodyScheme: IIncomeTableResponse;
+        sidePointing: IIncomeTableResponse;
+        position: IIncomeTableResponse;
+        direction: IIncomeTableResponse;
+        space: IIncomeTableResponse;
+        size: IIncomeTableResponse;
+        quantity: IIncomeTableResponse;
+        shape: IIncomeTableResponse;
+        visualDiscrimination: IIncomeTableResponse;
+        hearingDiscrimination: IIncomeTableResponse;
+        verbalizationOfWords: IIncomeTableResponse;
+        synthesisAnalysis: IIncomeTableResponse;
+        fineMotorCoordination: IIncomeTableResponse;
     }
-};
+
+
+export interface IIncomeTable {
+    doctor: string,
+    patient: string,
+    speciality: string,
+    incomeTablesPartOne: IIncomeTablesPartOne,
+    incomeTablesPartTwo: IIncomeTablesPartTwo,
+    
+}
+
+export interface IIncomeTableResponse {
+
+    acquired: boolean,
+    notAcquired: boolean,
+    inDevelopment: boolean, 
+}
