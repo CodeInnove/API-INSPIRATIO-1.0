@@ -4,7 +4,7 @@ import { CreateScaleAsrsDTO } from "./dto/scaleASRSCreate.dto";
 import { UpdateScaleAsrDto } from "./dto/scaleASRSUpdate.dto";
 import { ScaleAsrsService } from "./scaleASRS.service";
 
-@ApiTags('Scale ASRS')
+@ApiTags('ScaleASRS')
 @Controller('scale-asrs')
 export class ScaleASRSController {
   constructor(private readonly scaleAsrService: ScaleAsrsService) {}

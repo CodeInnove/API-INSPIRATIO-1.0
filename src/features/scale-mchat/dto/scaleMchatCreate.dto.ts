@@ -1,5 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsNotEmpty, ValidateNested } from 'class-validator';
+import { IsBoolean, IsNotEmpty, ValidateNested } from 'class-validator';
 import { Type } from 'class-transformer';
 
 class ChooseScaleMchatDTO {
@@ -13,120 +13,120 @@ class ChooseScaleMchatDTO {
   }
 
   class QuestionsScaleMchatDTO {
-    @ValidateNested()
-    @Type(() => ChooseScaleMchatDTO)
-    @ApiProperty({ type: ChooseScaleMchatDTO })
-    question1: ChooseScaleMchatDTO;
+    @ApiProperty()
+  @IsNotEmpty()
+  @IsBoolean()
+  childLikesToSwing: boolean;
 
-    @ValidateNested()
-    @Type(() => ChooseScaleMchatDTO)
-    @ApiProperty({ type: ChooseScaleMchatDTO })
-    question2: ChooseScaleMchatDTO;
+  @ApiProperty()
+  @IsNotEmpty()
+    @IsBoolean()
+  hasInterestInOtherChildren: boolean;
 
-    @ValidateNested()
-    @Type(() => ChooseScaleMchatDTO)
-    @ApiProperty({ type: ChooseScaleMchatDTO })
-    question3: ChooseScaleMchatDTO;
+  @ApiProperty()
+  @IsNotEmpty()
+    @IsBoolean()
+  likesToClimbOnThings: boolean;
 
-    @ValidateNested()
-    @Type(() => ChooseScaleMchatDTO)
-    @ApiProperty({ type: ChooseScaleMchatDTO })
-    question4: ChooseScaleMchatDTO;
+  @ApiProperty()
+  @IsNotEmpty()
+  @IsBoolean()
+  likesToPlayHideAndSeek: boolean;
 
-    @ValidateNested()
-    @Type(() => ChooseScaleMchatDTO)
-    @ApiProperty({ type: ChooseScaleMchatDTO })
-    question5: ChooseScaleMchatDTO;
+  @ApiProperty()
+  @IsNotEmpty()
+    @IsBoolean()
+  hasPlayedPretend: boolean;
 
-    @ValidateNested()
-    @Type(() => ChooseScaleMchatDTO)
-    @ApiProperty({ type: ChooseScaleMchatDTO })
-    question6: ChooseScaleMchatDTO;
+  @ApiProperty()
+  @IsNotEmpty()
+    @IsBoolean()
+  hasUsedIndexFingerToPointToAskForSomething: boolean;
 
-    @ValidateNested()
-    @Type(() => ChooseScaleMchatDTO)
-    @ApiProperty({ type: ChooseScaleMchatDTO })
-    question7: ChooseScaleMchatDTO;
+    @ApiProperty()
+    @IsNotEmpty()
+    @IsBoolean()
+  hasUsedIndexFingerToPointToIndicateInterest: boolean;
 
-    @ValidateNested()
-    @Type(() => ChooseScaleMchatDTO)
-    @ApiProperty({ type: ChooseScaleMchatDTO })
-    question8: ChooseScaleMchatDTO;
+    @ApiProperty()
+    @IsNotEmpty()
+    @IsBoolean()
+  canPlayCorrectlyWithSmallToys: boolean;
 
-    @ValidateNested()
-    @Type(() => ChooseScaleMchatDTO)
-    @ApiProperty({ type: ChooseScaleMchatDTO })
-    question9: ChooseScaleMchatDTO;
+    @ApiProperty()
+    @IsNotEmpty()
+    @IsBoolean()
+    hasBroughtObjectsToYouToShowThem: boolean;
 
-    @ValidateNested()
-    @Type(() => ChooseScaleMchatDTO)
-    @ApiProperty({ type: ChooseScaleMchatDTO })
-    question10: ChooseScaleMchatDTO;
+  @ApiProperty()
+  @IsNotEmpty()
+    @IsBoolean()
+  looksAtYouInTheEyesForMoreThanASecondOrTwo: boolean;
 
-    @ValidateNested()
-    @Type(() => ChooseScaleMchatDTO)
-    @ApiProperty({ type: ChooseScaleMchatDTO })
-    question11: ChooseScaleMchatDTO;
+  @ApiProperty()
+    @IsNotEmpty()
+    @IsBoolean()
+  hasSeemedVerySensitiveToNoise: boolean;
 
-    @ValidateNested()
-    @Type(() => ChooseScaleMchatDTO)
-    @ApiProperty({ type: ChooseScaleMchatDTO })
-    question12: ChooseScaleMchatDTO;
+  @ApiProperty()
+  @IsNotEmpty()
+    @IsBoolean()
+  smilesInResponseToYourFacialExpressionsOrSmile: boolean;
 
-    @ValidateNested()
-    @Type(() => ChooseScaleMchatDTO)
-    @ApiProperty({ type: ChooseScaleMchatDTO })
-    question13: ChooseScaleMchatDTO;
+  @ApiProperty()
+  @IsNotEmpty()
+    @IsBoolean()
+  imitatesYou: boolean;
 
-    @ValidateNested()
-    @Type(() => ChooseScaleMchatDTO)
-    @ApiProperty({ type: ChooseScaleMchatDTO })
-    question14: ChooseScaleMchatDTO;
+  @ApiProperty()
+  @IsNotEmpty()
+    @IsBoolean()
+  respondsOrLooksWhenYouCallHerByName: boolean;
 
-    @ValidateNested()
-    @Type(() => ChooseScaleMchatDTO)
-    @ApiProperty({ type: ChooseScaleMchatDTO })
-    question15: ChooseScaleMchatDTO;
+    @ApiProperty()
+    @IsNotEmpty()
+    @IsBoolean()
+    doesChildFollowYourGazeWhenYouPoint: boolean;
 
-    @ValidateNested()
-    @Type(() => ChooseScaleMchatDTO)
-    @ApiProperty({ type: ChooseScaleMchatDTO })
-    question16: ChooseScaleMchatDTO;
+    @ApiProperty()
+    @IsNotEmpty()
+    @IsBoolean()
+  canWalk: boolean;
 
-    @ValidateNested()
-    @Type(() => ChooseScaleMchatDTO)
-    @ApiProperty({ type: ChooseScaleMchatDTO })
-    question17: ChooseScaleMchatDTO;
+    @ApiProperty()
+    @IsNotEmpty()
+    @IsBoolean()
+  looksAtThingsYouAreLookingAt: boolean;
 
-    @ValidateNested()
-    @Type(() => ChooseScaleMchatDTO)
-    @ApiProperty({ type: ChooseScaleMchatDTO })
-    question18: ChooseScaleMchatDTO;
+  @ApiProperty()
+  @IsNotEmpty()
+    @IsBoolean()
+    makesStrangeMovementsNearHisFace: boolean;
 
-    @ValidateNested()
-    @Type(() => ChooseScaleMchatDTO)
-    @ApiProperty({ type: ChooseScaleMchatDTO })
-    question19: ChooseScaleMchatDTO;
+  @ApiProperty()
+  @IsNotEmpty()
+    @IsBoolean()
+  triesToAttractYourAttentionToHisActivity: boolean;
 
-    @ValidateNested()
-    @Type(() => ChooseScaleMchatDTO)
-    @ApiProperty({ type: ChooseScaleMchatDTO })
-    question20: ChooseScaleMchatDTO;
+  @ApiProperty()
+  @IsNotEmpty()
+    @IsBoolean()
+  haveYouEverWonderedIfYourChildIsDeaf: boolean;
 
-    @ValidateNested()
-    @Type(() => ChooseScaleMchatDTO)
-    @ApiProperty({ type: ChooseScaleMchatDTO })
-    question21: ChooseScaleMchatDTO;
+  @ApiProperty()
+    @IsNotEmpty()
+    @IsBoolean()
+  understandsWhatPeopleSay: boolean;
 
-    @ValidateNested()
-    @Type(() => ChooseScaleMchatDTO)
-    @ApiProperty({ type: ChooseScaleMchatDTO })
-    question22: ChooseScaleMchatDTO;
+  @ApiProperty()
+  @IsNotEmpty()
+    @IsBoolean()
+  sometimesGetsSpaceyOrWalksWithoutDirection: boolean;
 
-    @ValidateNested()
-    @Type(() => ChooseScaleMchatDTO)
-    @ApiProperty({ type: ChooseScaleMchatDTO })
-    question23: ChooseScaleMchatDTO;
+  @ApiProperty()
+    @IsNotEmpty()
+    @IsBoolean()
+  looksAtYourFaceToCheckYourReactionWhenSeeingSomethingStrange: boolean;
 
   }
   export class CreateScaleMchatDto {

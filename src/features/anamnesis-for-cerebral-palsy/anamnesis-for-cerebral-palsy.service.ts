@@ -35,7 +35,7 @@ export class AnamnesisForCerebralPalsyService {
       }
     }
   
-    async updateAfl(id: string, afcp: UpdateAfcpDto) {
+    async update(id: string, afcp: UpdateAfcpDto) {
       try {
         return await this.afcpRepository.update(id, afcp);
       } catch (error) {
@@ -43,7 +43,7 @@ export class AnamnesisForCerebralPalsyService {
       }
     }
   
-    async deleteAfl(id: string){
+    async delete(id: string){
       try {
         return await this.afcpRepository.delete(id);
       } catch (error) {

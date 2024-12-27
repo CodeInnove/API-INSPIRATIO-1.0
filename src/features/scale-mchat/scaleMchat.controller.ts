@@ -1,8 +1,9 @@
-import { Body, Controller, Delete, Get, Param, Post, Put } from "@nestjs/common";
+import { Body, Controller, Delete, Get, Param, Post, Put, Query } from "@nestjs/common";
 import { ApiTags } from "@nestjs/swagger";
 import { CreateScaleMchatDto } from "./dto/scaleMchatCreate.dto";
 import { UpdateScaleMchatDto } from "./dto/scaleMchatUpdate.dto";
 import { ScaleMchatService } from "./scaleMchat.service";
+import { QueryScaleMchatDto } from "./dto/scaleMchatQuery";
 
 @ApiTags('Scale Mchat')
 @Controller('scale-mchat')
@@ -15,8 +16,8 @@ export class ScaleMchatController {
   }
 
   @Get()
-  findAll() {
-    return this.scaleMchatService.findAll();
+  findAll(@Query() query:QueryScaleMchatDto) {
+    return this.scaleMchatService.findAll(query);
   }
 
   @Get(':id')

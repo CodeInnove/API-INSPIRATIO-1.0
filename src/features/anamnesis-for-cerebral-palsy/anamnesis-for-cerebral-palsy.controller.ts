@@ -30,11 +30,11 @@ export class AfcpController {
 
   @Put(':id')
   async update(@Param() id: string, @Body() data: CreateAfcpDto) {
-    return await this.afcpService.updateAfl(id, data);
+    return await this.afcpService.update(id, data);
   }
 
   @Delete(':id')
   async delete(@Param() id: string) {
-    return await this.afcpService.deleteAfl(id);
+    return await this.afcpService.delete(id);
   }
 }
