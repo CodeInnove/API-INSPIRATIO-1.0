@@ -4,7 +4,7 @@ import { IAnamneseForCerebralPalsy } from 'src/features/anamnesis-for-cerebral-p
 
 export const AnamneseCerebralSchema = new Schema({
   _id: { type: Schema.Types.ObjectId, required: true, auto: true },
-  patientId: { type: Schema.Types.ObjectId, required: true, ref: 'Patient' },
+  patient: { type: Schema.Types.ObjectId, required: true, ref: 'Patient' },
   age: { type: Schema.Types.ObjectId, required: true, ref: 'Patient'},
   bitrhDate: { type: Schema.Types.ObjectId, required: true, ref: 'Patient'},
   date: { type: Date, required: true, },
@@ -147,9 +147,9 @@ export const AnamneseCerebralSchema = new Schema({
     intelligibilityOfSpeech: { type: String },
     chainingAndSequentialThinking: { type: String },
     linguisticMarkers: { type: String },
-    getsIrritatedWithGaseousLiquids: { type: String },
     generalPsychologicalState: { type: String },
-  }
+          getsIrritatedWithGaseousLiquids: { type: String },
+      }
 });
 
 export interface IAnamneseCerebralEntity extends Omit<IAnamneseForCerebralPalsy, '_id'>, Document {}
