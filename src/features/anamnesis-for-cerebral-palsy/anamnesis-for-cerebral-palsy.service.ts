@@ -3,8 +3,6 @@ import {CreateAfcpDto} from './dto/create-anamnesis-for-cerebral-palsy.dto';
 import { UpdateAfcpDto} from './dto/update-anamnesis-for-cerebral-palsy.dto';
 import { IAnamneseCerebralEntity } from 'src/entities/anamnesis-for-cerebral-palsy.entity';
 import { AfcpRepository } from './afcp.repository';
-import { query } from 'express';
-import { Query } from 'mongoose';
 import { QueryAfcpDto } from './dto/query-anamnesis-for-cerebral-palsy.dto';
 
 @Injectable()
