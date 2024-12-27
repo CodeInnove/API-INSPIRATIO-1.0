@@ -1,13 +1,15 @@
 import { Schema, Document } from 'mongoose';
-import { IAnamneseForCerebralPalsy } from 'src/features/anamnesis-for-cerebral-palsy/types/anamneseForCerebralPalsy';
+import { AnamnesisForCerebralPalsy } from 'src/features/anamnesis-for-cerebral-palsy/types/anamneseForCerebralPalsy';
  
 
 export const AnamneseCerebralSchema = new Schema({
   _id: { type: Schema.Types.ObjectId, required: true, auto: true },
-  patient: { type: Schema.Types.ObjectId, required: true, ref: 'Patient' },
-  age: { type: Schema.Types.ObjectId, required: true, ref: 'Patient'},
-  bitrhDate: { type: Schema.Types.ObjectId, required: true, ref: 'Patient'},
+  patient: { type: Schema.Types.ObjectId, required: true, ref: 'patient' },
+  doctor: { type: Schema.Types.ObjectId, required: true, ref: 'doctor' },
+  age: { type: Schema.Types.ObjectId, required: true, ref: 'patient'},
+  bitrhDate: { type: Schema.Types.ObjectId, required: true, ref: 'patient'},
   date: { type: Date, required: true, },
+  
 
   relevantEvents: { type: String },
   useOfMedications: { type: String },
@@ -152,4 +154,4 @@ export const AnamneseCerebralSchema = new Schema({
       }
 });
 
-export interface IAnamneseCerebralEntity extends Omit<IAnamneseForCerebralPalsy, '_id'>, Document {}
+export interface IAnamneseCerebralEntity extends Omit<AnamnesisForCerebralPalsy, '_id'>, Document {}
