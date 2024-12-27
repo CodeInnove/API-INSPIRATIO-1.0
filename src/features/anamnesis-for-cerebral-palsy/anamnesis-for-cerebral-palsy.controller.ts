@@ -14,7 +14,7 @@ export class AfcpController {
   ) {}
 
   @Post()
-  async create(@Body() data: CreateAfcpDto): Promise<IAnamneseCerebralEntity> {
+  async createAfcp(@Body() data: CreateAfcpDto): Promise<IAnamneseCerebralEntity> {
     return await this.afcpService.createAfcp(data);
   }
 
@@ -24,17 +24,17 @@ export class AfcpController {
   }
 
   @Get(':id')
-  async findById(@Param() id: string): Promise<IAnamneseCerebralEntity> {
+  async findById(@Param() id: string) {
     return await this.afcpService.findById(id);
   }
 
   @Put(':id')
-  async update(@Param() id: string, @Body() data: CreateAfcpDto): Promise<IAnamneseCerebralEntity> {
+  async update(@Param() id: string, @Body() data: CreateAfcpDto) {
     return await this.afcpService.updateAfl(id, data);
   }
 
   @Delete(':id')
-  async delete(@Param() id: string): Promise<IAnamneseCerebralEntity> {
+  async delete(@Param() id: string) {
     return await this.afcpService.deleteAfl(id);
   }
 }

@@ -37,7 +37,7 @@ export class AnamnesisForCerebralPalsyService {
       }
     }
   
-    async updateAfl(id: string, afcp: UpdateAfcpDto): Promise<IAnamneseCerebralEntity> {
+    async updateAfl(id: string, afcp: UpdateAfcpDto) {
       try {
         return await this.afcpRepository.update(id, afcp);
       } catch (error) {
