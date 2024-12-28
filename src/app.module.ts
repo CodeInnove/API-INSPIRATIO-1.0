@@ -33,6 +33,7 @@ import { AnamnesisSpeechTherapyModule } from './features/anamnesis-speech-therap
 import { AutisticTraitScalesModule } from './features/autistic-trait-scales/autisticTraitScales.module';
 import { SensoryProcessingMeasureModule } from './features/sensory-processing-measure/sensoryProcessingMeasure.module';
 import { SensoryProcessingMeasureSchoolModule } from './features/sensory-processing-measure-school/sensoryProcessingMeasureSchool.module';
+import { SensoryProcessingMeasurePreschoolModule } from './features/sensory-processing-measure-preschool/sensoryProcessingMeasurePreschool.module';
 
 
 @Module({
@@ -107,6 +108,7 @@ import { SensoryProcessingMeasureSchoolModule } from './features/sensory-process
     AutisticTraitScalesModule,
     SensoryProcessingMeasureModule,
     SensoryProcessingMeasureSchoolModule,
+    SensoryProcessingMeasurePreschoolModule,
   ],
   controllers: [AppController],
   providers: [AppService],
