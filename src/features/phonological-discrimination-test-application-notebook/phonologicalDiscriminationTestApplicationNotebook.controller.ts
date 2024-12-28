@@ -5,7 +5,7 @@ import { UpdatePhonologicalDiscriminationTestApplicationNotebookDto } from "./dt
 import { PhonologicalDiscriminationTestApplicationNotebookService } from "./phonologicalDiscriminationTestApplicationNotebook.service";
 
 @ApiTags('Phonological Discrimination Test Application Notebook')
-@Controller('scale-asrs')
+@Controller('phonological-discrimination-test-application-notebook')
 export class PhonologicalDiscriminationTestApplicationNotebookController {
   constructor(private readonly phonologicalDiscriminationTestApplicationNotebookService: PhonologicalDiscriminationTestApplicationNotebookService) {}
 
