@@ -1,5 +1,5 @@
-export interface IPortageGuidetoPreschoolEducation {
-    socialization0To1Year: {
+//export interface IPortageGuidetoPreschoolEducation {
+    export interface ISocialization0To1Year {
         observesAPersonMovingInTheirVisualField: number,
         smilesInResponseToAdultAttention: number,
         vocalizesInResponseToAttention: number,
@@ -30,7 +30,7 @@ export interface IPortageGuidetoPreschoolEducation {
        imitatesMovementsOfOtherChildrenWhilePlaying: number
     }
      
-   socialization1To2Years: {
+   export interface ISocialization1To2Years {
       imitatesAnAdultInASimpleTask: number,
      playsNextToAnotherChildEachPerformingDifferentTasks: number,
       takesPartInAPlayWithAnotherChildFor2To5Minutes: number,
@@ -46,8 +46,8 @@ export interface IPortageGuidetoPreschoolEducation {
       playsWith2Or3ChildrenOfSameAge: number,
      sharesAnObjectOrFoodWithAnotherChild: number,
      greetsPeersOrAdultsWhenReminded: number
-   },
-    socialization2To3Years: {
+   }
+    export interface ISocialization2To3Years {
       obeysParentsOrdersAtLeastHalfTheTime: number,
       seeksOrTakesAnObjectOrPersonWhenAsked: number,
       paysAttentionToStoryOrMusicFor5To10Minutes: number,
@@ -56,8 +56,8 @@ export interface IPortageGuidetoPreschoolEducation {
         playsAtWearingAdultsClothes: number,
      makesAChoiceWhenAsked: number,
        demonstratesUnderstandingOfFeelingsExpressingThem: number
-    },
-    socialization3To4Years: {
+    }
+    export interface ISocialization3To4Years {
       singsAndDancesWhenHearingMusic: number,
      followsRulesOfAGameImitatingActionsOfOtherChildren: number,
      greetsFamilyMembersWithoutBeingReminded: number,
@@ -70,8 +70,8 @@ export interface IPortageGuidetoPreschoolEducation {
      obeysAdultsOrders75PercentOfTheTime: number,
        staysInItsOwnYardOrGarden: number,
       playsNearOtherChildrenTalkingToThemWhileWorkingOnOwnProject30Minutes: number
-    },
-    socialization4To5Years: {
+    }
+    export interface ISocialization4To5Years {
       asksForHelpWhenHavingDifficulties: number,
       contributesToAdultConversation: number,
       repeatsRhymesSongsOrDancesForOthers: number,
@@ -81,8 +81,8 @@ export interface IPortageGuidetoPreschoolEducation {
      playsWith2To3ChildrenFor20MinutesInAnActivityInvolvingCooperation: number,
      whenInPublicPresentsASociallyAcceptableBehavior: number,
     asksPermissionToUseOthersObjects75PercentOfTheTime: number
-    },
-    socialization5To6Years: {
+    }
+    export interface ISocialization5To6Years {
       expressesItsFeelings: number,
       playsWith4To5ChildrenInCooperativeActivityFor20MinutesWithoutSupervision: number,
      explainsToOthersTheRulesOfTheGameOrActivity: number,
@@ -94,8 +94,8 @@ export interface IPortageGuidetoPreschoolEducation {
      plansAndBuildsUsingSimpleTools: number,
      setsGoalsForItselfAndPerformsActivityToAchieveThem: number,
       dramatizesExcerptsFromStoriesPlayingARoleOrUsingPuppets: number
-    },
-    language0To1Years: {
+    }
+    export interface ILanguage0To1Years {
        repeatsSoundsMadeByOtherPeople: number,
        repeatsSameSyllable2To3Times: number,
        respondsToGesturesWithGestures: number,
@@ -106,8 +106,8 @@ export interface IPortageGuidetoPreschoolEducation {
      imitatesIntonationPatternsOfOthersVoice: number,
     usesAWordFunctionallyToIndicateObjectsOrPeople: number,
      vocalizesInResponseToOtherPeoplesSpeech: number
-    },
-    language1To2Years: {
+    }
+    export interface ILanguage1To2Years {
        says5DifferentWords: number,
      asksForMore: number,
       saysDone: number,
@@ -126,8 +126,8 @@ export interface IPortageGuidetoPreschoolEducation {
       asksQuestionsVaryingIntonationOfVoice: number,
      names3BodyPartsOnADollOrAnotherPerson: number,
      respondsToYesNoQuestions: number
-    },
-   language2To3Years: {
+    }
+    export interface ILanguage2To3Years {
      combinesNounsOrAdjectivesAndNounsIn2WordSentences: number,
       combinesNounAndVerbIn2WordSentences: number,
      usesAWordToIndicateThatWantsToGoToTheBathroom: number,
@@ -158,8 +158,8 @@ export interface IPortageGuidetoPreschoolEducation {
        usesNounsThatIndicateAGroupOrCategory: number,
       usesTheVerbsToBeToExistAndToHaveInThePresentWithFewErrors: number,
       saysIfObjectsAreOpenOrClosed: number
-    },
-    language3To4Years: {
+    }
+    export interface ILanguage3To4Years {
      expressesDiminutivesAndAugmentativesWhenSpeaking: number,
       paysAttentionFor5MinutesToAReadStory: number,
      obeysSequenceOf2UnrelatedOrders: number,
@@ -172,8 +172,8 @@ export interface IPortageGuidetoPreschoolEducation {
        usesMasculineAndFeminineAppropriatelyInSpeech: number,
       usesImperativeFormsOfVerbsWhenAskingForFavors: number,
        tells2FactsInOrderOfOccurrence: number
-      },
-    language4To5Years: {
+      }
+      export interface ILanguage4To5Years {
       obeysASequenceInvolving3Orders: number,
      demonstratesUnderstandingOfReflexiveVerbsUsingThemOccasionallyExHeGotHurt: number,
       managesToIdentifyObjectsFiguresThatFormAPairUponRequest: number,
@@ -189,8 +189,8 @@ export interface IPortageGuidetoPreschoolEducation {
      saysIfTwoWordsRhymeOrNot: number,
       usesComplexSentencesComposedBySubordination: number,
        saysIfASoundIsLoudOrSoft: number
-      },
-    language5To6Years: {
+      }
+      export interface ILanguage5To6Years {
       managesToIndicateSomeManyAndSeveralElements: number,
        saysOwnAddress: number,
        saysOwnPhoneNumber: number,
@@ -205,8 +205,8 @@ export interface IPortageGuidetoPreschoolEducation {
       respondsToTheQuestionWhatHappensIf: number,
      usesYesterdayAndTomorrowCorrectly: number,
       asksTheMeaningOfNewOrKnownQuestions: number
-    },
-    cognition0To1Year: {
+    }
+    export interface ICognition0To1Year {
       removesAClothFromFaceThatObscuresVision: number,
        looksForObjectThatHasBeenRemovedFromItsVisualField: number,
       removesAnObjectFromAReceptacleByPuttingHandInsideIt: number,
@@ -221,8 +221,8 @@ export interface IPortageGuidetoPreschoolEducation {
       removesACircleFromABoardByImitation: number,
       placesARoundPinInAPinBoardWhenRequested: number,
      performsSimpleGesturesWhenRequested: number
-    },
-    cognition1To2Years: {
+    }
+    export interface ICognition1To2Years {
       removes6ObjectsFromAReceptacleOneAtATime: number,
     pointsToAPartOfTheBody: number,
     stacks3BlocksGivenTheOrder: number,
@@ -233,8 +233,8 @@ export interface IPortageGuidetoPreschoolEducation {
       matchesObjectsWithTheFigureOfTheSameName: number,
      pointsToTheNamedFigure: number,
      turnsThePagesOfABook23AtATimeToFindTheNamedFigure: number
-    },
-   cognition2To3Years: {
+    }
+    export interface ICognition2To3Years {
       findsACertainBookWhenRequested: number,
      completesA3PieceJigsawPuzzle: number,
      names4CommonObjectsInFigures: number,
@@ -251,8 +251,8 @@ export interface IPortageGuidetoPreschoolEducation {
      namesActionsInFiguresWhatIsDoing: number,
        matchesGeometricShapeWithTheFigureOfTheSame: number,
       stacks5OrMoreRingsOnARodInOrder: number
-    },
-    cognition3To4Years: {
+    }
+    export interface ICognition3To4Years {
       namesObjectsAsBeingBigOrSmall: number,
      pointsTo10PartsOfTheBodyWhenRequested: number,
     pointsToBoyAndGirlGivenTheOrder: number,
@@ -277,8 +277,8 @@ export interface IPortageGuidetoPreschoolEducation {
      drawsASquareImitatingAnAdult: number,
      names3ColorsBeingRequested: number,
       names3GeometricShapesSquareTriangleAndCircle: number
-    },
-   cognition4To5Years: {
+    }
+    export interface ICognition4To5Years {
       picksUpFrom1To5ObjectsWhenRequested: number,
     names5DifferentTextures: number,
     copiesATriangleWhenRequested: number,
@@ -301,8 +301,8 @@ export interface IPortageGuidetoPreschoolEducation {
        namesOrPointsToTheMissingPartOfTheFigure: number,
      countsFrom1To20: number,
     identifiesTheObjectThatIsPlacedInTheMiddleInFirstAndLastPlace: number
-    },
-    cognition5To6Years: {
+    }
+    export interface ICognition5To6Years {
      countsUpTo20ObjectsAndAnswersAppropriatelyToTheQuestionHowManyDidYouCount: number,
      names10Numerals: number,
       identifiesWhichIsItsLeftAndWhichIsItsRight: number,
@@ -325,8 +325,8 @@ export interface IPortageGuidetoPreschoolEducation {
        predictsWhatWillOccur: number,
       pointsToWholeAndHalfObjects: number,
       countsFromMemoryFrom1To100AskToStopAt40AndContinueAt80IfNoErrorsUntil40: number
-    },
-   selfCare0To1Year: {
+    }
+    export interface ISelfCare0To1Year {
     sucksAndSwallowsLiquids: number,
     eatsPorridgeOrSoup: number,
        extendsHandsTowardsBabyBottleTryingToGrabIt: number,
@@ -340,8 +340,8 @@ export interface IPortageGuidetoPreschoolEducation {
     holdsTheMugWithBothHandsAndDrinks: number,
      bringsASpoonFullOfFoodToMouthWithHelp: number,
        stretchesArmsAndLegsWhenBeingDressed: number
-   },
-   selfCare1To2Years: {
+   }
+   export interface ISelfCare1To2Years {
       eatsWithSpoonIndependently: number,
        holdsMugWithOneHandAndDrinks: number,
        putsHandInWaterAndPatsFaceWithWetHandsImitatingSomeone: number,
@@ -354,8 +354,8 @@ export interface IPortageGuidetoPreschoolEducation {
       takesOffTrousersWhenUnbuttoned: number,
      pullsALargeZipperUpAndDown: number,
       usesWordsOrGesturesIndicatingNeedToGoToTheBathroom: number
-   },
-   selfCare2To3Years: {
+   }
+   export interface ISelfCare2To3Years {
     eatsAloneUsingSpoonOrMugSpillingALittleFoodOrLiquid: number,
      whenGivenATowelDriesHandsAndFaceWithHelp: number,
        sucksLiquidFromTheGlassOrMugUsingAStraw: number,
@@ -383,8 +383,8 @@ export interface IPortageGuidetoPreschoolEducation {
       putsOnSocks: number,
        wearsCoatJacketOrShirt: number,
       identifiesTheFrontPartOfClothes: number
-    },
-    selfCare3To4Years: {
+    }
+    export interface ISelfCare3To4Years {
      feedsItselfAloneForEntireMeal: number,
     dressesItselfAloneNeedingHelpOnlyWhenThereAreJacketsOrTShirtsWithClosedCollarsOrButtonsAndFasteners: number,
       wipesNoseWhenReminded: number,
@@ -400,8 +400,8 @@ export interface IPortageGuidetoPreschoolEducation {
     putsOnBoots: number,
       unbuttonsLargeButtons: number,
     buttonsLargeButtons: number
-    },
-    selfCare4To5Years: {
+    }
+    export interface ISelfCare4To5Years {
      cleansWhatItSpilledOnOwn: number,
      avoidsPoisonAndAllHarmfulSubstances: number,
     unbuttonsOwnClothes: number,
@@ -425,8 +425,8 @@ export interface IPortageGuidetoPreschoolEducation {
        walksAroundTheNeighborhoodWithoutConstantSupervision: number,
       threadsLacesIntoShoes: number,
      tiesOrLacesShoelaces: number
-      },
-    selfCare5To6Years: {
+      }
+      export interface ISelfCare5To6Years {
      isResponsibleForAWeeklyTaskAndPerformsItWhenReminded: number,
       selectsAppropriateClothingForClimateAndOccasion: number,
      stopsOnTheSidewalkLooksBothWaysAndCrossesTheStreetWithoutNeedingToBeReminded: number,
@@ -442,8 +442,8 @@ export interface IPortageGuidetoPreschoolEducation {
       picksUpATrayWithFoodCarryingItAndPlacingItOnTheTable: number,
      tiesTheLacesOnJacketsWithHood: number,
     fastensTheCarSeatBelt: number
-    },
-    motorDevelopment0To1Year: {
+    }
+    export interface IMotorDevelopment0To1Year {
       reachesForAnObjectPlacedInFrontOfIt15To20Cm: number,
       grabsAnObjectPlacedInFrontOfIt8Cm: number,
        extendsArmsTowardAnObjectInFrontOfItAndGrabsIt: number,
@@ -489,8 +489,8 @@ export interface IPortageGuidetoPreschoolEducation {
     clapsHands: number,
        walksWithMinimumSupport: number,
      takesAFewStepsWithoutSupport: number
-      },
-    motorDevelopment1To2Years: {
+      }
+      export interface IMotorDevelopment1To2Years {
       climbsStairsCrawling: number,
      placesItselfStandingWhileSitting: number,
      rollsABallImitatingAnAdult: number,
@@ -509,8 +509,8 @@ export interface IPortageGuidetoPreschoolEducation {
      climbsStairsWithHelp: number,
       bendsTheBodyWithoutFallingToPickUpObjectsOnTheFloor: number,
     imitatesACircularMovement: number
-      },
-    motorDevelopment2To3Years: {
+      }
+      export interface IMotorDevelopment2To3Years {
         threads4LargeBeadsOnACordIn2Minutes: number,
     turnsLatchesOrDoorknobsOnDoors: number,
       jumpsInTheSamePlaceWithBothFeet: number,
@@ -528,8 +528,8 @@ export interface IPortageGuidetoPreschoolEducation {
     holdsThePencilBetweenTheThumbAndIndexFingerRestingItOnTheMiddleFinger:number,
       doesForwardTumbleWithHelp:number,
    hammersToFit5PinsInTheirHoles:number
-    },
-    motorDevelopment3To4Years:{
+    }
+    export interface IMotorDevelopment3To4Years {
        makesAPuzzleOf3Pieces:number,
       cutsSomethingIntoPiecesWithScissors:number,
        jumpsFromAHeightOf20Cm:number,
@@ -546,8 +546,8 @@ export interface IPortageGuidetoPreschoolEducation {
     drawsFiguresFollowingOutlinesOrDottedLines:number,
      cutsAlongAStraightLine20CmMovingSlightlyAwayFromTheLine:number
 
-    },
-    motorDevelopment4To5Years:{
+    }
+    export interface IMotorDevelopment4To5Years {
     standsOnOneFootWithoutSupportFor4To8Seconds:number,
     changesDirectionWhenRunning:number,
       walksOnABeamOrBoardMaintainingBalance:number,
@@ -564,8 +564,8 @@ export interface IPortageGuidetoPreschoolEducation {
     cutsACircleIn5Cm:number,
   drawsSimpleEasilyIdentifiableFiguresExHouse:number,
    cutsAndPastesSimpleShapes:number
-    },
-    motorDevelopment5To6Years:{
+    }
+    export interface IMotorDevelopment5To6Years {
       writesUppercaseLettersIsolatedAndLargeAnywhereOnThePaper:number,
       walksOnABoardBackwardsForwardsAndSidewaysMaintainingBalance:number,
    walksWhileHopping:number,
@@ -596,4 +596,35 @@ export interface IPortageGuidetoPreschoolEducation {
      stopsOnOneFootWithoutSupportWithEyesClosedFor10Seconds:number,
   hangsFor10SecondsOnAHorizontalBar:number
     }
+
+export interface IPgpse {
+  socialization0To1Year: ISocialization0To1Year,
+  socialization1To2Years: ISocialization1To2Years,
+  socialization2To3Years: ISocialization2To3Years,
+  socialization3To4Years: ISocialization3To4Years,
+  socialization4To5Years: ISocialization4To5Years,
+  socialization5To6Years: ISocialization5To6Years,
+  language0To1Years: ILanguage0To1Years,
+  language1To2Years: ILanguage1To2Years,
+  language2To3Years: ILanguage2To3Years,
+  language3To4Years: ILanguage3To4Years,
+  language4To5Years: ILanguage4To5Years,
+  language5To6Years: ILanguage5To6Years,
+  cognition0To1Year: ICognition0To1Year,
+  cognition1To2Years: ICognition1To2Years,
+  cognition2To3Years: ICognition2To3Years,
+  cognition3To4Years: ICognition3To4Years,
+  cognition4To5Years: ICognition4To5Years,
+  cognition5To6Years: ICognition5To6Years,
+  selfCare0To1Year: ISelfCare0To1Year,
+  selfCare1To2Years: ISelfCare1To2Years,
+  selfCare2To3Years: ISelfCare2To3Years,
+  selfCare3To4Years: ISelfCare3To4Years,
+  selfCare4To5Years: ISelfCare4To5Years,
+  selfCare5To6Years: ISelfCare5To6Years,
+  motorDevelopment0To1Year: IMotorDevelopment0To1Year,
+  motorDevelopment1To2Years: IMotorDevelopment1To2Years,
+  motorDevelopment2To3Years: IMotorDevelopment2To3Years,
+  motorDevelopment3To4Years: IMotorDevelopment3To4Years,
+  motorDevelopment4To5Years: IMotorDevelopment4To5Years,
 }
