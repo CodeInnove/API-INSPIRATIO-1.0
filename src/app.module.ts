@@ -31,6 +31,7 @@ import { AnamnesisForCerebralPalsyModule } from './features/anamnesis-for-cerebr
 import { PortageGuidetoPreschoolEducationModule } from './features/portage-guideto-preschool-education/portage-guideto-preschool-education.module';
 import { AnamnesisSpeechTherapyModule } from './features/anamnesis-speech-therapy/anamnesisSpeechTherapy.module';
 import { AutisticTraitScalesModule } from './features/autistic-trait-scales/autisticTraitScales.module';
+import { SensoryProcessingMeasureModule } from './features/sensory-processing-measure/sensoryProcessingMeasure.module';
 
 
 @Module({
@@ -103,6 +104,7 @@ import { AutisticTraitScalesModule } from './features/autistic-trait-scales/auti
     PortageGuidetoPreschoolEducationModule,
     AnamnesisSpeechTherapyModule,
     AutisticTraitScalesModule,
+    SensoryProcessingMeasureModule,
   ],
   controllers: [AppController],
   providers: [AppService],
