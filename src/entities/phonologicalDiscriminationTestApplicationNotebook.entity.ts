@@ -2,11 +2,11 @@ import { Schema, Document } from 'mongoose';
 import { IPhonologicalDiscriminationTestApplicationNotebook } from 'src/features/phonological-discrimination-test-application-notebook/entities/phonologicalDiscriminationTestApplicationNotebook';
 
 export const PhonologicalDiscriminationTestApplicationNotebookSchema = new Schema({
-  identification: {
+  /*identification: {
     patient: { type: Schema.Types.ObjectId, ref: "User" },
     dateOfApplication: { type: String, required: true },
     evaluator: {type: Schema.Types.ObjectId, ref: "User"}
-    },
+    },*/
   
   QuestionsPhonologicalDiscriminationTestApplicationNotebook:{
     question1: {
