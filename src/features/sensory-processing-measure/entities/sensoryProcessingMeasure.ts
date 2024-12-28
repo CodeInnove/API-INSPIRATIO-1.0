@@ -1,23 +1,7 @@
-export class ISensoryEvaluationForm {
-    parentInfo: IParentInfo;
-    childInfo: IChildInfo;
-    participationSocial: IParticipationSocial;
-    vision: IVision;
-    hearing: IHearing;
-    touch: ITouch;
-    smellAndTaste: ISmellAndTaste;
-    bodyAwareness: IBodyAwareness;
-    balanceAndMovement: IBalanceAndMovement;
-    planningAndIdeation: IPlanningAndIdeation;
-  }
-  
-  export class IParentInfo {
-    nameOrId: string;
+export class ISensoryProcessingMeasure {
+    nameParentOrId: string;
     relationshipWithChild: string;
     date: Date;
-  }
-  
-  export class IChildInfo {
     nameOrId: string;
     gender: 'M' | 'F';
     ageYears: number;

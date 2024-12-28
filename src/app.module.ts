@@ -32,6 +32,7 @@ import { PortageGuidetoPreschoolEducationModule } from './features/portage-guide
 import { AnamnesisSpeechTherapyModule } from './features/anamnesis-speech-therapy/anamnesisSpeechTherapy.module';
 import { AutisticTraitScalesModule } from './features/autistic-trait-scales/autisticTraitScales.module';
 import { SensoryProcessingMeasureModule } from './features/sensory-processing-measure/sensoryProcessingMeasure.module';
+import { SensoryProcessingMeasureSchoolModule } from './features/sensory-processing-measure-school/sensoryProcessingMeasureSchool.module';
 
 
 @Module({
@@ -105,6 +106,7 @@ import { SensoryProcessingMeasureModule } from './features/sensory-processing-me
     AnamnesisSpeechTherapyModule,
     AutisticTraitScalesModule,
     SensoryProcessingMeasureModule,
+    SensoryProcessingMeasureSchoolModule,
   ],
   controllers: [AppController],
   providers: [AppService],
