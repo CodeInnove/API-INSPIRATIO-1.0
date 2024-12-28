@@ -1,7 +1,7 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
 import { SensoryProcessingMeasureService } from './sensoryProcessingMeasure.service';
-import { CreateSensoryProcessingMeasureDto } from './dto/create-sensory-processing-measure.dto';
-import { UpdateSensoryProcessingMeasureDto } from './dto/update-sensory-processing-measure.dto';
+import { CreateSensoryProcessingMeasureDto } from './dto/createSensoryProcessingMeasure.dto';
+import { UpdateSensoryProcessingMeasureDto } from './dto/updateSensoryProcessingMeasure.dto';
 
 @Controller('sensory-processing-measure')
 export class SensoryProcessingMeasureController {

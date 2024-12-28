@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import { CreateSensoryProcessingMeasureDto } from './dto/create-sensory-processing-measure.dto';
-import { UpdateSensoryProcessingMeasureDto } from './dto/update-sensory-processing-measure.dto';
+import { CreateSensoryProcessingMeasureDto } from './dto/createSensoryProcessingMeasure.dto';
+import { UpdateSensoryProcessingMeasureDto } from './dto/updateSensoryProcessingMeasure.dto';
 
 @Injectable()
 export class SensoryProcessingMeasureService {
