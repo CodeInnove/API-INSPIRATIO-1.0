@@ -1,0 +1,50 @@
+import { IAutisticTraitsScales } from "./autisticTraitScales";
+import { ISocialInteractionDifficulty } from "./autisticTraitScales";
+import { IEnvironmentManipulation } from "./autisticTraitScales";
+import { IPeopleUsage } from "./autisticTraitScales";
+import { IChangeResistance } from "./autisticTraitScales";
+import { IRigidOrder } from "./autisticTraitScales";
+import { ILackOfEyeContact } from "./autisticTraitScales";
+import { IInexpressiveMimicry } from "./autisticTraitScales";
+import { ISleepDisorders } from "./autisticTraitScales";
+import { IEatingDisorders } from "./autisticTraitScales";
+import { ISphincterControlDifficulty } from "./autisticTraitScales";
+import { IObjectExploration } from "./autisticTraitScales";
+import { IInappropriateObjectUse } from "./autisticTraitScales";
+import { ILackOfAttention } from "./autisticTraitScales";
+import { ILackOfInterestInLearning } from "./autisticTraitScales";
+import { ILackOfInitiative } from "./autisticTraitScales";
+import { ILanguageAndCommunicationDisorders } from "./autisticTraitScales";
+import { ILackOfSkillsManifestation } from "./autisticTraitScales";
+import { IInappropriateReactionsToFrustration } from "./autisticTraitScales";
+import { ILackOfResponsibility } from "./autisticTraitScales";
+import { IHyperactivityOrHypoactivity } from "./autisticTraitScales";
+import { IStereotypedAndRepetitiveMovements } from "./autisticTraitScales";
+import { IDangerIgnorance } from "./autisticTraitScales";
+
+export interface IAts{
+    identificaion: IAutisticTraitsScales;
+    socialInteractionDifficulty: ISocialInteractionDifficulty;
+    environmentManipulation: IEnvironmentManipulation;
+    peopleUsage: IPeopleUsage;
+    changeResistance: IChangeResistance;
+    rigidOrder: IRigidOrder;
+    lackOfEyeContact: ILackOfEyeContact;
+    inexpressiveMimicry: IInexpressiveMimicry;
+    sleepDisorders: ISleepDisorders;
+    eatingDisorders: IEatingDisorders;
+    sphincterControlDifficulty: ISphincterControlDifficulty;
+    objectExploration: IObjectExploration;
+    inappropriateObjectUse: IInappropriateObjectUse;
+    lackOfAttention: ILackOfAttention;
+    lackOfInterestInLearning: ILackOfInterestInLearning;
+    lackOfInitiative: ILackOfInitiative;
+    languageAndCommunicationDisorders: ILanguageAndCommunicationDisorders;
+    lackOfSkillsManifestation: ILackOfSkillsManifestation;
+    inappropriateReactionsToFrustration: IInappropriateReactionsToFrustration;
+    lackOfResponsibility: ILackOfResponsibility;
+    hyperactivityOrHypoactivity: IHyperactivityOrHypoactivity;
+    stereotypedAndRepetitiveMovements: IStereotypedAndRepetitiveMovements;
+    dangerIgnorance: IDangerIgnorance;
+  
+  }
