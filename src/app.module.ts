@@ -34,6 +34,7 @@ import { AutisticTraitScalesModule } from './features/autistic-trait-scales/auti
 import { SensoryProcessingMeasureModule } from './features/sensory-processing-measure/sensoryProcessingMeasure.module';
 import { SensoryProcessingMeasureSchoolModule } from './features/sensory-processing-measure-school/sensoryProcessingMeasureSchool.module';
 import { SensoryProcessingMeasurePreschoolModule } from './features/sensory-processing-measure-preschool/sensoryProcessingMeasurePreschool.module';
+import { SensoryProcessingMeasureSchoolPreschoolModule } from './features/sensory-processing-measure-school-preschool/sensoryProcessingMeasureSchoolPreSchool.module';
 
 
 @Module({
@@ -109,6 +110,7 @@ import { SensoryProcessingMeasurePreschoolModule } from './features/sensory-proc
     SensoryProcessingMeasureModule,
     SensoryProcessingMeasureSchoolModule,
     SensoryProcessingMeasurePreschoolModule,
+    SensoryProcessingMeasureSchoolPreschoolModule,
   ],
   controllers: [AppController],
   providers: [AppService],
