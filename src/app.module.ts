@@ -38,6 +38,7 @@ import { SensoryProcessingMeasureSchoolPreschoolModule } from './features/sensor
 import { OccupationalTherapyAnamnesisModule } from './features/occupational-therapy-anamnesis/occupationalTherapyAnamnesis.module';
 import { EessaTestModule } from './features/eessa-test/eessaTest.module';
 import { SpeechLanguagePathologyEvaluationForDysphagiaModule } from './features/speech-language-pathology-evaluation-for-dysphagia/speechLanguagePathologyEvaluationForDysphagia.module';
+import { SwalQolModule } from './features/swal-qol/swalQOL.module';
 
 
 @Module({
@@ -117,6 +118,7 @@ import { SpeechLanguagePathologyEvaluationForDysphagiaModule } from './features/
     OccupationalTherapyAnamnesisModule,
     EessaTestModule,
     SpeechLanguagePathologyEvaluationForDysphagiaModule,
+    SwalQolModule,
   ],
   controllers: [AppController],
   providers: [AppService],
