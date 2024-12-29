@@ -36,6 +36,7 @@ import { SensoryProcessingMeasureSchoolModule } from './features/sensory-process
 import { SensoryProcessingMeasurePreschoolModule } from './features/sensory-processing-measure-preschool/sensoryProcessingMeasurePreschool.module';
 import { SensoryProcessingMeasureSchoolPreschoolModule } from './features/sensory-processing-measure-school-preschool/sensoryProcessingMeasureSchoolPreSchool.module';
 import { OccupationalTherapyAnamnesisModule } from './features/occupational-therapy-anamnesis/occupationalTherapyAnamnesis.module';
+import { EessaTestModule } from './features/eessa-test/eessaTest.module';
 
 
 @Module({
@@ -113,6 +114,7 @@ import { OccupationalTherapyAnamnesisModule } from './features/occupational-ther
     SensoryProcessingMeasurePreschoolModule,
     SensoryProcessingMeasureSchoolPreschoolModule,
     OccupationalTherapyAnamnesisModule,
+    EessaTestModule,
   ],
   controllers: [AppController],
   providers: [AppService],
