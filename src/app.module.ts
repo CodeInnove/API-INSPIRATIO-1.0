@@ -39,6 +39,7 @@ import { OccupationalTherapyAnamnesisModule } from './features/occupational-ther
 import { EessaTestModule } from './features/eessa-test/eessaTest.module';
 import { SpeechLanguagePathologyEvaluationForDysphagiaModule } from './features/speech-language-pathology-evaluation-for-dysphagia/speechLanguagePathologyEvaluationForDysphagia.module';
 import { SwalQolModule } from './features/swal-qol/swalQOL.module';
+import { IncomeAssessmentModule } from './features/income-assessment/incomeAssessment.module';
 
 
 @Module({
@@ -119,6 +120,7 @@ import { SwalQolModule } from './features/swal-qol/swalQOL.module';
     EessaTestModule,
     SpeechLanguagePathologyEvaluationForDysphagiaModule,
     SwalQolModule,
+    IncomeAssessmentModule,
   ],
   controllers: [AppController],
   providers: [AppService],
