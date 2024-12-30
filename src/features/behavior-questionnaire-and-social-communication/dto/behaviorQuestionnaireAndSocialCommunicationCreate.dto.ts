@@ -1,252 +1,172 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsNotEmpty, ValidateNested } from 'class-validator';
+import { IsNotEmpty, ValidateNested, IsBoolean } from 'class-validator';
 import { Type } from 'class-transformer';
 
-class AnswerAsqDTO {
-    @IsNotEmpty()
-    @ApiProperty()
-    yes: number;
-
-    @IsNotEmpty()
-    @ApiProperty()
-    no: number;
-  }
 
 class QuestionsAsqDTO{
-    
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionOne: AnswerAsqDTO;
+ 
+  @ApiProperty()
+@IsBoolean()
+questionOne: boolean;
 
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionTwo: AnswerAsqDTO;
+@ApiProperty()
+@IsBoolean()
+questionTwo: boolean;
 
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionThree: AnswerAsqDTO;
+@ApiProperty()
+@IsBoolean()
+questionThree: boolean;
 
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionFour: AnswerAsqDTO;
+@ApiProperty()
+@IsBoolean()
+questionFour: boolean;
 
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionFive: AnswerAsqDTO;
+@ApiProperty()
+@IsBoolean()
+questionFive: boolean;
 
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionSix: AnswerAsqDTO;
+@ApiProperty()
+@IsBoolean()
+questionSix: boolean;
 
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionSeven: AnswerAsqDTO;
+@ApiProperty()
+@IsBoolean()
+questionSeven: boolean;
 
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionEight: AnswerAsqDTO;
+@ApiProperty()
+@IsBoolean()
+questionEight: boolean;
 
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionNine: AnswerAsqDTO;
+@ApiProperty()
+@IsBoolean()
+questionNine: boolean;
 
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionTen: AnswerAsqDTO;
+@ApiProperty()
+@IsBoolean()
+questionTen: boolean;
 
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionEleven: AnswerAsqDTO;
+@ApiProperty()
+@IsBoolean()
+questionEleven: boolean;
 
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionTwelve: AnswerAsqDTO;
+@ApiProperty()
+@IsBoolean()
+questionTwelve: boolean;
 
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionThirteen: AnswerAsqDTO;
+@ApiProperty()
+@IsBoolean()
+questionThirteen: boolean;
 
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionFourteen: AnswerAsqDTO;
+@ApiProperty()
+@IsBoolean()
+questionFourteen: boolean;
 
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionFifteen: AnswerAsqDTO;
+@ApiProperty()
+@IsBoolean()
+questionFifteen: boolean;
 
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionSixteen: AnswerAsqDTO;
+@ApiProperty()
+@IsBoolean()
+questionSixteen: boolean;
 
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionSeventeen: AnswerAsqDTO;
+@ApiProperty()
+@IsBoolean()
+questionSeventeen: boolean;
 
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionEighteen: AnswerAsqDTO;
+@ApiProperty()
+@IsBoolean()
+questionEighteen: boolean;
 
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionNineteen: AnswerAsqDTO;
+@ApiProperty()
+@IsBoolean()
+questionNineteen: boolean;
 
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionTwenty: AnswerAsqDTO;
+@ApiProperty()
+@IsBoolean()
+questionTwenty: boolean;
 
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionTwentyOne: AnswerAsqDTO;
+@ApiProperty()
+@IsBoolean()
+questionTwentyOne: boolean;
 
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionTwentyTwo: AnswerAsqDTO;
+@ApiProperty()
+@IsBoolean()
+questionTwentyTwo: boolean;
 
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionTwentyThree: AnswerAsqDTO;
+@ApiProperty()
+@IsBoolean()
+questionTwentyThree: boolean;
 
+@ApiProperty()
+@IsBoolean()
+questionTwentyFour: boolean;
 
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionTwentyFour: AnswerAsqDTO;
-    
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionTwentyFive: AnswerAsqDTO;
-    
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionTwentySix: AnswerAsqDTO;
-    
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionTwentySeven: AnswerAsqDTO;
-    
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionTwentyEight: AnswerAsqDTO;
-    
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionTwentyNine: AnswerAsqDTO;
-    
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionThirty: AnswerAsqDTO;
-    
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionThirtyOne: AnswerAsqDTO;
-    
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionThirtyTwo: AnswerAsqDTO;
-    
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionThirtyThree: AnswerAsqDTO;
-    
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionThirtyFour: AnswerAsqDTO;
-    
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionThirtyFive: AnswerAsqDTO;
-    
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionThirtySix: AnswerAsqDTO;
-    
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionThirtySeven: AnswerAsqDTO;
-    
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionThirtyEight: AnswerAsqDTO;
-    
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionThirtyNine: AnswerAsqDTO;
-    
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionForty: AnswerAsqDTO;
+@ApiProperty()
+@IsBoolean()
+questionTwentyFive: boolean;
+
+@ApiProperty()
+@IsBoolean()
+questionTwentySix: boolean;
+
+@ApiProperty()
+@IsBoolean()
+questionTwentySeven: boolean;
+
+@ApiProperty()
+@IsBoolean()
+questionTwentyEight: boolean;
+
+@ApiProperty()
+@IsBoolean()
+questionTwentyNine: boolean;
+
+@ApiProperty()
+@IsBoolean()
+questionThirty: boolean;
+
+@ApiProperty()
+@IsBoolean()
+questionThirtyOne: boolean;
+
+@ApiProperty()
+@IsBoolean()
+questionThirtyTwo: boolean;
+
+@ApiProperty()
+@IsBoolean()
+questionThirtyThree: boolean;
+
+@ApiProperty()
+@IsBoolean()
+questionThirtyFour: boolean;
+
+@ApiProperty()
+@IsBoolean()
+questionThirtyFive: boolean;
+
+@ApiProperty()
+@IsBoolean()
+questionThirtySix: boolean;
+
+@ApiProperty()
+@IsBoolean()
+questionThirtySeven: boolean;
+
+@ApiProperty()
+@IsBoolean()
+questionThirtyEight: boolean;
+
+@ApiProperty()
+@IsBoolean()
+questionThirtyNine: boolean;
   }
-
-class ScoreAsqDTO {
-
-    @IsNotEmpty()
-    @ApiProperty()
-    yesScore: number;
-
-    @IsNotEmpty()
-    @ApiProperty()
-    noScore: number;
-
-    }
-
-    class TotalResultAsqDTO {
-
-    @IsNotEmpty()
-    @ApiProperty()
-    resultTotalAsq: ScoreAsqDTO;
-
-}
 
 export class CreateBehaviorQuestionDto {
   @ValidateNested()
   @Type(() => QuestionsAsqDTO)
   @ApiProperty({ type: QuestionsAsqDTO })
   questions: QuestionsAsqDTO;
-
-  /*@ValidateNested()
-  @Type(() => TotalResultAsqDTO)
-  @ApiProperty({ type: TotalResultAsqDTO })
-  TotalResultAsqDTO: TotalResultAsqDTO;
-*/
 
 
 }
