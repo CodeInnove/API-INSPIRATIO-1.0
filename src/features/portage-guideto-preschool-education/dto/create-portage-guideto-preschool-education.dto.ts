@@ -1,2840 +1,2832 @@
 import { ApiProperty } from "@nestjs/swagger";
-import { IsNumber, IsOptional } from "class-validator";
+import { IsBoolean,  IsOptional } from "class-validator";
 
 
 
-export class CreatePortageGuidetoPreschoolEducationDto {
-    @ApiProperty()
-    name: string;
 
-    @ApiProperty()
-    birthDay: string;
 
-    @ApiProperty()
-    Date: Date;
+export class Socialization0To1Year { 
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  observesAPersonMovingInTheirVisualField?: boolean;
 
-    @ApiProperty()
-    socialization0To1Years: socialization0To1Year
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  smilesInResponseToAdultAttention?: boolean;
 
-    @ApiProperty()
-    socialization1To2Years: socialization1To2Years
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  vocalizesInResponseToAttention?: boolean;
 
-    @ApiProperty()
-    socialization2To3Years: socialization2To3Years
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  looksAtOwnHandSmilingOrVocalizing?: boolean;
 
-    @ApiProperty()
-    socialization3To4Years : Socialization3To4Years
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  respondsToFamilyCircleSmilingVocalizingOrStoppingCrying?: boolean;
 
-    @ApiProperty()
-    socialization4To5Years: Socialization4To5Years
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  smilesInResponseToOthersFacialExpressions?: boolean;
 
-    @ApiProperty()
-    socialization5To6Years: Socialization5To6Years
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  smilesAndVocalizesWhenSeeingImageInMirror?: boolean;
 
-    @ApiProperty()
-    language0To1Years: language0To1Years
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  caressesOrTouchesAdultsFacesPullsHairNoseGlassesEtc?: boolean;
 
-    @ApiProperty()
-    language1To2Years: language1To2Years
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  reachesTowardsAnOfferedObject?: boolean;
 
-    @ApiProperty()
-    language2To3Years:language2To3Years
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  reachesArmsTowardsFamilyMembers?: boolean;
 
-    @ApiProperty()
-    language3To4Years:language3To4Years
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  extendsHandAndTouchesOwnReflectedImageInMirror?: boolean;
 
-    @ApiProperty()
-    language4To5Years:language4To5Years
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  holdsAndExaminesGivenObjectFor1Minute?: boolean;
 
-    @ApiProperty()
-    language5To6Years:language5To6Years
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  shakesOrSqueezesAnObjectPlacedInHandProducingInvoluntarySounds?: boolean;
 
-    @ApiProperty()
-    cognition0To1Year:cognition0To1Year
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  playsAloneFor10Minutes?: boolean;
 
-    @ApiProperty()
-    cognition1To2Years:cognition1To2Years
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  seeksEyeContactWhenSomeonePaysAttentionFor2To3Minutes?: boolean;
 
-    @ApiProperty()
-    Cognition2To3YearsDto:Cognition2To3YearsDto
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  playsAloneWithoutComplainingFor15To20MinutesNearAnAdult?: boolean;
 
-    @ApiProperty()
-    Cognition3To4YearsDto:Cognition3To4YearsDto
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  vocalizesToGetAttention?: boolean;
 
-    @ApiProperty()
-    Cognition4To5YearsDto:Cognition4To5YearsDto
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  imitatesAdultInPeekABooGames?: boolean;
 
-    @ApiProperty()
-    Cognition5To6YearsDto:Cognition5To6YearsDto
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  clapsHandsImitatingAnAdult?: boolean;
 
-    @ApiProperty()
-    SelfCare0To1YearDto: SelfCare0To1YearDto
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  wavesHandImitatingAnAdult?: boolean;
 
-    @ApiProperty()
-    SelfCare1To2YearsDto:SelfCare1To2YearsDto
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  raisesArmsToExpressBigImitatingAnAdult?: boolean;
 
-    @ApiProperty()
-    SelfCare2To3YearsDto: SelfCare2To3YearsDto
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  offersSomethingButDoesNotAlwaysDeliver?: boolean;
 
-    @ApiProperty()
-    SelfCare3To4YearsDto:SelfCare3To4YearsDto
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  hugsCaressesAndKissesFamilyMembers?: boolean;
 
-    @ApiProperty()
-    SelfCare4To5YearsDto:SelfCare4To5YearsDto
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  respondsToOwnNameLookingOrExtendingArmToBePickedUp?: boolean;
 
-    @ApiProperty()
-    SelfCare5To6YearsDto:SelfCare5To6YearsDto
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  squeezesOrShakesToyToProduceSoundsInImitation?: boolean;
 
-    @ApiProperty()
-    MotorDevelopment0To1YearDto:MotorDevelopment0To1YearDto
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  manipulatesToyOrObject?: boolean;
 
-    @ApiProperty()
-    MotorDevelopment1To2YearsDto:MotorDevelopment1To2YearsDto
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  extendsAToyOrObjectToAnAdultAndDeliversIt?: boolean;
 
-    @ApiProperty()
-    MotorDevelopment2To3YearsDto:MotorDevelopment2To3YearsDto
-
-    @ApiProperty()
-    MotorDevelopment3To4YearsDto:MotorDevelopment3To4YearsDto
-
-    @ApiProperty()
-    MotorDevelopment4To5YearsDto:MotorDevelopment4To5YearsDto
-
-    @ApiProperty()
-    MotorDevelopment5To6YearsDto:MotorDevelopment5To6YearsDto
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  imitatesMovementsOfOtherChildrenWhilePlaying?: boolean;
 }
 
-export class socialization0To1Year{ 
-    @ApiProperty({ description: 'Observes a person moving in their visual field', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    observesAPersonMovingInTheirVisualField?: number;
+export class Socialization1To2Years {
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  imitatesAnAdultInASimpleTask?: boolean;
 
-    @ApiProperty({ description: 'Smiles in response to adult attention', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    smilesInResponseToAdultAttention?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  playsNextToAnotherChildEachPerformingDifferentTasks?: boolean;
 
-    @ApiProperty({ description: 'Vocalizes in response to attention', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    vocalizesInResponseToAttention?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  takesPartInAPlayWithAnotherChildFor2To5Minutes?: boolean;
 
-    @ApiProperty({ description: 'Looks at own hand, smiling or vocalizing', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    looksAtOwnHandSmilingOrVocalizing?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  acceptsParentsAbsenceAlthoughMayComplain?: boolean;
 
-    @ApiProperty({ description: 'Responds to family circle, smiling, vocalizing, or stopping crying', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    respondsToFamilyCircleSmilingVocalizingOrStoppingCrying?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  activelyExploresItsEnvironment?: boolean;
 
-    @ApiProperty({ description: 'Smiles in response to others facial expressions', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    smilesInResponseToOthersFacialExpressions?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  performsManipulativeActivityWithAnotherPerson?: boolean;
 
-    @ApiProperty({ description: 'Smiles and vocalizes when seeing image in mirror', example: 1 })
-     @IsNumber()
-    @IsOptional()
-    smilesAndVocalizesWhenSeeingImageInMirror?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  hugsAndCarriesADollOrSoftToy?: boolean;
 
-    @ApiProperty({ description: 'Caresses or touches adults faces, pulls hair, nose, glasses etc', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    caressesOrTouchesAdultsFacesPullsHairNoseGlassesEtc?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  repeatsActionsThatProduceLaughterAndAttention?: boolean;
 
-    @ApiProperty({ description: 'Reaches towards an offered object', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    reachesTowardsAnOfferedObject?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  givesABookForAnAdultToReadOrForBothToShare?: boolean;
 
-    @ApiProperty({ description: 'Reaches arms towards family members', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    reachesArmsTowardsFamilyMembers?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  pullsAPersonToShowThemSomething?: boolean;
 
-    @ApiProperty({ description: 'Extends hand and touches own reflected image in mirror', example: 1 })
-    @IsNumber()
-    @IsOptional()
-     extendsHandAndTouchesOwnReflectedImageInMirror?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  withdrawsHandOrSaysNoWhenNearForbiddenObjectAndSomeoneRemindsIt?: boolean;
 
-     @ApiProperty({ description: 'Holds and examines given object for 1 minute', example: 1 })
-    @IsNumber()
-    @IsOptional()
-     holdsAndExaminesGivenObjectFor1Minute?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  whenPlacedInChairOrChangingTableWaitsToBeAttended?: boolean;
 
-    @ApiProperty({ description: 'Shakes or squeezes an object placed in hand, producing involuntary sounds', example: 1 })
-    @IsNumber()
-    @IsOptional()
-     shakesOrSqueezesAnObjectPlacedInHandProducingInvoluntarySounds?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  playsWith2Or3ChildrenOfSameAge?: boolean;
 
-    @ApiProperty({ description: 'Plays alone for 10 minutes', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    playsAloneFor10Minutes?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  sharesAnObjectOrFoodWithAnotherChild?: boolean;
 
-    @ApiProperty({ description: 'Seeks eye contact when someone pays attention for 2 to 3 minutes', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    seeksEyeContactWhenSomeonePaysAttentionFor2To3Minutes?: number;
-
-    @ApiProperty({ description: 'Plays alone without complaining for 15 to 20 minutes near an adult', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    playsAloneWithoutComplainingFor15To20MinutesNearAnAdult?: number;
-
-    @ApiProperty({ description: 'Vocalizes to get attention', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    vocalizesToGetAttention?: number;
-
-    @ApiProperty({ description: 'Imitates adult in peek-a-boo games', example: 1 })
-     @IsNumber()
-    @IsOptional()
-    imitatesAdultInPeekABooGames?: number;
-
-    @ApiProperty({ description: 'Claps hands, imitating an adult', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    clapsHandsImitatingAnAdult?: number;
-
-    @ApiProperty({ description: 'Waves hand, imitating an adult', example: 1 })
-     @IsNumber()
-    @IsOptional()
-    wavesHandImitatingAnAdult?: number;
-
-    @ApiProperty({ description: 'Raises arms to express "big," imitating an adult', example: 1 })
-     @IsNumber()
-    @IsOptional()
-    raisesArmsToExpressBigImitatingAnAdult?: number;
-
-    @ApiProperty({ description: 'Offers something but does not always deliver', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    offersSomethingButDoesNotAlwaysDeliver?: number;
-
-    @ApiProperty({ description: 'Hugs, caresses, and kisses family members', example: 1 })
-     @IsNumber()
-    @IsOptional()
-    hugsCaressesAndKissesFamilyMembers?: number;
-
-    @ApiProperty({ description: 'Responds to own name, looking or extending arm to be picked up', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    respondsToOwnNameLookingOrExtendingArmToBePickedUp?: number;
-
-     @ApiProperty({ description: 'Squeezes or shakes toy to produce sounds in imitation', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    squeezesOrShakesToyToProduceSoundsInImitation?: number;
-
-     @ApiProperty({ description: 'Manipulates toy or object', example: 1 })
-     @IsNumber()
-    @IsOptional()
-     manipulatesToyOrObject?: number;
-    
-    @ApiProperty({ description: 'Extends a toy or object to an adult and delivers it', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    extendsAToyOrObjectToAnAdultAndDeliversIt?: number;
-
-    @ApiProperty({ description: 'Imitates movements of other children while playing', example: 1 })
-     @IsNumber()
-    @IsOptional()
-    imitatesMovementsOfOtherChildrenWhilePlaying?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  greetsPeersOrAdultsWhenReminded?: boolean;
 }
 
-
-export class socialization1To2Years {
-    @ApiProperty({ description: 'Imitates an adult in a simple task', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    imitatesAnAdultInASimpleTask?: number;
-
-  @ApiProperty({ description: 'Plays next to another child, each performing different tasks', example: 1 })
-  @IsNumber()
+export class Socialization2To3Years {
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  playsNextToAnotherChildEachPerformingDifferentTasks?: number;
+  obeysParentsOrdersAtLeastHalfTheTime?: boolean;
 
-  @ApiProperty({ description: 'Takes part in a play with another child for 2 to 5 minutes', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  takesPartInAPlayWithAnotherChildFor2To5Minutes?: number;
+  seeksOrTakesAnObjectOrPersonWhenAsked?: boolean;
 
-  @ApiProperty({ description: 'Accepts parents absence, although may complain', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  acceptsParentsAbsenceAlthoughMayComplain?: number;
+  paysAttentionToStoryOrMusicFor5To10Minutes?: boolean;
 
-  @ApiProperty({ description: 'Actively explores its environment', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  activelyExploresItsEnvironment?: number;
+  saysPleaseOrThankYouWhenReminded?: boolean;
 
-  @ApiProperty({ description: 'Performs manipulative activity with another person', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  performsManipulativeActivityWithAnotherPerson?: number;
+  triesToHelpParentsPerformTasksByDoingPartOfIt?: boolean;
 
-  @ApiProperty({ description: 'Hugs and carries a doll or soft toy', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  hugsAndCarriesADollOrSoftToy?: number;
+  playsAtWearingAdultsClothes?: boolean;
 
-  @ApiProperty({ description: 'Repeats actions that produce laughter and attention', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  repeatsActionsThatProduceLaughterAndAttention?: number;
+  makesAChoiceWhenAsked?: boolean;
 
-  @ApiProperty({ description: 'Gives a book for an adult to read or for both to share', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  givesABookForAnAdultToReadOrForBothToShare?: number;
-
-  @ApiProperty({ description: 'Pulls a person to show them something', example: 1 })
-  @IsNumber()
-  @IsOptional()
-  pullsAPersonToShowThemSomething?: number;
-
-  @ApiProperty({ description: 'Withdraws hand or says no when near forbidden object and someone reminds it', example: 1 })
-   @IsNumber()
-  @IsOptional()
-  withdrawsHandOrSaysNoWhenNearForbiddenObjectAndSomeoneRemindsIt?: number;
-
-  @ApiProperty({ description: 'When placed in chair or changing table, waits to be attended', example: 1 })
-  @IsNumber()
-  @IsOptional()
-  whenPlacedInChairOrChangingTableWaitsToBeAttended?: number;
-
-  @ApiProperty({ description: 'Plays with 2 or 3 children of same age', example: 1 })
-  @IsNumber()
-  @IsOptional()
-  playsWith2Or3ChildrenOfSameAge?: number;
-
-  @ApiProperty({ description: 'Shares an object or food with another child', example: 1 })
-  @IsNumber()
-  @IsOptional()
-  sharesAnObjectOrFoodWithAnotherChild?: number;
-
-  @ApiProperty({ description: 'Greets peers or adults when reminded', example: 1 })
-    @IsNumber()
-  @IsOptional()
-  greetsPeersOrAdultsWhenReminded?: number;
+  demonstratesUnderstandingOfFeelingsExpressingThem?: boolean;
 }
 
-
-export class socialization2To3Years{
-    @ApiProperty({ description: 'Obeys parents orders at least half the time', example: 1 })
-  @IsNumber()
+export class Socialization3To4Years {
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  obeysParentsOrdersAtLeastHalfTheTime?: number;
+  singsAndDancesWhenHearingMusic?: boolean;
 
-  @ApiProperty({ description: 'Seeks or takes an object or person when asked', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  seeksOrTakesAnObjectOrPersonWhenAsked?: number;
+  followsRulesOfAGameImitatingActionsOfOtherChildren?: boolean;
 
-  @ApiProperty({ description: 'Pays attention to story or music for 5 to 10 minutes', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  paysAttentionToStoryOrMusicFor5To10Minutes?: number;
+  greetsFamilyMembersWithoutBeingReminded?: boolean;
 
-  @ApiProperty({ description: 'Says please or thank you when reminded', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  saysPleaseOrThankYouWhenReminded?: number;
+  followsRulesInGroupGamesDirectedByAdults?: boolean;
 
-  @ApiProperty({ description: 'Tries to help parents perform tasks by doing part of it', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  triesToHelpParentsPerformTasksByDoingPartOfIt?: number;
+  asksPermissionToPlayWithAToyBeingUsedByAnotherChild?: boolean;
 
-  @ApiProperty({ description: 'Plays at wearing adults clothes', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  playsAtWearingAdultsClothes?: number;
+  saysPleaseAndThankYouWithoutBeingRemindedHalfTheTime?: boolean;
 
-    @ApiProperty({ description: 'Makes a choice when asked', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  makesAChoiceWhenAsked?: number;
+  answersThePhoneCallingAnAdultAndSpeakingWithFamilyMembers?: boolean;
 
-  @ApiProperty({ description: 'Demonstrates understanding of feelings, expressing them', example: 1 })
-    @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  demonstratesUnderstandingOfFeelingsExpressingThem?: number;
+  waitsItsTurn?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  followsRulesInGamesDirectedByAnOlderChild?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  obeysParentsInstructionsInPublicPlaces?: boolean;
 }
 
-export class Socialization3To4Years{
-    @ApiProperty({ description: 'Sings and dances when hearing music', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    singsAndDancesWhenHearingMusic: number;
-    
-    @ApiProperty({ description: 'Follows rules of a game, imitating actions of other children', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    followsRulesOfAGameImitatingActionsOfOtherChildren?: number;
-    
-    @ApiProperty({ description: 'Greets family members without being reminded', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    greetsFamilyMembersWithoutBeingReminded?: number;
-    
-    @ApiProperty({ description: 'Follows rules in group games directed by adults', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    followsRulesInGroupGamesDirectedByAdults?: number;
-    
-    @ApiProperty({ description: 'Asks permission to play with a toy being used by another child', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    asksPermissionToPlayWithAToyBeingUsedByAnotherChild?: number;
-    
-    @ApiProperty({ description: 'Says please and thank you without being reminded half the time', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    saysPleaseAndThankYouWithoutBeingRemindedHalfTheTime?: number;
-    
-    @ApiProperty({ description: 'Answers the phone, calling an adult, and speaking with family members', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    answersThePhoneCallingAnAdultAndSpeakingWithFamilyMembers?: number;
-    
-    @ApiProperty({ description: 'Waits its turn', example: 1 })
-      @IsNumber()
-    @IsOptional()
-    waitsItsTurn?: number;
-    
-      @ApiProperty({ description: 'Follows rules in games directed by an older child', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    followsRulesInGamesDirectedByAnOlderChild?: number;
-    
-    @ApiProperty({ description: 'Obeys adults orders 75 percent of the time', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    obeysAdultsOrders75PercentOfTheTime?: number;
-    
-    @ApiProperty({ description: 'Stays in its own yard or garden', example: 1 })
-     @IsNumber()
-    @IsOptional()
-    staysInItsOwnYardOrGarden?: number;
-    
-    @ApiProperty({ description: 'Plays near other children, talking to them while working on own project for 30 minutes', example: 1 })
-      @IsNumber()
-    @IsOptional()
-    playsNearOtherChildrenTalkingToThemWhileWorkingOnOwnProject30Minutes?: number;
-    }
 
 export class Socialization4To5Years {
-    @ApiProperty({ description: 'Asks for help when having difficulties', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    asksForHelpWhenHavingDifficulties?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  asksForHelpWhenHavingDifficulties?: boolean;
 
-    @ApiProperty({ description: 'Contributes to adult conversation', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    contributesToAdultConversation?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  contributesToAdultConversation?: boolean;
 
-    @ApiProperty({ description: 'Repeats rhymes, songs, or dances for others', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    repeatsRhymesSongsOrDancesForOthers?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  repeatsRhymesSongsOrDancesForOthers?: boolean;
 
-    @ApiProperty({ description: 'Does a task alone for 20 to 30 minutes', example: 1 })
-     @IsNumber()
-    @IsOptional()
-    doesATaskAloneFor20To30Minutes?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  doesATaskAloneFor20To30Minutes?: boolean;
 
-    @ApiProperty({ description: 'Apologizes without being reminded 75 percent of the time', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    apologizesWithoutBeingReminded75PercentOfTheTime?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  apologizesWithoutBeingReminded75PercentOfTheTime?: boolean;
 
-    @ApiProperty({ description: 'Waits its turn in play involving 8 to 9 children', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    waitsItsTurnInPlayInvolving8To9Children?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  waitsItsTurnInPlayInvolving8To9Children?: boolean;
 
-    @ApiProperty({ description: 'Plays with 2 to 3 children for 20 minutes in an activity involving cooperation', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    playsWith2To3ChildrenFor20MinutesInAnActivityInvolvingCooperation?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  playsWith2To3ChildrenFor20MinutesInAnActivityInvolvingCooperation?: boolean;
 
-    @ApiProperty({ description: 'When in public, presents a socially acceptable behavior', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    whenInPublicPresentsASociallyAcceptableBehavior?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  whenInPublicPresentsASociallyAcceptableBehavior?: boolean;
 
-    @ApiProperty({ description: 'Asks permission to use others objects 75 percent of the time', example: 1 })
-      @IsNumber()
-    @IsOptional()
-    asksPermissionToUseOthersObjects75PercentOfTheTime?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  asksPermissionToUseOthersObjects75PercentOfTheTime?: boolean;
 }
-
 
 export class Socialization5To6Years {
-    @ApiProperty({ description: 'Expresses its feelings', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  expressesItsFeelings?: number;
+  expressesItsFeelings?: boolean;
 
-  @ApiProperty({ description: 'Plays with 4 to 5 children in cooperative activity for 20 minutes without supervision', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  playsWith4To5ChildrenInCooperativeActivityFor20MinutesWithoutSupervision?: number;
+  playsWith4To5ChildrenInCooperativeActivityFor20MinutesWithoutSupervision?: boolean;
 
-  @ApiProperty({ description: 'Explains to others the rules of the game or activity', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  explainsToOthersTheRulesOfTheGameOrActivity?: number;
+  explainsToOthersTheRulesOfTheGameOrActivity?: boolean;
 
-  @ApiProperty({ description: 'Imitates adult roles', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  imitatesAdultRoles?: number;
+  imitatesAdultRoles?: boolean;
 
-  @ApiProperty({ description: 'Collaborates in conversation during meals', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  collaboratesInConversationDuringMeals?: number;
+  collaboratesInConversationDuringMeals?: boolean;
 
-  @ApiProperty({ description: 'Follows rules of a game involving verbal reasoning', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  followsRulesOfAGameInvolvingVerbalReasoning?: number;
+  followsRulesOfAGameInvolvingVerbalReasoning?: boolean;
 
-  @ApiProperty({ description: 'Comforts peers when they are sad', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  comfortsPeersWhenTheyAreSad?: number;
+  comfortsPeersWhenTheyAreSad?: boolean;
 
-  @ApiProperty({ description: 'Chooses its own friends', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  choosesItsOwnFriends?: number;
+  choosesItsOwnFriends?: boolean;
 
-  @ApiProperty({ description: 'Plans and builds using simple tools', example: 1 })
-    @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  plansAndBuildsUsingSimpleTools?: number;
+  plansAndBuildsUsingSimpleTools?: boolean;
 
-  @ApiProperty({ description: 'Sets goals for itself and performs activity to achieve them', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  setsGoalsForItselfAndPerformsActivityToAchieveThem?: number;
+  setsGoalsForItselfAndPerformsActivityToAchieveThem?: boolean;
 
-  @ApiProperty({ description: 'Dramatizes excerpts from stories, playing a role or using puppets', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  dramatizesExcerptsFromStoriesPlayingARoleOrUsingPuppets?: number;
-
+  dramatizesExcerptsFromStoriesPlayingARoleOrUsingPuppets?: boolean;
 }
 
-export class language0To1Years {
-    @ApiProperty({ description: 'Expresses its feelings', example: 1 })
-  @IsNumber()
+export class Language0To1Years {
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  expressesItsFeelings?: number;
+  expressesItsFeelings?: boolean;
 
-  @ApiProperty({ description: 'Plays with 4 to 5 children in cooperative activity for 20 minutes without supervision', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  playsWith4To5ChildrenInCooperativeActivityFor20MinutesWithoutSupervision?: number;
+  playsWith4To5ChildrenInCooperativeActivityFor20MinutesWithoutSupervision?: boolean;
 
-  @ApiProperty({ description: 'Explains to others the rules of the game or activity', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  explainsToOthersTheRulesOfTheGameOrActivity?: number;
+  explainsToOthersTheRulesOfTheGameOrActivity?: boolean;
 
-  @ApiProperty({ description: 'Imitates adult roles', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  imitatesAdultRoles?: number;
+  imitatesAdultRoles?: boolean;
 
-  @ApiProperty({ description: 'Collaborates in conversation during meals', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  collaboratesInConversationDuringMeals?: number;
+  collaboratesInConversationDuringMeals?: boolean;
 
-  @ApiProperty({ description: 'Follows rules of a game involving verbal reasoning', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  followsRulesOfAGameInvolvingVerbalReasoning?: number;
+  followsRulesOfAGameInvolvingVerbalReasoning?: boolean;
 
-  @ApiProperty({ description: 'Comforts peers when they are sad', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  comfortsPeersWhenTheyAreSad?: number;
+  comfortsPeersWhenTheyAreSad?: boolean;
 
-  @ApiProperty({ description: 'Chooses its own friends', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  choosesItsOwnFriends?: number;
+  choosesItsOwnFriends?: boolean;
 
-  @ApiProperty({ description: 'Plans and builds using simple tools', example: 1 })
-    @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  plansAndBuildsUsingSimpleTools?: number;
+  plansAndBuildsUsingSimpleTools?: boolean;
 
-  @ApiProperty({ description: 'Sets goals for itself and performs activity to achieve them', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  setsGoalsForItselfAndPerformsActivityToAchieveThem?: number;
+  setsGoalsForItselfAndPerformsActivityToAchieveThem?: boolean;
 
-  @ApiProperty({ description: 'Dramatizes excerpts from stories, playing a role or using puppets', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  dramatizesExcerptsFromStoriesPlayingARoleOrUsingPuppets?: number;
+  dramatizesExcerptsFromStoriesPlayingARoleOrUsingPuppets?: boolean;
 }
 
-export class language1To2Years {
-    @ApiProperty({ description: 'Says 5 different words', example: 1 })
-  @IsNumber()
+export class Language1To2Years {
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  says5DifferentWords?: number;
+  says5DifferentWords?: boolean;
 
-  @ApiProperty({ description: 'Asks for more', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  asksForMore?: number;
+  asksForMore?: boolean;
 
-  @ApiProperty({ description: 'Says "done"', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  saysDone?: number;
+  saysDone?: boolean;
 
-  @ApiProperty({ description: 'Obeys 3 different orders that are not accompanied by indicative gestures', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  obeys3DifferentOrdersThatAreNotAccompaniedByIndicativeGestures?: number;
+  obeys3DifferentOrdersThatAreNotAccompaniedByIndicativeGestures?: boolean;
 
-  @ApiProperty({ description: 'Manages to give or show when asked', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   managesToGiveOrShowWhenAsked?: number;
+  managesToGiveOrShowWhenAsked?: boolean;
 
-  @ApiProperty({ description: 'Points to 12 objects when named', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  pointsTo12ObjectsWhenNamed?: number;
+  pointsTo12ObjectsWhenNamed?: boolean;
 
-  @ApiProperty({ description: 'Points to 3 to 5 figures in a book', example: 1 })
-    @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  pointsTo3To5FiguresInABook?: number;
+  pointsTo3To5FiguresInABook?: boolean;
 
-  @ApiProperty({ description: 'Points to 3 parts of own body', example: 1 })
-    @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   pointsTo3PartsOfOwnBody?: number;
+  pointsTo3PartsOfOwnBody?: boolean;
 
-  @ApiProperty({ description: 'Says own name or nickname when asked', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  saysOwnNameOrNicknameWhenAsked?: number;
+  saysOwnNameOrNicknameWhenAsked?: boolean;
 
-  @ApiProperty({ description: 'Responds to the question "What is this?"', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  respondsToTheQuestionWhatIsThis?: number;
+  respondsToTheQuestionWhatIsThis?: boolean;
 
-  @ApiProperty({ description: 'Combines words and gestures to express wishes', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  combinesWordsAndGesturesToExpressWishes?: number;
+  combinesWordsAndGesturesToExpressWishes?: boolean;
 
-   @ApiProperty({ description: 'Names 5 family members, including animals', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    names5FamilyMembersIncludingAnimals?: number;
+  names5FamilyMembersIncludingAnimals?: boolean;
 
-  @ApiProperty({ description: 'Names 4 toys', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   names4Toys?: number;
+  names4Toys?: boolean;
 
-  @ApiProperty({ description: 'Produces animal sounds or names them by the sound', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   producesAnimalSoundsOrNamesThemByTheSound?: number;
+  producesAnimalSoundsOrNamesThemByTheSound?: boolean;
 
-    @ApiProperty({ description: 'Asks for known foods by name when shown', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-     asksForKnownFoodsByNameWhenShown?: number;
+  asksForKnownFoodsByNameWhenShown?: boolean;
 
-    @ApiProperty({ description: 'Asks questions, varying intonation of voice', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-      asksQuestionsVaryingIntonationOfVoice?: number;
+  asksQuestionsVaryingIntonationOfVoice?: boolean;
 
-    @ApiProperty({ description: 'Names 3 body parts on a doll or another person', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-       names3BodyPartsOnADollOrAnotherPerson?: number;
+  names3BodyPartsOnADollOrAnotherPerson?: boolean;
 
-    @ApiProperty({ description: 'Responds to yes/no questions', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    respondsToYesNoQuestions?: number;
+  respondsToYesNoQuestions?: boolean;
 }
 
-export class language2To3Years {
-    @ApiProperty({ description: 'Combines nouns or adjectives and nouns in 2-word sentences', example: 1 })
-  @IsNumber()
+export class Language2To3Years {
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  combinesNounsOrAdjectivesAndNounsIn2WordSentences?: number;
+  combinesNounsOrAdjectivesAndNounsIn2WordSentences?: boolean;
 
-  @ApiProperty({ description: 'Combines noun and verb in 2-word sentences', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  combinesNounAndVerbIn2WordSentences?: number;
+  combinesNounAndVerbIn2WordSentences?: boolean;
 
-    @ApiProperty({ description: 'Uses a word to indicate that wants to go to the bathroom', example: 1 })
-    @IsNumber()
-    @IsOptional()
-   usesAWordToIndicateThatWantsToGoToTheBathroom?: number;
-
-  @ApiProperty({ description: 'Combines verb or noun with "there" and "here" in 2-word sentences', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  combinesVerbOrNounWithThereAndHereIn2WordSentences?: number;
+  usesAWordToIndicateThatWantsToGoToTheBathroom?: boolean;
 
-    @ApiProperty({ description: 'Combines 2 words to express possession', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    combines2WordsToExpressPossession?: number;
+  combinesVerbOrNounWithThereAndHereIn2WordSentences?: boolean;
 
-    @ApiProperty({ description: 'Uses "no" in speech', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   usesNoInSpeech?: number;
+  combines2WordsToExpressPossession?: boolean;
 
-  @ApiProperty({ description: 'Responds to the question "What is doing?" for habitual activity', example: 1 })
-    @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   respondsToTheQuestionWhatIsDoingForHabitualActivity?: number;
+  usesNoInSpeech?: boolean;
 
-    @ApiProperty({ description: 'Responds to questions like "Where is object?"', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    respondsToQuestionsLikeWhereIsObject?: number;
+  respondsToTheQuestionWhatIsDoingForHabitualActivity?: boolean;
 
-  @ApiProperty({ description: 'Names familiar environmental sounds', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  namesFamiliarEnvironmentalSounds?: number;
+  respondsToQuestionsLikeWhereIsObject?: boolean;
 
-  @ApiProperty({ description: 'Gives more than one object when using the plural form in the request', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  givesMoreThanOneObjectWhenUsingThePluralFormInTheRequest?: number;
+  namesFamiliarEnvironmentalSounds?: boolean;
 
-    @ApiProperty({ description: 'When speaking refers to itself by name', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    whenSpeakingRefersToItselfByName?: number;
+  givesMoreThanOneObjectWhenUsingThePluralFormInTheRequest?: boolean;
 
-  @ApiProperty({ description: 'Points to figures of common objects described by use (up to 10: What is used to eat - spoon)', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    pointsToFiguresOfCommonObjectsDescribedByUseUpTo10WhatIsUsedToEatSpoon?: number;
+  whenSpeakingRefersToItselfByName?: boolean;
 
-  @ApiProperty({ description: 'Shows age by fingers', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   showsAgeByFingers?: number;
+  pointsToFiguresOfCommonObjectsDescribedByUseUpTo10WhatIsUsedToEatSpoon?: boolean;
 
-    @ApiProperty({ description: 'Says sex when asked', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    saysSexWhenAsked?: number;
+  showsAgeByFingers?: boolean;
 
-    @ApiProperty({ description: 'Obeys the sequence of two related orders', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    obeysTheSequenceOfTwoRelatedOrders?: number;
+  saysSexWhenAsked?: boolean;
 
-  @ApiProperty({ description: 'Uses the verb form in the gerund', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  usesTheVerbFormInTheGerund?: number;
+  obeysTheSequenceOfTwoRelatedOrders?: boolean;
 
-  @ApiProperty({ description: 'Employs regular plural forms', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  employsRegularPluralForms?: number;
+  usesTheVerbFormInTheGerund?: boolean;
 
-    @ApiProperty({ description: 'Employs some irregular forms of verbs in the past systematically', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    employsSomeIrregularFormsOfVerbsInThePastSystematically?: number;
+  employsRegularPluralForms?: boolean;
 
-  @ApiProperty({ description: 'Asks questions like "What is this?"', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  asksQuestionsLikeWhatIsThis?: number;
+  employsSomeIrregularFormsOfVerbsInThePastSystematically?: boolean;
 
-  @ApiProperty({ description: 'Controls volume of voice 90 percent of the time', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    controlsVolumeOfVoice90PercentOfTheTime?: number;
+  asksQuestionsLikeWhatIsThis?: boolean;
 
-    @ApiProperty({ description: 'Uses "this" and "that" in speech', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    usesThisAndThatInSpeech?: number;
-
-   @ApiProperty({ description: 'Employs "is" and "is located" in simple sentences', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    employsIsAndIsLocatedInSimpleSentences?: number;
+  controlsVolumeOfVoice90PercentOfTheTime?: boolean;
 
-    @ApiProperty({ description: 'Says "I", "me", "mine" instead of own name', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    saysIMeMineInsteadOfOwnName?: number;
+  usesThisAndThatInSpeech?: boolean;
 
-     @ApiProperty({ description: 'Points to objects and says they are not other things', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    pointsToObjectsAndSaysTheyAreNotOtherThings?: number;
+  employsIsAndIsLocatedInSimpleSentences?: boolean;
 
-    @ApiProperty({ description: 'Responds to the question "Who?" giving a name', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    respondsToTheQuestionWhoGivingAName?: number;
-  
-    @ApiProperty({ description: 'Employs possessive forms of nouns', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    employsPossessiveFormsOfNouns?: number;
-
-    @ApiProperty({ description: 'Uses articles when speaking', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    usesArticlesWhenSpeaking?: number;
-  
-    @ApiProperty({ description: 'Uses nouns that indicate a group or category', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    usesNounsThatIndicateAGroupOrCategory?: number;
-
-   @ApiProperty({ description: 'Uses the verbs "to be", "to exist", and "to have" in the present with few errors', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   usesTheVerbsToBeToExistAndToHaveInThePresentWithFewErrors?: number;
+  saysIMeMineInsteadOfOwnName?: boolean;
 
-    @ApiProperty({ description: 'Says if objects are open or closed', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    saysIfObjectsAreOpenOrClosed?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  pointsToObjectsAndSaysTheyAreNotOtherThings?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  respondsToTheQuestionWhoGivingAName?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  employsPossessiveFormsOfNouns?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  usesArticlesWhenSpeaking?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  usesNounsThatIndicateAGroupOrCategory?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  usesTheVerbsToBeToExistAndToHaveInThePresentWithFewErrors?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  saysIfObjectsAreOpenOrClosed?: boolean;
 }
 
-export class language3To4Years {
-    @ApiProperty({ description: 'Expresses diminutives and augmentatives when speaking', example: 1 })
-  @IsNumber()
-  @IsOptional()
-  expressesDiminutivesAndAugmentativesWhenSpeaking?: number;
+export class Language3To4Years {
+@ApiProperty()
+@IsBoolean()
+@IsOptional()
+expressesDiminutivesAndAugmentativesWhenSpeaking?: boolean;
 
-    @ApiProperty({ description: 'Pays attention for 5 minutes to a read story', example: 1 })
-   @IsNumber()
-  @IsOptional()
-    paysAttentionFor5MinutesToAReadStory?: number;
+@ApiProperty()
+@IsBoolean()
+@IsOptional()
+paysAttentionFor5MinutesToAReadStory?: boolean;
 
-  @ApiProperty({ description: 'Obeys sequence of 2 unrelated orders', example: 1 })
-  @IsNumber()
-  @IsOptional()
-  obeysSequenceOf2UnrelatedOrders?: number;
+@ApiProperty()
+@IsBoolean()
+@IsOptional()
+obeysSequenceOf2UnrelatedOrders?: boolean;
 
-  @ApiProperty({ description: 'Says full name when asked', example: 1 })
-  @IsNumber()
-  @IsOptional()
-  saysFullNameWhenAsked?: number;
+@ApiProperty()
+@IsBoolean()
+@IsOptional()
+saysFullNameWhenAsked?: boolean;
 
-   @ApiProperty({ description: 'Responds simple questions involving "how"', example: 1 })
-   @IsNumber()
-  @IsOptional()
-    respondsSimpleQuestionsInvolvingHow?: number;
+@ApiProperty()
+@IsBoolean()
+@IsOptional()
+respondsSimpleQuestionsInvolvingHow?: boolean;
 
-  @ApiProperty({ description: 'Employs regular verbs in the past', example: 1 })
-  @IsNumber()
-  @IsOptional()
-  employsRegularVerbsInThePast?: number;
+@ApiProperty()
+@IsBoolean()
+@IsOptional()
+employsRegularVerbsInThePast?: boolean;
 
-  @ApiProperty({ description: 'Reports immediate experiences', example: 1 })
-  @IsNumber()
-  @IsOptional()
-   reportsImmediateExperiences?: number;
+@ApiProperty()
+@IsBoolean()
+@IsOptional()
+reportsImmediateExperiences?: boolean;
 
-   @ApiProperty({ description: 'Says how common objects are used', example: 1 })
-   @IsNumber()
-  @IsOptional()
-    saysHowCommonObjectsAreUsed?: number;
+@ApiProperty()
+@IsBoolean()
+@IsOptional()
+saysHowCommonObjectsAreUsed?: boolean;
 
-  @ApiProperty({ description: 'Expresses future actions using verbs "to go", "to have", and "to want"', example: 1 })
-  @IsNumber()
-  @IsOptional()
-  expressesFutureActionsUsingVerbsToGoToHaveAndToWant?: number;
+@ApiProperty()
+@IsBoolean()
+@IsOptional()
+expressesFutureActionsUsingVerbsToGoToHaveAndToWant?: boolean;
 
-   @ApiProperty({ description: 'Uses masculine and feminine appropriately in speech', example: 1 })
-   @IsNumber()
-  @IsOptional()
-    usesMasculineAndFeminineAppropriatelyInSpeech?: number;
+@ApiProperty()
+@IsBoolean()
+@IsOptional()
+usesMasculineAndFeminineAppropriatelyInSpeech?: boolean;
 
-  @ApiProperty({ description: 'Uses imperative forms of verbs when asking for favors', example: 1 })
-  @IsNumber()
-  @IsOptional()
-  usesImperativeFormsOfVerbsWhenAskingForFavors?: number;
+@ApiProperty()
+@IsBoolean()
+@IsOptional()
+usesImperativeFormsOfVerbsWhenAskingForFavors?: boolean;
 
-   @ApiProperty({ description: 'Tells 2 facts in order of occurrence', example: 1 })
-  @IsNumber()
-  @IsOptional()
-    tells2FactsInOrderOfOccurrence?: number;
+@ApiProperty()
+@IsBoolean()
+@IsOptional()
+tells2FactsInOrderOfOccurrence?: boolean;
 }
 
-export class language4To5Years {
-    @ApiProperty({ description: 'Obeys a sequence involving 3 orders', example: 1 })
-  @IsNumber()
-  @IsOptional()
-  obeysASequenceInvolving3Orders?: number;
+export class Language4To5Years {
+@ApiProperty()
+@IsBoolean()
+@IsOptional()
+obeysASequenceInvolving3Orders?: boolean;
 
-    @ApiProperty({ description: 'Demonstrates understanding of reflexive verbs using them occasionally (ex: He got hurt)', example: 1 })
-  @IsNumber()
-  @IsOptional()
-   demonstratesUnderstandingOfReflexiveVerbsUsingThemOccasionallyExHeGotHurt?: number;
+@ApiProperty()
+@IsBoolean()
+@IsOptional()
+demonstratesUnderstandingOfReflexiveVerbsUsingThemOccasionallyExHeGotHurt?: boolean;
 
-  @ApiProperty({ description: 'Manages to identify objects/figures that form a pair upon request', example: 1 })
-   @IsNumber()
-  @IsOptional()
-    managesToIdentifyObjectsFiguresThatFormAPairUponRequest?: number;
+@ApiProperty()
+@IsBoolean()
+@IsOptional()
+managesToIdentifyObjectsFiguresThatFormAPairUponRequest?: boolean;
 
-  @ApiProperty({ description: 'Employs future when speaking', example: 1 })
-  @IsNumber()
-  @IsOptional()
-  employsFutureWhenSpeaking?: number;
+@ApiProperty()
+@IsBoolean()
+@IsOptional()
+employsFutureWhenSpeaking?: boolean;
 
-  @ApiProperty({ description: 'Uses sentences composed by coordination', example: 1 })
-   @IsNumber()
-  @IsOptional()
-  usesSentencesComposedByCoordination?: number;
+@ApiProperty()
+@IsBoolean()
+@IsOptional()
+usesSentencesComposedByCoordination?: boolean;
 
-  @ApiProperty({ description: 'Manages to identify the top and bottom part of objects when requested', example: 1 })
-  @IsNumber()
-  @IsOptional()
-  managesToIdentifyTheTopAndBottomPartOfObjectsWhenRequested?: number;
+@ApiProperty()
+@IsBoolean()
+@IsOptional()
+managesToIdentifyTheTopAndBottomPartOfObjectsWhenRequested?: boolean;
 
-  @ApiProperty({ description: 'Employs occasionally the conditional when speaking (could, would, could would make)', example: 1 })
-   @IsNumber()
-  @IsOptional()
-   employsOccasionallyTheConditionalWhenSpeakingCouldWouldCouldWouldMake?: number;
+@ApiProperty()
+@IsBoolean()
+@IsOptional()
+employsOccasionallyTheConditionalWhenSpeakingCouldWouldCouldWouldMake?: boolean;
 
-   @ApiProperty({ description: 'Manages to identify absurdities in figures', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    managesToIdentifyAbsurditiesInFigures?: number;
-  
-  @ApiProperty({ description: 'Employs the following words: brother, sister, grandmother, grandfather', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    employsTheFollowingWordsBrotherSisterGrandmotherGrandfather?: number;
+@ApiProperty()
+@IsBoolean()
+@IsOptional()
+managesToIdentifyAbsurditiesInFigures?: boolean;
 
-    @ApiProperty({ description: 'Completes sentences with antonyms', example: 1 })
-  @IsNumber()
-  @IsOptional()
-     completesSentencesWithAntonyms?: number;
+@ApiProperty()
+@IsBoolean()
+@IsOptional()
+employsTheFollowingWordsBrotherSisterGrandmotherGrandfather?: boolean;
 
-   @ApiProperty({ description: 'Tells a known story without help of figures', example: 1 })
-   @IsNumber()
-  @IsOptional()
-    tellsAKnownStoryWithoutHelpOfFigures?: number;
+@ApiProperty()
+@IsBoolean()
+@IsOptional()
+completesSentencesWithAntonyms?: boolean;
 
-  @ApiProperty({ description: 'In a figure, names the object that does not belong to a certain category', example: 1 })
-  @IsNumber()
-  @IsOptional()
-  inAFigureNamesTheObjectThatDoesNotBelongToACertainCategory?: number;
+@ApiProperty()
+@IsBoolean()
+@IsOptional()
+tellsAKnownStoryWithoutHelpOfFigures?: boolean;
 
-  @ApiProperty({ description: 'Says if two words rhyme or not', example: 1 })
-  @IsNumber()
-  @IsOptional()
-  saysIfTwoWordsRhymeOrNot?: number;
+@ApiProperty()
+@IsBoolean()
+@IsOptional()
+inAFigureNamesTheObjectThatDoesNotBelongToACertainCategory?: boolean;
 
-  @ApiProperty({ description: 'Uses complex sentences composed by subordination', example: 1 })
-   @IsNumber()
-  @IsOptional()
-  usesComplexSentencesComposedBySubordination?: number;
+@ApiProperty()
+@IsBoolean()
+@IsOptional()
+saysIfTwoWordsRhymeOrNot?: boolean;
 
-  @ApiProperty({ description: 'Says if a sound is loud or soft', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    saysIfASoundIsLoudOrSoft?: number;
+@ApiProperty()
+@IsBoolean()
+@IsOptional()
+usesComplexSentencesComposedBySubordination?: boolean;
+
+@ApiProperty()
+@IsBoolean()
+@IsOptional()
+saysIfASoundIsLoudOrSoft?: boolean;
 }
 
-export class language5To6Years {
-    @ApiProperty({ description: 'Manages to indicate "some," "many," and "several" elements', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    managesToIndicateSomeManyAndSeveralElements?: number;
 
-    @ApiProperty({ description: 'Says own address', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    saysOwnAddress?: number;
-
-    @ApiProperty({ description: 'Says own phone number', example: 1 })
-     @IsNumber()
-    @IsOptional()
-    saysOwnPhoneNumber?: number;
-
-    @ApiProperty({ description: 'Points to the set that has more, less, or few elements', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    pointsToTheSetThatHasMoreLessOrFewElements?: number;
-
-    @ApiProperty({ description: 'Tells simple jokes', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    tellsSimpleJokes?: number;
-
-    @ApiProperty({ description: 'Reports daily experiences', example: 1 })
-      @IsNumber()
-    @IsOptional()
-    reportsDailyExperiences?: number;
-
-    @ApiProperty({ description: 'Describes a location or movement through, between, away from, from, since, to, over, up to', example: 1 })
-     @IsNumber()
-    @IsOptional()
-    describesALocationOrMovementThroughOrBetweenAwayFromFromSinceToOverUpTo?: number;
-
-    @ApiProperty({ description: 'Answers the question "Why?" with an explanation', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    answersTheQuestionWhyWithAnExplanation?: number;
-
-    @ApiProperty({ description: 'Orders and tells a story of 2 to 5 episodes in the correct sequence', example: 1 })
-     @IsNumber()
-    @IsOptional()
-    ordersAndTellsAStoryOf2To5EpisodesInTheCorrectSequence?: number;
-
-    @ApiProperty({ description: 'Defines words', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    definesWords?: number;
-
-     @ApiProperty({ description: 'Responds appropriately to the question "What is the opposite of?"', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    respondsAppropriatelyToTheQuestionWhatIsTheOppositeOf?: number;
-
-    @ApiProperty({ description: 'Responds to the question "What happens if?"', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    respondsToTheQuestionWhatHappensIf?: number;
-
-    @ApiProperty({ description: 'Uses "yesterday" and "tomorrow" correctly', example: 1 })
-     @IsNumber()
-    @IsOptional()
-    usesYesterdayAndTomorrowCorrectly?: number;
-  
-   @ApiProperty({ description: 'Asks the meaning of new or known questions', example: 1 })
-  @IsNumber()
+export class Language5To6Years {
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-     asksTheMeaningOfNewOrKnownQuestions?: number;
+  managesToIndicateSomeManyAndSeveralElements?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  saysOwnAddress?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  saysOwnPhoneNumber?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  pointsToTheSetThatHasMoreLessOrFewElements?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  tellsSimpleJokes?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  reportsDailyExperiences?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  describesALocationOrMovementThroughOrBetweenAwayFromFromSinceToOverUpTo?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  answersTheQuestionWhyWithAnExplanation?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  ordersAndTellsAStoryOf2To5EpisodesInTheCorrectSequence?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  definesWords?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  respondsAppropriatelyToTheQuestionWhatIsTheOppositeOf?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  respondsToTheQuestionWhatHappensIf?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  usesYesterdayAndTomorrowCorrectly?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  asksTheMeaningOfNewOrKnownQuestions?: boolean;
 }
 
-export class cognition0To1Year {
-    @ApiProperty({ description: 'Removes a cloth from face that obscures vision', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    removesAClothFromFaceThatObscuresVision?: number;
-  
-    @ApiProperty({ description: 'Looks for object that has been removed from its visual field', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    looksForObjectThatHasBeenRemovedFromItsVisualField?: number;
-  
-    @ApiProperty({ description: 'Removes an object from a receptacle by putting hand inside it', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    removesAnObjectFromAReceptacleByPuttingHandInsideIt?: number;
-  
-    @ApiProperty({ description: 'Places an object in a receptacle, imitating an adult', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    placesAnObjectInAReceptacleImitatingAnAdult?: number;
-  
-      @ApiProperty({ description: 'Places an object in a receptacle when given instructions', example: 1 })
-      @IsNumber()
-      @IsOptional()
-      placesAnObjectInAReceptacleWhenGivenInstructions?: number;
-  
-    @ApiProperty({ description: 'Shakes a toy that produces sound, hanging from a string', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    shakesAToyThatProducesSoundHangingFromAString?: number;
-  
-    @ApiProperty({ description: 'Places three objects in a receptacle and empties it', example: 1 })
-     @IsNumber()
-    @IsOptional()
-    placesThreeObjectsInAReceptacleAndEmptiesIt?: number;
-  
-    @ApiProperty({ description: 'Transfers an object from one hand to another to pick up another object', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    transfersAnObjectFromOneHandToAnotherToPickUpAnotherObject?: number;
-  
-    @ApiProperty({ description: 'Drops and picks up a toy', example: 1 })
-      @IsNumber()
-      @IsOptional()
-      dropsAndPicksUpAToy?: number;
-    
-    @ApiProperty({ description: 'Discovers an object hidden under a receptacle', example: 1 })
-      @IsNumber()
-      @IsOptional()
-      discoversAnObjectHiddenUnderAReceptacle?: number;
-  
-    @ApiProperty({ description: 'Pushes 3 blocks as if it were a train', example: 1 })
-      @IsNumber()
-      @IsOptional()
-      pushes3BlocksAsIfItWereATrain?: number;
-  
-    @ApiProperty({ description: 'Removes a circle from a board by imitation', example: 1 })
-    @IsNumber()
-    @IsOptional()
-      removesACircleFromABoardByImitation?: number;
-  
-    @ApiProperty({ description: 'Places a round pin in a pin board when requested', example: 1 })
-      @IsNumber()
-      @IsOptional()
-     placesARoundPinInAPinBoardWhenRequested?: number;
-  
-    @ApiProperty({ description: 'Performs simple gestures when requested', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    performsSimpleGesturesWhenRequested?: number;
+export class Cognition0To1Year {
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  removesAClothFromFaceThatObscuresVision?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  looksForObjectThatHasBeenRemovedFromItsVisualField?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  removesAnObjectFromAReceptacleByPuttingHandInsideIt?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  placesAnObjectInAReceptacleImitatingAnAdult?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  placesAnObjectInAReceptacleWhenGivenInstructions?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  shakesAToyThatProducesSoundHangingFromAString?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  placesThreeObjectsInAReceptacleAndEmptiesIt?: boolean;
+
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  transfersAnObjectFromOneHandToAnotherToPickUpAnotherObject?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  dropsAndPicksUpAToy?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  discoversAnObjectHiddenUnderAReceptacle?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  pushes3BlocksAsIfItWereATrain?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  removesACircleFromABoardByImitation?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  placesARoundPinInAPinBoardWhenRequested?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  performsSimpleGesturesWhenRequested?: boolean;
 }
-export class cognition1To2Years{
-    @ApiProperty({ description: 'Removes 6 objects from a receptacle one at a time', example: 1 })
-  @IsNumber()
+
+export class Cognition1To2Years{
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  removes6ObjectsFromAReceptacleOneAtATime?: number;
+  removes6ObjectsFromAReceptacleOneAtATime?: boolean;
 
-    @ApiProperty({ description: 'Points to a part of the body', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    pointsToAPartOfTheBody?: number;
-
-  @ApiProperty({ description: 'Stacks 3 blocks given the order', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  stacks3BlocksGivenTheOrder?: number;
+  pointsToAPartOfTheBody?: boolean;
 
-  @ApiProperty({ description: 'Matches similar objects', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  matchesSimilarObjects?: number;
+  stacks3BlocksGivenTheOrder?: boolean;
 
-  @ApiProperty({ description: 'Scribbles on paper', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  scribblesOnPaper?: number;
+  matchesSimilarObjects?: boolean;
 
-    @ApiProperty({ description: 'Points to itself when asked "Where is [name]?"', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   pointsToItselfWhenAskedWhereIsName?: number;
+  scribblesOnPaper?: boolean;
 
-  @ApiProperty({ description: 'Places 5 round pins given the order', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  places5RoundPinsGivenTheOrder?: number;
+  pointsToItselfWhenAskedWhereIsName?: boolean;
 
-   @ApiProperty({ description: 'Matches objects with the figure of the same name', example: 1 })
-    @IsNumber()
-    @IsOptional()
-     matchesObjectsWithTheFigureOfTheSameName?: number;
-
-  @ApiProperty({ description: 'Points to the named figure', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    pointsToTheNamedFigure?: number;
-
-  @ApiProperty({ description: 'Turns the pages of a book 2-3 at a time to find the named figure', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  turnsThePagesOfABook23AtATimeToFindTheNamedFigure?: number;
+  places5RoundPinsGivenTheOrder?: boolean;
+  
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  matchesObjectsWithTheFigureOfTheSameName?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  pointsToTheNamedFigure?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  turnsThePagesOfABook23AtATimeToFindTheNamedFigure?: boolean;
 }
 
 export class Cognition2To3YearsDto  {
-    @ApiProperty({ description: 'Finds a certain book when requested', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    findsACertainBookWhenRequested?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  findsACertainBookWhenRequested?: boolean;
 
-    @ApiProperty({ description: 'Completes a 3-piece jigsaw puzzle', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    completesA3PieceJigsawPuzzle?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  completesA3PieceJigsawPuzzle?: boolean;
 
-    @ApiProperty({ description: 'Names 4 common objects in figures', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    names4CommonObjectsInFigures?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  names4CommonObjectsInFigures?: boolean;
 
-    @ApiProperty({ description: 'Draws a vertical line, imitating an adult', example: 1 })
-      @IsNumber()
-    @IsOptional()
-    drawsAVerticalLineImitatingAnAdult?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  drawsAVerticalLineImitatingAnAdult?: boolean;
 
-    @ApiProperty({ description: 'Draws a horizontal line, imitating an adult', example: 1 })
-     @IsNumber()
-    @IsOptional()
-    drawsAHorizontalLineImitatingAnAdult?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  drawsAHorizontalLineImitatingAnAdult?: boolean;
 
-    @ApiProperty({ description: 'Copies a circle', example: 1 })
-      @IsNumber()
-    @IsOptional()
-    copiesACircle?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  copiesACircle?: boolean;
 
-    @ApiProperty({ description: 'Matches objects with the same texture', example: 1 })
-      @IsNumber()
-    @IsOptional()
-    matchesObjectsWithTheSameTexture?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  matchesObjectsWithTheSameTexture?: boolean;
 
-    @ApiProperty({ description: 'Points to "small" and "big" when requested', example: 1 })
-     @IsNumber()
-    @IsOptional()
-    pointsToSmallAndBigWhenRequested?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  pointsToSmallAndBigWhenRequested?: boolean;
 
-     @ApiProperty({ description: 'Draws a plus sign, imitating an adult', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    drawsAPlusSignImitatingAnAdult?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  drawsAPlusSignImitatingAnAdult?: boolean;
 
-    @ApiProperty({ description: 'Matches 3 colors', example: 1 })
-      @IsNumber()
-    @IsOptional()
-    matches3Colors?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  matches3Colors?: boolean;
 
-   @ApiProperty({ description: 'Places objects inside, on top, and under a receptacle, given the order', example: 1 })
-    @IsNumber()
-    @IsOptional()
-   placesObjectsInsideOnTopAndUnderAReceptacleGivenTheOrder?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  placesObjectsInsideOnTopAndUnderAReceptacleGivenTheOrder?: boolean;
 
-    @ApiProperty({ description: 'Names objects when hears the noise they make', example: 1 })
-     @IsNumber()
-    @IsOptional()
-     namesObjectsWhenHearsTheNoiseTheyMake?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  namesObjectsWhenHearsTheNoiseTheyMake?: boolean;
 
-    @ApiProperty({ description: 'Mounts a 4-piece fitting toy', example: 1 })
-      @IsNumber()
-    @IsOptional()
-    mountsA4PieceFittingToy?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  mountsA4PieceFittingToy?: boolean;
 
-    @ApiProperty({ description: 'Names actions in figures (What is doing?)', example: 1 })
-     @IsNumber()
-    @IsOptional()
-     namesActionsInFiguresWhatIsDoing?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  namesActionsInFiguresWhatIsDoing?: boolean;
 
-    @ApiProperty({ description: 'Matches geometric shape with the figure of the same', example: 1 })
-      @IsNumber()
-    @IsOptional()
-    matchesGeometricShapeWithTheFigureOfTheSame?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  matchesGeometricShapeWithTheFigureOfTheSame?: boolean;
 
-    @ApiProperty({ description: 'Stacks 5 or more rings on a rod in order', example: 1 })
-      @IsNumber()
-    @IsOptional()
-    stacks5OrMoreRingsOnARodInOrder?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  stacks5OrMoreRingsOnARodInOrder?: boolean;
 }
 
-export class Cognition3To4YearsDto  {
-  @ApiProperty({ description: 'Names objects as being big or small', example: 1 })
-  @IsNumber()
+export class Cognition3To4YearsDto {
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    namesObjectsAsBeingBigOrSmall?: number;
+  namesObjectsAsBeingBigOrSmall?: boolean;
 
-  @ApiProperty({ description: 'Points to 10 parts of the body when requested', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    pointsTo10PartsOfTheBodyWhenRequested?: number;
+  pointsTo10PartsOfTheBodyWhenRequested?: boolean;
 
-  @ApiProperty({ description: 'Points to boy and girl, given the order', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    pointsToBoyAndGirlGivenTheOrder?: number;
-
-  @ApiProperty({ description: 'Says if an object is heavy or light', example: 1 })
-  @IsNumber()
+  pointsToBoyAndGirlGivenTheOrder?: boolean;
+  
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   saysIfAnObjectIsHeavyOrLight?: number;
+  saysIfAnObjectIsHeavyOrLight?: boolean;
 
-  @ApiProperty({ description: 'Unites 2 parts of a figure to form the whole', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   unites2PartsOfAFigureToFormTheWhole?: number;
+  unites2PartsOfAFigureToFormTheWhole?: boolean;
 
-  @ApiProperty({ description: 'Describes 2 events or characters from a familiar story or TV program', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   describes2EventsOrCharactersFromAFamiliarStoryOrTvProgram?: number;
+  describes2EventsOrCharactersFromAFamiliarStoryOrTvProgram?: boolean;
 
-  @ApiProperty({ description: 'Repeats games, rhymes, or songs that involve coordinated movements', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    repeatsGamesRhymesOrSongsThatInvolveCoordinatedMovements?: number;
-
-  @ApiProperty({ description: 'Matches 3 or more objects', example: 1 })
-    @IsNumber()
-    @IsOptional()
-   matches3OrMoreObjects?: number;
-
-  @ApiProperty({ description: 'Points to long or short objects', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   pointsToLongOrShortObjects?: number;
+  repeatsGamesRhymesOrSongsThatInvolveCoordinatedMovements?: boolean;
 
-  @ApiProperty({ description: 'Associates corresponding objects (ex: sock-shoe)', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   associatesCorrespondingObjectsExSockShoe?: number;
+  matches3OrMoreObjects?: boolean;
 
-    @ApiProperty({ description: 'Counts up to 3, imitating an adult', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   countsUpTo3ImitatingAnAdult?: number;
+  pointsToLongOrShortObjects?: boolean;
 
-  @ApiProperty({ description: 'Groups objects into categories', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    groupsObjectsIntoCategories?: number;
+  associatesCorrespondingObjectsExSockShoe?: boolean;
 
-    @ApiProperty({ description: 'Traces a V in imitation', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  tracesAVInImitation?: number;
+  countsUpTo3ImitatingAnAdult?: boolean;
 
-  @ApiProperty({ description: 'Traces a diagonal line, given the example', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    tracesADiagonalLineGivenTheExample?: number;
+  groupsObjectsIntoCategories?: boolean;
 
-  @ApiProperty({ description: 'Counts up to 10 objects, imitating an adult', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   countsUpTo10ObjectsImitatingAnAdult?: number;
+  tracesAVInImitation?: boolean;
 
-    @ApiProperty({ description: 'Builds a bridge with 3 blocks by imitation', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    buildsABridgeWith3BlocksByImitation?: number;
-
-  @ApiProperty({ description: 'Matches a sequence or pattern (size, color) of blocks or beads', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  matchesASequenceOrPatternSizeColorOfBlocksOrBeads?: number;
+  tracesADiagonalLineGivenTheExample?: boolean;
 
-  @ApiProperty({ description: 'Copies a series of interconnected V\'s', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  copiesASeriesOfInterconnectedV?: number;
+  countsUpTo10ObjectsImitatingAnAdult?: boolean;
 
-  @ApiProperty({ description: 'Adds a leg or arm to an incomplete drawing of the human figure', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    addsALegOrArmToAnIncompleteDrawingOfTheHumanFigure?: number;
+  buildsABridgeWith3BlocksByImitation?: boolean;
 
-  @ApiProperty({ description: 'Completes a 6-piece puzzle', example: 1 })
-    @IsNumber()
-    @IsOptional()
-   completesA6PiecePuzzle?: number;
-
-    @ApiProperty({ description: 'Indicates if objects are equal or different', example: 1 })
-    @IsNumber()
-    @IsOptional()
-   indicatesIfObjectsAreEqualOrDifferent?: number;
-
-    @ApiProperty({ description: 'Draws a square, imitating an adult', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-     drawsASquareImitatingAnAdult?: number;
+  matchesASequenceOrPatternSizeColorOfBlocksOrBeads?: boolean;
 
-  @ApiProperty({ description: 'Names 3 colors when requested', example: 1 })
-    @IsNumber()
-    @IsOptional()
-   names3ColorsBeingRequested?: number;
-
-    @ApiProperty({ description: 'Names 3 geometric shapes (square, triangle, and circle)', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   names3GeometricShapesSquareTriangleAndCircle?: number;
+  copiesASeriesOfInterconnectedV?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  addsALegOrArmToAnIncompleteDrawingOfTheHumanFigure?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  completesA6PiecePuzzle?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  indicatesIfObjectsAreEqualOrDifferent?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  drawsASquareImitatingAnAdult?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  names3ColorsBeingRequested?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  names3GeometricShapesSquareTriangleAndCircle?: boolean;
 }
-export class Cognition4To5YearsDto  {
-    @ApiProperty({ description: 'Picks up from 1 to 5 objects when requested', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    picksUpFrom1To5ObjectsWhenRequested?: number;
 
-    @ApiProperty({ description: 'Names 5 different textures', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    names5DifferentTextures?: number;
-
-    @ApiProperty({ description: 'Copies a triangle when requested', example: 1 })
-     @IsNumber()
-    @IsOptional()
-    copiesATriangleWhenRequested?: number;
-
-     @ApiProperty({ description: 'Remembers 4 objects that had been seen in a figure', example: 1 })
-     @IsNumber()
-    @IsOptional()
-    remembers4ObjectsThatHadBeenSeenInAFigure?: number;
-
-    @ApiProperty({ description: 'Says the time of the day associated with each activity', example: 1 })
-     @IsNumber()
-    @IsOptional()
-   saysTheTimeOfTheDayAssociatedWithEachActivity?: number;
-
-    @ApiProperty({ description: 'Repeats familiar rhymes', example: 1 })
-     @IsNumber()
-    @IsOptional()
-   repeatsFamiliarRhymes?: number;
-
-  @ApiProperty({ description: 'Says if an object is heavier or lighter (objects with a difference of 0.5 kilo)', example: 1 })
-  @IsNumber()
+export class Cognition4To5YearsDto {
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  saysIfAnObjectIsHeavierOrLighterObjectsWithADifferenceOf05Kilo?: number;
+  picksUpFrom1To5ObjectsWhenRequested?: boolean;
 
-  @ApiProperty({ description: 'Says what is missing when an object is removed from a group of 3 objects', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   saysWhatIsMissingWhenAnObjectIsRemovedFromAGroupOf3Objects?: number;
+  names5DifferentTextures?: boolean;
 
-  @ApiProperty({ description: 'Names 8 colors', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  names8Colors?: number;
+  copiesATriangleWhenRequested?: boolean;
 
-  @ApiProperty({ description: 'Identifies the value of 3 coins', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   identifiesTheValueOf3Coins?: number;
+  remembers4ObjectsThatHadBeenSeenInAFigure?: boolean;
 
-    @ApiProperty({ description: 'Matches symbols, letters, and numbers', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   matchesSymbolsLettersAndNumbers?: number;
+  saysTheTimeOfTheDayAssociatedWithEachActivity?: boolean;
 
-  @ApiProperty({ description: 'Says the color of named objects', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   saysTheColorOfNamedObjects?: number;
+  repeatsFamiliarRhymes?: boolean;
 
-  @ApiProperty({ description: 'Reports 5 main facts of a story told 3 times', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    reports5MainFactsOfAStoryTold3Times?: number;
+  saysIfAnObjectIsHeavierOrLighterObjectsWithADifferenceOf05Kilo?: boolean;
 
-    @ApiProperty({ description: 'Draws human figure (head, torso, and 4 limbs)', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  drawsHumanFigureHeadTorsoAnd4Limbs?: number;
+  saysWhatIsMissingWhenAnObjectIsRemovedFromAGroupOf3Objects?: boolean;
 
-    @ApiProperty({ description: 'Sings 5 verses of a song', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  sings5VersesOfASong?: number;
+  names8Colors?: boolean;
 
-   @ApiProperty({ description: 'Builds a pyramid of 10 blocks by imitation', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    buildsAPyramidOf10BlocksByImitation?: number;
+  identifiesTheValueOf3Coins?: boolean;
 
-  @ApiProperty({ description: 'Names objects as being long or short', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    namesObjectsAsBeingLongOrShort?: number;
-
-  @ApiProperty({ description: 'Places objects behind, beside, or next to others', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   placesObjectsBehindBesideOrNextToOthers?: number;
+  matchesSymbolsLettersAndNumbers?: boolean;
 
-  @ApiProperty({ description: 'Makes equal sets of 10 objects according to a model', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  makesEqualSetsOf10ObjectsAccordingToModel?: number;
+  saysTheColorOfNamedObjects?: boolean;
 
-   @ApiProperty({ description: 'Names or points to the missing part of a figure', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  namesOrPointsToTheMissingPartOfTheFigure?: number;
- 
-  @ApiProperty({ description: 'Counts from 1 to 20', example: 1 })
-  @IsNumber()
-  @IsOptional()
-    countsFrom1To20?: number;
+  reports5MainFactsOfAStoryTold3Times?: boolean;
 
-  @ApiProperty({ description: 'Identifies the object that is placed in the middle, in first, and last place', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    identifiesTheObjectThatIsPlacedInTheMiddleInFirstAndLastPlace?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  drawsHumanFigureHeadTorsoAnd4Limbs?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  sings5VersesOfASong?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  buildsAPyramidOf10BlocksByImitation?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  namesObjectsAsBeingLongOrShort?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  placesObjectsBehindBesideOrNextToOthers?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  makesEqualSetsOf10ObjectsAccordingToModel?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  namesOrPointsToTheMissingPartOfTheFigure?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  countsFrom1To20?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  identifiesTheObjectThatIsPlacedInTheMiddleInFirstAndLastPlace?: boolean;
 }
 
 export class Cognition5To6YearsDto {
-  @ApiProperty({ description: 'Counts up to 20 objects and answers appropriately to the question "How many did you count?"', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  countsUpTo20ObjectsAndAnswersAppropriatelyToTheQuestionHowManyDidYouCount?: number;
+  countsUpTo20ObjectsAndAnswersAppropriatelyToTheQuestionHowManyDidYouCount?: boolean;
 
-    @ApiProperty({ description: 'Names 10 numerals', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    names10Numerals?: number;
-
-    @ApiProperty({ description: 'Identifies which is its left and which is its right', example: 1 })
-     @IsNumber()
-    @IsOptional()
-    identifiesWhichIsItsLeftAndWhichIsItsRight?: number;
-
-    @ApiProperty({ description: 'Says the vowels in order', example: 1 })
-    @IsNumber()
-    @IsOptional()
-     saysTheVowelsInOrder?: number;
-
-    @ApiProperty({ description: 'Writes own name with block letters', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    writesOwnNameWithBlockLetters?: number;
-
-    @ApiProperty({ description: 'Names 5 letters of the alphabet', example: 1 })
-     @IsNumber()
-    @IsOptional()
-    names5LettersOfTheAlphabet?: number;
-
-   @ApiProperty({ description: 'Orders objects in sequence of length and width', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   ordersObjectsInSequenceOfLengthAndWidth?: number;
+  names10Numerals?: boolean;
 
-    @ApiProperty({ description: 'Names the uppercase letters of the alphabet', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-     namesTheUppercaseLettersOfTheAlphabet?: number;
+  identifiesWhichIsItsLeftAndWhichIsItsRight?: boolean;
 
-    @ApiProperty({ description: 'Places numerals from 1 to 10 in the correct sequence', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    placesNumeralsFrom1To10InTheCorrectSequence?: number;
-
-    @ApiProperty({ description: 'Identifies the position of objects in first, second, and third place', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  identifiesThePositionOfObjectsInFirstSecondAndThirdPlace?: number;
+  saysTheVowelsInOrder?: boolean;
 
-  @ApiProperty({ description: 'Names the lowercase letters of the alphabet', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    namesTheLowercaseLettersOfTheAlphabet?: number;
-
-   @ApiProperty({ description: 'Matches uppercase letters with lowercase ones', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    matchesUppercaseLettersWithLowercaseOnes?: number;
+  writesOwnNameWithBlockLetters?: boolean;
 
-  @ApiProperty({ description: 'Points to numerals from 1 to 25', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   pointsToNumeralsFrom1To25?: number;
-  
-   @ApiProperty({ description: 'Copies a rhombus', example: 1 })
-  @IsNumber()
-  @IsOptional()
-     copiesARhombus?: number;
+  names5LettersOfTheAlphabet?: boolean;
 
-   @ApiProperty({ description: 'Completes a simple labyrinth', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    completesASimpleLabyrinth?: number;
+  objectsInSequenceOfLengthAndWidth?: boolean;
 
-   @ApiProperty({ description: 'Says the days of the week in order', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  saysTheDaysOfTheWeekInOrder?: number;
+  namesTheUppercaseLettersOfTheAlphabet?: boolean;
 
-  @ApiProperty({ description: 'Adds and subtracts combinations of up to 3 elements', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   addsAndSubtractsCombinationsOfUpTo3Elements?: number;
+  placesNumeralsFrom1To10InTheCorrectSequence?: boolean;
 
-   @ApiProperty({ description: 'Says the month and day of own birthday', example: 1 })
-    @IsNumber()
-    @IsOptional()
-   saysTheMonthAndDayOfOwnBirthday?: number;
-
-   @ApiProperty({ description: 'Reads 10 printed words', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    reads10PrintedWords?: number;
-  
-   @ApiProperty({ description: 'Predicts what will occur', example: 1 })
-   @IsNumber()
-  @IsOptional()
-    predictsWhatWillOccur?: number;
+  identifiesThePositionOfObjectsInFirstSecondAndThirdPlace?: boolean;
 
-   @ApiProperty({ description: 'Points to whole and half objects', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   pointsToWholeAndHalfObjects?: number;
+  namesTheLowercaseLettersOfTheAlphabet?: boolean;
 
-    @ApiProperty({ description: 'Counts from memory from 1 to 100 (ask to stop at 40 and continue at 80 if no errors until 40)', example: 1 })
-    @IsNumber()
-    @IsOptional()
-   countsFromMemoryFrom1To100AskToStopAt40AndContinueAt80IfNoErrorsUntil40?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  matchesUppercaseLettersWithLowercaseOnes?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  pointsToNumeralsFrom1To25?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  copiesARhombus?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  completesASimpleLabyrinth?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  saysTheDaysOfTheWeekInOrder?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  addsAndSubtractsCombinationsOfUpTo3Elements?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  saysTheMonthAndDayOfOwnBirthday?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  reads10PrintedWords?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  predictsWhatWillOccur?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  pointsToWholeAndHalfObjects?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  countsFromMemoryFrom1To100AskToStopAt40AndContinueAt80IfNoErrorsUntil40?: boolean;
 }
-export class SelfCare0To1YearDto  {
-  @ApiProperty({ description: 'Sucks and swallows liquids', example: 1 })
-  @IsNumber()
+
+export class SelfCare0To1YearDto {
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  sucksAndSwallowsLiquids?: number;
+  sucksAndSwallowsLiquids?: boolean;
 
-   @ApiProperty({ description: 'Eats porridge or soup', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    eatsPorridgeOrSoup?: number;
+  eatsPorridgeOrSoup?: boolean;
 
-  @ApiProperty({ description: 'Extends hands towards baby bottle, trying to grab it', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  extendsHandsTowardsBabyBottleTryingToGrabIt?: number;
+  extendsHandsTowardsBabyBottleTryingToGrabIt?: boolean;
 
-  @ApiProperty({ description: 'Eats pureed foods given by parents', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    eatsPureedFoodsGivenByParents?: number;
+  eatsPureedFoodsGivenByParents?: boolean;
 
-  @ApiProperty({ description: 'Holds baby bottle without help while drinking', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    holdsBabyBottleWithoutHelpWhileDrinking?: number;
-
-  @ApiProperty({ description: 'Brings bottle to mouth or refuses it, pushing it away', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    bringsBottleToMouthOrRefusesItPushingItAway?: number;
+  holdsBabyBottleWithoutHelpWhileDrinking?: boolean;
 
-    @ApiProperty({ description: 'Eats mashed foods given by parents', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    eatsMashedFoodsGivenByParents?: number;
-
-  @ApiProperty({ description: 'Drinks from a mug held by parents', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   drinksFromAMugHeldByParents?: number;
+  bringsBottleToMouthOrRefusesItPushingItAway?: boolean;
 
-  @ApiProperty({ description: 'Eats semisolid foods given by parents', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    eatsSemisolidFoodsGivenByParents?: number;
+  eatsMashedFoodsGivenByParents?: boolean;
 
-    @ApiProperty({ description: 'Feeds itself using fingers', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    feedsItselfUsingFingers?: number;
-
-  @ApiProperty({ description: 'Holds the mug with both hands and drinks', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    holdsTheMugWithBothHandsAndDrinks?: number;
+  drinksFromAMugHeldByParents?: boolean;
 
-  @ApiProperty({ description: 'Brings a spoonful of food to mouth with help', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   bringsASpoonFullOfFoodToMouthWithHelp?: number;
+  eatsSemisolidFoodsGivenByParents?: boolean;
 
-    @ApiProperty({ description: 'Stretches arms and legs when being dressed', example: 1 })
-    @IsNumber()
-    @IsOptional()
-   stretchesArmsAndLegsWhenBeingDressed?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  feedsItselfUsingFingers?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  holdsTheMugWithBothHandsAndDrinks?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  bringsASpoonFullOfFoodToMouthWithHelp?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  stretchesArmsAndLegsWhenBeingDressed?: boolean;
 }
 export class SelfCare1To2YearsDto {
-    @ApiProperty({ description: 'Eats with spoon independently', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    eatsWithSpoonIndependently?: number;
-
-  @ApiProperty({ description: 'Holds mug with one hand and drinks', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   holdsMugWithOneHandAndDrinks?: number;
+  eatsWithSpoonIndependently?: boolean;
 
-    @ApiProperty({ description: 'Puts hand in water and pats face with wet hands, imitating someone', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    putsHandInWaterAndPatsFaceWithWetHandsImitatingSomeone?: number;
-
-  @ApiProperty({ description: 'Sits on a potty or child\'s toilet for 5 minutes', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   sitsOnAPottyOrChildsToiletFor5Minutes?: number;
+  holdsMugWithOneHandAndDrinks?: boolean;
 
-  @ApiProperty({ description: 'Puts a hat on head and removes it', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   putsAHatOnHeadAndRemovesIt?: number;
+  putsHandInWaterAndPatsFaceWithWetHandsImitatingSomeone?: boolean;
 
-    @ApiProperty({ description: 'Takes off socks', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    takesOffSocks?: number;
-
-    @ApiProperty({ description: 'Pushes arms through sleeves and feet through trouser legs', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    pushesArmsThroughSleevesAndFeetThroughTrouserLegs?: number;
-   
-  @ApiProperty({ description: 'Takes off shoes when laces are untied', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   takesOffShoesWhenLacesAreUntied?: number;
+  sitsOnAPottyOrChildsToiletFor5Minutes?: boolean;
 
-  @ApiProperty({ description: 'Takes off coat when unbuttoned', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    takesOffCoatWhenUnbuttoned?: number;
+  putsAHatOnHeadAndRemovesIt?: boolean;
 
-  @ApiProperty({ description: 'Takes off trousers when unbuttoned', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    takesOffTrousersWhenUnbuttoned?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  takesOffSocks?: boolean;
 
-   @ApiProperty({ description: 'Pulls a large zipper up and down', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    pullsALargeZipperUpAndDown?: number;
-  
-    @ApiProperty({ description: 'Uses words or gestures indicating need to go to the bathroom', example: 1 })
-    @IsNumber()
-    @IsOptional()
-     usesWordsOrGesturesIndicatingNeedToGoToTheBathroom?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  pushesArmsThroughSleevesAndFeetThroughTrouserLegs?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  takesOffShoesWhenLacesAreUntied?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  takesOffCoatWhenUnbuttoned?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  takesOffTrousersWhenUnbuttoned?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  pullsALargeZipperUpAndDown?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  usesWordsOrGesturesIndicatingNeedToGoToTheBathroom?: boolean;
 }
-export class SelfCare2To3YearsDto  {
-  @ApiProperty({ description: 'Eats alone using spoon or mug, spilling a little food or liquid', example: 1 })
-  @IsNumber()
-  @IsOptional()
-    eatsAloneUsingSpoonOrMugSpillingALittleFoodOrLiquid?: number;
 
-  @ApiProperty({ description: 'When given a towel, dries hands and face with help', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    whenGivenATowelDriesHandsAndFaceWithHelp?: number;
+export class SelfCare2To3YearsDto {
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  eatsAloneUsingSpoonOrMugSpillingALittleFoodOrLiquid?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  whenGivenATowelDriesHandsAndFaceWithHelp?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  sucksLiquidFromTheGlassOrMugUsingAStraw?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  takesForkfuls?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  chewsAndSwallowsOnlyEdibleSubstances?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  driesHandsWithoutHelpWhenGivenATowel?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  warnsThatWantsToGoToTheBathroomEvenIfItIsTooLate?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  controlsOwnDrool?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  urinatesOrDefecatesWhenPlacedInPottyAtLeast3TimesAWeek?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  putsOnShoes?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  brushesTeethImitatingAnAdult?: boolean;
   
-    @ApiProperty({ description: 'Sucks liquid from the glass or mug using a straw', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    sucksLiquidFromTheGlassOrMugUsingAStraw?: number;
-
-  @ApiProperty({ description: 'Takes forkfuls', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    takesForkfuls?: number;
-
-    @ApiProperty({ description: 'Chews and swallows only edible substances', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    chewsAndSwallowsOnlyEdibleSubstances?: number;
-
-   @ApiProperty({ description: 'Dries hands without help when given a towel', example: 1 })
-    @IsNumber()
-    @IsOptional()
-   driesHandsWithoutHelpWhenGivenATowel?: number;
-
-  @ApiProperty({ description: 'Warns that wants to go to the bathroom, even if it is too late', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    warnsThatWantsToGoToTheBathroomEvenIfItIsTooLate?: number;
+  removesSimpleClothesThatHaveBeenUnbuttoned?: boolean;
 
-   @ApiProperty({ description: 'Controls own drool', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    controlsOwnDrool?: number;
+  usesTheBathroomToDefecateFailsOnlyOnceAWeek?: boolean;
 
-  @ApiProperty({ description: 'Urinates or defecates when placed in potty at least 3 times a week', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    urinatesOrDefecatesWhenPlacedInPottyAtLeast3TimesAWeek?: number;
-
-  @ApiProperty({ description: 'Puts on shoes', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    putsOnShoes?: number;
-
-  @ApiProperty({ description: 'Brushes teeth, imitating an adult', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   brushesTeethImitatingAnAdult?: number;
+  obtainsWaterFromAFaucetWithoutHelp?: boolean;
 
-  @ApiProperty({ description: 'Removes simple clothes that have been unbuttoned', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    removesSimpleClothesThatHaveBeenUnbuttoned?: number;
-
-    @ApiProperty({ description: 'Uses the bathroom to defecate, fails only once a week', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    usesTheBathroomToDefecateFailsOnlyOnceAWeek?: number;
+  washesHandsAndFaceWithSoap?: boolean;
 
-    @ApiProperty({ description: 'Obtains water from a faucet without help', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  obtainsWaterFromAFaucetWithoutHelp?: number;
+  warnsThatWantsToGoToTheBathroomDuringTheDayInTime?: boolean;
 
-   @ApiProperty({ description: 'Washes hands and face with soap', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    washesHandsAndFaceWithSoap?: number;
-
-  @ApiProperty({ description: 'Warns that wants to go to the bathroom during the day, in time', example: 1 })
-    @IsNumber()
-    @IsOptional()
-     warnsThatWantsToGoToTheBathroomDuringTheDayInTime?: number;
-
-  @ApiProperty({ description: 'Hangs coat on a hook at its own height', example: 1 })
-    @IsNumber()
-    @IsOptional()
-   hangsCoatOnAHookAtItsOwnHeight?: number;
-
-    @ApiProperty({ description: 'Stays dry when sleeping during the day', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    staysDryWhenSleepingDuringTheDay?: number;
-
-   @ApiProperty({ description: 'Avoids risks (ex: sharp edges on furniture and stairs without handrail)', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-     avoidsRisksExSharpEdgesOnFurnitureAndStairsWithoutHandrail?: number;
+  hangsCoatOnAHookAtItsOwnHeight?: boolean;
 
-  @ApiProperty({ description: 'Uses a napkin when recommended', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  usesANapkinWhenRecommended?: number;
+  staysDryWhenSleepingDuringTheDay?: boolean;
 
-    @ApiProperty({ description: 'Pierces the fork in the food, taking it to the mouth', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    piercesTheForkInTheFoodTakingItToTheMouth?: number;
-
-    @ApiProperty({ description: 'Pours liquid from a small pitcher into a glass without help', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   poursLiquidFromASmallPitcherIntoAGlassWithoutHelp?: number;
+  avoidsRisksExSharpEdgesOnFurnitureAndStairsWithoutHandrail?: boolean;
 
-    @ApiProperty({ description: 'Unfastens clothes fastened with a snap fastener', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    unfastensClothesFastenedWithASnapFastener?: number;
+  usesANapkinWhenRecommended?: boolean;
 
-     @ApiProperty({ description: 'Washes arms and legs when given a bath', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    washesArmsAndLegsWhenGivenABath?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  piercesTheForkInTheFoodTakingItToTheMouth?: boolean;
 
-     @ApiProperty({ description: 'Puts on socks', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    putsOnSocks?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  poursLiquidFromASmallPitcherIntoAGlassWithoutHelp?: boolean;
 
-    @ApiProperty({ description: 'Wears coat, jacket, or shirt', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    wearsCoatJacketOrShirt?: number;
-   
-   @ApiProperty({ description: 'Identifies the front part of clothes', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    identifiesTheFrontPartOfClothes?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  unfastensClothesFastenedWithASnapFastener?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  washesArmsAndLegsWhenGivenABath?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  putsOnSocks?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  wearsCoatJacketOrShirt?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  identifiesTheFrontPartOfClothes?: boolean;
 }
+
 export class SelfCare3To4YearsDto {
-    @ApiProperty({ description: 'Feeds itself alone for entire meal', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    feedsItselfAloneForEntireMeal?: number;
-
-   @ApiProperty({ description: 'Dresses itself alone, needing help only when there are jackets or t-shirts with closed collars or buttons and fasteners', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    dressesItselfAloneNeedingHelpOnlyWhenThereAreJacketsOrTShirtsWithClosedCollarsOrButtonsAndFasteners?: number;
-
-  @ApiProperty({ description: 'Wipes nose when reminded', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    wipesNoseWhenReminded?: number;
-
-  @ApiProperty({ description: 'Wakes up dry 2 mornings a week', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    wakesUpDry2MorningsAWeek?: number;
-
-    @ApiProperty({ description: 'If boy, urinates in the toilet while standing', example: 1 })
-     @IsNumber()
-    @IsOptional()
-    ifBoyUrinatesInTheToiletWhileStanding?: number;
-
-    @ApiProperty({ description: 'Dresses and undresses itself alone, except for buttons and fasteners, 75 percent of the time', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  dressesAndUndressesItselfAloneExceptForButtonsAndFasteners75PercentOfTheTime?: number;
+  feedsItselfAloneForEntireMeal?: boolean;
 
-  @ApiProperty({ description: 'Fastens clothes with snaps or hooks', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    fastensClothesWithSnapsOrHooks?: number;
+  dressesItselfAloneNeedingHelpOnlyWhenThereAreJacketsOrTShirtsWithClosedCollarsOrButtonsAndFasteners?: boolean;
 
-   @ApiProperty({ description: 'Blows nose when reminded', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-     blowsNoseWhenReminded?: number;
+  wipesNoseWhenReminded?: boolean;
 
-    @ApiProperty({ description: 'Avoids common dangers (ex: broken glass)', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   avoidsCommonDangersExBrokenGlass?: number;
+  wakesUpDry2MorningsAWeek?: boolean;
 
-    @ApiProperty({ description: 'Hangs clothes on a hanger and puts in closet when asked', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   hangsClothesOnAHangerAndPutsInClosetWhenAsked?: number;
-  
-  @ApiProperty({ description: 'Brushes teeth when receives instruction', example: 1 })
-   @IsNumber()
+  ifBoyUrinatesInTheToiletWhileStanding?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   brushesTeethWhenReceivesInstruction?: number;
+  dressesAndUndressesItselfAloneExceptForButtonsAndFasteners75PercentOfTheTime?: boolean;
 
-  @ApiProperty({ description: 'Puts on gloves', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  putsOnGloves?: number;
+  fastensClothesWithSnapsOrHooks?: boolean;
 
-  @ApiProperty({ description: 'Puts on boots', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    putsOnBoots?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  blowsNoseWhenReminded?: boolean;
 
-   @ApiProperty({ description: 'Unbuttons large buttons', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    unbuttonsLargeButtons?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  avoidsCommonDangersExBrokenGlass?: boolean;
 
-    @ApiProperty({ description: 'Buttons large buttons', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    buttonsLargeButtons?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  hangsClothesOnAHangerAndPutsInClosetWhenAsked?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  brushesTeethWhenReceivesInstruction?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  putsOnGloves?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  putsOnBoots?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  unbuttonsLargeButtons?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  buttonsLargeButtons?: boolean;
 }
 
-export class SelfCare4To5YearsDto  {
-    @ApiProperty({ description: 'Cleans what it spilled on own', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    cleansWhatItSpilledOnOwn?: number;
-
-  @ApiProperty({ description: 'Avoids poison and all harmful substances', example: 1 })
-   @IsNumber()
+export class SelfCare4To5YearsDto {
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  avoidsPoisonAndAllHarmfulSubstances?: number;
+  cleansWhatItSpilledOnOwn?: boolean;
 
-   @ApiProperty({ description: 'Unbuttons own clothes', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    unbuttonsOwnClothes?: number;
-
-   @ApiProperty({ description: 'Buttons own clothes', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    buttonsOwnClothes?: number;
-
-   @ApiProperty({ description: 'Removes plate and cutlery from the table', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    removesPlateAndCutleryFromTheTable?: number;
+  avoidsPoisonAndAllHarmfulSubstances?: boolean;
 
-   @ApiProperty({ description: 'Fits zipper into its termination', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    fitsZipperIntoItsTermination?: number;
-
-    @ApiProperty({ description: 'Washes hands and face', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  washesHandsAndFace?: number;
+  unbuttonsOwnClothes?: boolean;
 
-    @ApiProperty({ description: 'Uses appropriate cutlery to eat', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    usesAppropriateCutleryToEat?: number;
+  buttonsOwnClothes?: boolean;
 
-   @ApiProperty({ description: 'Wakes up at night to go to the bathroom or wakes up dry', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-     wakesUpAtNightToGoToTheBathroomOrWakesUpDry?: number;
+  removesPlateAndCutleryFromTheTable?: boolean;
 
-  @ApiProperty({ description: 'Cleans and blows its nose 75 percent of the time without being reminded', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    cleansAndBlowsItsNose75PercentOfTheTimeWithoutBeingReminded?: number;
+  fitsZipperIntoItsTermination?: boolean;
 
-    @ApiProperty({ description: 'Bathes alone, needing help only to wash back, neck, and ears', example: 1 })
-    @IsNumber()
-    @IsOptional()
-   bathesAloneNeedingHelpOnlyToWashBackNeckAndEars?: number;
-
-    @ApiProperty({ description: 'Uses a knife to spread butter on bread', example: 1 })
-    @IsNumber()
-    @IsOptional()
-   usesAKnifeToSpreadButterOnBread?: number;
-
-  @ApiProperty({ description: 'Tightens and loosens belts or buckles', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   tightensAndLoosensBeltsOrBuckles?: number;
+  washesHandsAndFace?: boolean;
 
-  @ApiProperty({ description: 'Dresses itself alone but does not tie laces', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    dressesItselfAloneButDoesNotTieLaces?: number;
-  
-   @ApiProperty({ description: 'Serves itself at the table while holding the food platter', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    servesItselfAtTheTableWhileHoldingTheFoodPlatter?: number;
+  usesAppropriateCutleryToEat?: boolean;
 
-    @ApiProperty({ description: 'Helps set the table correctly when receives instructions', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   helpsSetTheTableCorrectlyWhenReceivesInstructions?: number;
-  
-  @ApiProperty({ description: 'Brushes teeth', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    brushesTeeth?: number;
+  wakesUpAtNightToGoToTheBathroomOrWakesUpDry?: boolean;
 
-     @ApiProperty({ description: 'Goes to the bathroom in time, removes clothes, uses toilet paper, flushes, and dresses without help', example: 1 })
-    @IsNumber()
-    @IsOptional()
-   goesToTheBathroomInTimeRemovesClothesUsesToiletPaperFlushesAndDressesWithoutHelp?: number;
-
-   @ApiProperty({ description: 'Combs or brushes hair', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   combsOrBrushesHair?: number;
+  cleansAndBlowsItsNose75PercentOfTheTimeWithoutBeingReminded?: boolean;
 
-  @ApiProperty({ description: 'Hangs clothes on hangers', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    hangsClothesOnHangers?: number;
+  bathesAloneNeedingHelpOnlyToWashBackNeckAndEars?: boolean;
 
-   @ApiProperty({ description: 'Walks around the neighborhood without constant supervision', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   walksAroundTheNeighborhoodWithoutConstantSupervision?: number;
+  usesAKnifeToSpreadButterOnBread?: boolean;
 
-     @ApiProperty({ description: 'Threads laces into shoes', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    threadsLacesIntoShoes?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  tightensAndLoosensBeltsOrBuckles?: boolean;
 
-     @ApiProperty({ description: 'Ties or laces shoelaces', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    tiesOrLacesShoelaces?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  dressesItselfAloneButDoesNotTieLaces?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  servesItselfAtTheTableWhileHoldingTheFoodPlatter?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  helpsSetTheTableCorrectlyWhenReceivesInstructions?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  brushesTeeth?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  goesToTheBathroomInTimeRemovesClothesUsesToiletPaperFlushesAndDressesWithoutHelp?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  combsOrBrushesHair?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  hangsClothesOnHangers?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  walksAroundTheNeighborhoodWithoutConstantSupervision?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  threadsLacesIntoShoes?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  tiesOrLacesShoelaces?: boolean;
 }
-export class SelfCare5To6YearsDto  {
-  @ApiProperty({ description: 'Is responsible for a weekly task and performs it when reminded', example: 1 })
-  @IsNumber()
+export class SelfCare5To6YearsDto {
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    isResponsibleForAWeeklyTaskAndPerformsItWhenReminded?: number;
+  isResponsibleForAWeeklyTaskAndPerformsItWhenReminded?: boolean;
 
-  @ApiProperty({ description: 'Selects appropriate clothing for climate and occasion', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   selectsAppropriateClothingForClimateAndOccasion?: number;
+  selectsAppropriateClothingForClimateAndOccasion?: boolean;
 
-  @ApiProperty({ description: 'Stops on the sidewalk, looks both ways, and crosses the street without needing to be reminded', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   stopsOnTheSidewalkLooksBothWaysAndCrossesTheStreetWithoutNeedingToBeReminded?: number;
+  stopsOnTheSidewalkLooksBothWaysAndCrossesTheStreetWithoutNeedingToBeReminded?: boolean;
 
-    @ApiProperty({ description: 'Serves itself at the table and passes the pot of food to others', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    servesItselfAtTheTableAndPassesThePotOfFoodToOthers?: number;
+  servesItselfAtTheTableAndPassesThePotOfFoodToOthers?: boolean;
 
-  @ApiProperty({ description: 'Prepares own cup of coffee with milk', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   preparesOwnCupOfCoffeeWithMilk?: number;
+  preparesOwnCupOfCoffeeWithMilk?: boolean;
 
-  @ApiProperty({ description: 'Is responsible for a daily task at home', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  isResponsibleForADailyTaskAtHome?: number;
+  isResponsibleForADailyTaskAtHome?: boolean;
 
-   @ApiProperty({ description: 'Adjusts the temperature of water for bathing', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    adjustsTheTemperatureOfWaterForBathing?: number;
-
-     @ApiProperty({ description: 'Prepares own snack', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-     preparesOwnSnack?: number;
+  adjustsTheTemperatureOfWaterForBathing?: boolean;
 
-   @ApiProperty({ description: 'Walks alone up to a distance of 2 blocks from home', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    walksAloneUpToADistanceOf2BlocksFromHome?: number;
-
-   @ApiProperty({ description: 'Cuts tender foods with a knife', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    cutsTenderFoodsWithAKnife?: number;
-
-  @ApiProperty({ description: 'Finds the bathroom in a public place correctly', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    findsTheBathroomInAPublicPlaceCorrectly?: number;
-  
-    @ApiProperty({ description: 'Opens the milk package', example: 1 })
-  @IsNumber()
+  preparesOwnSnack?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    opensTheMilkPackage?: number;
+  walksAloneUpToADistanceOf2BlocksFromHome?: boolean;
 
-    @ApiProperty({ description: 'Picks up a tray with food, carrying it, and placing it on the table', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    picksUpATrayWithFoodCarryingItAndPlacingItOnTheTable?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  cutsTenderFoodsWithAKnife?: boolean;
 
-    @ApiProperty({ description: 'Ties the laces on jackets with hood', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    tiesTheLacesOnJacketsWithHood?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  findsTheBathroomInAPublicPlaceCorrectly?: boolean;
 
-    @ApiProperty({ description: 'Fastens the car seat belt', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    fastensTheCarSeatBelt?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  opensTheMilkPackage?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  picksUpATrayWithFoodCarryingItAndPlacingItOnTheTable?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  tiesTheLacesOnJacketsWithHood?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  fastensTheCarSeatBelt?: boolean;
 }
-export class MotorDevelopment0To1YearDto  {
-    @ApiProperty({ description: 'Reaches for an object placed in front of it (15 to 20 cm)', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    reachesForAnObjectPlacedInFrontOfIt15To20Cm?: number;
 
-    @ApiProperty({ description: 'Grabs an object placed in front of it (8 cm)', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    grabsAnObjectPlacedInFrontOfIt8Cm?: number;
-
-    @ApiProperty({ description: 'Extends arms toward an object in front of it and grabs it', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    extendsArmsTowardAnObjectInFrontOfItAndGrabsIt?: number;
-
-    @ApiProperty({ description: 'Reaches for a preferred object', example: 1 })
-     @IsNumber()
-    @IsOptional()
-    reachesForAPreferredObject?: number;
-
-    @ApiProperty({ description: 'Puts objects in mouth', example: 1 })
-     @IsNumber()
-    @IsOptional()
-     putsObjectsInMouth?: number;
-
-    @ApiProperty({ description: 'Raises head and torso, supporting self on arms when lying on stomach', example: 1 })
-     @IsNumber()
-    @IsOptional()
-    raisesHeadAndTorsoSupportingSelfOnArmsWhenLyingOnStomach?: number;
-
-    @ApiProperty({ description: 'Raises head and torso, supporting self on one arm', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    raisesHeadAndTorsoSupportingSelfOnOneArm?: number;
-
-  @ApiProperty({ description: 'Touches and explores objects with mouth', example: 1 })
-    @IsNumber()
-    @IsOptional()
-   touchesAndExploresObjectsWithMouth?: number;
-
-  @ApiProperty({ description: 'In prone position, turns to the side and maintains this position half the time', example: 1 })
-    @IsNumber()
-    @IsOptional()
-   inPronePositionTurnsToTheSideAndMaintainsThisPositionHalfTheTime?: number;
-
-  @ApiProperty({ description: 'In prone position, turns on back', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    inPronePositionTurnsOnBack?: number;
-
-  @ApiProperty({ description: 'In prone position, moves forward the equivalent of its height', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    inPronePositionMovesForwardTheEquivalentOfItsHeight?: number;
-
-    @ApiProperty({ description: 'In supine position, rolls to the side', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    inSupinePositionRollsToTheSide?: number;
-
-     @ApiProperty({ description: 'In supine position, turns from stomach to back', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    inSupinePositionTurnsFromStomachToBack?: number;
-
-   @ApiProperty({ description: 'Makes effort to sit, holding onto adults fingers', example: 1 })
-  @IsNumber()
+export class MotorDevelopment0To1YearDto {
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    makesEffortToSitHoldingOntoAdultsFingers?: number;
-  
-    @ApiProperty({ description: 'Turns head easily when the body is supported', example: 1 })
-  @IsNumber()
+  reachesForAnObjectPlacedInFrontOfIt15To20Cm?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   turnsHeadEasilyWhenTheBodyIsSupported?: number;
-  
-    @ApiProperty({ description: 'Sits for 2 minutes', example: 1 })
-    @IsNumber()
-    @IsOptional()
-   sitsFor2Minutes?: number;
-  
-  @ApiProperty({ description: 'Releases an object to grab another', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    releasesAnObjectToGrabAnother?: number;
+  grabsAnObjectPlacedInFrontOfIt8Cm?: boolean;
 
-   @ApiProperty({ description: 'Grabs and drops an object purposefully', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    grabsAndDropsAnObjectPurposefully?: number;
-
-    @ApiProperty({ description: 'Stands with maximum support', example: 1 })
-    @IsNumber()
-    @IsOptional()
-   standsWithMaximumSupport?: number;
-  
-   @ApiProperty({ description: 'While standing with support, jumps up and down', example: 1 })
-    @IsNumber()
-    @IsOptional()
-   whileStandingWithSupportJumpsUpAndDown?: number;
-   
-   @ApiProperty({ description: 'Crawls to grab an object distant its height', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    crawlsToGrabAnObjectDistantItsHeight?: number;
-  
-   @ApiProperty({ description: 'Sits supporting self alone', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   sitsSupportingSelfAlone?: number;
-  
-   @ApiProperty({ description: 'While sitting, turns to crawling', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    whileSittingTurnsToCrawling?: number;
-  
-  @ApiProperty({ description: 'While in prone position, manages to sit', example: 1 })
-   @IsNumber()
+  extendsArmsTowardAnObjectInFrontOfItAndGrabsIt?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   whileInPronePositionManagesToSit?: number;
+  reachesForAPreferredObject?: boolean;
 
-   @ApiProperty({ description: 'Sits without hand support', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    sitsWithoutHandSupport?: number;
+  putsObjectsInMouth?: boolean;
 
-  @ApiProperty({ description: 'Throws objects at random', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   throwsObjectsAtRandom?: number;
+  raisesHeadAndTorsoSupportingSelfOnArmsWhenLyingOnStomach?: boolean;
 
-   @ApiProperty({ description: 'Sways back and forth when crawling', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   swaysBackAndForthWhenCrawling?: number;
+  raisesHeadAndTorsoSupportingSelfOnOneArm?: boolean;
 
-  @ApiProperty({ description: 'Transfers objects from one hand to another when sitting', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  transfersObjectsFromOneHandToAnotherWhenSitting?: number;
+  touchesAndExploresObjectsWithMouth?: boolean;
 
-   @ApiProperty({ description: 'Retains 2 cubes of 2.5 cm in one hand', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    retains2CubesOf25CmInOneHand?: number;
-
-   @ApiProperty({ description: 'Gets on knees', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    getsOnKnees?: number;
-  
-   @ApiProperty({ description: 'Stands supporting self on something', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  standsSupportingSelfOnSomething?: number;
-  
-  @ApiProperty({ description: 'Uses pincer grip to pick up objects', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    usesPincerGripToPickUpObjects?: number;
+  inPronePositionTurnsToTheSideAndMaintainsThisPositionHalfTheTime?: boolean;
 
-    @ApiProperty({ description: 'Crawls', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    crawls?: number;
-  
-   @ApiProperty({ description: 'While crawling, extends one hand upwards', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    whileCrawlingExtendsOneHandUpwards?: number;
-  
-    @ApiProperty({ description: 'Stands with minimum support', example: 1 })
-    @IsNumber()
-    @IsOptional()
-   standsWithMinimumSupport?: number;
-
-   @ApiProperty({ description: 'Licks food around mouth', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  licksFoodAroundMouth?: number;
+  inPronePositionTurnsOnBack?: boolean;
 
-   @ApiProperty({ description: 'Maintains self standing alone for 1 minute', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    maintainsSelfStandingAloneFor1Minute?: number;
+  inPronePositionMovesForwardTheEquivalentOfItsHeight?: boolean;
 
-   @ApiProperty({ description: 'Knocks down an object that is inside a receptacle', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    knocksDownAnObjectThatIsInsideAReceptacle?: number;
+  inSupinePositionRollsToTheSide?: boolean;
 
-   @ApiProperty({ description: 'Turns several pages of a book at the same time', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   turnsSeveralPagesOfABookAtTheSameTime?: number;
-  
-    @ApiProperty({ description: 'Scoops with a spoon or spade', example: 1 })
-    @IsNumber()
-    @IsOptional()
-     scoopsWithASpoonOrSpade?: number;
+  inSupinePositionTurnsFromStomachToBack?: boolean;
 
-   @ApiProperty({ description: 'Places small objects inside a receptacle', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    placesSmallObjectsInsideAReceptacle?: number;
+  makesEffortToSitHoldingOntoAdultsFingers?: boolean;
 
-    @ApiProperty({ description: 'While standing, lowers itself and sits', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    whileStandingLowersItselfAndSits?: number;
-
-    @ApiProperty({ description: 'Claps hands', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    clapsHands?: number;
-
-     @ApiProperty({ description: 'Walks with minimum support', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   walksWithMinimumSupport?: number;
-    
-    @ApiProperty({ description: 'Takes a few steps without support', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    takesAFewStepsWithoutSupport?: number;
+  turnsHeadEasilyWhenTheBodyIsSupported?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  sitsFor2Minutes?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  releasesAnObjectToGrabAnother?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  grabsAndDropsAnObjectPurposefully?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  standsWithMaximumSupport?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  whileStandingWithSupportJumpsUpAndDown?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  crawlsToGrabAnObjectDistantItsHeight?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  sitsSupportingSelfAlone?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  whileSittingTurnsToCrawling?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  whileInPronePositionManagesToSit?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  sitsWithoutHandSupport?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  throwsObjectsAtRandom?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  swaysBackAndForthWhenCrawling?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  transfersObjectsFromOneHandToAnotherWhenSitting?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  retains2CubesOf25CmInOneHand?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  getsOnKnees?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  standsSupportingSelfOnSomething?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  usesPincerGripToPickUpObjects?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  crawls?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  whileCrawlingExtendsOneHandUpwards?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  standsWithMinimumSupport?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  licksFoodAroundMouth?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  maintainsSelfStandingAloneFor1Minute?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  knocksDownAnObjectThatIsInsideAReceptacle?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  turnsSeveralPagesOfABookAtTheSameTime?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  scoopsWithASpoonOrSpade?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  placesSmallObjectsInsideAReceptacle?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  whileStandingLowersItselfAndSits?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  clapsHands?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  walksWithMinimumSupport?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  takesAFewStepsWithoutSupport?: boolean;
 }
+
 export class MotorDevelopment1To2YearsDto {
-   @ApiProperty({ description: 'Climbs stairs crawling', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    climbsStairsCrawling?: number;
-
-    @ApiProperty({ description: 'Places itself standing while sitting', example: 1 })
-    @IsNumber()
-    @IsOptional()
-   placesItselfStandingWhileSitting?: number;
-
-   @ApiProperty({ description: 'Rolls a ball, imitating an adult', example: 1 })
-    @IsNumber()
-    @IsOptional()
-   rollsABallImitatingAnAdult?: number;
-
-   @ApiProperty({ description: 'Climbs onto an adult chair, turns, and sits', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    climbsOntoAnAdultChairTurnsAndSits?: number;
-
-    @ApiProperty({ description: 'Puts 4 rings on a small stake', example: 1 })
-    @IsNumber()
-    @IsOptional()
-   puts4RingsOnASmallStake?: number;
-
-  @ApiProperty({ description: 'Removes 2.5 cm pins from a board or tray', example: 1 })
-    @IsNumber()
-    @IsOptional()
-   removes25CmPinsFromABoardOrTray?: number;
-
-  @ApiProperty({ description: 'Fits 2.5 cm pins into a fitting board', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  fits25CmPinsIntoAFittingBoard?: number;
+  climbsStairsCrawling?: boolean;
 
-   @ApiProperty({ description: 'Builds a tower of 3 blocks', example: 1 })
-    @IsNumber()
-    @IsOptional()
-   buildsATowerOf3Blocks?: number;
-
-    @ApiProperty({ description: 'Makes traces on paper with pencil or crayon', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    makesTracesOnPaperWithPencilOrCrayon?: number;
-
-   @ApiProperty({ description: 'Walks alone', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    walksAlone?: number;
-
-   @ApiProperty({ description: 'Goes down stairs sitting, putting feet first', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   goesDownStairsSittingPuttingFeetFirst?: number;
+  placesItselfStandingWhileSitting?: boolean;
 
-    @ApiProperty({ description: 'Sits in a small chair', example: 1 })
-    @IsNumber()
-    @IsOptional()
-   sitsInASmallChair?: number;
-  
-   @ApiProperty({ description: 'Crouches and returns to stand', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    crouchesAndReturnsToStand?: number;
+  rollsABallImitatingAnAdult?: boolean;
 
-    @ApiProperty({ description: 'Pushes and pulls toys when walking', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    pushesAndPullsToysWhenWalking?: number;
-
-    @ApiProperty({ description: 'Uses a chair or rocking horse', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    usesAChairOrRockingHorse?: number;
-
-   @ApiProperty({ description: 'Climbs stairs with help', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  climbsStairsWithHelp?: number;
+  climbsOntoAnAdultChairTurnsAndSits?: boolean;
 
-    @ApiProperty({ description: 'Bends the body without falling to pick up objects on the floor', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    bendsTheBodyWithoutFallingToPickUpObjectsOnTheFloor?: number;
-  
-   @ApiProperty({ description: 'Imitates a circular movement', example: 1 })
-   @IsNumber()
+  puts4RingsOnASmallStake?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    imitatesACircularMovement?: number;
+  removes25CmPinsFromABoardOrTray?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  fits25CmPinsIntoAFittingBoard?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  buildsATowerOf3Blocks?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  makesTracesOnPaperWithPencilOrCrayon?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  walksAlone?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  goesDownStairsSittingPuttingFeetFirst?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  sitsInASmallChair?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  crouchesAndReturnsToStand?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  pushesAndPullsToysWhenWalking?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  usesAChairOrRockingHorse?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  climbsStairsWithHelp?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  bendsTheBodyWithoutFallingToPickUpObjectsOnTheFloor?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  imitatesACircularMovement?: boolean;
 }
 
 export class MotorDevelopment2To3YearsDto {
-   @ApiProperty({ description: 'Threads 4 large beads on a cord in 2 minutes', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    threads4LargeBeadsOnACordIn2Minutes?: number;
-
-   @ApiProperty({ description: 'Turns latches or doorknobs on doors', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  turnsLatchesOrDoorknobsOnDoors?: number;
+  threads4LargeBeadsOnACordIn2Minutes?: boolean;
 
-   @ApiProperty({ description: 'Jumps in the same place with both feet', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    jumpsInTheSamePlaceWithBothFeet?: number;
-
-  @ApiProperty({ description: 'Walks backwards', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  walksBackwards?: number;
+  turnsLatchesOrDoorknobsOnDoors?: boolean;
 
-  @ApiProperty({ description: 'Goes down stairs without help', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    goesDownStairsWithoutHelp?: number;
+  jumpsInTheSamePlaceWithBothFeet?: boolean;
 
-   @ApiProperty({ description: 'Throws a ball to an adult at a 1.5-meter distance', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   throwsABallToAnAdultAtA1HalfDistance?: number;
+  walksBackwards?: boolean;
 
-   @ApiProperty({ description: 'Builds a tower of 5 to 6 blocks', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    buildsATowerOf5To6Blocks?: number;
+  goesDownStairsWithoutHelp?: boolean;
 
-  @ApiProperty({ description: 'Turns pages of a book one at a time', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  turnsPagesOfABookOneAtATime?: number;
+  throwsABallToAnAdultAtA1HalfDistance?: boolean;
 
-  @ApiProperty({ description: 'Unwraps a small object', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    unwrapsASmallObject?: number;
+  buildsATowerOf5To6Blocks?: boolean;
 
-    @ApiProperty({ description: 'Folds a paper in half, imitating an adult', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    foldsAPaperInHalfImitatingAnAdult?: number;
-
-    @ApiProperty({ description: 'Dismantles and rebuilds pressure-fit toys', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    dismantlesAndRebuildsPressureFitToys?: number;
-
-  @ApiProperty({ description: 'Unscrews toys that fit with threads', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    unscrewsToysThatFitWithThreads?: number;
- 
-  @ApiProperty({ description: 'Kicks a large ball that is still', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    kicksALargeBallThatIsStill?: number;
+  turnsPagesOfABookOneAtATime?: boolean;
 
-   @ApiProperty({ description: 'Makes balls of clay, mud, or plasticine', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    makesBallsOfClayMudOrPlasticine?: number;
+  unwrapsASmallObject?: boolean;
 
-  @ApiProperty({ description: 'Holds the pencil between the thumb and index finger, resting it on the middle finger', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    holdsThePencilBetweenTheThumbAndIndexFingerRestingItOnTheMiddleFinger?: number;
+  foldsAPaperInHalfImitatingAnAdult?: boolean;
 
-  @ApiProperty({ description: 'Does forward tumble with help', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  doesForwardTumbleWithHelp?: number;
+  dismantlesAndRebuildsPressureFitToys?: boolean;
 
-  @ApiProperty({ description: 'Hammers to fit 5 pins in their holes', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   hammersToFit5PinsInTheirHoles?: number;
+  unscrewsToysThatFitWithThreads?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  kicksALargeBallThatIsStill?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  makesBallsOfClayMudOrPlasticine?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  holdsThePencilBetweenTheThumbAndIndexFingerRestingItOnTheMiddleFinger?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  doesForwardTumbleWithHelp?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  hammersToFit5PinsInTheirHoles?: boolean;
 }
 
+
 export class MotorDevelopment3To4YearsDto {
-    @ApiProperty({ description: 'Makes a puzzle of 3 pieces', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    makesAPuzzleOf3Pieces?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  makesAPuzzleOf3Pieces?: boolean;
 
-    @ApiProperty({ description: 'Cuts something into pieces with scissors', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    cutsSomethingIntoPiecesWithScissors?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  cutsSomethingIntoPiecesWithScissors?: boolean;
 
-    @ApiProperty({ description: 'Jumps from a height of 20 cm', example: 1 })
-     @IsNumber()
-    @IsOptional()
-    jumpsFromAHeightOf20Cm?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  jumpsFromAHeightOf20Cm?: boolean;
 
-    @ApiProperty({ description: 'Kicks a large ball when sent to you', example: 1 })
-     @IsNumber()
-    @IsOptional()
-    kicksALargeBallWhenSentToYou?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  kicksALargeBallWhenSentToYou?: boolean;
 
-    @ApiProperty({ description: 'Walks on tiptoes', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    walksOnTiptoes?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  walksOnTiptoes?: boolean;
 
-    @ApiProperty({ description: 'Runs 10 steps, coordinating and alternating the movement of arms and feet', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    runs10StepsCoordinatingAndAlternatingTheMovementOfArmsAndFeet?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  runs10StepsCoordinatingAndAlternatingTheMovementOfArmsAndFeet?: boolean;
 
-   @ApiProperty({ description: 'Pedals with tricycle the distance of 1.5 meters', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    pedalsWithTricycleTheDistanceOf1AndAHalfMeters?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  pedalsWithTricycleTheDistanceOf1AndAHalfMeters?: boolean;
 
-   @ApiProperty({ description: 'Swings on a swing when it is in motion', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    swingsOnASwingWhenItIsInMotion?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  swingsOnASwingWhenItIsInMotion?: boolean;
 
-   @ApiProperty({ description: 'Climbs on a slide of 1.20m to 1.80m and slides down', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    climbsOnASlideOf120MTo180MAndSlidesDown?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  climbsOnASlideOf120MTo180MAndSlidesDown?: boolean;
 
-  @ApiProperty({ description: 'Does forward tumbles', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    doesForwardTumbles?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  doesForwardTumbles?: boolean;
 
-    @ApiProperty({ description: 'Climbs stairs, alternating feet', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    climbsStairsAlternatingFeet?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  climbsStairsAlternatingFeet?: boolean;
 
-    @ApiProperty({ description: 'Marches (walks in a rhythmical way)', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    marchesWalksInARhythmicalWay?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  marchesWalksInARhythmicalWay?: boolean;
 
-  @ApiProperty({ description: 'Parries the ball with both hands', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    parriesTheBallWithBothHands?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  parriesTheBallWithBothHands?: boolean;
 
-    @ApiProperty({ description: 'Draws figures following outlines or dotted lines', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    drawsFiguresFollowingOutlinesOrDottedLines?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  drawsFiguresFollowingOutlinesOrDottedLines?: boolean;
 
-    @ApiProperty({ description: 'Cuts along a straight line (20 cm), moving slightly away from the line', example: 1 })
-     @IsNumber()
-    @IsOptional()
-    cutsAlongAStraightLine20CmMovingSlightlyAwayFromTheLine?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  cutsAlongAStraightLine20CmMovingSlightlyAwayFromTheLine?: boolean;
 }
 
 export class MotorDevelopment4To5YearsDto {
-     @ApiProperty({ description: 'Stands on one foot without support for 4 to 8 seconds', example: 1 })
-    @IsNumber()
-    @IsOptional()
-     standsOnOneFootWithoutSupportFor4To8Seconds?: number;
-   
-     @ApiProperty({ description: 'Changes direction when running', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   changesDirectionWhenRunning?: number;
- 
-    @ApiProperty({ description: 'Walks on a beam or board, maintaining balance', example: 1 })
-   @IsNumber()
+  standsOnOneFootWithoutSupportFor4To8Seconds?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   walksOnABeamOrBoardMaintainingBalance?: number;
+  changesDirectionWhenRunning?: boolean;
 
-    @ApiProperty({ description: 'Jumps forward 10 times without falling', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    jumpsForward10TimesWithoutFalling?: number;
+  walksOnABeamOrBoardMaintainingBalance?: boolean;
 
-    @ApiProperty({ description: 'Jumps over a rope suspended 5 cm from the ground', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-   jumpsOverARopeSuspended5CmFromTheGround?: number;
+  jumpsForward10TimesWithoutFalling?: boolean;
 
-     @ApiProperty({ description: 'Jumps backwards 6 times', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    jumpsBackwards6Times?: number;
-
-   @ApiProperty({ description: 'Rebounds and catches a large ball', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    reboundsAndCatchesALargeBall?: number;
+  jumpsOverARopeSuspended5CmFromTheGround?: boolean;
 
-   @ApiProperty({ description: 'Joins 2 to 3 pieces of plasticine', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    joins2To3PiecesOfPlasticine?: number;
-    
-    @ApiProperty({ description: 'Cuts around curved lines', example: 1 })
-   @IsNumber()
+  jumpsBackwards6Times?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    cutsAroundCurvedLines?: number;
+  reboundsAndCatchesALargeBall?: boolean;
 
-   @ApiProperty({ description: 'Fits screw objects', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    fitsScrewObjects?: number;
-
-  @ApiProperty({ description: 'Goes down stairs, alternating feet', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-  goesDownStairsAlternatingFeet?: number;
+  joins2To3PiecesOfPlasticine?: boolean;
 
-   @ApiProperty({ description: 'Pedals a tricycle, making turns', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    pedalsATricycleMakingTurns?: number;
+  cutsAroundCurvedLines?: boolean;
 
-   @ApiProperty({ description: 'Jumps on one foot 5 consecutive times', example: 1 })
-  @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    jumpsOnOneFoot5ConsecutiveTimes?: number;
+  fitsScrewObjects?: boolean;
 
-    @ApiProperty({ description: 'Cuts a circle in 5 cm', example: 1 })
-   @IsNumber()
+  @ApiProperty()
+  @IsBoolean()
   @IsOptional()
-    cutsACircleIn5Cm?: number;
-  
-   @ApiProperty({ description: 'Draws simple, easily identifiable figures (ex: house)', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    drawsSimpleEasilyIdentifiableFiguresExHouse?: number;
+  goesDownStairsAlternatingFeet?: boolean;
 
-    @ApiProperty({ description: 'Cuts and pastes simple shapes', example: 1 })
-    @IsNumber()
-    @IsOptional()
-    cutsAndPastesSimpleShapes?: number;
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  pedalsATricycleMakingTurns?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  jumpsOnOneFoot5ConsecutiveTimes?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  cutsACircleIn5Cm?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  drawsSimpleEasilyIdentifiableFiguresExHouse?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  cutsAndPastesSimpleShapes?: boolean;
 }
 
 export class MotorDevelopment5To6YearsDto {
-    @ApiProperty({ description: 'Writes uppercase letters (isolated and large) anywhere on the paper', example: 1 })
-     @IsNumber()
-     @IsOptional()
-    writesUppercaseLettersIsolatedAndLargeAnywhereOnThePaper?: number;
- 
-      @ApiProperty({ description: 'Walks on a board (backwards, forwards, and sideways), maintaining balance', example: 1 })
-     @IsNumber()
-     @IsOptional()
-     walksOnABoardBackwardsForwardsAndSidewaysMaintainingBalance?: number;
- 
-      @ApiProperty({ description: 'Walks while hopping', example: 1 })
-     @IsNumber()
-     @IsOptional()
-    walksWhileHopping?: number;
-  
-     @ApiProperty({ description: 'Swings on a swing, starting and maintaining the movement', example: 1 })
-    @IsNumber()
-   @IsOptional()
-     swingsOnASwingStartingAndMaintainingTheMovement?: number;
-   
-    @ApiProperty({ description: 'Stretches fingers, touching thumb to each of them', example: 1 })
-   @IsNumber()
-   @IsOptional()
-     stretchesFingersTouchingThumbToEachOfThem?: number;
- 
-      @ApiProperty({ description: 'Copies capital letters', example: 1 })
-     @IsNumber()
-     @IsOptional()
-     copiesCapitalLetters?: number;
-  
-     @ApiProperty({ description: 'Climbs on ladders or a slide of 3 meters', example: 1 })
-     @IsNumber()
-     @IsOptional()
-    climbsOnLaddersOrASlideOf3M?: number;
- 
-     @ApiProperty({ description: 'Hammers a nail with a hammer', example: 1 })
-     @IsNumber()
-     @IsOptional()
-     hammersANailWithAHammer?: number;
- 
-     @ApiProperty({ description: 'Rebounds the ball as it walks (with direction)', example: 1 })
-    @IsNumber()
-   @IsOptional()
-     reboundsTheBallAsItWalksWithDirection?: number;
- 
-    @ApiProperty({ description: 'Manages to color without going out of the margin 95 percent of the time', example: 1 })
-   @IsNumber()
-   @IsOptional()
-     managesToColorWithoutGoingOutOfTheMargin95PercentOfTheTime?: number;
-   
-     @ApiProperty({ description: 'Cuts out figures without leaving more than 6 mm from the margin', example: 1 })
-   @IsNumber()
-   @IsOptional()
-     cutsOutFiguresWithoutLeavingMoreThan6MmFromTheMargin?: number;
- 
-     @ApiProperty({ description: 'Uses pencil sharpener', example: 1 })
-     @IsNumber()
-     @IsOptional()
-    usesPencilSharpener?: number;
- 
-    @ApiProperty({ description: 'Copies complex drawings (school, ship)', example: 1 })
-     @IsNumber()
-     @IsOptional()
-     copiesComplexDrawingsSchoolShip?: number;
- 
-     @ApiProperty({ description: 'Tears simple figures from the paper', example: 1 })
-    @IsNumber()
-   @IsOptional()
-    tearsSimpleFiguresFromThePaper?: number;
- 
-     @ApiProperty({ description: 'Folds a square paper 2x diagonally by imitation', example: 1 })
-     @IsNumber()
-     @IsOptional()
-    foldsASquarePaper2XDiagonallyByImitation?: number;
- 
-     @ApiProperty({ description: 'Catches a light ball with one hand', example: 1 })
-    @IsNumber()
-   @IsOptional()
-     catchesALightBallWithOneHand?: number;
- 
-    @ApiProperty({ description: 'Jumps rope alone', example: 1 })
-   @IsNumber()
-   @IsOptional()
-     jumpsRopeAlone?: number;
- 
-    @ApiProperty({ description: 'Strikes a ball with a stick or piece of wood', example: 1 })
-     @IsNumber()
-     @IsOptional()
-     strikesABallWithAStickOrPieceOfWood?: number;
-     
-    @ApiProperty({ description: 'Catches an object on the floor while running', example: 1 })
-     @IsNumber()
-     @IsOptional()
-     catchesAnObjectOnTheFloorWhileRunning?: number;
-   
-    @ApiProperty({ description: 'Skates a distance of 3m or uses a skateboard', example: 1 })
-     @IsNumber()
-     @IsOptional()
-     skatesADistanceOf3MOrUsesASkateboard?: number;
- 
-    @ApiProperty({ description: 'Rides a bicycle', example: 1 })
-     @IsNumber()
-     @IsOptional()
-    ridesABicycle?: number;
- 
-   @ApiProperty({ description: 'Slides down a hill of sand or earth', example: 1 })
-     @IsNumber()
-     @IsOptional()
-     slidesDownAHillOfSandOrEarth?: number;
- 
-    @ApiProperty({ description: 'Walks or plays in a swimming pool having water up to its waist', example: 1 })
-    @IsNumber()
-   @IsOptional()
-     walksOrPlaysInASwimmingPoolHavingWaterUpToItsWaist?: number;
- 
-    @ApiProperty({ description: 'Drives a scooter, giving impulse with one foot only', example: 1 })
-     @IsNumber()
-     @IsOptional()
-     drivesAScooterGivingImpulseWithOneFootOnly?: number;
-     
-     @ApiProperty({ description: 'Jumps and turns on one foot', example: 1 })
-     @IsNumber()
-     @IsOptional()
-     jumpsAndTurnsOnOneFoot?: number;
- 
-     @ApiProperty({ description: 'Writes own name with block letters in a lined notebook', example: 1 })
-     @IsNumber()
-     @IsOptional()
-      writesOwnNameWithBlockLettersInLinedNotebook?: number;
- 
-     @ApiProperty({ description: 'Jumps from a height of 30 cm and falls on tiptoes', example: 1 })
-     @IsNumber()
-     @IsOptional()
-      jumpsFromAHeightOf30CmAndFallsOnTiptoes?: number;
- 
-    @ApiProperty({ description: 'Stops on one foot without support, with eyes closed for 10 seconds', example: 1 })
-    @IsNumber()
-   @IsOptional()
-      stopsOnOneFootWithoutSupportWithEyesClosedFor10Seconds?: number;
- 
-     @ApiProperty({ description: 'Hangs for 10 seconds on a horizontal bar', example: 1 })
-     @IsNumber()
-     @IsOptional()
-    hangsFor10SecondsOnAHorizontalBar?: number;
- }
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  writesUppercaseLettersIsolatedAndLargeAnywhereOnThePaper?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  walksOnABoardBackwardsForwardsAndSidewaysMaintainingBalance?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  walksWhileHopping?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  swingsOnASwingStartingAndMaintainingTheMovement?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  stretchesFingersTouchingThumbToEachOfThem?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  copiesCapitalLetters?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  climbsOnLaddersOrASlideOf3M?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  hammersANailWithAHammer?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  reboundsTheBallAsItWalksWithDirection?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  managesToColorWithoutGoingOutOfTheMargin95PercentOfTheTime?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  cutsOutFiguresWithoutLeavingMoreThan6MmFromTheMargin?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  usesPencilSharpener?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  copiesComplexDrawingsSchoolShip?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  tearsSimpleFiguresFromThePaper?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  foldsASquarePaper2XDiagonallyByImitation?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  catchesALightBallWithOneHand?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  jumpsRopeAlone?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  strikesABallWithAStickOrPieceOfWood?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  catchesAnObjectOnTheFloorWhileRunning?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  skatesADistanceOf3MOrUsesASkateboard?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  ridesABicycle?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  slidesDownAHillOfSandOrEarth?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  walksOrPlaysInASwimmingPoolHavingWaterUpToItsWaist?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  drivesAScooterGivingImpulseWithOneFootOnly?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  jumpsAndTurnsOnOneFoot?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  writesOwnNameWithBlockLettersInLinedNotebook?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  jumpsFromAHeightOf30CmAndFallsOnTiptoes?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  stopsOnOneFootWithoutSupportWithEyesClosedFor10Seconds?: boolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  hangsfor10SecondsOnAHorizontalBar?: boolean;
+}
+
+
+ export class CreatePortageGuidetoPreschoolEducationDto {
+
+  @ApiProperty({ type: Socialization0To1Year})
+  socialization0To1Years: Socialization0To1Year
+
+  @ApiProperty({ type: Socialization1To2Years})
+  socialization1To2Years: Socialization1To2Years
+
+  @ApiProperty({ type: Socialization2To3Years})
+  socialization2To3Years: Socialization2To3Years
+
+  @ApiProperty({ type: Socialization3To4Years})
+  socialization3To4Years : Socialization3To4Years
+
+  @ApiProperty({ type: Socialization4To5Years})
+  socialization4To5Years: Socialization4To5Years
+
+  @ApiProperty({ type: Socialization5To6Years})
+  socialization5To6Years: Socialization5To6Years
+
+  @ApiProperty({ type: Language0To1Years})
+  language0To1Years: Language0To1Years
+
+  @ApiProperty({ type: Language1To2Years})
+  language1To2Years: Language1To2Years
+
+  @ApiProperty({ type: Language2To3Years})
+  language2To3Years:Language2To3Years
+
+  @ApiProperty({ type: Language3To4Years})
+  language3To4Years:Language3To4Years
+
+  @ApiProperty({ type: Language4To5Years})
+  language4To5Years:Language4To5Years
+
+  @ApiProperty({ type: Language5To6Years})
+  language5To6Years:Language5To6Years
+
+  @ApiProperty({ type: Cognition0To1Year})
+  cognition0To1Year:Cognition0To1Year
+
+  @ApiProperty({ type: Cognition1To2Years})
+  cognition1To2Years:Cognition1To2Years
+
+  @ApiProperty({ type: Cognition2To3YearsDto})
+  Cognition2To3YearsDto:Cognition2To3YearsDto
+
+  @ApiProperty({ type: Cognition3To4YearsDto})
+  Cognition3To4YearsDto:Cognition3To4YearsDto
+
+  @ApiProperty({ type: Cognition4To5YearsDto})
+  Cognition4To5YearsDto:Cognition4To5YearsDto
+
+  @ApiProperty({ type: Cognition5To6YearsDto})
+  Cognition5To6YearsDto:Cognition5To6YearsDto
+
+  @ApiProperty({ type: SelfCare0To1YearDto})
+  SelfCare0To1YearDto: SelfCare0To1YearDto
+
+  @ApiProperty({ type: SelfCare1To2YearsDto})
+  SelfCare1To2YearsDto:SelfCare1To2YearsDto
+
+  @ApiProperty({ type: SelfCare2To3YearsDto})
+  SelfCare2To3YearsDto: SelfCare2To3YearsDto
+
+  @ApiProperty({ type: SelfCare3To4YearsDto})
+  SelfCare3To4YearsDto:SelfCare3To4YearsDto
+
+  @ApiProperty({ type: SelfCare4To5YearsDto})
+  SelfCare4To5YearsDto:SelfCare4To5YearsDto
+
+  @ApiProperty({ type: SelfCare5To6YearsDto})
+  SelfCare5To6YearsDto:SelfCare5To6YearsDto
+
+  @ApiProperty({ type: MotorDevelopment0To1YearDto})
+  MotorDevelopment0To1YearDto:MotorDevelopment0To1YearDto
+
+  @ApiProperty({ type: MotorDevelopment1To2YearsDto})
+  MotorDevelopment1To2YearsDto:MotorDevelopment1To2YearsDto
+
+  @ApiProperty({ type: MotorDevelopment2To3YearsDto})
+  MotorDevelopment2To3YearsDto:MotorDevelopment2To3YearsDto
+
+  @ApiProperty({ type: MotorDevelopment3To4YearsDto})
+  MotorDevelopment3To4YearsDto:MotorDevelopment3To4YearsDto
+
+  @ApiProperty({ type: MotorDevelopment4To5YearsDto})
+  MotorDevelopment4To5YearsDto:MotorDevelopment4To5YearsDto
+
+  @ApiProperty({ type: MotorDevelopment5To6YearsDto})
+  MotorDevelopment5To6YearsDto:MotorDevelopment5To6YearsDto
+}

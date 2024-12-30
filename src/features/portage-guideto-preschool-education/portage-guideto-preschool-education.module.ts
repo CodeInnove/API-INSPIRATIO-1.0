@@ -8,7 +8,7 @@ import { PortageGuidetoPreschoolEducationRepository } from './portage-guideto-pr
 @Module({
   imports: [
     MongooseModule.forFeature([
-      { name: 'PortageGuidetoPreschoolEducation', schema: PortageGuidetoPreschoolEducationSchema }
+      { name: 'portageGuidetoPreschoolEducation', schema: PortageGuidetoPreschoolEducationSchema }
     ])
   ],
   controllers: [PortageGuidetoPreschoolEducationController],
