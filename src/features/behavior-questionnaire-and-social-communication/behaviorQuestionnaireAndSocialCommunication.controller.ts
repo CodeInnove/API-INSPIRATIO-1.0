@@ -3,6 +3,7 @@ import { ApiTags } from "@nestjs/swagger";
 import { CreateBehaviorQuestionDto } from "./dto/behaviorQuestionnaireAndSocialCommunicationCreate.dto";
 import { UpdateBehaviorQuestionnaireAndSocialCommunicationDto } from "./dto/behaviorQuestionnaireAndSocialCommunicationUpdate.dto";
 import { BehaviorQuestionnaireAndSocialCommunicationService } from "./behaviorQuestionnaireAndSocialCommunication.service";
+import { IBehaviorQuestionnaireAndSocialCommunicationEntity } from "src/entities/behaviorQuestionnaireAndSocialCommunication.entity";
 
 @ApiTags('Behavior Questionnaire And Social Communication')
 @Controller('Behavior-Questionnaire-And-Social-Communication')
@@ -10,27 +11,27 @@ export class BehaviorQuestionnaireAndSocialCommunicationController {
   constructor(private readonly behaviorQuestionnaireAndSocialCommunicationService: BehaviorQuestionnaireAndSocialCommunicationService) {}
 
   @Post()
-  create(@Body() data: CreateBehaviorQuestionDto) {
-    return this.behaviorQuestionnaireAndSocialCommunicationService.create(data);
-  }
-
-  @Get()
-  findAll() {
-    return this.behaviorQuestionnaireAndSocialCommunicationService.findAll();
-  }
-
-  @Get(':id')
-  findById(@Param('id') id: string) {
-    return this.behaviorQuestionnaireAndSocialCommunicationService.findById(id);
-  }
-
-  @Put(':id')
-  update(@Param('id') id: string, @Body() data: UpdateBehaviorQuestionnaireAndSocialCommunicationDto) {
-    return this.behaviorQuestionnaireAndSocialCommunicationService.update(id, data);
-  }
-
-  @Delete(':id')
-  delete(@Param('id') id: string) {
-    return this.behaviorQuestionnaireAndSocialCommunicationService.delete(id);
-  }
+    async create(@Body() data: CreateBehaviorQuestionDto): Promise<IBehaviorQuestionnaireAndSocialCommunicationEntity> {
+      return await this.behaviorQuestionnaireAndSocialCommunicationService.create(data);
+    }
+  
+    @Get()
+    async findAll() {
+      return await this.behaviorQuestionnaireAndSocialCommunicationService.findAll();
+    }
+  
+    @Get(':id')
+    async findById(@Param() id: string) {
+      return await this.behaviorQuestionnaireAndSocialCommunicationService.findById(id);
+    }
+  
+    @Put(':id')
+    async update(@Param() id: string, @Body() data: UpdateBehaviorQuestionnaireAndSocialCommunicationDto) {
+      return await this.behaviorQuestionnaireAndSocialCommunicationService.update(id, data);
+    }
+  
+    @Delete(':id')
+    async delete(@Param() id: string) {
+      return await this.behaviorQuestionnaireAndSocialCommunicationService.delete(id);
+    }
 }

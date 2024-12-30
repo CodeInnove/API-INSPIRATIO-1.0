@@ -1,166 +1,177 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsNotEmpty, ValidateNested, IsBoolean } from 'class-validator';
+import { IsNotEmpty, ValidateNested, IsBoolean, IsString } from 'class-validator';
 import { Type } from 'class-transformer';
 
 
-class QuestionsAsqDTO{
+export class QuestionsAsqDTO{
+
  
-  @ApiProperty()
+@ApiProperty()
 @IsBoolean()
-questionOne: boolean;
+isAbleToConverseUsingShortPhrasesOrSentences: boolean;
 
 @ApiProperty()
 @IsBoolean()
-questionTwo: boolean;
+ifNotProceedToQuestion9: boolean;
 
 @ApiProperty()
 @IsBoolean()
-questionThree: boolean;
+doesHeTalkToYouJustToBeFriendly: boolean;
 
 @ApiProperty()
 @IsBoolean()
-questionFour: boolean;
+canYouHaveADialogue: boolean;
 
 @ApiProperty()
 @IsBoolean()
-questionFive: boolean;
+doesHeUseStrangePhrasesOrSayThingsRepeatedly: boolean;
 
 @ApiProperty()
 @IsBoolean()
-questionSix: boolean;
+doesHeOftenUseSociallyInappropriateQuestionsOrStatements: boolean;
 
 @ApiProperty()
 @IsBoolean()
-questionSeven: boolean;
+doesHeOftenUsePronounsInverted: boolean;
 
 @ApiProperty()
 @IsBoolean()
-questionEight: boolean;
+doesHeOftenUseWordsThatHeSeemsToHaveInvented: boolean;
 
 @ApiProperty()
 @IsBoolean()
-questionNine: boolean;
+doesHeOftenSayTheSameThingRepeatedly: boolean;
 
 @ApiProperty()
 @IsBoolean()
-questionTen: boolean;
+areThereThingsThatAreDoneByHimInAParticularWay: boolean;
 
 @ApiProperty()
 @IsBoolean()
-questionEleven: boolean;
+doesHisFacialExpressionGenerallySeemAppropriate: boolean;
 
 @ApiProperty()
 @IsBoolean()
-questionTwelve: boolean;
+hasHeEverUsedYourHandAsATool: boolean;
 
 @ApiProperty()
 @IsBoolean()
-questionThirteen: boolean;
+doesHeOftenHaveSpecialInterestsThatSeemWeirdToOthers: boolean;
 
 @ApiProperty()
 @IsBoolean()
-questionFourteen: boolean;
+doesHeOftenGetMoreInterestedInPartsOfAnObject: boolean;
 
 @ApiProperty()
 @IsBoolean()
-questionFifteen: boolean;
+doesHeOftenHaveSpecificInterests: boolean;
 
 @ApiProperty()
 @IsBoolean()
-questionSixteen: boolean;
+doesHeOftenInAWierdWayLookFeelListenTasteOrSmellThingsOrPeople: boolean;
 
 @ApiProperty()
 @IsBoolean()
-questionSeventeen: boolean;
+doesHeOftenHaveMannerismsOrStrangeWaysOfMovingHisHandsOrFingers: boolean;
 
 @ApiProperty()
 @IsBoolean()
-questionEighteen: boolean;
+doesHeOftenMakeComplexMovementsWithHisWholeBody: boolean;
 
 @ApiProperty()
 @IsBoolean()
-questionNineteen: boolean;
+doesHeOftenHurtHimselfOnPurpose: boolean;
 
 @ApiProperty()
 @IsBoolean()
-questionTwenty: boolean;
+doesHeHaveAnObjectThatHeCarriesAround: boolean;
 
 @ApiProperty()
 @IsBoolean()
-questionTwentyOne: boolean;
+doesHeHaveAParticularFriendOrABestFriend: boolean;
 
 @ApiProperty()
 @IsBoolean()
-questionTwentyTwo: boolean;
+whenHeWas4To5YearsOldDidHeRepeatedOrImitateWhatYouDid: boolean;
 
 @ApiProperty()
 @IsBoolean()
-questionTwentyThree: boolean;
+whenHeWas4To5YearsOldDidHePointAtThings: boolean;
 
 @ApiProperty()
 @IsBoolean()
-questionTwentyFour: boolean;
+whenHeWas4To5YearsOldDidHeUseGesturesToShowWhatHeWanted: boolean;
 
 @ApiProperty()
 @IsBoolean()
-questionTwentyFive: boolean;
+whenHeWas4To5YearsOldDidHeUseHisHeadToSayYes: boolean;
 
 @ApiProperty()
 @IsBoolean()
-questionTwentySix: boolean;
+whenHeWas4To5YearsOldDidHeShakeHisHeadToSayNo: boolean;
 
 @ApiProperty()
 @IsBoolean()
-questionTwentySeven: boolean;
+whenHeWas4To5YearsOldDidHeUsuallyLookYouDirectlyInTheFace: boolean;
 
 @ApiProperty()
 @IsBoolean()
-questionTwentyEight: boolean;
+whenHeWas4To5YearsOldDidHeSmileBackIfSomeoneSmiledAtHim: boolean;
 
 @ApiProperty()
 @IsBoolean()
-questionTwentyNine: boolean;
+whenHeWas4To5YearsOldDidHeShowThingsOfHisInterestToGetYourAttention: boolean;
 
 @ApiProperty()
 @IsBoolean()
-questionThirty: boolean;
+whenHeWas4To5YearsOldDidHeShareThingsWithYouBesidesFood: boolean;
 
 @ApiProperty()
 @IsBoolean()
-questionThirtyOne: boolean;
+whenHeWas4To5YearsOldDidHeWantYouToParticipateInSomethingThatWasEntertainingHim: boolean;
 
 @ApiProperty()
 @IsBoolean()
-questionThirtyTwo: boolean;
+whenHeWas4To5YearsOldDidHeTryToComfortYouIfYouWereSadOrHurt: boolean;
 
 @ApiProperty()
 @IsBoolean()
-questionThirtyThree: boolean;
+betweenTheAgesOf4To5YearsWhenHeWantedSomethingOrSomeHelpDidHeLookAtYou: boolean;
 
 @ApiProperty()
 @IsBoolean()
-questionThirtyFour: boolean;
+betweenTheAgesOf4To5YearsDidHeHaveNormalFacialExpressions: boolean;
 
 @ApiProperty()
 @IsBoolean()
-questionThirtyFive: boolean;
+whenHeWas4Or5YearsOldDidHeParticipateSpontaneouslyInSocialGames: boolean;
 
 @ApiProperty()
 @IsBoolean()
-questionThirtySix: boolean;
+whenHeWas4Or5YearsOldDidHePlayImaginaryGames: boolean;
 
 @ApiProperty()
 @IsBoolean()
-questionThirtySeven: boolean;
+whenHeWas4Or5YearsOldDidHeSeemInterestedInOtherChildren: boolean;
 
 @ApiProperty()
 @IsBoolean()
-questionThirtyEight: boolean;
+whenHeWas4Or5YearsOldDidHeReactPositivelyWhenAnotherChildApproachedHim: boolean;
 
 @ApiProperty()
 @IsBoolean()
-questionThirtyNine: boolean;
-  }
+whenHeWas4Or5YearsOldIfYouEnteredTheRoomAndStartedACConversationWithHim: boolean;
+
+@ApiProperty()
+@IsBoolean()
+whenHeWas4Or5YearsOldDidHePlayMakeBelieveWithAnotherChild: boolean;
+
+
+@ApiProperty()
+@IsBoolean()
+whenHeWas4Or5YearsOldDidHePlayCooperativelyInGroupGames: boolean;
+
+}
 
 export class CreateBehaviorQuestionDto {
   @ValidateNested()

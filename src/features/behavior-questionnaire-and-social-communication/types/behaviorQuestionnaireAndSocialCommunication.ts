@@ -1,60 +1,48 @@
-export interface IBehaviorQuestionnaireAndSocialCommunicationYesOrNo{
-    yes: number;
-    no: number;
-}
+
 
 export interface IBehaviorQuestionnaireAndSocialCommunication{
-      
-    isAbleToConverseUsingShortPhrasesOrSentences: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
-ifNotProceedToQuestion9: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
-doesHeTalkToYouJustToBeFriendly: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
-canYouHaveADialogue: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
-doesHeUseStrangePhrasesOrSayThingsRepeatedly: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
-doesHeOftenUseSociallyInappropriateQuestionsOrStatements: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
-doesHeOftenUsePronounsInverted: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
-doesHeOftenUseWordsThatHeSeemsToHaveInvented: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
-doesHeOftenSayTheSameThingRepeatedly: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
-areThereThingsThatAreDoneByHimInAParticularWay: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
-doesHisFacialExpressionGenerallySeemAppropriate: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
-hasHeEverUsedYourHandAsATool: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
-doesHeOftenHaveSpecialInterestsThatSeemWeirdToOthers: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
-doesHeOftenGetMoreInterestedInPartsOfAnObject: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
-doesHeOftenHaveSpecificInterests: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
-doesHeOftenInAWierdWayLookFeelListenTasteOrSmellThingsOrPeople: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
-doesHeOftenHaveMannerismsOrStrangeWaysOfMovingHisHandsOrFingers: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
-doesHeOftenMakeComplexMovementsWithHisWholeBody: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
-doesHeOftenHurtHimselfOnPurpose: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
-doesHeHaveAnObjectThatHeCarriesAround: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
-doesHeHaveAParticularFriendOrABestFriend: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
-whenHeWas4To5YearsOldDidHeRepeatedOrImitateWhatYouDid: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
-whenHeWas4To5YearsOldDidHePointAtThings: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
-whenHeWas4To5YearsOldDidHeUseGesturesToSHowWhatHeWanted: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
-whenHeWas4To5YearsOldDidHeUseHisHeadToSayYes: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
-whenHeWas4To5YearsOldDidHeShakeHisHeadToSayNo: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
-whenHeWas4To5YearsOldDidHeUsuallyLookYouDirectlyInTheFace: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
-whenHeWas4To5YearsOldDidHeSmileBackIfSomeoneSmiledAtHim: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
-whenHeWas4To5YearsOldDidHeShowThingsOfHisInterestToGetYourAttention: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
-whenHeWas4To5YearsOldDidHeShareThingsWithYouBesidesFood: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
-whenHeWas4To5YearsOldDidHeWantYouToParticipateInSomethingThatWasEntertainingHim: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
-whenHeWas4To5YearsOldDidHeTryToComfortYouIfYouWereSadOrHurt: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
-betweenTheAgesOf4To5YearsWhenHeWantedSomethingOrSomeHelpDidHeLookAtYou: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
-betweenTheAgesOf4To5YearsDidHeHaveNormalFacialExpressions: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
-whenHeWas4Or5YearsOldDidHeParticipateSpontaneouslyInSocialGames: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
-whenHeWas4Or5YearsOldDidHePlayImaginaryGames: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
-whenHeWas4Or5YearsOldDidHeSeemInterestedInOtherChildren: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
-whenHeWas4Or5YearsOldDidHeReactPositivelyWhenAnotherChildApproachedHim: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
-whenHeWas4Or5YearsOldIfYouEnteredTheRoomAndStartedACConversationWithHim: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
-whenHeWas4Or5YearsOldDidHePlayMakeBelieveWithAnotherChild: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
-whenHeWas4Or5YearsOldDidHePlayCooperativelyInGroupGames: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
-totalPoints: number
-    scoreAsq: {
-        yesScore: number;
-        noScore: number;
-        };
     
-        totalResultAsq: {
-            resultTotal: number;
-        }
+    isAbleToConverseUsingShortPhrasesOrSentences: Boolean,
+    ifNotProceedToQuestion9: Boolean,
+    doesHeTalkToYouJustToBeFriendly: Boolean,
+    canYouHaveADialogue: Boolean,
+    doesHeUseStrangePhrasesOrSayThingsRepeatedly: Boolean,
+    doesHeOftenUseSociallyInappropriateQuestionsOrStatements: Boolean,
+    doesHeOftenUsePronounsInverted: Boolean,
+    doesHeOftenUseWordsThatHeSeemsToHaveInvented: Boolean,
+    doesHeOftenSayTheSameThingRepeatedly: Boolean,
+    areThereThingsThatAreDoneByHimInAParticularWay: Boolean,
+    doesHisFacialExpressionGenerallySeemAppropriate: Boolean,
+    hasHeEverUsedYourHandAsATool: Boolean,
+    doesHeOftenHaveSpecialInterestsThatSeemWeirdToOthers: Boolean,
+    doesHeOftenGetMoreInterestedInPartsOfAnObject: Boolean,
+    doesHeOftenHaveSpecificInterests: Boolean,
+    doesHeOftenInAWierdWayLookFeelListenTasteOrSmellThingsOrPeople: Boolean,
+    doesHeOftenHaveMannerismsOrStrangeWaysOfMovingHisHandsOrFingers: Boolean,
+    doesHeOftenMakeComplexMovementsWithHisWholeBody: Boolean,
+    doesHeOftenHurtHimselfOnPurpose: Boolean,
+    doesHeHaveAnObjectThatHeCarriesAround: Boolean,
+    doesHeHaveAParticularFriendOrABestFriend: Boolean,
+    whenHeWas4To5YearsOldDidHeRepeatedOrImitateWhatYouDid: Boolean,
+    whenHeWas4To5YearsOldDidHePointAtThings: Boolean,
+    whenHeWas4To5YearsOldDidHeUseGesturesToSHowWhatHeWanted: Boolean,
+    whenHeWas4To5YearsOldDidHeUseHisHeadToSayYes: Boolean,
+    whenHeWas4To5YearsOldDidHeShakeHisHeadToSayNo: Boolean,
+    whenHeWas4To5YearsOldDidHeUsuallyLookYouDirectlyInTheFace: Boolean,
+    whenHeWas4To5YearsOldDidHeSmileBackIfSomeoneSmiledAtHim: Boolean,
+    whenHeWas4To5YearsOldDidHeShowThingsOfHisInterestToGetYourAttention: Boolean,
+    whenHeWas4To5YearsOldDidHeShareThingsWithYouBesidesFood: Boolean,
+    whenHeWas4To5YearsOldDidHeWantYouToParticipateInSomethingThatWasEntertainingHim: Boolean,
+    whenHeWas4To5YearsOldDidHeTryToComfortYouIfYouWereSadOrHurt: Boolean,
+    betweenTheAgesOf4To5YearsWhenHeWantedSomethingOrSomeHelpDidHeLookAtYou: Boolean,
+    betweenTheAgesOf4To5YearsDidHeHaveNormalFacialExpressions: Boolean,
+    whenHeWas4Or5YearsOldDidHeParticipateSpontaneouslyInSocialGames: Boolean,
+    whenHeWas4Or5YearsOldDidHePlayImaginaryGames: Boolean,
+    whenHeWas4Or5YearsOldDidHeSeemInterestedInOtherChildren: Boolean,
+    whenHeWas4Or5YearsOldDidHeReactPositivelyWhenAnotherChildApproachedHim: Boolean,
+    whenHeWas4Or5YearsOldIfYouEnteredTheRoomAndStartedACConversationWithHim: Boolean,
+    whenHeWas4Or5YearsOldDidHePlayMakeBelieveWithAnotherChild: Boolean,
+    whenHeWas4Or5YearsOldDidHePlayCooperativelyInGroupGames: Boolean,
 }
 
 
