@@ -9,26 +9,26 @@ import { IPortageGuidetoPreschoolEducationEntity } from "src/entities/portage-gu
 @Injectable()
 export class PortageGuidetoPreschoolEducationRepository {
   constructor(
-    @InjectModel('PortageGuidetoPreschoolEducation') private readonly aflModel: Model<IPortageGuidetoPreschoolEducationEntity>
+    @InjectModel('portageGuidetoPreschoolEducation') private readonly portageGuidetoModel: Model<IPortageGuidetoPreschoolEducationEntity>
   ) {}
 
   async create(data: CreatePortageGuidetoPreschoolEducationDto): Promise<IPortageGuidetoPreschoolEducationEntity> {
-    return await this.aflModel.create(data);
+    return await this.portageGuidetoModel.create(data);
   }
 
   async findAll(): Promise<IPortageGuidetoPreschoolEducationEntity[]> {
-    return await this.aflModel.find().exec();
+    return await this.portageGuidetoModel.find().exec();
   }
 
   async findOne(id: string): Promise<IPortageGuidetoPreschoolEducationEntity> {
-    return await this.aflModel.findById(id).exec();
+    return await this.portageGuidetoModel.findById(id).exec();
   }
 
   async update(id: string, data: UpdatePortageGuidetoPreschoolEducationDto): Promise<IPortageGuidetoPreschoolEducationEntity> {
-    return await this.aflModel.findByIdAndUpdate(id, data, { new: true }).exec();
+    return await this.portageGuidetoModel.findByIdAndUpdate(id, data, { new: true }).exec();
   }
 
   async delete(id: string): Promise<IPortageGuidetoPreschoolEducationEntity> {
-    return await this.aflModel.findByIdAndDelete(id).exec();
+    return await this.portageGuidetoModel.findByIdAndDelete(id).exec();
   }
 }

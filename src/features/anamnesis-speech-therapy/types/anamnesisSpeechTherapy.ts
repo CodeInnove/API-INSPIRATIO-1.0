@@ -1,185 +1,156 @@
 export interface IAnamnesisSpeechTherapy{
     
     identification: {
-        patient: string; // ObjectId as string
-        dateBirth: string;
-        age: number;
-        maritalStatus: string;
-        sex: string;
-        naturalization: string;
-        nationality: string;
-        schoolName: string;
-        schoolPeriod: string;
+        name: string,
+        birthDate: string,
+        maritalStatus: string,
+        placeOfBirth: string,
+        age: number,
+        sex: string,
+        nationality: string,
+        schoolName: string,
+        studyPeriod: string,
+    },
     affiliation: {
-        fatherName: string;
-        ageFather: number;
-        fatherProfession: string;
-        schooling: string;
-        motherName: string;
-        ageMother: number;
-        motherProfession: string;
-        schoolingMother: string;
-        brotherName: string;
-        brotherAge: number;
-        };
+        fatherAge: number,
+        fatherProfession: string,
+        fatherEducation: string,
+        motherName: string,
+        motherAge: number,
+        motherProfession: string,
+        motherEducation: string,
+        siblingsNamesOne: string,
+        ageSiblingsNamesOne: number,
+        siblingsNamesTwo: string,
+        ageSiblingsNamesTwo: number,
+        fatherName: string,
+    },
     address: {
-        street: string;
-        number: string;
-        city: string;
-        state: string;
-        zipCode: string;
-        fone: string;
-        responsible: string;
-        forwarded: string;
-        dateAnamnese: string;
-        professional: string;
-        };
+        street: string,
+        city: string,
+        number: string,
+        state: string,
+        zipCode: string,
+        phonenumbers: [string],
+        responsible: string,
+        referredBy: string,
+        anamnesisDate: string,
+        professional: string
+    },
+}
+export interface IcomplaintAndDurations{
+    complaintAndDuration: string,
+}
+
+export interface Iantecedents {
+    gestation: string,
+    typeOfDelivery: string,
+    usedMedication: string,
+    medicalGuidance: string,
+    whichMedication: string,
+    prenatalCare: string,
+    prenatalCareWhy: string,
+    childProblem: string,
+    whichProblem: string,
+    parentsWorkHours: string,
+    childCaregiver: string,
+    weeklyRoutine: string,
+}
+export interface Idevelopment {
+    sleep: string,
+    disease: string,
+    hearingEarInfection: string,
+    vision: string,
+    allergies: string,
+    surgeriesAndDates: string,
+    hospitalizations: string,
+    medication: string,
+    breastfed: string,
+    untilWhen: string,
+    lookedAtMotherBreastfeeding: string,
+    whatEatsNow: string,
+    chokedEasily: string,
+    gastroesophagealReflux: string,
+    usedBottle: string,
+    whenStartedUsingBottle: string,
+    forHowLongUsedBottle: string,
+    whenChangedFromLiquidToPastyFoods: string,
+    pastyToSolidFoods: string,
+    fever: string,
+    fainting: string,
+    convulsions: string,
+    otherProblems: string,
+    heldHeadUp: string,
+    satWithSupport: string,
+    satWithoutSupport: string,
+    crawled: string,
+    walked: string,
+    diurnalSphincterControl: string,
+    nocturnalSphincterControl: string,
+    fellALot: string,
+    bumpedIntoThings: string,
+    speechBabblingWhen: string,
+    quietBaby: string
+    suction: string,
+    chewing: string,
+    swallowing: string,
+    breathing: string,
+    presentsNoiseEffort: string,
+    leftOrRightHanded: string,
+    usedPacifierBottleFinger: string,
+    untilWhenUsedPacifierBottleFinger: string,
+    otherHabits: string
+    bathesAlone: string,
+    eatsAlone: string,
+    sinceWhenEatsAlone: string,
+    whatDoesItUse: string,
+    whichHandEatsWith: string,
+    playsBall: string,
+    jumpsRope: string,
+    brushesTeethAlone: string,
+    dressesAlone: string,
+    putsOnShoes: string,
+    tiesShoes: string,
+    closesZipper: string
+    hasOwnInitiative: string,
+    demonstratesWishes: string,
+    whatDoesWhenAlone: string,
+    howSolvesProblems: string
+}
+export interface IsocioCultural{
+    relationshipWithParents: string,
+    relationshipWithAdults: string,
+    relationshipWithOtherChildren: string,
+    whoAreYourBestFriends: string
+    whatLikes: string,
+    muchChargedToSpeakCorrectly: string,
+    familyWithSpeechDifficulty: string,
+    difficultyOfUnderstanding: string,
+    hasVisualContact: string,
+    bitesOtherChildrenAggressive: string,
+    communicationInitiative: string,
+    maintainsDialogue: string,
+    hasContactWithWhatLikes: string,
+    doesntLike: string,
+    hasGoodSchoolPerformance: string,
+    whenStartedSchool: string,
+    hadGoodAdaptation: string,
+    howIsTheirBehavior: string,
+    answersByName: string
+    }
+        
+export interface IimportantObservations {
+        importantObservation: string
+}
+
+    export interface AnamnesisSpeechTherapy {
+        doctor: string,
+        patient: string,
+        speciality: string,
+        complaintAndDuration: IcomplaintAndDurations,
+        antecedents: Iantecedents,
+        development: Idevelopment,
+        socioCultural: IsocioCultural,
+        importantObservations: IimportantObservations,
     }
 
-
-
-    complaintAndDuration:{
-        observationComplaintAndDuration: string;
-    };
-
-
-
-    background:{
-      groupConstitutional:{
-        questionGestation: string;
-        questionTypeOfDelivery: string;
-        questionComplications: string;
-        questionHasUsedAnyMedication: string;
-        questionUnderMedicalAdvice: string;
-        questionWhichMedicine: string;
-        questionDidYouHavePrenatalCare: string;
-        questionWhy: string;
-        questionDidTheChildHaveAnyProblems: string;
-        questionWhatProblem: string;};
-
-
-
-      groupCircumstantial:{
-        questionParentsWorkingHours: string;
-        questionWhoDoesTheChildStayWith: string;
-        questionWeeklyRoutine: string;
-    };
-};
-
-
-    development: {
-        physical: {
-            groupSomatic:{
-                questionSleep: string;
-                questionSickness: string;
-                questionHearingAndEarInfection: string;
-                questionVision: string;
-                questionAllergy: string;
-                questionSurgery: string;
-                questionDateOfSurgery: string;
-                questionHospitalization: string;
-                questionDrug: string;
-                questionBreastfed: string;
-                questionWhenUntil: string;
-                questionLookedAtMyMotherInBreastfeeding: string;
-                questionWhatDoYouCurrentlyEat: string;
-                questionDidYouChokeEasily: string;
-                questionGastroesophagealReflux: string;
-                questionDidYouUseABottle: string;
-                questionWhenDidYouStartUsingIt: string;
-                questionForHowLong: string;
-                questionWhenDidYouSwitchFromLiquidToPastyFoods: string;
-                questionPastyToSolid: string;
-                questionFever: string;
-                questionFainting: string;
-                questionSeizures: string;
-                questionOtherProblems: string;
-            };
-
-
-
-        groupEngine:{
-            questionHeHeldHisHead: string;
-            questionSatWithSupport: string;
-            questionSatWithoutSupport: string;
-            questionCrawled: string;
-            questionBeen: string;
-            questionDaytimeSphincterControl: string;
-            questionNightSphincterControl: string;
-            questionFallALot: string;
-            questionDidYouBumpIntoEverything: string;
-            questionSpeechBabbling: string;
-            questionWhen: string;
-            questionWasItAQuietBaby: string;
-        }
-
-
-
-        groupNeurovegetativeFunctions:{
-            questionSuction: string;
-            questionMastication: string;
-            questionSwallowing: string;
-            questionRespiration: string;
-            questionDoesItHaveNoise: string;
-            questionEffort: string;
-            questionLeftHandedOrRightHanded: string;
-            questionUsed: string;
-            questionUntilWhen: string;
-            questionOtherHabits: string;
-            };
-
-
-
-        groupIdeomotor:{
-            questionDoYouShowerAlone: string;
-            questionDoYouEatAlone: string;
-            questionSinceWhen: string;
-            questionWhatDoYouUse: string;
-            questionWithWhatHand: string;
-            questionDoYouPlayBall: string;
-            questionJumpRope: string;
-            questionDoYouBrushYourTeethAlone: string;
-            questionDoYouDressAlone: string;
-            questionDoYouPutOnYourShoes: string;
-            questionLaceUpYourSneakers: string;
-            questionZipUp: string;
-        }
-        
-
-        groupIdeatorious:{
-            questionDodYouHaveYourOwnInitiative: string;
-            questionDoesItShowWill: string;
-            questionWhatDoYouDoWhenYoureAlone: string;
-            questionHowDoesItSolveProblems: string;
-        };
-    };
-
-
-    socioCultural: {
-        groupInteractive:{
-            questionRelationshipWithParents: string;
-            questionRelationshipWithAdults: string;
-            questionRelationshipWithOtherChildren: string;
-            questionWhoAreYourBestFriends: string;
-        };
-
-        groupIntegrative:{
-            questionWhatDoYouLike: string;
-            questionAreYouVeryDemandingToSayRight: string;
-            questionFamilyWithSpeechImpairment: string;
-            questionIsThereDifficultyInUnderstandingDoesHeUnderstandWhatYouSay: string;
-            questionDoesItHaveEyeContact: string;
-            questionIsBitingOtherChildrenAggressive: string;
-            questionDoYouHaveACommunicationInitiative: string;
-            questionDoYouMaintainDialogue: string;
-            questionDoYouHaveContactWithSomethingYouLike: string;
-            questionAndWhatDoesntHeLike: string;
-            questionDoYouPerformWellAtSchool: string;
-            questionWhenDidYouEnterSchool: string;
-            questionDidYouHaveAGoodAdaptation: string;
-            questionHowIsTheirBehavior: string;
-            questionDoYouGoByName: string;
-            observationIntegrative: string;
-        };
-    };
-}};

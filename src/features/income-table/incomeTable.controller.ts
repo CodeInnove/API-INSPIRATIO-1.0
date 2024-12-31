@@ -1,37 +1,40 @@
-import { Body, Controller, Delete, Get, Param, Post, Put } from "@nestjs/common";
+import { Body, Controller, Delete, Get, Param, Post, Put, Query } from "@nestjs/common";
 import { ApiTags } from "@nestjs/swagger";
 import { CreateTableDto } from "./dto/incomeTableCreate.dto";
-import { UpdateIncomeTableDto } from "./dto/incomeTableUpdate.dto";
+import { IIncomeTableEntity } from "src/entities/incomeTable.entity";
 import { IncomeTableService } from "./incomeTable.service";
+import { QueryIncomeTableDto } from "./dto/incomeTableCreateQuery.dto";
 
-@ApiTags('Income Table')
-@Controller('income-table')
+
+@ApiTags('IncomeTable')
+@Controller('income-Table')
 export class IncomeTableController {
-  constructor(private readonly incomeTableService: IncomeTableService) {}
+  constructor(
+    private readonly afcpService: IncomeTableService
+  ) {}
 
   @Post()
-  create(@Body() data: CreateTableDto) {
-    return this.incomeTableService.create(data);
+  async createAfcp(@Body() data: CreateTableDto): Promise<IIncomeTableEntity> {
+    return await this.afcpService.create(data);
   }
 
   @Get()
-  findAll() {
-    return this.incomeTableService.findAll();
+  async findAll(@Query() query: QueryIncomeTableDto) {
+    return await this.afcpService.findAll(query);
   }
 
   @Get(':id')
-  findById(@Param('id') id: string) {
-    return this.incomeTableService.findById(id);
+  async findById(@Param() id: string) {
+    return await this.afcpService.findById(id);
   }
 
   @Put(':id')
-  update(@Param('id') id: string, @Body() data: UpdateIncomeTableDto) {
-    return this.incomeTableService.update(id, data);
+  async update(@Param() id: string, @Body() data: CreateTableDto) {
+    return await this.afcpService.update(id, data);
   }
 
   @Delete(':id')
-  delete(@Param('id') id: string) {
-    return this.incomeTableService.delete(id);
+  async delete(@Param() id: string) {
+    return await this.afcpService.delete(id);
   }
 }
-

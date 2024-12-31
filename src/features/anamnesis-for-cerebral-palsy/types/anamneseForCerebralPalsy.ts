@@ -140,3 +140,12 @@ export interface IFoods {
     chainingAndSequentialThinking: string,
     linguisticMarkers: string
 }
+
+export interface AnamnesisForCerebralPalsy {
+    doctor: string,
+    patient: string,
+    speciality: string,
+    anamneseInitial: IAnamneseForCerebralPalsy
+    developmentMotor: IdevelopmentMotor,
+    foods: IFoods,
+}

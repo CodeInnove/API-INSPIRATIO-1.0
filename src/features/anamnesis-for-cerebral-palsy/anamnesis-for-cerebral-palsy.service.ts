@@ -3,6 +3,7 @@ import {CreateAfcpDto} from './dto/create-anamnesis-for-cerebral-palsy.dto';
 import { UpdateAfcpDto} from './dto/update-anamnesis-for-cerebral-palsy.dto';
 import { IAnamneseCerebralEntity } from 'src/entities/anamnesis-for-cerebral-palsy.entity';
 import { AfcpRepository } from './afcp.repository';
+import { QueryAfcpDto } from './dto/query-anamnesis-for-cerebral-palsy.dto';
 
 @Injectable()
 export class AnamnesisForCerebralPalsyService {
@@ -10,39 +11,39 @@ export class AnamnesisForCerebralPalsyService {
       private readonly afcpRepository: AfcpRepository
     ) {}
 
-  async createAfl(afl: CreateAfcpDto): Promise<IAnamneseCerebralEntity> {
+  async createAfcp(afcp: CreateAfcpDto): Promise<IAnamneseCerebralEntity> {
       try {
-        return await this.afcpRepository.create(afl);
+        return await this.afcpRepository.createAfcp(afcp);
       } catch (error) {
         throw new HttpException(error, HttpStatus.BAD_REQUEST);
       }
     }
 
-  async findAllAfls(): Promise<IAnamneseCerebralEntity[]> {
+  async findAll(query: QueryAfcpDto) {
       try {
-        return await this.afcpRepository.findAll();
+        return await this.afcpRepository.findAll(query);
       } catch (error) {
         throw new HttpException(error, HttpStatus.BAD_REQUEST);
       }
     }
   
-    async findOneAfl(id: string): Promise<IAnamneseCerebralEntity> {
+    async findById(id: string) {
       try {
-        return await this.afcpRepository.findOne(id);
+        return await this.afcpRepository.findById(id);
       } catch (error) {
         throw new HttpException(error, HttpStatus.BAD_REQUEST);
       }
     }
   
-    async updateAfl(id: string, afl: UpdateAfcpDto): Promise<IAnamneseCerebralEntity> {
+    async update(id: string, afcp: UpdateAfcpDto) {
       try {
-        return await this.afcpRepository.update(id, afl);
+        return await this.afcpRepository.update(id, afcp);
       } catch (error) {
         throw new HttpException(error, HttpStatus.BAD_REQUEST);
       }
     }
   
-    async deleteAfl(id: string): Promise<IAnamneseCerebralEntity> {
+    async delete(id: string){
       try {
         return await this.afcpRepository.delete(id);
       } catch (error) {

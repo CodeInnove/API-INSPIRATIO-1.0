@@ -1,29 +1,53 @@
-import { Injectable } from "@nestjs/common";
-import { IncomeTableRepository } from "./incomeTables.repository";
+import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
+import { CreateTableDto } from './dto/incomeTableCreate.dto';
+import { IncomeTableRepository } from './incomeTables.repository';
+import { UpdateIncomeTableDto } from './dto/incomeTableUpdate.dto';
+import { IIncomeTableEntity } from 'src/entities/incomeTable.entity';
+import { QueryIncomeTableDto } from './dto/incomeTableCreateQuery.dto';
 
 @Injectable()
 export class IncomeTableService {
-  constructor(
-    private readonly incomeTableRepository: IncomeTableRepository
-  ) {}
+   constructor(
+      private readonly incomeTableRepository: IncomeTableRepository
+    ) {}
 
-  async create(data: any) {
-    return this.incomeTableRepository.create(data);
-  }
+  async create(incometable: CreateTableDto): Promise<IIncomeTableEntity> {
+      try {
+        return await this.incomeTableRepository.create(incometable);
+      } catch (error) {
+        throw new HttpException(error, HttpStatus.BAD_REQUEST);
+      }
+    }
 
-  async findAll() {
-    return this.incomeTableRepository.findAll();
+  async findAll(query: QueryIncomeTableDto) {
+      try {
+        return await this.incomeTableRepository.findAll(query);
+      } catch (error) {
+        throw new HttpException(error, HttpStatus.BAD_REQUEST);
+      }
+    }
+  
+    async findById(id: string) {
+      try {
+        return await this.incomeTableRepository.findById(id);
+      } catch (error) {
+        throw new HttpException(error, HttpStatus.BAD_REQUEST);
+      }
+    }
+  
+    async update(id: string, afcp: UpdateIncomeTableDto) {
+      try {
+        return await this.incomeTableRepository.update(id, afcp);
+      } catch (error) {
+        throw new HttpException(error, HttpStatus.BAD_REQUEST);
+      }
+    }
+  
+    async delete(id: string){
+      try {
+        return await this.incomeTableRepository.delete(id);
+      } catch (error) {
+        throw new HttpException(error, HttpStatus.BAD_REQUEST);
+      }
+    }
   }
-
-  async findById(id: string) {
-    return this.incomeTableRepository.findById(id);
-  }
-
-  async update(id: string, data: any) {
-    return this.incomeTableRepository.update(id, data);
-  }
-
-  async delete(id: string) {
-    return this.incomeTableRepository.delete(id);
-  }
-}

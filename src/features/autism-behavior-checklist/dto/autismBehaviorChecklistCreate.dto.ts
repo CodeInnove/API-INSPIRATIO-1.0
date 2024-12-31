@@ -339,7 +339,7 @@ class ScoreDTO {
 
     @IsNotEmpty()
     @ApiProperty()
-    resultTotal: string;
+    resultTotal: ScoreDTO;
 
   }
 
@@ -349,4 +349,13 @@ export class CreateAutismBehaviorChecklistDto {
   @ApiProperty({ type: QuestionsDTO })
   questions: QuestionsDTO;
 
+  @ValidateNested()
+  @Type(() => ScoreDTO)
+  @ApiProperty({ type: ScoreDTO })
+  score: ScoreDTO;
+
+  @ValidateNested()
+  @Type(() => TotalResultDTO)
+  @ApiProperty({ type: TotalResultDTO })
+  total: TotalResultDTO
 }

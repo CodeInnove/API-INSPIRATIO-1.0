@@ -1,8 +1,9 @@
-import { Body, Controller, Delete, Get, Param, Post, Put } from "@nestjs/common";
+import { Body, Controller, Delete, Get, Param, Post, Put, Query } from "@nestjs/common";
 import { ApiTags } from "@nestjs/swagger";
 import { CreateAnamnesisSpeechTherapyDto } from "./dto/anamnesisSpeechTherapyCreate.dto";
 import { UpdateAnamnesisSpeechTherapyDto } from "./dto/anamnesisSpeechTherapyUpdate.dto";
 import { AnamnesisSpeechTherapyService } from "./anamnesisSpeechTherapy.service";
+import { QueryAnamnesisTherapyDto } from "./dto/anamnesisSpeechTherapyQuery.dto";
 
 @ApiTags('Anamnesis Speech Therapy')
 @Controller('anamnesis-speech-therapy')
@@ -10,23 +11,23 @@ export class AnamnesisSpeechTherapyController {
   constructor(private readonly anamnesisSpeechTherapyService: AnamnesisSpeechTherapyService) {}
 
   @Post()
-  create(@Body() data: CreateAnamnesisSpeechTherapyDto) {
-    return this.anamnesisSpeechTherapyService.create(data);
+  async create(@Body() data: CreateAnamnesisSpeechTherapyDto) {
+    return await this.anamnesisSpeechTherapyService.create(data);
   }
 
   @Get()
-  findAll() {
-    return this.anamnesisSpeechTherapyService.findAll();
+  async findAll(@Query() query: QueryAnamnesisTherapyDto) {
+    return await this.anamnesisSpeechTherapyService.findAll(query);
   }
 
   @Get(':id')
-  findById(@Param('id') id: string) {
-    return this.anamnesisSpeechTherapyService.findById(id);
+  async findById(@Param('id') id: string) {
+    return await this.anamnesisSpeechTherapyService.findById(id);
   }
 
   @Put(':id')
-  update(@Param('id') id: string, @Body() data: UpdateAnamnesisSpeechTherapyDto) {
-    return this.anamnesisSpeechTherapyService.update(id, data);
+  async update(@Param() id: string, @Body() data: UpdateAnamnesisSpeechTherapyDto) {
+    return await this.anamnesisSpeechTherapyService.update(id, data);
   }
 
   @Delete(':id')

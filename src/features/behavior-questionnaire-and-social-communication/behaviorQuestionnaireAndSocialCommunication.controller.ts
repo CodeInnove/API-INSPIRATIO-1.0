@@ -1,6 +1,6 @@
 import { Body, Controller, Delete, Get, Param, Post, Put } from "@nestjs/common";
 import { ApiTags } from "@nestjs/swagger";
-import { CreateBehaviorQuestionnaireAndSocialCommunicationDto } from "./dto/behaviorQuestionnaireAndSocialCommunicationCreate.dto";
+import { CreateBehaviorQuestionDto } from "./dto/behaviorQuestionnaireAndSocialCommunicationCreate.dto";
 import { UpdateBehaviorQuestionnaireAndSocialCommunicationDto } from "./dto/behaviorQuestionnaireAndSocialCommunicationUpdate.dto";
 import { BehaviorQuestionnaireAndSocialCommunicationService } from "./behaviorQuestionnaireAndSocialCommunication.service";
 
@@ -10,7 +10,7 @@ export class BehaviorQuestionnaireAndSocialCommunicationController {
   constructor(private readonly behaviorQuestionnaireAndSocialCommunicationService: BehaviorQuestionnaireAndSocialCommunicationService) {}
 
   @Post()
-  create(@Body() data: CreateBehaviorQuestionnaireAndSocialCommunicationDto) {
+  create(@Body() data: CreateBehaviorQuestionDto) {
     return this.behaviorQuestionnaireAndSocialCommunicationService.create(data);
   }
 

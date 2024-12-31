@@ -6,7 +6,7 @@ import {
 } from 'class-validator';
 
 // Um parâmetro opcional para paginação
-export class QueryAnamneseDto {
+export class QueryAfcpDto {
   @IsOptional()
   @IsString()
   @ApiProperty()

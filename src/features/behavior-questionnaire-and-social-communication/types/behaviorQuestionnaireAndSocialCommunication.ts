@@ -1,172 +1,60 @@
+export interface IBehaviorQuestionnaireAndSocialCommunicationYesOrNo{
+    yes: number;
+    no: number;
+}
+
 export interface IBehaviorQuestionnaireAndSocialCommunication{
       
-    questionOne: {
-        yes: string;
-        no: string;
-    };
-    questionTwo: {
-        yes: string;
-        no: string;
-    };
-    questionThree: {
-        yes: string;
-        no: string;
-    };
-    questionFour: {
-        yes: string;
-        no: string;
-    };
-    questionFive: {
-        yes: string;
-        no: string;
-    };
-    questionSix: {
-        yes: string;
-        no: string;
-    };
-    questionSeven: {
-        yes: string;
-        no: string;
-    };
-    questionEight: {
-        yes: string;
-        no: string;
-    };
-    questionNine: {
-        yes: string;
-        no: string;
-    };
-    questionTen: {
-        yes: string;
-        no: string;
-    };
-    questionEleven: {
-        yes: string;
-        no: string;
-    };
-    questionTwelve: {
-        yes: string;
-        no: string;
-    };
-    questionThirteen: {
-        yes: string;
-        no: string;
-    };
-    questionFourteen: {
-        yes: string;
-        no: string;
-    };
-    questionFifteen: {
-        yes: string;
-        no: string;
-    };
-    questionSixteen: {
-        yes: string;
-        no: string;
-    };
-    questionSeventeen: {
-        yes: string;
-        no: string;
-    };
-    questionEighteen: {
-        yes: string;
-        no: string;
-    };
-    questionNineteen: {
-        yes: string;
-        no: string;
-    };
-    questionTwenty: {
-        yes: string;
-        no: string;
-    };
-    questionTwentyOne: {
-        yes: string;
-        no: string;
-    };
-    questionTwentyTwo: {
-        yes: string;
-        no: string;
-    };
-    questionTwentyThree: {
-        yes: string;
-        no: string;
-    };
-    questionTwentyFour: {
-        yes: string;
-        no: string;
-    };
-    questionTwentyFive: {
-        yes: string;
-        no: string;
-    };
-    questionTwentySix: {
-        yes: string;
-        no: string;
-    };
-    questionTwentySeven: {
-        yes: string;
-        no: string;
-    };
-    questionTwentyEight: {
-        yes: string;
-        no: string;
-    };
-    questionTwentyNine: {
-        yes: string;
-        no: string;
-    };
-    questionThirty: {
-        yes: string;
-        no: string;
-    };
-    questionThirtyOne: {
-        yes: string;
-        no: string;
-    };
-    questionThirtyTwo: {
-        yes: string;
-        no: string;
-    };
-    questionThirtyThree: {
-        yes: string;
-        no: string;
-    };
-    questionThirtyFour: {
-        yes: string;
-        no: string;
-    };
-    questionThirtyFive: {
-        yes: string;
-        no: string;
-    };
-    questionThirtySix: {
-        yes: string;
-        no: string;
-    };
-    questionThirtySeven: {
-        yes: string;
-        no: string;
-    };
-    questionThirtyEight: {
-        yes: string;
-        no: string;
-    };
-    questionThirtyNine: {
-        yes: string;
-        no: string;
-    };
-    questionForty: {
-        yes: string;
-        no: string;
-    };
-
+    isAbleToConverseUsingShortPhrasesOrSentences: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
+ifNotProceedToQuestion9: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
+doesHeTalkToYouJustToBeFriendly: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
+canYouHaveADialogue: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
+doesHeUseStrangePhrasesOrSayThingsRepeatedly: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
+doesHeOftenUseSociallyInappropriateQuestionsOrStatements: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
+doesHeOftenUsePronounsInverted: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
+doesHeOftenUseWordsThatHeSeemsToHaveInvented: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
+doesHeOftenSayTheSameThingRepeatedly: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
+areThereThingsThatAreDoneByHimInAParticularWay: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
+doesHisFacialExpressionGenerallySeemAppropriate: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
+hasHeEverUsedYourHandAsATool: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
+doesHeOftenHaveSpecialInterestsThatSeemWeirdToOthers: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
+doesHeOftenGetMoreInterestedInPartsOfAnObject: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
+doesHeOftenHaveSpecificInterests: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
+doesHeOftenInAWierdWayLookFeelListenTasteOrSmellThingsOrPeople: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
+doesHeOftenHaveMannerismsOrStrangeWaysOfMovingHisHandsOrFingers: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
+doesHeOftenMakeComplexMovementsWithHisWholeBody: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
+doesHeOftenHurtHimselfOnPurpose: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
+doesHeHaveAnObjectThatHeCarriesAround: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
+doesHeHaveAParticularFriendOrABestFriend: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
+whenHeWas4To5YearsOldDidHeRepeatedOrImitateWhatYouDid: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
+whenHeWas4To5YearsOldDidHePointAtThings: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
+whenHeWas4To5YearsOldDidHeUseGesturesToSHowWhatHeWanted: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
+whenHeWas4To5YearsOldDidHeUseHisHeadToSayYes: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
+whenHeWas4To5YearsOldDidHeShakeHisHeadToSayNo: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
+whenHeWas4To5YearsOldDidHeUsuallyLookYouDirectlyInTheFace: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
+whenHeWas4To5YearsOldDidHeSmileBackIfSomeoneSmiledAtHim: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
+whenHeWas4To5YearsOldDidHeShowThingsOfHisInterestToGetYourAttention: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
+whenHeWas4To5YearsOldDidHeShareThingsWithYouBesidesFood: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
+whenHeWas4To5YearsOldDidHeWantYouToParticipateInSomethingThatWasEntertainingHim: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
+whenHeWas4To5YearsOldDidHeTryToComfortYouIfYouWereSadOrHurt: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
+betweenTheAgesOf4To5YearsWhenHeWantedSomethingOrSomeHelpDidHeLookAtYou: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
+betweenTheAgesOf4To5YearsDidHeHaveNormalFacialExpressions: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
+whenHeWas4Or5YearsOldDidHeParticipateSpontaneouslyInSocialGames: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
+whenHeWas4Or5YearsOldDidHePlayImaginaryGames: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
+whenHeWas4Or5YearsOldDidHeSeemInterestedInOtherChildren: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
+whenHeWas4Or5YearsOldDidHeReactPositivelyWhenAnotherChildApproachedHim: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
+whenHeWas4Or5YearsOldIfYouEnteredTheRoomAndStartedACConversationWithHim: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
+whenHeWas4Or5YearsOldDidHePlayMakeBelieveWithAnotherChild: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
+whenHeWas4Or5YearsOldDidHePlayCooperativelyInGroupGames: IBehaviorQuestionnaireAndSocialCommunicationYesOrNo,
+totalPoints: number
     scoreAsq: {
         yesScore: number;
         noScore: number;
-    };
-
-    totalResultAsq: {
-        resultTotal: number;
-    }
+        };
+    
+        totalResultAsq: {
+            resultTotal: number;
+        }
 }
+
+
