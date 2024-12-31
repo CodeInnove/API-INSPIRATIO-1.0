@@ -1,8 +1,9 @@
 import { HttpException, HttpStatus, Injectable } from "@nestjs/common";
 import { BehaviorQuestionnaireAndSocialCommunicationRepository } from "./behaviorQuestionnaireAndSocialCommunications.repository";
-import { CreateBehaviorQuestionDto } from "./dto/behaviorQuestionnaireAndSocialCommunicationCreate.dto";
+import { QuestionsAsqDTO } from "./dto/behaviorQuestionnaireAndSocialCommunicationCreate.dto";
 import { IBehaviorQuestionnaireAndSocialCommunicationEntity } from "src/entities/behaviorQuestionnaireAndSocialCommunication.entity";
 import { UpdateBehaviorQuestionnaireAndSocialCommunicationDto } from "./dto/behaviorQuestionnaireAndSocialCommunicationUpdate.dto";
+import { IBehaviorQuestionnaireAndSocialCommunication } from "./types/behaviorQuestionnaireAndSocialCommunication";
 
 @Injectable()
 export class BehaviorQuestionnaireAndSocialCommunicationService {
@@ -10,7 +11,7 @@ export class BehaviorQuestionnaireAndSocialCommunicationService {
       private readonly bQASCRepository: BehaviorQuestionnaireAndSocialCommunicationRepository
     ) {}
 
-  async create(bqasc: CreateBehaviorQuestionDto): Promise<IBehaviorQuestionnaireAndSocialCommunicationEntity> {
+  async create(bqasc: QuestionsAsqDTO): Promise<IBehaviorQuestionnaireAndSocialCommunication> {
       try {
         return await this.bQASCRepository.create(bqasc);
       } catch (error) {

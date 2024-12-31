@@ -1,7 +1,6 @@
-
-
 export interface IBehaviorQuestionnaireAndSocialCommunication{
-    
+    patient: string;
+    doctor: string;
     isAbleToConverseUsingShortPhrasesOrSentences: Boolean,
     ifNotProceedToQuestion9: Boolean,
     doesHeTalkToYouJustToBeFriendly: Boolean,

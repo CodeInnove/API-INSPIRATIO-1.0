@@ -3,9 +3,10 @@ import { IBehaviorQuestionnaireAndSocialCommunication } from 'src/features/behav
 
 export const BehaviorQuestionnaireAndSocialCommunicationSchema = new Schema({
   _id: { type: Schema.Types.ObjectId, required: true, auto: true },
-  //patient: {type: Schema.Types.ObjectId, ref: 'User'},
-  //doctor: {type: Schema.Types.ObjectId, ref: 'User'},
-  questions: {
+  patient: {type: Schema.Types.ObjectId, ref: 'User'},
+  doctor: {type: Schema.Types.ObjectId, ref: 'User'},
+  date:{type: String, req: true},
+  //questions: {
     isAbleToConverseUsingShortPhrasesOrSentences: { type: Boolean },
     ifNotProceedToQuestion9: { type: Boolean },
     doesHeTalkToYouJustToBeFriendly: { type: Boolean },
@@ -47,7 +48,7 @@ export const BehaviorQuestionnaireAndSocialCommunicationSchema = new Schema({
     whenHeWas4Or5YearsOldIfYouEnteredTheRoomAndStartedACConversationWithHim: { type: Boolean },
     whenHeWas4Or5YearsOldDidHePlayMakeBelieveWithAnotherChild: { type: Boolean },
     whenHeWas4Or5YearsOldDidHePlayCooperativelyInGroupGames: { type: Boolean }
-  }
+  //}
   
 
     

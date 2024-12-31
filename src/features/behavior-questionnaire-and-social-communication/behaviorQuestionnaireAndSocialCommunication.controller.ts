@@ -1,9 +1,10 @@
 import { Body, Controller, Delete, Get, Param, Post, Put } from "@nestjs/common";
 import { ApiTags } from "@nestjs/swagger";
-import { CreateBehaviorQuestionDto } from "./dto/behaviorQuestionnaireAndSocialCommunicationCreate.dto";
+import { QuestionsAsqDTO } from "./dto/behaviorQuestionnaireAndSocialCommunicationCreate.dto";
 import { UpdateBehaviorQuestionnaireAndSocialCommunicationDto } from "./dto/behaviorQuestionnaireAndSocialCommunicationUpdate.dto";
 import { BehaviorQuestionnaireAndSocialCommunicationService } from "./behaviorQuestionnaireAndSocialCommunication.service";
 import { IBehaviorQuestionnaireAndSocialCommunicationEntity } from "src/entities/behaviorQuestionnaireAndSocialCommunication.entity";
+import { IBehaviorQuestionnaireAndSocialCommunication } from "./types/behaviorQuestionnaireAndSocialCommunication";
 
 @ApiTags('Behavior Questionnaire And Social Communication')
 @Controller('Behavior-Questionnaire-And-Social-Communication')
@@ -11,7 +12,7 @@ export class BehaviorQuestionnaireAndSocialCommunicationController {
   constructor(private readonly behaviorQuestionnaireAndSocialCommunicationService: BehaviorQuestionnaireAndSocialCommunicationService) {}
 
   @Post()
-    async create(@Body() data: CreateBehaviorQuestionDto): Promise<IBehaviorQuestionnaireAndSocialCommunicationEntity> {
+    async create(@Body() data: QuestionsAsqDTO): Promise<IBehaviorQuestionnaireAndSocialCommunication> {
       return await this.behaviorQuestionnaireAndSocialCommunicationService.create(data);
     }
   
