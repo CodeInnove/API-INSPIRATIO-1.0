@@ -2,6 +2,9 @@ import { Injectable } from "@nestjs/common";
 import { InjectModel } from "@nestjs/mongoose";
 import { Model } from "mongoose";
 import { IBehaviorQuestionnaireAndSocialCommunicationEntity } from "src/entities/behaviorQuestionnaireAndSocialCommunication.entity";
+import { QuestionsAsqDTO } from "./dto/behaviorQuestionnaireAndSocialCommunicationCreate.dto";
+import { UpdateBehaviorQuestionnaireAndSocialCommunicationDto } from "./dto/behaviorQuestionnaireAndSocialCommunicationUpdate.dto";
+import { IBehaviorQuestionnaireAndSocialCommunication } from "./types/behaviorQuestionnaireAndSocialCommunication";
 
 @Injectable()
 export class BehaviorQuestionnaireAndSocialCommunicationRepository {
@@ -9,7 +12,7 @@ export class BehaviorQuestionnaireAndSocialCommunicationRepository {
     @InjectModel('behaviorQuestionnaireAndSocialCommunication') private readonly behaviorQuestionnaireAndSocialCommunicationModel: Model<IBehaviorQuestionnaireAndSocialCommunicationEntity>
   ) {}
 
-  async create(data: IBehaviorQuestionnaireAndSocialCommunicationEntity): Promise<IBehaviorQuestionnaireAndSocialCommunicationEntity> {
+  async create(data: QuestionsAsqDTO): Promise<IBehaviorQuestionnaireAndSocialCommunication> {
     return this.behaviorQuestionnaireAndSocialCommunicationModel.create(data);
   }
   
@@ -18,10 +21,13 @@ export class BehaviorQuestionnaireAndSocialCommunicationRepository {
   }
 
   async findById(id: string): Promise<IBehaviorQuestionnaireAndSocialCommunicationEntity> {
-    return this.behaviorQuestionnaireAndSocialCommunicationModel.findById(id);
+    return this.behaviorQuestionnaireAndSocialCommunicationModel.findById(id)
+    .populate('doctor')
+    .populate('patient')
+    .lean().exec()
   }
 
-  async update(id: string, data: IBehaviorQuestionnaireAndSocialCommunicationEntity): Promise<IBehaviorQuestionnaireAndSocialCommunicationEntity> {
+  async update(id: string, data: UpdateBehaviorQuestionnaireAndSocialCommunicationDto): Promise<IBehaviorQuestionnaireAndSocialCommunicationEntity> {
     return this.behaviorQuestionnaireAndSocialCommunicationModel.findByIdAndUpdate(id, data);
   }
 

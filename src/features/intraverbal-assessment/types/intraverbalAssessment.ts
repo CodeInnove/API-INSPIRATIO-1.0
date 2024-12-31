@@ -1,486 +1,126 @@
 export interface IIntraverbalAssessment{
-
-  groupAnimalSoundsAndCompleteSongs:[{
-    question1: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        }},
-
-    question1: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-        
-    question2: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-        
-    question3: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-    question4: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-    
-    question5: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-            
-    question6: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-            
-    question7: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-
-    question8: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-                  
-    question9: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-                  
-    question10: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-
-
-    totalGroupAnimalSoundsAndCompleteSongs:{
-      resultGroupAnimalSoundsAndCompleteSongs: number;
-    }],
-
-  groupNameAndCompletesAndAssociations:[{
-    question1: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        }},
-
-    question1: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-        
-    question2: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-        
-    question3: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-    question4: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-    
-    question5: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-            
-    question6: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-            
-    question7: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-
-    question8: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-                  
-    question9: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-                  
-    question10: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-
-
-    totalGroupNameAndCompletesAndAssociations:{
-      resultGroupNameAndCompletesAndAssociations: number;
-    }],
-
-  groupSimpleQuestions1:[{
-    question1: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        }},
-
-    question1: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-        
-    question2: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-        
-    question3: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-    question4: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-    
-    question5: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-            
-    question6: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-            
-    question7: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-
-    question8: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-                  
-    question9: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-                  
-    question10: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-
-
-    totalGroupSimpleQuestions1:{
-      resultGroupSimpleQuestions1: number;
-    }],
-
-  groupSimpleQuestions2:[{
-    question1: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        }},
-
-    question1: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-        
-    question2: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-        
-    question3: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-    question4: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-    
-    question5: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-            
-    question6: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-            
-    question7: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-
-    question8: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-                  
-    question9: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-                  
-    question10: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-
-
-    totalGgroupSimpleQuestions2:{
-      resultGgroupSimpleQuestions2: number;
-    }],
-
-    
-  groupCategoriesAndFunctionsAndCharacteristics:[{
-    question1: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        }},
-
-    question1: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-        
-    question2: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-        
-    question3: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-    question4: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-    
-    question5: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-            
-    question6: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-            
-    question7: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-
-    question8: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-                  
-    question9: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-                  
-    question10: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-
-
-    totalGroupCategoriesAndFunctionsAndCharacteristics:{
-      resultGroupCategoriesAndFunctionsAndCharacteristics: number;
-    }],
-
-    
-  groupAdjectivesAndPrepositionsAndAdverbs:[{
-    question1: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        }},
-
-    question1: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-        
-    question2: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-        
-    question3: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-    question4: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-    
-    question5: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-            
-    question6: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-            
-    question7: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-
-    question8: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-                  
-    question9: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-                  
-    question10: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-
-
-    totalGroupAdjectivesAndPrepositionsAndAdverbs:{
-      resultGroupAdjectivesAndPrepositionsAndAdverbs: number;
-    }],
-
-    
-  groupIssuesWithMultipleParts1:[{
-    question1: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        }},
-
-    question1: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-        
-    question2: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-        
-    question3: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-    question4: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-    
-    question5: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-            
-    question6: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-            
-    question7: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-
-    question8: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-                  
-    question9: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-                  
-    question10: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-
-
-    totalGroupIssuesWithMultipleParts1:{
-      resultGroupIssuesWithMultipleParts1: number;
-    }],
-
-    
-  groupIssuesWithMultipleParts2:[{
-    question1: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        }},
-
-    question1: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-        
-    question2: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-        
-    question3: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-    question4: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-    
-    question5: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-            
-    question6: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-            
-    question7: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-
-    question8: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-                  
-    question9: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-                  
-    question10: {
-      writtenAnswer: string;
-      replyIndicated: number;
-        },
-
-
-    totalGroupIssuesWithMultipleParts2:{
-      resultGroupIssuesWithMultipleParts2: number;
-    }],
+    patient: string;
+    //dataOfApplication: Date;
+    doctor: string;
+    group1: {
+      theCatSays: string,
+      theFrogDoesntWashHisFeetHeDoesntWashBecauseHeDoesnt: string,
+      readyAim: string,
+      myLittleChickYellowFitsHereInMy: string,
+      cirandaCirandinhaLetUsAll: string,
+      theDogSays: string,
+      ithrewAStickAtThe: string,
+      theSpiderClimbedUpThe: string,
+      headShouldersKneesAnd: string,
+      happyBirthdayTo: string,
+      other1Group1: string,
+      other2Group1: string,
+      subtotalPointsGroup1: number
+    },
+    group2: {
+      whatIsYourName: string,
+      youBrushYour: string,
+      shoesAnd: string,
+      youRide: string,
+      afterUsingTheBathroomYouGive: string,
+      youSitOnA: string,
+      youEat: string,
+      oneTwo: string,
+      youWashYour: string,
+      youSleepInA: string,
+      other1Group2: string,
+      other2Group2: string,
+      subtotalPointsGroup2: number
+    },
+    group3: {
+      whatCanYouDrink: string,
+      whatCanFly: string,
+      whatNumbersDoYouKnow: string,
+      whatCanYouSing: string,
+      whatIsYourFavoriteMovie: string,
+      whatColorsDoYouKnow: string,
+      whatDoYouRead: string,
+      whatIsOutThere: string,
+      whatIsIntheKitchen: string,
+      whatAnimalsDoYouKnow: string,
+      other1Group3: string,
+      other2Group3: string,
+      subtotalPointsGroup3: number
+    },
+    group4: {
+      whoIsYourTeacher: string,
+      whereDoYouWashYourHands: string,
+      whoLivesOnTheFarm: string,
+      whereIsTheRefrigerator: string,
+      whoDrivesTheCar: string,
+      whereDoYouTakeABath: string,
+      howOldAreYou: string,
+      whereAreTheTrees: string,
+      whoDoYouSeeOnTV: string,
+      whyDoWeUseBandaid: string,
+      other1Group4: string,
+      other2Group4: string,
+      subtotalPointsGroup4: number
+    },
+    group5: {
+      whatIsTheShapeOfTheTire: string,
+      whatGrowsInTheGarden: string,
+      whatCanBiteYou: string,
+      whatDoYouDoWithASpoon: string,
+      whatCanYouPush: string,
+      whereDoYouFindWheels: string,
+      whatDoYouUseToSmell: string,
+      sayTheNameOfSomeClothes: string,
+      sayTheNameOfSomethingSharp: string,
+      whatIsTheColorOfTheTire: string,
+      other1Group5: string,
+      other2Group5: string,
+      subtotalPointsGroup5: number
+    },
+    group6: {
+      whatDoYouWearOnYourHead: string,
+      whatDoYouUseToEat: string,
+      whatAnimalWalksVerySlowly: string,
+      whatIsOnTopOfTheHouse: string,
+      whereDoYouWrite: string,
+      whatIsInsideTheHouse: string,
+      sayTheNameOfThingsThatAreHot: string,
+      whatGrowsOnYourHead: string,
+      whatIsUnderABoat: string,
+      whereDoYouEat: string,
+      other1Group6: string,
+      other2Group6: string,
+      subtotalPointsGroup6: number
+    },
+    group7: {
+      whatMakesYouSad: string,
+      whatAnimalHasAVeryLongNeck: string,
+      sayTheNameOfSomethingThatIsNotForEating: string,
+      whatHelpsAFlowerGrow: string,
+      whatCanYouNotWear: string,
+      whatDoYouDoWithMoney: string,
+      whatNumberIsBetween6And8: string,
+      whatIsInsideABalloon: string,
+      whatIsYourLastName: string,
+      sayTheNameOfSomethingSticky: string,
+      other1Group7: string,
+      other2Group7: string,
+      subtotalPointsGroup7: number
+    },
+    group8: {
+      whereDoYouPutDirtyClothes: string,
+      whatDoYouTakeToABirthday: string,
+      whatDayIsToday: string,
+      whatDoYouSeeInTheField: string,
+      whatDayComesBeforeTuesday: string,
+      whyDoPeopleWearGlasses: string,
+      whenDoYouSetTheTable: string,
+      whatDoesTheCarHaveThatIsDifferentFromABicycle: string,
+      howDoYouKnowIfSomeoneIsSick: string,
+      whatDidYouDoTodayAtSchool: string,
+      other1Group8: string,
+      other2Group8: string,
+      subtotalPointsGroup8: number
+    }
 }
+  

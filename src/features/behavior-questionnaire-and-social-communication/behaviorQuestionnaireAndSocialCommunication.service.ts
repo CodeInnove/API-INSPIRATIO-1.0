@@ -1,28 +1,53 @@
-import { Injectable } from "@nestjs/common";
+import { HttpException, HttpStatus, Injectable } from "@nestjs/common";
 import { BehaviorQuestionnaireAndSocialCommunicationRepository } from "./behaviorQuestionnaireAndSocialCommunications.repository";
+import { QuestionsAsqDTO } from "./dto/behaviorQuestionnaireAndSocialCommunicationCreate.dto";
+import { IBehaviorQuestionnaireAndSocialCommunicationEntity } from "src/entities/behaviorQuestionnaireAndSocialCommunication.entity";
+import { UpdateBehaviorQuestionnaireAndSocialCommunicationDto } from "./dto/behaviorQuestionnaireAndSocialCommunicationUpdate.dto";
+import { IBehaviorQuestionnaireAndSocialCommunication } from "./types/behaviorQuestionnaireAndSocialCommunication";
+
 @Injectable()
 export class BehaviorQuestionnaireAndSocialCommunicationService {
-  constructor(
-    private readonly behaviorQuestionnaireAndSocialCommunicationRepository: BehaviorQuestionnaireAndSocialCommunicationRepository
-  ) {}
+   constructor(
+      private readonly bQASCRepository: BehaviorQuestionnaireAndSocialCommunicationRepository
+    ) {}
 
-  async create(data: any) {
-    return this.behaviorQuestionnaireAndSocialCommunicationRepository.create(data);
-  }
+  async create(bqasc: QuestionsAsqDTO): Promise<IBehaviorQuestionnaireAndSocialCommunication> {
+      try {
+        return await this.bQASCRepository.create(bqasc);
+      } catch (error) {
+        throw new HttpException(error, HttpStatus.BAD_REQUEST);
+      }
+    }
 
   async findAll() {
-    return this.behaviorQuestionnaireAndSocialCommunicationRepository.findAll();
+      try {
+        return await this.bQASCRepository.findAll();
+      } catch (error) {
+        throw new HttpException(error, HttpStatus.BAD_REQUEST);
+      }
+    }
+  
+    async findById(id: string) {
+      try {
+        return await this.bQASCRepository.findById(id);
+      } catch (error) {
+        throw new HttpException(error, HttpStatus.BAD_REQUEST);
+      }
+    }
+  
+    async update(id: string, afcp: UpdateBehaviorQuestionnaireAndSocialCommunicationDto) {
+      try {
+        return await this.bQASCRepository.update(id, afcp);
+      } catch (error) {
+        throw new HttpException(error, HttpStatus.BAD_REQUEST);
+      }
+    }
+  
+    async delete(id: string){
+      try {
+        return await this.bQASCRepository.delete(id);
+      } catch (error) {
+        throw new HttpException(error, HttpStatus.BAD_REQUEST);
+      }
+    }
   }
-
-  async findById(id: string) {
-    return this.behaviorQuestionnaireAndSocialCommunicationRepository.findById(id);
-  }
-
-  async update(id: string, data: any) {
-    return this.behaviorQuestionnaireAndSocialCommunicationRepository.update(id, data);
-  }
-
-  async delete(id: string) {
-    return this.behaviorQuestionnaireAndSocialCommunicationRepository.delete(id);
-  }
-}

@@ -1,10 +1,10 @@
 
 export interface IAutismBehaviorChecklistQuestion {
-  es: number | null;
-  re: number | null;
-  co: number | null;
-  lg: number | null;
-  ps: number | null;
+  es: number;
+  re: number;
+  co: number;
+  lg: number;
+  ps: number;
 }
 
 export interface IAutismBehaviorChecklist {

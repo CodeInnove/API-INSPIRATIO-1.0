@@ -2,6 +2,7 @@ import { Injectable } from "@nestjs/common";
 import { InjectModel } from "@nestjs/mongoose";
 import { Model } from "mongoose";
 import { IIntraverbalAssessmentEntity } from "src/entities/intraverbalAssessment.entity";
+import { CreateIntraverbalAssessmentDto } from "./dto/intraverbalAssessmentCreate.dto";
 
 @Injectable()
 export class IntraverbalAssessmentRepository {
@@ -9,7 +10,7 @@ export class IntraverbalAssessmentRepository {
     @InjectModel('IntraverbalAssessment') private readonly intraverbalAssessmentModel: Model<IIntraverbalAssessmentEntity>
   ) {}
 
-  async create(data: IIntraverbalAssessmentEntity): Promise<IIntraverbalAssessmentEntity> {
+  async create(data: CreateIntraverbalAssessmentDto): Promise<IIntraverbalAssessmentEntity> {
     return this.intraverbalAssessmentModel.create(data);
   }
   

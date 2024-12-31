@@ -1,252 +1,192 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsNotEmpty, ValidateNested } from 'class-validator';
-import { Type } from 'class-transformer';
-
-class AnswerAsqDTO {
-    @IsNotEmpty()
-    @ApiProperty()
-    yes: number;
-
-    @IsNotEmpty()
-    @ApiProperty()
-    no: number;
-  }
-
-class QuestionsAsqDTO{
-    
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionOne: AnswerAsqDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionTwo: AnswerAsqDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionThree: AnswerAsqDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionFour: AnswerAsqDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionFive: AnswerAsqDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionSix: AnswerAsqDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionSeven: AnswerAsqDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionEight: AnswerAsqDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionNine: AnswerAsqDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionTen: AnswerAsqDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionEleven: AnswerAsqDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionTwelve: AnswerAsqDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionThirteen: AnswerAsqDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionFourteen: AnswerAsqDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionFifteen: AnswerAsqDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionSixteen: AnswerAsqDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionSeventeen: AnswerAsqDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionEighteen: AnswerAsqDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionNineteen: AnswerAsqDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionTwenty: AnswerAsqDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionTwentyOne: AnswerAsqDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionTwentyTwo: AnswerAsqDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionTwentyThree: AnswerAsqDTO;
+import {IsBoolean, IsString } from 'class-validator';
 
 
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionTwentyFour: AnswerAsqDTO;
-    
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionTwentyFive: AnswerAsqDTO;
-    
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionTwentySix: AnswerAsqDTO;
-    
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionTwentySeven: AnswerAsqDTO;
-    
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionTwentyEight: AnswerAsqDTO;
-    
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionTwentyNine: AnswerAsqDTO;
-    
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionThirty: AnswerAsqDTO;
-    
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionThirtyOne: AnswerAsqDTO;
-    
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionThirtyTwo: AnswerAsqDTO;
-    
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionThirtyThree: AnswerAsqDTO;
-    
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionThirtyFour: AnswerAsqDTO;
-    
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionThirtyFive: AnswerAsqDTO;
-    
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionThirtySix: AnswerAsqDTO;
-    
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionThirtySeven: AnswerAsqDTO;
-    
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionThirtyEight: AnswerAsqDTO;
-    
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionThirtyNine: AnswerAsqDTO;
-    
-    @ValidateNested()
-    @Type(() => AnswerAsqDTO)
-    @ApiProperty({ type: AnswerAsqDTO })
-    questionForty: AnswerAsqDTO;
-  }
 
-class ScoreAsqDTO {
 
-    @IsNotEmpty()
-    @ApiProperty()
-    yesScore: number;
-
-    @IsNotEmpty()
-    @ApiProperty()
-    noScore: number;
-
-    }
-
-    class TotalResultAsqDTO {
-
-    @IsNotEmpty()
-    @ApiProperty()
-    resultTotalAsq: ScoreAsqDTO;
-
+export class QuestionsAsqDTO{
+  
+  @ApiProperty()
+  @IsString()
+  patient: string;
+  
+  @ApiProperty()
+  @IsString()
+  doctor: string;
+  
+  
+  @ApiProperty()
+  @IsBoolean()
+  isAbleToConverseUsingShortPhrasesOrSentences: boolean;
+  
+  @ApiProperty()
+  @IsBoolean()
+  ifNotProceedToQuestion9: boolean;
+  
+  @ApiProperty()
+  @IsBoolean()
+  doesHeTalkToYouJustToBeFriendly: boolean;
+  
+  @ApiProperty()
+  @IsBoolean()
+  canYouHaveADialogue: boolean;
+  
+  @ApiProperty()
+  @IsBoolean()
+  doesHeUseStrangePhrasesOrSayThingsRepeatedly: boolean;
+  
+  @ApiProperty()
+  @IsBoolean()
+  doesHeOftenUseSociallyInappropriateQuestionsOrStatements: boolean;
+  
+  @ApiProperty()
+  @IsBoolean()
+  doesHeOftenUsePronounsInverted: boolean;
+  
+  @ApiProperty()
+  @IsBoolean()
+  doesHeOftenUseWordsThatHeSeemsToHaveInvented: boolean;
+  
+  @ApiProperty()
+  @IsBoolean()
+  doesHeOftenSayTheSameThingRepeatedly: boolean;
+  
+  @ApiProperty()
+  @IsBoolean()
+  areThereThingsThatAreDoneByHimInAParticularWay: boolean;
+  
+  @ApiProperty()
+  @IsBoolean()
+  doesHisFacialExpressionGenerallySeemAppropriate: boolean;
+  
+  @ApiProperty()
+  @IsBoolean()
+  hasHeEverUsedYourHandAsATool: boolean;
+  
+  @ApiProperty()
+  @IsBoolean()
+  doesHeOftenHaveSpecialInterestsThatSeemWeirdToOthers: boolean;
+  
+  @ApiProperty()
+  @IsBoolean()
+  doesHeOftenGetMoreInterestedInPartsOfAnObject: boolean;
+  
+  @ApiProperty()
+  @IsBoolean()
+  doesHeOftenHaveSpecificInterests: boolean;
+  
+  @ApiProperty()
+  @IsBoolean()
+  doesHeOftenInAWierdWayLookFeelListenTasteOrSmellThingsOrPeople: boolean;
+  
+  @ApiProperty()
+  @IsBoolean()
+  doesHeOftenHaveMannerismsOrStrangeWaysOfMovingHisHandsOrFingers: boolean;
+  
+  @ApiProperty()
+  @IsBoolean()
+  doesHeOftenMakeComplexMovementsWithHisWholeBody: boolean;
+  
+  @ApiProperty()
+  @IsBoolean()
+  doesHeOftenHurtHimselfOnPurpose: boolean;
+  
+  @ApiProperty()
+  @IsBoolean()
+  doesHeHaveAnObjectThatHeCarriesAround: boolean;
+  
+  @ApiProperty()
+  @IsBoolean()
+  doesHeHaveAParticularFriendOrABestFriend: boolean;
+  
+  @ApiProperty()
+  @IsBoolean()
+  whenHeWas4To5YearsOldDidHeRepeatedOrImitateWhatYouDid: boolean;
+  
+  @ApiProperty()
+  @IsBoolean()
+  whenHeWas4To5YearsOldDidHePointAtThings: boolean;
+  
+  @ApiProperty()
+  @IsBoolean()
+  whenHeWas4To5YearsOldDidHeUseGesturesToShowWhatHeWanted: boolean;
+  
+  @ApiProperty()
+  @IsBoolean()
+  whenHeWas4To5YearsOldDidHeUseHisHeadToSayYes: boolean;
+  
+  @ApiProperty()
+  @IsBoolean()
+  whenHeWas4To5YearsOldDidHeShakeHisHeadToSayNo: boolean;
+  
+  @ApiProperty()
+  @IsBoolean()
+  whenHeWas4To5YearsOldDidHeUsuallyLookYouDirectlyInTheFace: boolean;
+  
+  @ApiProperty()
+  @IsBoolean()
+  whenHeWas4To5YearsOldDidHeSmileBackIfSomeoneSmiledAtHim: boolean;
+  
+  @ApiProperty()
+  @IsBoolean()
+  whenHeWas4To5YearsOldDidHeShowThingsOfHisInterestToGetYourAttention: boolean;
+  
+  @ApiProperty()
+  @IsBoolean()
+  whenHeWas4To5YearsOldDidHeShareThingsWithYouBesidesFood: boolean;
+  
+  @ApiProperty()
+  @IsBoolean()
+  whenHeWas4To5YearsOldDidHeWantYouToParticipateInSomethingThatWasEntertainingHim: boolean;
+  
+  @ApiProperty()
+  @IsBoolean()
+  whenHeWas4To5YearsOldDidHeTryToComfortYouIfYouWereSadOrHurt: boolean;
+  
+  @ApiProperty()
+  @IsBoolean()
+  betweenTheAgesOf4To5YearsWhenHeWantedSomethingOrSomeHelpDidHeLookAtYou: boolean;
+  
+  @ApiProperty()
+  @IsBoolean()
+  betweenTheAgesOf4To5YearsDidHeHaveNormalFacialExpressions: boolean;
+  
+  @ApiProperty()
+  @IsBoolean()
+  whenHeWas4Or5YearsOldDidHeParticipateSpontaneouslyInSocialGames: boolean;
+  
+  @ApiProperty()
+  @IsBoolean()
+  whenHeWas4Or5YearsOldDidHePlayImaginaryGames: boolean;
+  
+  @ApiProperty()
+  @IsBoolean()
+  whenHeWas4Or5YearsOldDidHeSeemInterestedInOtherChildren: boolean;
+  
+  @ApiProperty()
+  @IsBoolean()
+  whenHeWas4Or5YearsOldDidHeReactPositivelyWhenAnotherChildApproachedHim: boolean;
+  
+  @ApiProperty()
+  @IsBoolean()
+  whenHeWas4Or5YearsOldIfYouEnteredTheRoomAndStartedACConversationWithHim: boolean;
+  
+  @ApiProperty()
+  @IsBoolean()
+  whenHeWas4Or5YearsOldDidHePlayMakeBelieveWithAnotherChild: boolean;
+  
+  
+  @ApiProperty()
+  @IsBoolean()
+  whenHeWas4Or5YearsOldDidHePlayCooperativelyInGroupGames: boolean;
+  
 }
 
-export class CreateBehaviorQuestionDto {
+/*export class CreateBehaviorQuestionDto {
   @ValidateNested()
   @Type(() => QuestionsAsqDTO)
   @ApiProperty({ type: QuestionsAsqDTO })
   questions: QuestionsAsqDTO;
+  
 
-  /*@ValidateNested()
-  @Type(() => TotalResultAsqDTO)
-  @ApiProperty({ type: TotalResultAsqDTO })
-  TotalResultAsqDTO: TotalResultAsqDTO;
-*/
-
-
-}
+}*/

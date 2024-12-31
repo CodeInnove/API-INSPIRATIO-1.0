@@ -1,4 +1,4 @@
 import { PartialType } from '@nestjs/swagger';
-import { CreateBehaviorQuestionDto } from './behaviorQuestionnaireAndSocialCommunicationCreate.dto';
+import { QuestionsAsqDTO } from './behaviorQuestionnaireAndSocialCommunicationCreate.dto';
 
-export class UpdateBehaviorQuestionnaireAndSocialCommunicationDto extends PartialType(CreateBehaviorQuestionDto) {}
+export class UpdateBehaviorQuestionnaireAndSocialCommunicationDto extends PartialType(QuestionsAsqDTO) {}
