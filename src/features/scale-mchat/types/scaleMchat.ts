@@ -1,5 +1,8 @@
 export interface IScaleMchat{
-    childLikesToSwing: boolean,
+  patient: string,
+  dateOfApplication: string,
+  doctor: string,
+  childLikesToSwing: boolean,
   hasInterestInOtherChildren: boolean,
   likesToClimbOnThings: boolean,
   likesToPlayHideAndSeek: boolean,
@@ -22,8 +25,4 @@ export interface IScaleMchat{
   understandsWhatPeopleSay: boolean,
   sometimesGetsSpaceyOrWalksWithoutDirection: boolean,
   looksAtYourFaceToCheckYourReactionWhenSeeingSomethingStrange: boolean
-
-    totalOptionNo:{
-        resultOptionNo: number;
-    }
 }

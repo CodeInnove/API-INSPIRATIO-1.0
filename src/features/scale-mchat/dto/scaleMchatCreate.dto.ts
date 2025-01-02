@@ -1,19 +1,11 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsBoolean, IsNotEmpty, ValidateNested } from 'class-validator';
+import { IsBoolean, IsNotEmpty, IsString, ValidateNested } from 'class-validator';
 import { Type } from 'class-transformer';
 
-class ChooseScaleMchatDTO {
-    @IsNotEmpty()
-    @ApiProperty()
-    optionYes: string;
 
-    @IsNotEmpty()
-    @ApiProperty()
-    optionNo: string;
-  }
 
   class QuestionsScaleMchatDTO {
-    @ApiProperty()
+  @ApiProperty()
   @IsNotEmpty()
   @IsBoolean()
   childLikesToSwing: boolean;
@@ -130,6 +122,21 @@ class ChooseScaleMchatDTO {
 
   }
   export class CreateScaleMchatDto {
+    @ApiProperty()
+    @IsNotEmpty()
+    @IsString()
+    patient: string;
+
+    @ApiProperty()
+    @IsNotEmpty()
+    @IsString()
+    dataOfApplication: string;
+
+    @ApiProperty()
+    @IsNotEmpty()
+    @IsString()
+    doctor: string;
+
     @ValidateNested()
     @Type(() => QuestionsScaleMchatDTO)
     @ApiProperty({ type: QuestionsScaleMchatDTO })

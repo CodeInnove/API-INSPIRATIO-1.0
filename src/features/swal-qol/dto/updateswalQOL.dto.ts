@@ -1,4 +1,4 @@
 import { PartialType } from '@nestjs/swagger';
-import { CreateSwalQolDto } from './create-swal-qol.dto';
+import { CreateSwalQolDto } from './createswalQOL.dto';
 
 export class UpdateSwalQolDto extends PartialType(CreateSwalQolDto) {}

@@ -53,6 +53,10 @@ export class ScaleMchatRepository {
         return { data, total,};
       }
 
+  async findByToken(token: string): Promise<IScaleMchat> {
+      return this.scaleMchatModel.findOne({ passwordResetToken: token }).lean().exec();
+    }
+
   async findById(id: string): Promise<IScaleMchat> {
     return this.scaleMchatModel.findById(id);
   }
