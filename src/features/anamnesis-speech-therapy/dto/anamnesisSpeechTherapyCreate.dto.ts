@@ -1,8 +1,8 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { IsOptional, IsString } from 'class-validator';
-import { IdeatoryDto, IdeomotorDto, MotorDto, NeurovegetativeFunctionsDto, SomaticDto } from './createAstDevelopmentphysical.dto';
-import { DevelopmentSocioCulturalDto, IntegrativeDto, InteractiveDto } from './createAstDevelopmentSocioCultural.dto';
-import { CircumstantialDto, ConstitutionalDto } from './createAstComplaintAndDuration.dto';
+import { IPhysicalDto } from './createAstDevelopmentphysical.dto';
+import { DevelopmentSocioCulturalDto } from './createAstDevelopmentSocioCultural.dto';
+import { IBackgroundDto } from './createAstComplaintAndDuration.dto';
 
 export class CreateAnamnesisSpeechTherapyDto {
 
@@ -46,49 +46,28 @@ export class CreateAnamnesisSpeechTherapyDto {
     //professional: string; // Assuming professional is stored as a string in the DTO
   //};
 
-    @ApiProperty()
-    @IsOptional()
-    @IsString()
-    complaintAndDuration: string;
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  complaintAndDurations: string;
 
-    @ApiProperty({ type: ConstitutionalDto})
-    @IsOptional()
-    Constitutional: ConstitutionalDto
+  @ApiProperty( { type: IBackgroundDto} )
+  @IsOptional()
+  backgorund: IBackgroundDto;
 
-    @ApiProperty({ type: CircumstantialDto})
-    @IsOptional()
-    Circumstantial: CircumstantialDto
+  @ApiProperty( { type: IPhysicalDto} )
+  @IsOptional()
+  physycal: IPhysicalDto;
 
-    @ApiProperty({ type: SomaticDto})
-    @IsOptional()
-    Somatic: SomaticDto
+  @ApiProperty( { type: DevelopmentSocioCulturalDto} )
+  @IsOptional()
+  socioCultural: DevelopmentSocioCulturalDto;
 
-    @ApiProperty({ type: MotorDto})
-    @IsOptional()
-    Motor: MotorDto
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  importantObservations: string;
+    
 
-    @ApiProperty({ type: NeurovegetativeFunctionsDto})
-    @IsOptional()
-    NeurovegetativeFunctions: NeurovegetativeFunctionsDto
 
-    @ApiProperty({ type: IdeomotorDto})
-    @IsOptional()
-    Ideomotor: IdeomotorDto
-
-    @ApiProperty({ type: IdeatoryDto})
-    @IsOptional()
-    Ideatory: IdeatoryDto
-
-    @ApiProperty({ type: InteractiveDto})
-    @IsOptional()
-    Interactive: InteractiveDto
-
-    @ApiProperty({ type: IntegrativeDto})
-    @IsOptional()
-    IntegrativeDto: IntegrativeDto
-
-    @ApiProperty()
-    @IsOptional()
-    @IsString()
-    importantObservations: string
 };
