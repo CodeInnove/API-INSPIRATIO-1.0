@@ -1,4 +1,4 @@
 import { PartialType } from '@nestjs/swagger';
-import { CreatePsychopedagogicalAnamnesisDto } from './psychopedagogicalAnamnesisCreate.dto';
+import { PsychopedagogicalAnamnesisCreateDto } from './psychopedagogicalAnamnesisCreate.dto';
 
-export class UpdatePsychopedagogicalAnamnesisDto extends PartialType(CreatePsychopedagogicalAnamnesisDto) {}
+export class UpdatePsychopedagogicalAnamnesisDto extends PartialType(PsychopedagogicalAnamnesisCreateDto) {}

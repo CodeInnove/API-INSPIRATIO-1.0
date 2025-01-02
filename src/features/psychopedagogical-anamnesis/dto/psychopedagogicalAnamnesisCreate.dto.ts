@@ -1,542 +1,430 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsNotEmpty, ValidateNested } from 'class-validator';
+import { IsBoolean, IsNotEmpty, IsNumber, IsOptional, IsString, ValidateNested } from 'class-validator';
 import { Type } from 'class-transformer';
 
-class ChooseYesOurNoPsychopedagogicalAnamnesisDTO {
-    @IsNotEmpty()
-    @ApiProperty()
-    optionYes: string;
-    
-    @IsNotEmpty()
-    @ApiProperty()
-    optionNo: string;
-  }
 
-class ChooseReadingLevelDTO {
-    @IsNotEmpty()
-    @ApiProperty()
-    optionDoesNotRead: string;
-    
-    @IsNotEmpty()
-    @ApiProperty()
-    optionSyllableReading: string;
 
-    @IsNotEmpty()
+class FamilyLearningHistoryDto {
     @ApiProperty()
-    @IsNotEmpty()
+    @IsString()
+    @IsOptional()
+    fatherName: string;
+
     @ApiProperty()
-    optionFluenReading: string; string;
+    @IsNumber()
+    @IsOptional()
+    ageFather: number;
+
+    @ApiProperty()
+    @IsString()
+    @IsOptional()
+    schoolingFather: string;
+
+    @ApiProperty()
+    @IsString()
+    @IsOptional()
+    difficultyFather: string;
+
+    @ApiProperty()
+    @IsString()
+    @IsOptional()
+    motherName: string;
+
+    @ApiProperty()
+    @IsNumber()
+    @IsOptional()
+    ageMother: number;
+
+    @ApiProperty()
+    @IsString()
+    @IsOptional()
+    schoolingMother: string;
+
+    @ApiProperty()
+    @IsString()
+    @IsOptional()
+    difficultyMother: string;
+
+    @ApiProperty()
+    @IsString()
+    @IsOptional()
+    nameBrotherOne: string;
+
+    @ApiProperty()
+    @IsNumber()
+    @IsOptional()
+    ageBrotherOne: number;
+
+    @ApiProperty()
+    @IsString()
+    @IsOptional()
+    schoolingBrotherOne: string;
+
+    @ApiProperty()
+    @IsString()
+    @IsOptional()
+    difficultyBrotherOne: string;
+
+    @ApiProperty()
+    @IsString()
+    @IsOptional()
+    nameBrotherTwo: string;
+
+    @ApiProperty()
+    @IsNumber()
+    @IsOptional()
+    ageBrotherTwo: number;
+
+    @ApiProperty()
+    @IsString()
+    @IsOptional()
+    schoolingBrotherTwo: string;
+
+    @ApiProperty()
+    @IsString()
+    @IsOptional()
+    difficultyBrotherTwo: string;
+
+    @ApiProperty()
+    @IsString()
+    @IsOptional()
+    nameBrotherThree: string;
+
+    @ApiProperty()
+    @IsNumber()
+    @IsOptional()
+    ageBrotherThree: number;
+
+    @ApiProperty()
+    @IsString()
+    @IsOptional()
+    schoolingBrotherThree: string;
+
+    @ApiProperty()
+    @IsString()
+    @IsOptional()
+    difficultyBrotherThree: string;
 }
 
-class ChooseTextProductionDTO{
-    @IsNotEmpty()
-    @ApiProperty()
-    optionDoesNotWrite: string;
-    
-    @IsNotEmpty()
-    @ApiProperty()
-    optionWritesSentences: string;
 
-    @IsNotEmpty()
+class ObservationDto{
     @ApiProperty()
-    optionFluenReading: string;
-    
-    @IsNotEmpty()
-    @ApiProperty()
-    optionProducesShortTexts: string;
+    @IsNumber()
+    @IsOptional()
+    bedtime: number;
 
-    @IsNotEmpty()
     @ApiProperty()
-    optionProducesTextWithoutContextualizations: string;
+    @IsNumber()
+    @IsOptional()
+    wakeUpTime: number;
 
-    @IsNotEmpty()
     @ApiProperty()
-    optionProducesTextWithCohesion: string;
+    @IsString()
+    @IsOptional()
+    sportsActivitiesHeLikesTheMost: string;
+
+    @ApiProperty()
+    @IsString()
+    @IsOptional()
+    externalServiceActivities: string;
+
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    doYouUseAdaptedActivitiesAtSchool: boolean;
+
+    @ApiProperty()
+    @IsString()
+    @IsOptional()
+    whatActivitiesAreAdapted: string;
+
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    doYouHaveDifficultyInSocialInteraction: boolean;
+
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    whatDifficultyInSocialInteraction: boolean;
+
+
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    resistanceToRoutineChange: boolean;
+
+    @ApiProperty()
+    @IsString()
+    @IsOptional()
+    whatResistanceToRoutineChange: string;
+
+
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    eyeContact: boolean;
+
+    @ApiProperty()
+    @IsString()
+    @IsOptional()
+    whatEyeContact: string;
+
+
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    interestInLearning: boolean;
+
+    @ApiProperty()
+    @IsString()
+    @IsOptional()
+    whatInterestInLearning: string;
+
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    hyperactivity: boolean;
+
+    @ApiProperty()
+    @IsString()
+    @IsOptional()
+    whatHyperactivity: string;
+
+
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    inattention: boolean;
+
+
+    @ApiProperty()
+    @IsString()
+    @IsOptional()
+    whatInattention: string;
+
+
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    areYouLiterate: boolean;
+
+    @ApiProperty()
+    @IsString()
+    @IsOptional()
+    whatAreYouLiterate: string;
+
+
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    changeInLanguageAndCommunication: boolean;
+
+    @ApiProperty()
+    @IsString()
+    @IsOptional()
+    whatLanguageAndCommunication: string;
+
+
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    inappropriateReactionToFrustration: boolean;
+
+    @ApiProperty()
+    @IsString()
+    @IsOptional()
+    whatReactionToFrustration: string;
+
+
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    crisisTypeCrisisTrigger: boolean;
+
+    @ApiProperty()
+    @IsString()
+    @IsOptional()
+    whatTypeCrisisTrigger: string;
+
+
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    stereotypy: boolean;
+
+    @ApiProperty()
+    @IsString()
+    @IsOptional()
+    whatStereotypy: string;
+
+
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    medication: boolean;
+
+    @ApiProperty()
+    @IsString()
+    @IsOptional()
+    whatMedication: string;
+
+
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    allergy: boolean;
+
+    @ApiProperty()
+    @IsString()
+    @IsOptional()
+    whatAllergy: string;
+
+
+    @ApiProperty()
+    @IsString()
+    @IsOptional()
+    Diagnosis: string;
+
+    @ApiProperty()
+    @IsString()
+    @IsOptional()
+    schoolFamilyComplaint: string;
+
+    @ApiProperty()
+    @IsString()
+    @IsOptional()
+    outher: string;
+
 }
 
-class ChoosePreSyllabicWritingLevelDTO{
-    @IsNotEmpty()
+class LearningAssessmentDto{
     @ApiProperty()
-    optionSyllabic: string;
-    
-    @IsNotEmpty()
-    @ApiProperty()
-    optionSyllabicOurAlphabetic: string;
+    @IsString()
+    @IsOptional()
+    readingLevel: string;
 
-    @IsNotEmpty()
     @ApiProperty()
-    optionAlphabetic: string;
+    @IsString()
+    @IsOptional()
+    textProduction: string;
+
+    @ApiProperty()
+    @IsString()
+    @IsOptional()
+    preSyllabicWritingLevel: string;
+        
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    doYouRecognizeTheColors: boolean;                                                                                                         
+
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    difficultyRecognizeTheColors: boolean;
+
+
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    doYouHaveDifficultyTracingTheNumerals: boolean;
+    
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    difficultyRecognizingNumbers: boolean;
+
+    @ApiProperty()
+    @IsString()
+    @IsOptional()
+    doYouHaveAChangeWhenCarryingOutOperations: string;
+
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    difficultyCarryingOutOperations: boolean;
+
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    doesItSolveProblemSituations:  boolean;
 }
 
-class ChooseLogicalReasoningDTO{
-    @IsNotEmpty()
-    @ApiProperty()
-    optionAddition: string;
-    
-    @IsNotEmpty()
-    @ApiProperty()
-    optionSubtraction: string;
+export class PsychopedagogicalAnamnesisCreateDto {
 
-    @IsNotEmpty()
     @ApiProperty()
-    optionMultiplication: string;
-    
-    @IsNotEmpty()
+    @IsString()
+    @IsOptional()
+    patient: string;
+
     @ApiProperty()
-    optionDivision: string;
+    @IsString()
+    @IsOptional()
+    dateOfApplication: string;
+
+    @ApiProperty()
+    @IsString()
+    @IsOptional()
+    dateBirth: string;
+
+    @ApiProperty()
+    @IsNumber()
+    @IsOptional()
+    age: number;
+
+    @ApiProperty()
+    @IsString()
+    @IsOptional()
+    teacherName: string;
+
+    @ApiProperty()
+    @IsString()
+    @IsOptional()
+    supportProfessional: string;
+
+    @ApiProperty()
+    @IsString()
+    @IsOptional()
+    schoolName: string;
+
+    @ApiProperty()
+    @IsString()
+    @IsOptional()
+    schoolPeriod: string;
+
+    @ApiProperty()
+    @IsString()
+    @IsOptional()
+    schoolYear: string;
+
+    @ApiProperty()
+    @ValidateNested()
+    @Type(() => FamilyLearningHistoryDto)
+    familyLearningHistory: FamilyLearningHistoryDto;
+
+    @ApiProperty()
+    @ValidateNested()
+    @Type(() => ObservationDto)
+    observation: ObservationDto;
+
+    @ApiProperty()
+    @ValidateNested()
+    @Type(() => LearningAssessmentDto)
+    learningAssessment: LearningAssessmentDto;
+   
+    @ApiProperty()
+    @IsString()
+    @IsOptional()
+    therapistInCharge: string;
+
+    @ApiProperty()
+    @IsString()
+    @IsOptional()
+    informationOfficer: string;
+
+    @ApiProperty()
+    @IsString()
+    @IsOptional()
+    choiseInformationOfficer: string;
 }
-
-class ChooseInformationOfficerDTO{
-
-    @IsNotEmpty()
-    @ApiProperty()
-    optionFather: string;
-
-    @IsNotEmpty()
-    @ApiProperty()
-    optionMom: string;
-    
-    @IsNotEmpty()
-    @ApiProperty()
-    optionGrandMother: string;
-}
-
-class AnswerPsychopedagogicalAnamnesisDTO{
-    @IsNotEmpty()
-    @ApiProperty()
-    answerInWriting: string;
-  }
-
-class IdentificationDTO{
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    patient: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    dateOfApplication: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    dateBirth: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    age: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    teacherName: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    supportProfessional: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    schoolName: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    schoolPeriod:AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    schoolYear: AnswerPsychopedagogicalAnamnesisDTO;
-}
-
-class FamilyLearningHistoryDTO {
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    fatherName: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    ageFather: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    schoolingFather: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    difficultyFather: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    motherName: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    ageMother: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    schoolingMother: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    difficultyMother: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    nameBrotherOne: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    ageBrotherOne: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    schoolingBrotherOne: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    difficultyBrotherOne: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    nameBrotherTwo: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    ageBrotherTwo: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    schoolingBrotherTwo: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    difficultyBrotherTwo: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    nameBrotherThree: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    ageBrotherThree: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    schoolingBrotherThree: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    difficultyBrotherThree: AnswerPsychopedagogicalAnamnesisDTO;
-}
-
-class ObservationDTO {
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    bedtime: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    wakeUpTime: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    sportsActivitiesHeLikesTheMost: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    externalServiceActivities: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => ChooseYesOurNoPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: ChooseYesOurNoPsychopedagogicalAnamnesisDTO })
-    doYouUseAdaptedActivitiesAtSchool: ChooseYesOurNoPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    whatActivitiesAreAdapted: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => ChooseYesOurNoPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: ChooseYesOurNoPsychopedagogicalAnamnesisDTO })
-    doYouHaveDifficultyInSocialInteraction: ChooseYesOurNoPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    whatDifficultyInSocialInteraction: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => ChooseYesOurNoPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: ChooseYesOurNoPsychopedagogicalAnamnesisDTO })
-    resistanceToRoutineChange: ChooseYesOurNoPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    whatRoutineChange: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => ChooseYesOurNoPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: ChooseYesOurNoPsychopedagogicalAnamnesisDTO })
-    eyeContact: ChooseYesOurNoPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    whatEyeContact: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => ChooseYesOurNoPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: ChooseYesOurNoPsychopedagogicalAnamnesisDTO })
-    interestInLearning: ChooseYesOurNoPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    whatInterestInLearning: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => ChooseYesOurNoPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: ChooseYesOurNoPsychopedagogicalAnamnesisDTO })
-    hyperactivity: ChooseYesOurNoPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    whatHyperactivity: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => ChooseYesOurNoPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: ChooseYesOurNoPsychopedagogicalAnamnesisDTO })
-    inattention: ChooseYesOurNoPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    whatInattention: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => ChooseYesOurNoPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: ChooseYesOurNoPsychopedagogicalAnamnesisDTO })
-    areYouLiterate: ChooseYesOurNoPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    whatAreYouLiterate: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => ChooseYesOurNoPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: ChooseYesOurNoPsychopedagogicalAnamnesisDTO })
-    changeInLanguageAndCommunication: ChooseYesOurNoPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    whatLanguageAndCommunication: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => ChooseYesOurNoPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: ChooseYesOurNoPsychopedagogicalAnamnesisDTO })
-    inappropriateReactionToFrustration: ChooseYesOurNoPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    whatReactionToFrustration: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => ChooseYesOurNoPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: ChooseYesOurNoPsychopedagogicalAnamnesisDTO })
-    crisisTypeCrisisTrigger: ChooseYesOurNoPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    whatTypeCrisisTrigger: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => ChooseYesOurNoPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: ChooseYesOurNoPsychopedagogicalAnamnesisDTO })
-    stereotypy: ChooseYesOurNoPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    whatStereotypy: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => ChooseYesOurNoPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: ChooseYesOurNoPsychopedagogicalAnamnesisDTO })
-    medication: ChooseYesOurNoPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    whatMedication: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => ChooseYesOurNoPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: ChooseYesOurNoPsychopedagogicalAnamnesisDTO })
-    allergy: ChooseYesOurNoPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    whatAllergy: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    Diagnosis: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    schoolFamilyComplaint: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    outher: AnswerPsychopedagogicalAnamnesisDTO;
-
-}
-    
-class LearningAssessmentDTO{
-
-    @ValidateNested()
-    @Type(() => ChooseReadingLevelDTO)
-    @ApiProperty({ type: ChooseReadingLevelDTO })
-    readingLevel: ChooseReadingLevelDTO;
-
-    @ValidateNested()
-    @Type(() => ChooseTextProductionDTO)
-    @ApiProperty({ type: ChooseTextProductionDTO })
-    textProduction: ChooseTextProductionDTO;
-
-    @ValidateNested()
-    @Type(() => ChoosePreSyllabicWritingLevelDTO)
-    @ApiProperty({ type: ChoosePreSyllabicWritingLevelDTO })
-    preSyllabicWritingLevel: ChoosePreSyllabicWritingLevelDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    logicalReasoning: AnswerPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => ChooseYesOurNoPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: ChooseYesOurNoPsychopedagogicalAnamnesisDTO })
-    doYouRecognizeTheColors: ChooseYesOurNoPsychopedagogicalAnamnesisDTO;
-    
-    @ValidateNested()
-    @Type(() => ChooseYesOurNoPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: ChooseYesOurNoPsychopedagogicalAnamnesisDTO })
-    difficultyRecognizeTheColors: ChooseYesOurNoPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => ChooseYesOurNoPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: ChooseYesOurNoPsychopedagogicalAnamnesisDTO })
-    doYouHaveDifficultyTracingTheNumerals: ChooseYesOurNoPsychopedagogicalAnamnesisDTO;
-          
-    @ValidateNested()
-    @Type(() => ChooseYesOurNoPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: ChooseYesOurNoPsychopedagogicalAnamnesisDTO })
-    difficultyRecognizingNumbers: ChooseYesOurNoPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => ChooseLogicalReasoningDTO)
-    @ApiProperty({ type: ChooseLogicalReasoningDTO })
-    doYouHaveAChangeWhenCarryingOutOperations: ChooseLogicalReasoningDTO;
-
-    @ValidateNested()
-    @Type(() => ChooseYesOurNoPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: ChooseYesOurNoPsychopedagogicalAnamnesisDTO })
-    difficultyCarryingOutOperations: ChooseYesOurNoPsychopedagogicalAnamnesisDTO;
-
-    @ValidateNested()
-    @Type(() => ChooseYesOurNoPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: ChooseYesOurNoPsychopedagogicalAnamnesisDTO })
-    doesItSolveProblemSituations: ChooseYesOurNoPsychopedagogicalAnamnesisDTO;
-}
-
-class FinishFormsDTO{
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    therapistInCharge: ChooseInformationOfficerDTO;
-
-    @ValidateNested()
-    @Type(() => AnswerPsychopedagogicalAnamnesisDTO)
-    @ApiProperty({ type: AnswerPsychopedagogicalAnamnesisDTO })
-    informationOfficer: ChooseInformationOfficerDTO;
-
-    @ValidateNested()
-    @Type(() => ChooseInformationOfficerDTO)
-    @ApiProperty({ type: ChooseInformationOfficerDTO })
-    choiseInformationOfficer: ChooseInformationOfficerDTO;
-
-    }
-
-export class CreatePsychopedagogicalAnamnesisDto {
-    @ValidateNested()
-    @Type(() => IdentificationDTO)
-    @ApiProperty({ type: IdentificationDTO })
-    Identification: IdentificationDTO;
-    
-    @ValidateNested()
-    @Type(() => FamilyLearningHistoryDTO)
-    @ApiProperty({ type: FamilyLearningHistoryDTO })
-    FamilyLearningHistory: FamilyLearningHistoryDTO;
-
-    @ValidateNested()
-    @Type(() => ObservationDTO)
-    @ApiProperty({ type: ObservationDTO })
-    Observation: ObservationDTO;
-
-    @ValidateNested()
-    @Type(() => LearningAssessmentDTO)
-    @ApiProperty({ type: LearningAssessmentDTO })
-    LearningAssessment: LearningAssessmentDTO;
-  
-
-    @ValidateNested()
-    @Type(() => FinishFormsDTO)
-    @ApiProperty({ type: FinishFormsDTO })
-    FinishForms: FinishFormsDTO;
-    }

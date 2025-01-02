@@ -1,16 +1,15 @@
 export interface IPsychopedagogicalAnamnesis{
 
-    identification: {
-        patient: string; // ObjectId as string
-        dateOfApplication: string;
-        dateBirth: string;
-        age: number;
-        teacherName: string;
-        supportProfessional: string;
-        schoolName: string;
-        schoolPeriod: string;
-        schoolYear: string;
-    }
+    patient: string; // ObjectId as string
+    dateOfApplication: string;
+    dateBirth: string;
+    age: number;
+    teacherName: string;
+    supportProfessional: string;
+    schoolName: string;
+    schoolPeriod: string;
+    schoolYear: string;
+
 
     familyLearningHistory:{
         fatherName: string;
@@ -40,33 +39,33 @@ export interface IPsychopedagogicalAnamnesis{
         wakeUpTime: number;
         sportsActivitiesHeLikesTheMost: string;
         externalServiceActivities: string;
-        doYouUseAdaptedActivitiesAtSchool: string;
+        doYouUseAdaptedActivitiesAtSchool: boolean;
         whatActivitiesAreAdapted: string;
-        doYouHaveDifficultyInSocialInteraction: string;
-        whatDifficultyInSocialInteraction: string;
-        resistanceToRoutineChange: string;
+        doYouHaveDifficultyInSocialInteraction: boolean;
+        whatDifficultyInSocialInteraction: boolean;
+        resistanceToRoutineChange: boolean;
         whatRoutineChange: string;
-        eyeContact: string;
+        eyeContact: boolean;
         whatEyeContact: string;
-        interestInLearning: string;
+        interestInLearning: boolean;
         whatInterestInLearning: string;
-        hyperactivity: string;
+        hyperactivity: boolean;
         whatHyperactivity: string;
-        inattention: string;
+        inattention: boolean;
         whatInattention: string;
-        areYouLiterate: string;
+        areYouLiterate: boolean;
         whatAreYouLiterate: string;
-        changeInLanguageAndCommunication: string;
+        changeInLanguageAndCommunication: boolean;
         whatLanguageAndCommunication: string;
-        inappropriateReactionToFrustration: string;
+        inappropriateReactionToFrustration: boolean;
         whatReactionToFrustration: string;
-        crisisTypeCrisisTrigger: string;
+        crisisTypeCrisisTrigger: boolean;
         whatTypeCrisisTrigger: string;
-        stereotypy: string;
+        stereotypy: boolean;
         whatStereotypy: string;
-        medication: string;
+        medication: boolean;
         whatMedication: string;
-        allergy: string;
+        allergy: boolean;
         whatAllergy: string;
         Diagnosis: string;
         schoolFamilyComplaint: string;
@@ -79,19 +78,17 @@ export interface IPsychopedagogicalAnamnesis{
         readingLevel: string;
         textProduction: string;
         preSyllabicWritingLevel: string;
-        logicalReasoning: string;
-        doYouRecognizeTheColors: string;                                                                        
-        difficultyRecognizeTheColors: string;
-        doYouHaveDifficultyTracingTheNumerals: string;
-        difficultyRecognizingNumbers: string;
+        doYouRecognizeTheColors: boolean;                                                                        
+        difficultyRecognizeTheColors: boolean;
+        doYouHaveDifficultyTracingTheNumerals: boolean;
+        difficultyRecognizingNumbers: boolean;
         doYouHaveAChangeWhenCarryingOutOperations: string;
-        difficultyCarryingOutOperations: string;
-        doesItSolveProblemSituations: string;
+        difficultyCarryingOutOperations: boolean;
+        doesItSolveProblemSituations: boolean;
     }
 
-        FinishForms:{
-        therapistInCharge: string; 
-        informationOfficer: string;
-        choiseInformationOfficer: string;
-    }
+       
+    therapistInCharge: string; 
+    informationOfficer: string;
+    choiseInformationOfficer: string;
 }
