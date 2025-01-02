@@ -29,6 +29,16 @@ import { PsychopedagogicalAnamnesisModule } from './features/psychopedagogical-a
 import { AnamnesisForCerebralPalsyModule } from './features/anamnesis-for-cerebral-palsy/anamnesis-for-cerebral-palsy.module';
 import { PortageGuidetoPreschoolEducationModule } from './features/portage-guideto-preschool-education/portage-guideto-preschool-education.module';
 import { AnamnesisSpeechTherapyModule } from './features/anamnesis-speech-therapy/anamnesisSpeechTherapy.module';
+import { AutisticTraitScalesModule } from './features/autistic-trait-scales/autisticTraitScales.module';
+import { SensoryProcessingMeasureModule } from './features/sensory-processing-measure/sensoryProcessingMeasure.module';
+import { SensoryProcessingMeasureSchoolModule } from './features/sensory-processing-measure-school/sensoryProcessingMeasureSchool.module';
+import { SensoryProcessingMeasurePreschoolModule } from './features/sensory-processing-measure-preschool/sensoryProcessingMeasurePreschool.module';
+import { SensoryProcessingMeasureSchoolPreschoolModule } from './features/sensory-processing-measure-school-preschool/sensoryProcessingMeasureSchoolPreSchool.module';
+import { OccupationalTherapyAnamnesisModule } from './features/occupational-therapy-anamnesis/occupationalTherapyAnamnesis.module';
+import { EessaTestModule } from './features/eessa-test/eessaTest.module';
+import { SpeechLanguagePathologyEvaluationForDysphagiaModule } from './features/speech-language-pathology-evaluation-for-dysphagia/speechLanguagePathologyEvaluationForDysphagia.module';
+import { SwalQolModule } from './features/swal-qol/swalQOL.module';
+import { IncomeAssessmentModule } from './features/income-assessment/incomeAssessment.module';
 
 
 @Module({
@@ -99,6 +109,16 @@ import { AnamnesisSpeechTherapyModule } from './features/anamnesis-speech-therap
     AnamnesisForCerebralPalsyModule,
     PortageGuidetoPreschoolEducationModule,
     AnamnesisSpeechTherapyModule,
+    AutisticTraitScalesModule,
+    SensoryProcessingMeasureModule,
+    SensoryProcessingMeasureSchoolModule,
+    SensoryProcessingMeasurePreschoolModule,
+    SensoryProcessingMeasureSchoolPreschoolModule,
+    OccupationalTherapyAnamnesisModule,
+    EessaTestModule,
+    SpeechLanguagePathologyEvaluationForDysphagiaModule,
+    SwalQolModule,
+    IncomeAssessmentModule,
   ],
   controllers: [AppController],
   providers: [AppService],

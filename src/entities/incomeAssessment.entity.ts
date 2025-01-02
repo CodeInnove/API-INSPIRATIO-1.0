@@ -1,0 +1,41 @@
+import { Schema, Document } from 'mongoose';
+import { IIaPsychoPedagogical } from 'src/features/income-assessment/types/iaPsychopedagogical';
+
+export const IncomeAssessmentSchema = new Schema({
+  _id: { type: Schema.Types.ObjectId, required: true, auto: true },
+  patientId: { type: Schema.Types.ObjectId, required: true, ref: 'Patient' },
+  age: { type: Schema.Types.ObjectId, required: true, ref: 'Patient'},
+  bitrhDate: { type: Schema.Types.ObjectId, required: true, ref: 'Patient'},
+  date: { type: Date, required: true, },
+  identificatioPshyco: { type: Schema.Types.Mixed, required: true },
+  observedAspectsPshyco: { type: Schema.Types.Mixed, required: true },
+  evaluationofPerformanceBody2At4YearsPshyco: { type: Schema.Types.Mixed, required: true },
+  evaluationOfPerformanceBody5At6YearsPshyco: { type: Schema.Types.Mixed, required: true },
+  evaluationOfPerformanceTrailsAndOthers2At4YearsPshyco: { type: Schema.Types.Mixed, required: true },
+  evaluationOfPerformanceTrailsAndOthers5At6YearsPshyco: { type: Schema.Types.Mixed, required: true },
+  evaluationOfPerformanceListeningSpeechAndOthers2At4YearsPshyco: { type: Schema.Types.Mixed, required: true },
+  evaluationOfPerformanceListeningSpeechAndOthers5At6YearsPshyco: { type: Schema.Types.Mixed, required: true },
+  evaluationOfPerformanceSpacesAndOthers2At4YearsPshyco: { type: Schema.Types.Mixed, required: true },
+  evaluationOfPerformanceSpacesAndOthers5At6YearsPshyco: { type: Schema.Types.Mixed, required: true },
+  evaluationOfPerformanceTheSelfAndOthers2At4YearsPshyco: { type: Schema.Types.Mixed, required: true },
+  evaluationOfPerformanceTheSelfAndOthers5At6YearsPshyco: { type: Schema.Types.Mixed, required: true },
+  theSelfAndOthersPshyco: { type: Schema.Types.Mixed, required: true },
+  bodyAndOthersPshyco: { type: Schema.Types.Mixed, required: true },
+  trailsAndOthersPshyco: { type: Schema.Types.Mixed, required: true },
+  listeningAndOthersPshyco: { type: Schema.Types.Mixed, required: true },
+  spacesAndOthersPshyco: { type: Schema.Types.Mixed, required: true },
+  portugueseLanguage1GradePshyco: { type: Schema.Types.Mixed, required: true },
+  mathematics1GradePshyco: { type: Schema.Types.Mixed, required: true },
+  portugueseLanguage2GradePshyco: { type: Schema.Types.Mixed, required: true },
+  mathematics2GradePshyco: { type: Schema.Types.Mixed, required: true },
+  portugueseLanguage3GradePshyco: { type: Schema.Types.Mixed, required: true },
+  mathematics3GradePshyco: { type: Schema.Types.Mixed, required: true },
+  portugueseLanguage4GradePshyco: { type: Schema.Types.Mixed, required: true },
+  mathematics4GradePshyco: { type: Schema.Types.Mixed, required: true },
+  portugueseLanguage5GradePshyco: { type: Schema.Types.Mixed, required: true },
+  mathematics5GradePshyco: { type: Schema.Types.Mixed, required: true },
+  observationIaPshyco: { type: Schema.Types.Mixed, required: true },
+  evaluatorsSignaturePshyco: { type: Schema.Types.Mixed, required: true },
+});
+
+export interface ISensoryProcessingMeasureSchoolPreSchoolEntity extends Omit<IIaPsychoPedagogical, '_id'>, Document {}
