@@ -1,102 +1,133 @@
-export interface IPhonologicalDiscriminationTestApplicationNotebook{
-
-    questionsPhonologicalDiscriminationTestApplicationNotebook:[{
+export interface PhonologicalDiscriminationTestApplicationNotebook {
+    patient: string,
+    dateOfApplication: string,
+    doctor: string,
+    QuestionsPhonologicalDiscriminationTestApplicationNotebook: {
+      grade: string,
+      school: string,
+      dateOfBirth: string,
+      age: number,
+      applicationDate: string,
+      applicant: string,
+      totalScore: string,
+      observations: string,
+      items: {
         question1: {
-          optionFigure1: string;
-          optionFigure2: string;
+          figure1: string,
+          figure2: string,
+          score: number
         },
         question2: {
-          optionFigure1: string;
-          optionFigure2: string;
+          figure1: string,
+          figure2: string,
+          score: number
         },
         question3: {
-          optionFigure1: string;
-          optionFigure2: string;
+          figure1: string,
+          figure2: string,
+          score: number
         },
         question4: {
-          optionFigure1: string;
-          optionFigure2: string;
+          figure1: string,
+          figure2: string,
+          score: number
         },
         question5: {
-          optionFigure1: string;
-          optionFigure2: string;
+          figure1: string,
+          figure2: string,
+          score: number
         },
         question6: {
-          optionFigure1: string;
-          optionFigure2: string;
+          figure1: string,
+          figure2: string,
+          score: number
         },
         question7: {
-          optionFigure1: string;
-          optionFigure2: string;
+          figure1: string,
+          figure2: string,
+          score: number
         },
         question8: {
-          optionFigure1: string;
-          optionFigure2: string;
+          figure1: string,
+          figure2: string,
+          score: number
         },
         question9: {
-          optionFigure1: string;
-          optionFigure2: string;
+          figure1: string,
+          figure2: string,
+          score: number
         },
         question10: {
-          optionFigure1: string;
-          optionFigure2: string;
+          figure1: string,
+          figure2: string,
+          score: number
         },
         question11: {
-          optionFigure1: string;
-          optionFigure2: string;
+          figure1: string,
+          figure2: string,
+          score: number
         },
         question12: {
-          optionFigure1: string;
-          optionFigure2: string;
+          figure1: string,
+          figure2: string,
+          score: number
         },
         question13: {
-          optionFigure1: string;
-          optionFigure2: string;
+          figure1: string,
+          figure2: string,
+          score: number
         },
         question14: {
-          optionFigure1: string;
-          optionFigure2: string;
+          figure1: string,
+          figure2: string,
+          score: number
         },
         question15: {
-          optionFigure1: string;
-          optionFigure2: string;
+          figure1: string,
+          figure2: string,
+          score: number
         },
         question16: {
-          optionFigure1: string;
-          optionFigure2: string;
+          figure1: string,
+          figure2: string,
+          score: number
         },
         question17: {
-          optionFigure1: string;
-          optionFigure2: string;
+          figure1: string,
+          figure2: string,
+          score: number
         },
         question18: {
-          optionFigure1: string;
-          optionFigure2: string;
+          figure1: string,
+          figure2: string,
+          score: number
         },
         question19: {
-          optionFigure1: string;
-          optionFigure2: string;
+          figure1: string,
+          figure2: string,
+          score: number
         },
         question20: {
-          optionFigure1: string;
-          optionFigure2: string;
+          figure1: string,
+          figure2: string,
+          score: number
         },
         question21: {
-          optionFigure1: string;
-          optionFigure2: string;
+          figure1: string,
+          figure2: string,
+          score: number
         },
         question22: {
-          optionFigure1: string;
-          optionFigure2: string;
+          figure1: string,
+          figure2: string,
+          score: number
         },
         question23: {
-          optionFigure1: string;
-          optionFigure2: string;
-        },
-    }];
-
-    totalResults: [{
-	resultsFigure1: number;
-	resultsFigure2: number;
-    }]
-}
+          figure1: string,
+          figure2: string,
+          score: number
+        }
+      }
+    }
+    
+  }

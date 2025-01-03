@@ -1,8 +1,9 @@
-import { Body, Controller, Delete, Get, Param, Post, Put } from "@nestjs/common";
+import { Body, Controller, Delete, Get, Param, Post, Put, Query } from "@nestjs/common";
 import { ApiTags } from "@nestjs/swagger";
 import { CreatePhonologicalDiscriminationTestApplicationNotebookDto } from "./dto/phonologicalDiscriminationTestApplicationNotebookCreate.dto";
 import { UpdatePhonologicalDiscriminationTestApplicationNotebookDto } from "./dto/phonologicalDiscriminationTestApplicationNotebookUpdate.dto";
 import { PhonologicalDiscriminationTestApplicationNotebookService } from "./phonologicalDiscriminationTestApplicationNotebook.service";
+import { QuerPDTANDto } from "./dto/phonologicalDiscriminationTestApplicationNotebookQuery.dto";
 
 @ApiTags('Phonological Discrimination Test Application Notebook')
 @Controller('phonological-discrimination-test-application-notebook')
@@ -15,8 +16,8 @@ export class PhonologicalDiscriminationTestApplicationNotebookController {
   }
 
   @Get()
-  findAll() {
-    return this.phonologicalDiscriminationTestApplicationNotebookService.findAll();
+  findAll(@Query() query: QuerPDTANDto) {
+    return this.phonologicalDiscriminationTestApplicationNotebookService.findAll(query);
   }
 
   @Get(':id')

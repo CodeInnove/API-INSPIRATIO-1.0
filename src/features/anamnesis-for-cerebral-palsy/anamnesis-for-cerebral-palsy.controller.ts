@@ -5,6 +5,7 @@ import { IAnamneseCerebralEntity } from "src/entities/anamnesis-for-cerebral-pal
 import { CreateAfcpDto} from './dto/create-anamnesis-for-cerebral-palsy.dto';
 import { query } from "express";
 import { QueryAfcpDto } from "./dto/query-anamnesis-for-cerebral-palsy.dto";
+import { UpdateAfcpDto } from "./dto/update-anamnesis-for-cerebral-palsy.dto";
 
 @ApiTags('Anamnesis For Cerebral Palsy')
 @Controller('anamnesis-for-cerebral-palsy')
@@ -24,12 +25,12 @@ export class AfcpController {
   }
 
   @Get(':id')
-  async findById(@Param() id: string) {
+  async findById(@Param('id') id: string) {
     return await this.afcpService.findById(id);
   }
 
   @Put(':id')
-  async update(@Param() id: string, @Body() data: CreateAfcpDto) {
+  async update(@Param() id: string, @Body() data: UpdateAfcpDto) {
     return await this.afcpService.update(id, data);
   }
 
