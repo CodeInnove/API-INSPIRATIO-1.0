@@ -4,6 +4,7 @@ import { Model } from "mongoose";
 import { IPsychopedagogicalAnamnesisEntity } from "src/entities/psychopedagogicalAnamnesis.entity";
 import { PsychopedagogicalAnamnesisCreateDto } from "./dto/psychopedagogicalAnamnesisCreate.dto";
 import { UpdatePsychopedagogicalAnamnesisDto } from "./dto/psychopedagogicalAnamnesisUpdate.dto";
+import { QueryPsychopedagogicalDto } from "./dto/queryPsychocpedagogicalAnamnesis.dto";
 
 @Injectable()
 export class PsychopedagogicalAnamnesisRepository {
@@ -15,9 +16,42 @@ export class PsychopedagogicalAnamnesisRepository {
     return this.psychopedagogicalAnamnesisModel.create(data);
   }
   
-  async findAll(): Promise<IPsychopedagogicalAnamnesisEntity[]> {
-    return this.psychopedagogicalAnamnesisModel.find();
-  }
+  async findAll(options: QueryPsychopedagogicalDto) {
+            const {
+              dateEnd = null,
+              dateInit = null,
+              role = '',
+            } = options; 
+        
+            let query = {};
+        
+        
+            if (role) {
+              query = { ...query, roles: { $in: role } };
+            }
+        
+            if (dateInit && dateEnd) {
+              query = {
+                ...query,
+                createdAt: {
+                  $gte: new Date(dateInit),
+                  $lte: new Date(dateEnd),
+                },
+              };
+            }
+        
+            const data = await this.psychopedagogicalAnamnesisModel
+              .find(query)
+              .populate('doctor')
+              .populate('patient')
+              .populate('speciality')
+              .lean()
+              .exec();
+        
+            const total = await this.psychopedagogicalAnamnesisModel.countDocuments(query).exec();
+        
+            return { data, total,};
+          }
 
   async findById(id: string): Promise<IPsychopedagogicalAnamnesisEntity> {
     return this.psychopedagogicalAnamnesisModel.findById(id);

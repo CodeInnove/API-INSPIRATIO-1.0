@@ -63,7 +63,7 @@ export class IncomeTableRepository {
     }
   
     async findById(id: string): Promise<IIncomeTableEntity> {
-      return this.incomeTableModel.findById(id)
+      return this.incomeTableModel.findById(id);
     }
   
     async update(id: string, data: UpdateIncomeTableDto): Promise<IIncomeTableEntity> {

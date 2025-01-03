@@ -1,128 +1,29 @@
 export interface IScaleASRS{
+  patient: string;
+  dateOfApplication: string;
+  doctor: string;
         
-  groupA:[{
-      questionOne: {
-      optionOne: number;
-      optionTwo: number;
-      optionThree: number;
-      optionFour: number;
-      optionFive: number;}
+  GroupA:{
+      questionOne: number;
+      questionTwo: number;
+      questionThree: number;
+      questionFour: number;
+      questionFive: number;
+      questionSix: number;
+      questionSeven: number;
+      questionEight: number;
+    //totalGroupA:{resultGroupA: number;};
+  }
+  GroupB:{
+      questionOne: number,
+      questionTwo: number,
+      questionThree: number,
+      questionFour: number,
+      questionFive: number,
+      questionSix: number,
+      questionSeven: number,
 
-      },
-      questionTwo: {
-      optionOne: number;
-      optionTwo: number;
-      optionThree: number;
-      optionFour: number;
-      optionFive: number;
-      },
-      questionThree: {
-      optionOne: number;
-      optionTwo: number;
-      optionThree: number;
-      optionFour: number;
-      optionFive: number;
-      },
-      questionFour: {
-      optionOne: number;
-      optionTwo: number;
-      optionThree: number;
-      optionFour: number;
-      optionFive: number;
-      },
-      questionFive: {
-      optionOne: number;
-      optionTwo: number;
-      optionThree: number;
-      optionFour: number;
-      optionFive: number;
-      },
-      questionSix: {
-      optionOne: number;
-      optionTwo: number;
-      optionThree: number;
-      optionFour: number;
-      optionFive: number;
-      },
-      questionSeven: {
-      optionOne: number;
-      optionTwo: number;
-      optionThree: number;
-      optionFour: number;
-      optionFive: number;
-      },
-      questionEight: {
-      optionOne: number;
-      optionTwo: number;
-      optionThree: number;
-      optionFour: number;
-      optionFive: number;
-      },
-    totalGroupA:{
-      resultGroupA: number;
-      }];
-
-  groupB:[{
-      questionOne: {
-      optionOne: number;
-      optionTwo: number;
-      optionThree: number;
-      optionFour: number;
-      optionFive: number;}
-
-      },
-      questionTwo: {
-      optionOne: number;
-      optionTwo: number;
-      optionThree: number;
-      optionFour: number;
-      optionFive: number;
-      },
-      questionThree: {
-      optionOne: number;
-      optionTwo: number;
-      optionThree: number;
-      optionFour: number;
-      optionFive: number;
-      },
-      questionFour: {
-      optionOne: number;
-      optionTwo: number;
-      optionThree: number;
-      optionFour: number;
-      optionFive: number;
-      },
-      questionFive: {
-      optionOne: number;
-      optionTwo: number;
-      optionThree: number;
-      optionFour: number;
-      optionFive: number;
-      },
-      questionSix: {
-      optionOne: number;
-      optionTwo: number;
-      optionThree: number;
-      optionFour: number;
-      optionFive: number;
-      },
-      questionSeven: {
-      optionOne: number;
-      optionTwo: number;
-      optionThree: number;
-      optionFour: number;
-      optionFive: number;
-      },
-
-      questionEight: {
-        optionOne: number;
-        optionTwo: number;
-        optionThree: number;
-        optionFour: number;
-        optionFive: number;
-      },
-      totalGroupB:{
-        resultGroupB: number;
-        }];
-
+      questionEight: number,
+      //totalGroupB:{resultGroupB: number;};
+    }
 }

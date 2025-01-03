@@ -1,123 +1,101 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsNotEmpty, ValidateNested } from 'class-validator';
+import { IsNotEmpty, IsNumber, IsString, ValidateNested } from 'class-validator';
 import { Type } from 'class-transformer';
 
-class ChooseScaleAsrsDTO {
-    @IsNotEmpty()
+
+
+  class GroupADto {
+    
     @ApiProperty()
-    optionOne: number;
+    @IsNumber()
+    questionOne: number;
 
-    @IsNotEmpty()
     @ApiProperty()
-    optionTwo: number;
+    @IsNumber()
+    questionTwo: number;
 
-    @IsNotEmpty()
     @ApiProperty()
-    optionThree: number;
+    @IsNumber()
+    questionThree: number;
 
-    @IsNotEmpty()
     @ApiProperty()
-    optionFour: number;
+    @IsNumber()
+    questionFour: number;
 
-    @IsNotEmpty()
     @ApiProperty()
-    optionFive: number;
-  }
+    @IsNumber()
+    questionFive: number;
 
-  class GroupADTO {
-    @ValidateNested()
-    @Type(() => ChooseScaleAsrsDTO)
-    @ApiProperty({ type: ChooseScaleAsrsDTO })
-    questionOne: ChooseScaleAsrsDTO;
+    @ApiProperty()
+    @IsNumber()
+    questionSix: number;
 
-    @ValidateNested()
-    @Type(() => ChooseScaleAsrsDTO)
-    @ApiProperty({ type: ChooseScaleAsrsDTO })
-    questionTwo: ChooseScaleAsrsDTO;
+    @ApiProperty()
+    @IsNumber()
+    questionSeven: number;
 
-    @ValidateNested()
-    @Type(() => ChooseScaleAsrsDTO)
-    @ApiProperty({ type: ChooseScaleAsrsDTO })
-    questionThree: ChooseScaleAsrsDTO;
-
-    @ValidateNested()
-    @Type(() => ChooseScaleAsrsDTO)
-    @ApiProperty({ type: ChooseScaleAsrsDTO })
-    questionFour: ChooseScaleAsrsDTO;
-
-    @ValidateNested()
-    @Type(() => ChooseScaleAsrsDTO)
-    @ApiProperty({ type: ChooseScaleAsrsDTO })
-    questionFive: ChooseScaleAsrsDTO;
-
-    @ValidateNested()
-    @Type(() => ChooseScaleAsrsDTO)
-    @ApiProperty({ type: ChooseScaleAsrsDTO })
-    questionSix: ChooseScaleAsrsDTO;
-
-    @ValidateNested()
-    @Type(() => ChooseScaleAsrsDTO)
-    @ApiProperty({ type: ChooseScaleAsrsDTO })
-    questionSeven: ChooseScaleAsrsDTO;
-
-    @ValidateNested()
-    @Type(() => ChooseScaleAsrsDTO)
-    @ApiProperty({ type: ChooseScaleAsrsDTO })
-    questionEight: ChooseScaleAsrsDTO;
+    @ApiProperty()
+    @IsNumber()
+    questionEight: number;
 
 }
 
-class GroupBDTO {
-    @ValidateNested()
-    @Type(() => ChooseScaleAsrsDTO)
-    @ApiProperty({ type: ChooseScaleAsrsDTO })
-    questionOne: ChooseScaleAsrsDTO;
-
-    @ValidateNested()
-    @Type(() => ChooseScaleAsrsDTO)
-    @ApiProperty({ type: ChooseScaleAsrsDTO })
-    questionTwo: ChooseScaleAsrsDTO;
-
-    @ValidateNested()
-    @Type(() => ChooseScaleAsrsDTO)
-    @ApiProperty({ type: ChooseScaleAsrsDTO })
-    questionThree: ChooseScaleAsrsDTO;
-
-    @ValidateNested()
-    @Type(() => ChooseScaleAsrsDTO)
-    @ApiProperty({ type: ChooseScaleAsrsDTO })
-    questionFour: ChooseScaleAsrsDTO;
-
-    @ValidateNested()
-    @Type(() => ChooseScaleAsrsDTO)
-    @ApiProperty({ type: ChooseScaleAsrsDTO })
-    questionFive: ChooseScaleAsrsDTO;
-
-    @ValidateNested()
-    @Type(() => ChooseScaleAsrsDTO)
-    @ApiProperty({ type: ChooseScaleAsrsDTO })
-    questionSix: ChooseScaleAsrsDTO;
-
-    @ValidateNested()
-    @Type(() => ChooseScaleAsrsDTO)
-    @ApiProperty({ type: ChooseScaleAsrsDTO })
-    questionSeven: ChooseScaleAsrsDTO;
-
-    @ValidateNested()
-    @Type(() => ChooseScaleAsrsDTO)
-    @ApiProperty({ type: ChooseScaleAsrsDTO })
-    questionEight: ChooseScaleAsrsDTO;
-}
-
-  export class CreateScaleAsrsDTO {
-    @ValidateNested()
-    @Type(() => GroupADTO)
-    @ApiProperty({ type: GroupADTO })
-    GroupA: GroupADTO;
-	
-	@ValidateNested()
-    @Type(() => GroupBDTO)
-    @ApiProperty({ type: GroupBDTO })
-    GroupB: GroupBDTO;
+class GroupBDto {
+  @ApiProperty()
+  @IsNumber()
+  questionOne: number;
   
-  }
+  @ApiProperty()
+  @IsNumber()
+  questionTwo: number;
+  
+  @ApiProperty()
+  @IsNumber()
+  questionThree: number;
+  
+  @ApiProperty()
+  @IsNumber()
+  questionFour: number;
+  
+  @ApiProperty()
+  @IsNumber()
+  questionFive: number;
+
+  @ApiProperty()
+  @IsNumber()
+  questionSix: number;
+  
+  @ApiProperty()
+  @IsNumber()
+  questionSeven: number;
+  
+  @ApiProperty()
+  @IsNumber()
+  questionEight: number;
+}
+
+export class CreateScaleAsrsDto {
+  
+  @ApiProperty()
+  @IsString()
+  patient : string;
+  
+  @ApiProperty()
+  @IsString()
+  dateOfApplication: string;
+  
+  @ApiProperty()
+  @IsString()
+  doctor: string;
+  
+  @ApiProperty()
+  @ValidateNested()
+  @Type(() => GroupADto)
+  GroupA: GroupADto;
+	
+  @ApiProperty()
+	@ValidateNested()
+  @Type(() => GroupBDto)
+  GroupB: GroupBDto;
+  
+}

@@ -2,6 +2,7 @@ import { HttpException, HttpStatus, Injectable } from "@nestjs/common";
 import { PsychopedagogicalAnamnesisRepository } from "./psychopedagogicalAnamnesis.repository";
 import { UpdatePsychopedagogicalAnamnesisDto } from "./dto/psychopedagogicalAnamnesisUpdate.dto";
 import { PsychopedagogicalAnamnesisCreateDto } from "./dto/psychopedagogicalAnamnesisCreate.dto";
+import { QueryPsychopedagogicalDto } from "./dto/queryPsychocpedagogicalAnamnesis.dto";
 
 @Injectable()
 export class PsychopedagogicalAnamnesisService {
@@ -17,9 +18,9 @@ export class PsychopedagogicalAnamnesisService {
         }
   }
 
-  async findAll() {
+  async findAll(query: QueryPsychopedagogicalDto) {
     try {
-      return await this.psychopedagogicalAnamnesisRepository.findAll();
+      return await this.psychopedagogicalAnamnesisRepository.findAll(query);
     } catch (error) {
       throw new HttpException(error, HttpStatus.BAD_REQUEST);
     }

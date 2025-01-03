@@ -13,7 +13,29 @@ export interface IIncomeTablesPartOne{
    
 }
 
-export interface IIncomeTablesPartTwo {
+
+
+export interface IIncomeTable {
+    patient: string,
+    doctor: string,
+
+    GroupA: {
+        recognizesAndIdentifiesLetters: string,
+        recognizesAndIdentifiesNumbers: string,
+        directedWriting: string,
+        spontaneousWriting: string,
+        readingAndWriting: string,
+        readingAndComprehension: string,
+        textProductionRecord: string,
+        textualStructuring: string,
+        oralTextProduction: string,
+        numbersGreaterMagnitude: string,
+        problemSolving: string,
+   
+}
+
+
+    GroupB: {
         bodyScheme: string;
         sidePointing: string;
         position: string;
@@ -29,12 +51,7 @@ export interface IIncomeTablesPartTwo {
         fineMotorCoordination: string;
     }
 
-
-export interface IIncomeTable {
-    patient: string,
-    doctor: string,
-    incomeTablesPartOne: IIncomeTablesPartOne,
-    incomeTablesPartTwo: IIncomeTablesPartTwo,
+    
 }
 
 
