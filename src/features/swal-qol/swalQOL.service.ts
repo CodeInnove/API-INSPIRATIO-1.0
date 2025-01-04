@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import { CreateSwalQolDto } from './dto/create-swal-qol.dto';
-import { UpdateSwalQolDto } from './dto/update-swal-qol.dto';
+import { CreateSwalQolDto } from './dto/createswalQOL.dto';
+import { UpdateSwalQolDto } from './dto/updateswalQOL.dto';
 
 @Injectable()
 export class SwalQolService {
