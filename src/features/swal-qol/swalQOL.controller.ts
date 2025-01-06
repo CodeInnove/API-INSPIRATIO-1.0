@@ -2,6 +2,8 @@ import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/commo
 import { SwalQolService } from './swalQOL.service';
 import { CreateSwalQolDto } from './dto/createswalQOL.dto';
 import { UpdateSwalQolDto } from './dto/updateswalQOL.dto'; 
+import { UpdateSwalQolDto } from './dto/updateswalQOL.dto';
+
 @Controller('swal-qol')
 export class SwalQolController {
   constructor(private readonly swalQolService: SwalQolService) {}
