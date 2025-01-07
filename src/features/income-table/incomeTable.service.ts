@@ -28,16 +28,16 @@ export class IncomeTableService {
     }
   
     async findById(id: string) {
-      try {
+      try{
         return await this.incomeTableRepository.findById(id);
       } catch (error) {
         throw new HttpException(error, HttpStatus.BAD_REQUEST);
       }
     }
   
-    async update(id: string, afcp: UpdateIncomeTableDto) {
+    async update(id: string, updateIncome: UpdateIncomeTableDto) {
       try {
-        return await this.incomeTableRepository.update(id, afcp);
+        return await this.incomeTableRepository.update(id, updateIncome);
       } catch (error) {
         throw new HttpException(error, HttpStatus.BAD_REQUEST);
       }

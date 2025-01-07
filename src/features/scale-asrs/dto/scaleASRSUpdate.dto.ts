@@ -1,4 +1,4 @@
 import { PartialType } from '@nestjs/swagger';
-import { CreateScaleAsrsDTO } from './scaleASRSCreate.dto';
+import { CreateScaleAsrsDto } from './scaleASRSCreate.dto';
 
-export class UpdateScaleAsrDto extends PartialType(CreateScaleAsrsDTO) {}
+export class UpdateScaleAsrDto extends PartialType(CreateScaleAsrsDto) {}

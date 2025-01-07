@@ -1,8 +1,9 @@
-import { Body, Controller, Delete, Get, Param, Post, Put } from "@nestjs/common";
+import { Body, Controller, Delete, Get, Param, Post, Put, Query } from "@nestjs/common";
 import { ApiTags } from "@nestjs/swagger";
-import { CreateScaleAsrsDTO } from "./dto/scaleASRSCreate.dto";
+import { CreateScaleAsrsDto } from "./dto/scaleASRSCreate.dto";
 import { UpdateScaleAsrDto } from "./dto/scaleASRSUpdate.dto";
 import { ScaleAsrsService } from "./scaleASRS.service";
+import { QueryScaleASRSpDto } from "./dto/scaleASRSQuery.dto";
 
 @ApiTags('ScaleASRS')
 @Controller('scale-asrs')
@@ -10,13 +11,13 @@ export class ScaleASRSController {
   constructor(private readonly scaleAsrService: ScaleAsrsService) {}
 
   @Post()
-  create(@Body() data: CreateScaleAsrsDTO) {
+  create(@Body() data: CreateScaleAsrsDto) {
     return this.scaleAsrService.create(data);
   }
 
   @Get()
-  findAll() {
-    return this.scaleAsrService.findAll();
+  findAll(@Query() query: QueryScaleASRSpDto) {
+    return this.scaleAsrService.findAll(query);
   }
 
   @Get(':id')

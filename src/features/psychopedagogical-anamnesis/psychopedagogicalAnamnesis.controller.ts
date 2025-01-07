@@ -1,8 +1,9 @@
-import { Body, Controller, Delete, Get, Param, Post, Put } from "@nestjs/common";
+import { Body, Controller, Delete, Get, Param, Post, Put, Query } from "@nestjs/common";
 import { ApiTags } from "@nestjs/swagger";
 import { PsychopedagogicalAnamnesisCreateDto } from "./dto/psychopedagogicalAnamnesisCreate.dto";
 import { UpdatePsychopedagogicalAnamnesisDto } from "./dto/psychopedagogicalAnamnesisUpdate.dto";
 import { PsychopedagogicalAnamnesisService } from "./psychopedagogicalAnamnesis.service";
+import { QueryPsychopedagogicalDto } from "./dto/queryPsychocpedagogicalAnamnesis.dto";
 
 @ApiTags('Psychopedagogical Anamnesis')
 @Controller('psychopedagogical-anamnesis')
@@ -15,8 +16,8 @@ export class PsychopedagogicalAnamnesisController {
   }
 
   @Get()
-  findAll() {
-    return this.psychopedagogicalAnamnesisService.findAll();
+  findAll(@Query() query: QueryPsychopedagogicalDto) {
+    return this.psychopedagogicalAnamnesisService.findAll(query);
   }
 
   @Get(':id')

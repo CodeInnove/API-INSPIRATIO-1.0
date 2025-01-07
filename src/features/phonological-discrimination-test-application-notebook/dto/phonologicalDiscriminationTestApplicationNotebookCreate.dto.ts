@@ -1,5 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsNotEmpty, ValidateNested } from 'class-validator';
+import { IsNotEmpty, IsString, ValidateNested } from 'class-validator';
 import { Type } from 'class-transformer';
 
 class ChoosePhonologicalDiscriminationTestApplicationNotebookDTO {
@@ -10,6 +10,10 @@ class ChoosePhonologicalDiscriminationTestApplicationNotebookDTO {
     @IsNotEmpty()
     @ApiProperty()
     optionFigure2: string;
+
+    @IsNotEmpty()
+    @ApiProperty()
+    score: number;
   }
 
   class QuestionsPhonologicalDiscriminationTestApplicationNotebookDTO {
@@ -130,6 +134,19 @@ class ChoosePhonologicalDiscriminationTestApplicationNotebookDTO {
 }
 
   export class CreatePhonologicalDiscriminationTestApplicationNotebookDto {
+    @ApiProperty()
+    @IsString()
+    patient: string;
+
+    @ApiProperty()
+    @IsString()
+    dataOfApplication: string;
+
+    @ApiProperty()
+    @IsString()
+    doctor: string;
+
+
     @ValidateNested()
     @Type(() => QuestionsPhonologicalDiscriminationTestApplicationNotebookDTO)
     @ApiProperty({ type: QuestionsPhonologicalDiscriminationTestApplicationNotebookDTO })

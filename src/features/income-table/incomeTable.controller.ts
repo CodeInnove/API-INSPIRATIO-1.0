@@ -4,37 +4,38 @@ import { CreateTableDto } from "./dto/incomeTableCreate.dto";
 import { IIncomeTableEntity } from "src/entities/incomeTable.entity";
 import { IncomeTableService } from "./incomeTable.service";
 import { QueryIncomeTableDto } from "./dto/incomeTableCreateQuery.dto";
+import { UpdateIncomeTableDto } from "./dto/incomeTableUpdate.dto";
 
 
 @ApiTags('IncomeTable')
 @Controller('income-Table')
 export class IncomeTableController {
   constructor(
-    private readonly afcpService: IncomeTableService
+    private readonly incomeTableService: IncomeTableService
   ) {}
 
   @Post()
-  async createAfcp(@Body() data: CreateTableDto): Promise<IIncomeTableEntity> {
-    return await this.afcpService.create(data);
+  create(@Body() data: CreateTableDto): Promise<IIncomeTableEntity> {
+    return  this.incomeTableService.create(data);
   }
 
   @Get()
-  async findAll(@Query() query: QueryIncomeTableDto) {
-    return await this.afcpService.findAll(query);
+  findAll(@Query() query: QueryIncomeTableDto) {
+    return this.incomeTableService.findAll(query);
   }
 
   @Get(':id')
-  async findById(@Param() id: string) {
-    return await this.afcpService.findById(id);
+  findById(@Param('id') id: string) {
+    return this.incomeTableService.findById(id);
   }
 
   @Put(':id')
-  async update(@Param() id: string, @Body() data: CreateTableDto) {
-    return await this.afcpService.update(id, data);
+  update(@Param('id') id: string, @Body() data: UpdateIncomeTableDto) {
+    return this.incomeTableService.update(id, data);
   }
 
   @Delete(':id')
-  async delete(@Param() id: string) {
-    return await this.afcpService.delete(id);
+  delete(@Param() id: string) {
+    return this.incomeTableService.delete(id);
   }
 }
