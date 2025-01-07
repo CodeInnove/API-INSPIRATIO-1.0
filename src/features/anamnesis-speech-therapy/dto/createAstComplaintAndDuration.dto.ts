@@ -2,7 +2,7 @@ import { ApiProperty } from "@nestjs/swagger";
 import { IsOptional, IsString } from "class-validator";
  
   
-export class ConstitutionalDto {
+export class IBackgroundDto {
 
     @ApiProperty()
     @IsOptional()
@@ -53,22 +53,24 @@ export class ConstitutionalDto {
     @IsOptional()
     @IsString()
     whichProblem: string;
-}
-
-export class  CircumstantialDto {
-
     @ApiProperty()
     @IsOptional()
     @IsString()
     parentsWorkHours: string;
-
+    
     @ApiProperty()
     @IsOptional()
     @IsString()
     childCaregiver: string;
-
+    
     @ApiProperty()
     @IsOptional()
     @IsString()
     weeklyRoutine: string;
 }
+
+
+
+
+
+

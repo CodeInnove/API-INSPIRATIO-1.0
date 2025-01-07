@@ -3,7 +3,7 @@ import { InjectModel } from "@nestjs/mongoose";
 import { Model } from "mongoose";
 import { IAnamnesisSpeechTherapyEntity } from "src/entities/anamnesisSpeechTherapy.entity"; 
 import { UpdateAnamnesisSpeechTherapyDto } from "./dto/anamnesisSpeechTherapyUpdate.dto";
-import { AnamnesisSpeechTherapy } from "./types/anamnesisSpeechTherapy";
+import { IAnamnesisSpeechTherapy } from "./types/anamnesisSpeechTherapy";
 import { QueryAnamnesisTherapyDto } from "./dto/anamnesisSpeechTherapyQuery.dto";
 import { CreateAnamnesisSpeechTherapyDto } from "./dto/anamnesisSpeechTherapyCreate.dto";
 
@@ -60,7 +60,7 @@ export class AnamnesisSpeechTherapyRepository {
       return this.anamnesisTherapyModel.findOne({ passwordResetToken: token }).lean().exec();
     }
   
-    async findById(id: string): Promise<AnamnesisSpeechTherapy> {
+    async findById(id: string): Promise<IAnamnesisSpeechTherapy> {
       return this.anamnesisTherapyModel.findById(id)
     }
   

@@ -1,13 +1,8 @@
 import { ApiProperty } from "@nestjs/swagger";
 import { IsOptional, IsString } from "class-validator";
  
-export class DevelopmentSocioCulturalDto {
 
-    interactive: InteractiveDto;
-    integrative: IntegrativeDto;
-    };
-
-export class InteractiveDto{
+ export class DevelopmentSocioCulturalDto{
 
     @ApiProperty()
     @IsOptional()
@@ -28,9 +23,6 @@ export class InteractiveDto{
     @IsOptional()
     @IsString()
     whoAreYourBestFriends: string;
-}
-
-export class IntegrativeDto{
 
     @ApiProperty()
     @IsOptional()
@@ -106,4 +98,5 @@ export class IntegrativeDto{
     @IsOptional()
     @IsString()
     answersByName: string;
-    }
+}
+

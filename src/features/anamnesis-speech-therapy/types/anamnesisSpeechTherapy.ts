@@ -1,48 +1,9 @@
-export interface IAnamnesisSpeechTherapy{
-    
-    identification: {
-        name: string,
-        birthDate: string,
-        maritalStatus: string,
-        placeOfBirth: string,
-        age: number,
-        sex: string,
-        nationality: string,
-        schoolName: string,
-        studyPeriod: string,
-    },
-    affiliation: {
-        fatherAge: number,
-        fatherProfession: string,
-        fatherEducation: string,
-        motherName: string,
-        motherAge: number,
-        motherProfession: string,
-        motherEducation: string,
-        siblingsNamesOne: string,
-        ageSiblingsNamesOne: number,
-        siblingsNamesTwo: string,
-        ageSiblingsNamesTwo: number,
-        fatherName: string,
-    },
-    address: {
-        street: string,
-        city: string,
-        number: string,
-        state: string,
-        zipCode: string,
-        phonenumbers: [string],
-        responsible: string,
-        referredBy: string,
-        anamnesisDate: string,
-        professional: string
-    },
-}
-export interface IcomplaintAndDurations{
+
+interface IcomplaintAndDurations{
     complaintAndDuration: string,
 }
 
-export interface Iantecedents {
+interface IBackground {
     gestation: string,
     typeOfDelivery: string,
     usedMedication: string,
@@ -56,7 +17,7 @@ export interface Iantecedents {
     childCaregiver: string,
     weeklyRoutine: string,
 }
-export interface Idevelopment {
+interface Idevelopment {
     sleep: string,
     disease: string,
     hearingEarInfection: string,
@@ -117,7 +78,7 @@ export interface Idevelopment {
     whatDoesWhenAlone: string,
     howSolvesProblems: string
 }
-export interface IsocioCultural{
+interface IsocioCultural{
     relationshipWithParents: string,
     relationshipWithAdults: string,
     relationshipWithOtherChildren: string,
@@ -139,16 +100,13 @@ export interface IsocioCultural{
     answersByName: string
     }
         
-export interface IimportantObservations {
+interface IimportantObservations {
         importantObservation: string
 }
 
-    export interface AnamnesisSpeechTherapy {
-        doctor: string,
-        patient: string,
-        speciality: string,
+    export interface IAnamnesisSpeechTherapy {
         complaintAndDuration: IcomplaintAndDurations,
-        antecedents: Iantecedents,
+        antecedents: IBackground,
         development: Idevelopment,
         socioCultural: IsocioCultural,
         importantObservations: IimportantObservations,

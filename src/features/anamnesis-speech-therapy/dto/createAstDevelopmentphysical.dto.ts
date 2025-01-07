@@ -2,7 +2,7 @@ import { ApiProperty } from "@nestjs/swagger";
 import { IsOptional, IsString } from "class-validator";
  
     
-export class SomaticDto {
+export class IPhysicalDto {
 
     @ApiProperty()
     @IsOptional()
@@ -47,7 +47,7 @@ export class SomaticDto {
     @ApiProperty()
     @IsOptional()
     @IsString()
-    breastfed: boolean;
+    breastfed: string;
 
     @ApiProperty()
     @IsOptional()
@@ -57,7 +57,7 @@ export class SomaticDto {
     @ApiProperty()
     @IsOptional()
     @IsString()
-    lookedAtMotherBreastfeeding: boolean;
+    lookedAtMotherBreastfeeding: string;
 
     @ApiProperty()
     @IsOptional()
@@ -67,17 +67,17 @@ export class SomaticDto {
     @ApiProperty()
     @IsOptional()
     @IsString()
-    chokedEasily: boolean;
+    chokedEasily: string;
 
     @ApiProperty()
     @IsOptional()
     @IsString()
-    gastroesophagealReflux: boolean;
+    gastroesophagealReflux: string;
 
     @ApiProperty()
     @IsOptional()
     @IsString()
-    usedBottle: boolean;
+    usedBottle: string;
 
     @ApiProperty()
     @IsOptional()
@@ -118,10 +118,6 @@ export class SomaticDto {
     @IsOptional()
     @IsString()
     otherProblems: string;
-}
-
-
-export class MotorDto {
 
     @ApiProperty()
     @IsOptional()
@@ -177,9 +173,7 @@ export class MotorDto {
     @IsOptional()
     @IsString()
     quietBaby: string;
-}
 
-export class NeurovegetativeFunctionsDto {
 
     @ApiProperty()
     @IsOptional()
@@ -214,12 +208,12 @@ export class NeurovegetativeFunctionsDto {
     @ApiProperty()
     @IsOptional()
     @IsString()
-    leftOrRightHanded: boolean;
+    leftOrRightHanded: string;
 
     @ApiProperty()
     @IsOptional()
     @IsString()
-    usedPacifierBottleFinger: boolean;
+    usedPacifierBottleFinger: string;
 
     @ApiProperty()
     @IsOptional()
@@ -230,9 +224,7 @@ export class NeurovegetativeFunctionsDto {
     @IsOptional()
     @IsString()
     otherHabits: string;
-}
 
-export class IdeomotorDto {
 
     @ApiProperty()
     @IsOptional()
@@ -293,9 +285,7 @@ export class IdeomotorDto {
     @IsOptional()
     @IsString()
     closesZipper: string;
-}
 
-export class  IdeatoryDto {
 
     @ApiProperty()
     @IsOptional()
@@ -317,3 +307,4 @@ export class  IdeatoryDto {
     @IsString()
     howSolvesProblems: string;
 }
+
