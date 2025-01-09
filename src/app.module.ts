@@ -28,6 +28,7 @@ import { SensoryProcessingMeasureSchoolPreschoolModule } from './features/sensor
 import { OccupationalTherapyAnamnesisModule } from './features/occupational-therapy-anamnesis/occupationalTherapyAnamnesis.module';
 import { SpeechLanguagePathologyEvaluationForDysphagiaModule } from './features/speech-language-pathology-evaluation-for-dysphagia/speechLanguagePathologyEvaluationForDysphagia.module';
 import { IncomeAssessmentModule } from './features/income-assessment/incomeAssessment.module';
+import { ChecklistDenverModule } from './features/checklist-denver/checklist-denver.module';
 
 
 @Module({
@@ -97,6 +98,7 @@ import { IncomeAssessmentModule } from './features/income-assessment/incomeAsses
     OccupationalTherapyAnamnesisModule,
     SpeechLanguagePathologyEvaluationForDysphagiaModule,
     IncomeAssessmentModule,
+    ChecklistDenverModule,
   ],
   controllers: [AppController],
   providers: [AppService],
