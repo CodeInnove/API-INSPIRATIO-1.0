@@ -29,6 +29,7 @@ import { OccupationalTherapyAnamnesisModule } from './features/occupational-ther
 import { SpeechLanguagePathologyEvaluationForDysphagiaModule } from './features/speech-language-pathology-evaluation-for-dysphagia/speechLanguagePathologyEvaluationForDysphagia.module';
 import { IncomeAssessmentModule } from './features/income-assessment/incomeAssessment.module';
 import { ChecklistDenverModule } from './features/checklist-denver/checklist-denver.module';
+import { PortageGuidetoPhysiotherapyModule } from './features/portage-guideto-physiotherapy/portage-guideto-physiotherapy.module';
 
 
 @Module({
@@ -99,6 +100,7 @@ import { ChecklistDenverModule } from './features/checklist-denver/checklist-den
     SpeechLanguagePathologyEvaluationForDysphagiaModule,
     IncomeAssessmentModule,
     ChecklistDenverModule,
+    PortageGuidetoPhysiotherapyModule,
   ],
   controllers: [AppController],
   providers: [AppService],
