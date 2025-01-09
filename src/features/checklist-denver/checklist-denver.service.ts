@@ -1,26 +1,52 @@
-import { Injectable } from '@nestjs/common';
+import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { CreateChecklistDenverDto } from './dto/create-checklist-denver.dto';
 import { UpdateChecklistDenverDto } from './dto/update-checklist-denver.dto';
+import { ChecklistDenverRepository } from './checklist-denver.repository';
+import { IChecklistDenverEntity } from 'src/entities/checklist-denver.entity';
+
 
 @Injectable()
 export class ChecklistDenverService {
-  create(createChecklistDenverDto: CreateChecklistDenverDto) {
-    return 'This action adds a new checklistDenver';
+  constructor(
+    private readonly denverRepository: ChecklistDenverRepository
+  ){}
+  async create(createChecklistDenverDto: CreateChecklistDenverDto): Promise<IChecklistDenverEntity> {
+    try{
+      return await this.denverRepository.create(createChecklistDenverDto);
+    } catch(error){
+      throw new HttpException(error, HttpStatus.BAD_REQUEST);
+    }
   }
 
-  findAll() {
-    return `This action returns all checklistDenver`;
+  async findAll(): Promise<IChecklistDenverEntity[]> {
+    try{
+      return await this.denverRepository.findAll();
+    } catch(error){
+      throw new HttpException(error, HttpStatus.BAD_REQUEST);
+    }
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} checklistDenver`;
+  async findOne(id: string): Promise<IChecklistDenverEntity> {
+    try{
+      return await this.denverRepository.findOne(id);
+    } catch(error){
+      throw new HttpException(error, HttpStatus.BAD_REQUEST);
+    }
   }
 
-  update(id: number, updateChecklistDenverDto: UpdateChecklistDenverDto) {
-    return `This action updates a #${id} checklistDenver`;
+  async update(id: string, updateChecklistDenverDto: UpdateChecklistDenverDto): Promise<IChecklistDenverEntity> {
+    try{
+      return await this.denverRepository.update(id, updateChecklistDenverDto);
+    } catch(error){
+      throw new HttpException(error, HttpStatus.BAD_REQUEST);
+    }
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} checklistDenver`;
+  async delete(id: string) {
+    try{
+      return await this.denverRepository.delete(id);
+    } catch(error){
+      throw new HttpException(error, HttpStatus.BAD_REQUEST);
+    }
   }
 }

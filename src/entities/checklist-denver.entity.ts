@@ -11,4 +11,4 @@ export const ChecklistDenverSchema = new Schema ({
 
 }, { timestamps: true})
 
-export interface IChecklistDenverDocument extends Omit<IChecklistDenver, '_id'>, Document {}
+export interface IChecklistDenverEntity extends Omit<IChecklistDenver, '_id'>, Document {}
