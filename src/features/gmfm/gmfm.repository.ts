@@ -8,7 +8,7 @@ import { UpdateGmfmDto } from "./dto/update-gmfm.dto";
 @Injectable()
 export class GmfmRepository {
   constructor(
-    @InjectModel('Afl') private readonly gmfmModel: Model<IGmfmEntity>
+    @InjectModel('Gmfm') private readonly gmfmModel: Model<IGmfmEntity>
   ) {}
 
   async create(data: CreateGmfmDto): Promise<IGmfmEntity> {

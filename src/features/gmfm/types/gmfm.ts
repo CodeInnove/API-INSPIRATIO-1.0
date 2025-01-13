@@ -1,4 +1,6 @@
 export interface ICreateGmfm{
+    patient: string;
+    doctor: string;
     lieDownAndRollOver: LieDownAndRollOver
     toSit: ToSit
     crawlAndKneel: CrawlAndKneel

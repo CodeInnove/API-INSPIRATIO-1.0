@@ -1,26 +1,52 @@
-import { Injectable } from '@nestjs/common';
+import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { CreateGmfmDto } from './dto/create-gmfm.dto';
 import { UpdateGmfmDto } from './dto/update-gmfm.dto';
+import { IGmfmEntity } from 'src/entities/gmfm.entity';
+import { GmfmRepository } from './gmfm.repository';
 
 @Injectable()
 export class GmfmService {
-  create(createGmfmDto: CreateGmfmDto) {
-    return 'This action adds a new gmfm';
+  constructor(
+    private readonly gmfmRepository: GmfmRepository
+  ) {}
+
+  async create(gmfm: CreateGmfmDto): Promise<IGmfmEntity> {
+    try {
+      return await this.gmfmRepository.create(gmfm);
+    } catch (error) {
+      throw new HttpException(error, HttpStatus.BAD_REQUEST);
+    }
   }
 
-  findAll() {
-    return `This action returns all gmfm`;
+  async findAll(): Promise<IGmfmEntity[]> {
+    try {
+      return await this.gmfmRepository.findAll();
+    } catch (error) {
+      throw new HttpException(error, HttpStatus.BAD_REQUEST);
+    }
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} gmfm`;
+  async findOne(id: string): Promise<IGmfmEntity> {
+    try {
+      return await this.gmfmRepository.findOne(id);
+    } catch (error) {
+      throw new HttpException(error, HttpStatus.BAD_REQUEST);
+    }
   }
 
-  update(id: number, updateGmfmDto: UpdateGmfmDto) {
-    return `This action updates a #${id} gmfm`;
+  async update(id: string, gmfm: UpdateGmfmDto): Promise<IGmfmEntity> {
+    try {
+      return await this.gmfmRepository.update(id, gmfm);
+    } catch (error) {
+      throw new HttpException(error, HttpStatus.BAD_REQUEST);
+    }
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} gmfm`;
+  async delete(id: string): Promise<IGmfmEntity> {
+    try {
+      return await this.gmfmRepository.delete(id);
+    } catch (error) {
+      throw new HttpException(error, HttpStatus.BAD_REQUEST);
+    }
   }
 }

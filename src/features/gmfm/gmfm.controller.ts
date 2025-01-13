@@ -1,34 +1,37 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, Put } from '@nestjs/common';
 import { GmfmService } from './gmfm.service';
 import { CreateGmfmDto } from './dto/create-gmfm.dto';
 import { UpdateGmfmDto } from './dto/update-gmfm.dto';
+import { IGmfmEntity } from 'src/entities/gmfm.entity';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('GMFM')
 @Controller('gmfm')
 export class GmfmController {
   constructor(private readonly gmfmService: GmfmService) {}
 
   @Post()
-  create(@Body() createGmfmDto: CreateGmfmDto) {
-    return this.gmfmService.create(createGmfmDto);
+  async create(@Body() data: CreateGmfmDto) {
+    return await this.gmfmService.create(data);
   }
 
   @Get()
-  findAll() {
-    return this.gmfmService.findAll();
+  async findAll(): Promise<IGmfmEntity[]> {
+    return await this.gmfmService.findAll();
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.gmfmService.findOne(+id);
+  async findOne(@Param('id') id: string): Promise<IGmfmEntity> {
+    return await this.gmfmService.findOne(id);
   }
 
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateGmfmDto: UpdateGmfmDto) {
-    return this.gmfmService.update(+id, updateGmfmDto);
+  @Put(':id')
+  async update(@Param('id') id: string, @Body() updateGmfmDto: UpdateGmfmDto) {
+    return this.gmfmService.update(id, updateGmfmDto);
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.gmfmService.remove(+id);
+  delete(@Param('id') id: string) {
+    return this.gmfmService.delete(id);
   }
 }
