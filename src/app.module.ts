@@ -32,6 +32,7 @@ import { ChecklistDenverModule } from './features/checklist-denver/checklist-den
 import { PortageGuidetoPhysiotherapyModule } from './features/portage-guideto-physiotherapy/portage-guideto-physiotherapy.module';
 import { AmiofeModule } from './features/amiofe/amiofe.module';
 import { GmfmModule } from './features/gmfm/gmfm.module';
+import { PerformanceAssessmentModule } from './features/performance-assessment/performance-assessment.module';
 
 
 @Module({
@@ -105,6 +106,7 @@ import { GmfmModule } from './features/gmfm/gmfm.module';
     PortageGuidetoPhysiotherapyModule,
     AmiofeModule,
     GmfmModule,
+    PerformanceAssessmentModule,
   ],
   controllers: [AppController],
   providers: [AppService],
