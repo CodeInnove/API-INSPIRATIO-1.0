@@ -30,6 +30,8 @@ import { SpeechLanguagePathologyEvaluationForDysphagiaModule } from './features/
 import { IncomeAssessmentModule } from './features/income-assessment/incomeAssessment.module';
 import { ChecklistDenverModule } from './features/checklist-denver/checklist-denver.module';
 import { PortageGuidetoPhysiotherapyModule } from './features/portage-guideto-physiotherapy/portage-guideto-physiotherapy.module';
+import { AmiofeModule } from './features/amiofe/amiofe.module';
+import { GmfmModule } from './features/gmfm/gmfm.module';
 
 
 @Module({
@@ -101,6 +103,8 @@ import { PortageGuidetoPhysiotherapyModule } from './features/portage-guideto-ph
     IncomeAssessmentModule,
     ChecklistDenverModule,
     PortageGuidetoPhysiotherapyModule,
+    AmiofeModule,
+    GmfmModule,
   ],
   controllers: [AppController],
   providers: [AppService],
