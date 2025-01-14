@@ -1,16 +1,15 @@
 import { Schema, Document } from 'mongoose';
 import { AnamnesisForCerebralPalsy } from 'src/features/anamnesis-for-cerebral-palsy/types/anamneseForCerebralPalsy';
- 
 
 export const AnamneseCerebralSchema = new Schema({
   _id: { type: Schema.Types.ObjectId, required: true, auto: true },
   patient: { type: Schema.Types.ObjectId, required: true, ref: 'patient' },
   doctor: { type: Schema.Types.ObjectId, required: true, ref: 'doctor' },
-  age: { type: Schema.Types.ObjectId, required: true, ref: 'patient'},
-  bitrhDate: { type: Schema.Types.ObjectId, required: true, ref: 'patient'},
-  date: { type: Date, required: true, },
-  
-  gestationalHistory:{
+  age: { type: Schema.Types.ObjectId, required: true, ref: 'patient' },
+  bitrhDate: { type: Schema.Types.ObjectId, required: true, ref: 'patient' },
+  date: { type: Date, required: true },
+
+  gestationalHistory: {
     relevantEvents: { type: String },
     useOfMedications: { type: String },
     generalHealth: { type: String },
@@ -41,7 +40,9 @@ export const AnamneseCerebralSchema = new Schema({
     walkingInitial: { type: String },
     walkingCurrently: { type: String },
     coordinationOfMovementsInGrossAndFineMotorActivities: { type: String },
-    conditionsOfSelfStimulationAndExplorationOfTheEnvironmentAndObjects: { type: String },
+    conditionsOfSelfStimulationAndExplorationOfTheEnvironmentAndObjects: {
+      type: String,
+    },
   },
   foods: {
     headControlPrevious: { type: String },
@@ -151,8 +152,10 @@ export const AnamneseCerebralSchema = new Schema({
     chainingAndSequentialThinking: { type: String },
     linguisticMarkers: { type: String },
     generalPsychologicalState: { type: String },
-          getsIrritatedWithGaseousLiquids: { type: String },
-      }
+    getsIrritatedWithGaseousLiquids: { type: String },
+  },
 });
 
-export interface IAnamneseCerebralEntity extends Omit<AnamnesisForCerebralPalsy, '_id'>, Document {}
+export interface IAnamneseCerebralEntity
+  extends Omit<AnamnesisForCerebralPalsy, '_id'>,
+    Document {}
