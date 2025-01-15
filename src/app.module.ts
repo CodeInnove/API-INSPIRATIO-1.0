@@ -33,6 +33,7 @@ import { PortageGuidetoPhysiotherapyModule } from './features/portage-guideto-ph
 import { AmiofeModule } from './features/amiofe/amiofe.module';
 import { GmfmModule } from './features/gmfm/gmfm.module';
 import { PerformanceAssessmentModule } from './features/performance-assessment/performance-assessment.module';
+import { VbmappPeiModule } from './features/vbmapp-pei/vbmapp-pei.module';
 
 
 @Module({
@@ -107,6 +108,7 @@ import { PerformanceAssessmentModule } from './features/performance-assessment/p
     AmiofeModule,
     GmfmModule,
     PerformanceAssessmentModule,
+    VbmappPeiModule,
   ],
   controllers: [AppController],
   providers: [AppService],
