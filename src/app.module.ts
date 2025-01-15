@@ -34,6 +34,7 @@ import { AmiofeModule } from './features/amiofe/amiofe.module';
 import { GmfmModule } from './features/gmfm/gmfm.module';
 import { PerformanceAssessmentModule } from './features/performance-assessment/performance-assessment.module';
 import { VbmappPeiModule } from './features/vbmapp-pei/vbmapp-pei.module';
+import { PediatricNeurologicalEvaluationModule } from './features/pediatric-neurological-evaluation/pediatric-neurological-evaluation.module';
 
 
 @Module({
@@ -109,6 +110,7 @@ import { VbmappPeiModule } from './features/vbmapp-pei/vbmapp-pei.module';
     GmfmModule,
     PerformanceAssessmentModule,
     VbmappPeiModule,
+    PediatricNeurologicalEvaluationModule,
   ],
   controllers: [AppController],
   providers: [AppService],
