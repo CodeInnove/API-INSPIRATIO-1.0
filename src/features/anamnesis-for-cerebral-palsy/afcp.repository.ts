@@ -5,7 +5,7 @@ import { IAnamneseCerebralEntity } from 'src/entities/anamnesis-for-cerebral-pal
 import { CreateAfcpDto } from './dto/create-anamnesis-for-cerebral-palsy.dto';
 import { UpdateAfcpDto } from './dto/update-anamnesis-for-cerebral-palsy.dto';
 import { QueryAfcpDto } from './dto/query-anamnesis-for-cerebral-palsy.dto';
-import { AnamnesisForCerebralPalsy } from './types/anamneseForCerebralPalsy';
+import { IAnamnesisForCerebralPalsy } from './types/anamneseForCerebralPalsy';
 
 @Injectable()
 export class AfcpRepository {
@@ -50,18 +50,18 @@ export class AfcpRepository {
     return { data, total };
   }
 
-  async findByToken(token: string): Promise<AnamnesisForCerebralPalsy> {
+  async findByToken(token: string): Promise<IAnamnesisForCerebralPalsy> {
     return this.afcpModel.findOne({ passwordResetToken: token }).lean().exec();
   }
 
-  async findById(id: string): Promise<AnamnesisForCerebralPalsy> {
+  async findById(id: string): Promise<IAnamnesisForCerebralPalsy> {
     return this.afcpModel.findById(id);
   }
 
   async update(
     id: string,
     data: UpdateAfcpDto,
-  ): Promise<AnamnesisForCerebralPalsy> {
+  ): Promise<IAnamnesisForCerebralPalsy> {
     return this.afcpModel
       .findOneAndUpdate({ _id: id }, data, { new: true })
       .populate('consultation')
@@ -69,7 +69,7 @@ export class AfcpRepository {
       .exec();
   }
 
-  async delete(id: string): Promise<AnamnesisForCerebralPalsy> {
+  async delete(id: string): Promise<IAnamnesisForCerebralPalsy> {
     return this.afcpModel.findByIdAndDelete(id).exec();
   }
 }
