@@ -1,14 +1,4 @@
-export class ISensoryProcessingMeasurePreschool {
-    nameParentOrId: string;
-    relationshipWithChild: string;
-    date: Date;
-    nameOrId: string;
-    gender: 'M' | 'F';
-    ageYears: number;
-    ageMonths: number;
-    ethnicity: Ethnicity;
-    behaviorComments: string;
-  }
+
 
   export enum Ethnicity {
     AMERICAN_INDIAN_ALASKA_NATIVE = 'American Indian/Alaska Native',
@@ -22,108 +12,108 @@ export class ISensoryProcessingMeasurePreschool {
 
 export class ISocialParticipationPreSchool {
   
-    playsWithFriends: boolean;
-    sharesThings: boolean;
-    participatesInGroupGames: boolean;
-    participatesAtMeals: boolean;
-    participatesInFamilyOutings: boolean;
-    participatesInFamilyMeetings: boolean;
-    participatesWithFriends: boolean;
-    helpsWithFamilyActivities: boolean;
+    playsWithFriends: string;
+    sharesThings: string;
+    participatesInGroupGames: string;
+    participatesAtMeals: string;
+    participatesInFamilyOutings: string;
+    participatesInFamilyMeetings: string;
+    participatesWithFriends: string;
+    helpsWithFamilyActivities: string;
   }
   
   export class IVisionPreSchool {
     
-    botheredByBrightLights: boolean;
-    difficultyFindingObjects: boolean;
-    difficultyRecognizingObjects: boolean;
-    likesWatchingMovingObjects: boolean;
-    walksThroughObjects: boolean;
-    likesSwitchingLights: boolean;
-    likesLookingAtMovingObjects: boolean;
-    difficultyPayingAttention: boolean;
-    botheredByVisualStimuli: boolean;
-    distractedWhileWalking: boolean;
-    difficultyCompletingTasks: boolean;
+    botheredByBrightLights: string;
+    difficultyFindingObjects: string;
+    difficultyRecognizingObjects: string;
+    likesWatchingMovingObjects: string;
+    walksThroughObjects: string;
+    likesSwitchingLights: string;
+    likesLookingAtMovingObjects: string;
+    difficultyPayingAttention: string;
+    botheredByVisualStimuli: string;
+    distractedWhileWalking: string;
+    difficultyCompletingTasks: string;
   }
   
   export class IHearingPreSchool {
     
-    botheredByNormalSounds: boolean;
-    reactsNegativelyToLoudNoises: boolean;
-    seemsNotToHear: boolean;
-    overlySensitiveToSounds: boolean;
-    easilyDistractedByNoises: boolean;
-    likesMakingCertainSounds: boolean;
-    distressedBySharpNoises: boolean;
-    distressedInLoudPlaces: boolean;
-    startledByLoudSounds: boolean;
+    botheredByNormalSounds: string;
+    reactsNegativelyToLoudNoises: string;
+    seemsNotToHear: string;
+    overlySensitiveToSounds: string;
+    easilyDistractedByNoises: string;
+    likesMakingCertainSounds: string;
+    distressedBySharpNoises: string;
+    distressedInLoudPlaces: string;
+    startledByLoudSounds: string;
   }
   
   export class ITouchPreSchool {
     
-    avoidsBeingTouched: boolean;
-    prefersTouchingOthers: boolean;
-    distressedByNailCutting: boolean;
-    botheredByFaceTouch: boolean;
-    avoidsMessyActivities: boolean;
-    highPainTolerance: boolean;
-    dislikesBrushingTeeth: boolean;
-    enjoysPainfulSensations: boolean;
-    dislikesHairCare: boolean;
-    dislikesHaircuts: boolean;
-    avoidsCertainTextures: boolean;
-    vomitsDueToTextures: boolean;
-    dislikesFaceCleaning: boolean;
-    droolsExcessively: boolean;
+    avoidsBeingTouched: string;
+    prefersTouchingOthers: string;
+    distressedByNailCutting: string;
+    botheredByFaceTouch: string;
+    avoidsMessyActivities: string;
+    highPainTolerance: string;
+    dislikesBrushingTeeth: string;
+    enjoysPainfulSensations: string;
+    dislikesHairCare: string;
+    dislikesHaircuts: string;
+    avoidsCertainTextures: string;
+    vomitsDueToTextures: string;
+    dislikesFaceCleaning: string;
+    droolsExcessively: string;
   }
   
   export class ISmellAndTastePreSchool {
     
-    eatsNonFoodItems: boolean;
-    ignoresStrongOdors: boolean;
-    prefersCertainFlavors: boolean;
-    refusesToothpaste: boolean;
+    eatsNonFoodItems: string;
+    ignoresStrongOdors: string;
+    prefersCertainFlavors: string;
+    refusesToothpaste: string;
   }
   
   export class IBodyAwarenessPreSchool {
     
-    holdsObjectsTooTightly: boolean;
-    seeksPushPullActivities: boolean;
-    insecureDuringMovement: boolean;
-    holdsObjectsTooLoosely: boolean;
-    excessivePressure: boolean;
-    jumpsExcessively: boolean;
-    roughWithAnimals: boolean;
-    pushesOthers: boolean;
-    chewsObjects: boolean;
+    holdsObjectsTooTightly: string;
+    seeksPushPullActivities: string;
+    insecureDuringMovement: string;
+    holdsObjectsTooLoosely: string;
+    excessivePressure: string;
+    jumpsExcessively: string;
+    roughWithAnimals: string;
+    pushesOthers: string;
+    chewsObjects: string;
   }
   
   export class IBalanceAndMovementPreSchool {
     
-    overlyAfraidOfMovement: boolean;
-    avoidsBalanceActivities: boolean;
-    fallsFromChair: boolean;
-    failsToCatchSelfWhenFalling: boolean;
-    doesntGetDizzy: boolean;
-    spinsExcessively: boolean;
-    distressedByHeadTilting: boolean;
-    poorCoordination: boolean;
-    needsSupportToRise: boolean;
-    rocksBody: boolean;
-    afraidOfStairs: boolean;
+    overlyAfraidOfMovement: string;
+    avoidsBalanceActivities: string;
+    fallsFromChair: string;
+    failsToCatchSelfWhenFalling: string;
+    doesntGetDizzy: string;
+    spinsExcessively: string;
+    distressedByHeadTilting: string;
+    poorCoordination: string;
+    needsSupportToRise: string;
+    rocksBody: string;
+    afraidOfStairs: string;
   }
   
   export class IPlanningAndIdeationPreSchool {
     
-    difficultyCarryingMultipleItems: boolean;
-    difficultyOrganizingItems: boolean;
-    confusedByRoutineSteps: boolean;
-    difficultyCompletingMultiStepTasks: boolean;
-    troubleImitatingActions: boolean;
-    cantCopyOthers: boolean;
-    difficultyWithNewIdeas: boolean;
-    repetitiveInPlay: boolean;
-    troubleExitingCarSeat: boolean;
+    difficultyCarryingMultipleItems: string;
+    difficultyOrganizingItems: string;
+    confusedByRoutineSteps: string;
+    difficultyCompletingMultiStepTasks: string;
+    troubleImitatingActions: string;
+    cantCopyOthers: string;
+    difficultyWithNewIdeas: string;
+    repetitiveInPlay: string;
+    troubleExitingCarSeat: string;
   }
   
