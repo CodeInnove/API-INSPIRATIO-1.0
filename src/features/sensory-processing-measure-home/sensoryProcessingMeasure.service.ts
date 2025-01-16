@@ -1,26 +1,53 @@
-import { Injectable } from '@nestjs/common';
+import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { CreateSensoryProcessingMeasureDto } from './dto/createSensoryProcessingMeasure.dto';
 import { UpdateSensoryProcessingMeasureDto } from './dto/updateSensoryProcessingMeasure.dto';
+import { SpmHomeRepository } from './sensoryProcessingMeasure.repository';
+import { ISensoryProcessingMeasureEntity } from 'src/entities/sensoryProcessingMeasureHome.entity';
 
 @Injectable()
 export class SensoryProcessingMeasureService {
-  create(createSensoryProcessingMeasureDto: CreateSensoryProcessingMeasureDto) {
-    return 'This action adds a new sensoryProcessingMeasure';
+  constructor(
+    private readonly spmHomeRepository: SpmHomeRepository
+  ) {}
+
+  async createSpm(data: CreateSensoryProcessingMeasureDto): Promise<ISensoryProcessingMeasureEntity> {
+    try {
+      return await this.spmHomeRepository.create(data);
+    } catch (error) {
+      throw new HttpException(error, HttpStatus.BAD_REQUEST);
+    }
   }
 
-  findAll() {
-    return `This action returns all sensoryProcessingMeasure`;
+  async findAllSpm(): Promise<ISensoryProcessingMeasureEntity[]> {
+    try {
+      return await this.spmHomeRepository.findAll();
+    } catch (error) {
+      throw new HttpException(error, HttpStatus.BAD_REQUEST);
+    }
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} sensoryProcessingMeasure`;
+  async findOneSpm(id: string): Promise<ISensoryProcessingMeasureEntity> {
+    try {
+      return await this.spmHomeRepository.findOne(id);
+    } catch (error) {
+      throw new HttpException(error, HttpStatus.BAD_REQUEST);
+    }
   }
 
-  update(id: number, updateSensoryProcessingMeasureDto: UpdateSensoryProcessingMeasureDto) {
-    return `This action updates a #${id} sensoryProcessingMeasure`;
+  async updateSpm(id: string, update: UpdateSensoryProcessingMeasureDto): Promise<ISensoryProcessingMeasureEntity> {
+    try {
+      return await this.spmHomeRepository.update(id, update);
+    } catch (error) {
+      throw new HttpException(error, HttpStatus.BAD_REQUEST);
+    }
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} sensoryProcessingMeasure`;
+  async deleteSpm(id: string): Promise<ISensoryProcessingMeasureEntity> {
+    try {
+      return await this.spmHomeRepository.delete(id);
+    } catch (error) {
+      throw new HttpException(error, HttpStatus.BAD_REQUEST);
+    }
   }
 }
+

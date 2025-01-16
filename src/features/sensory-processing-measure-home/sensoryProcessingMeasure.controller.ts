@@ -1,34 +1,36 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, Put } from '@nestjs/common';
 import { SensoryProcessingMeasureService } from './sensoryProcessingMeasure.service';
 import { CreateSensoryProcessingMeasureDto } from './dto/createSensoryProcessingMeasure.dto';
 import { UpdateSensoryProcessingMeasureDto } from './dto/updateSensoryProcessingMeasure.dto';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Home SPM')
 @Controller('sensory-processing-measure')
 export class SensoryProcessingMeasureController {
   constructor(private readonly sensoryProcessingMeasureService: SensoryProcessingMeasureService) {}
 
   @Post()
-  create(@Body() createSensoryProcessingMeasureDto: CreateSensoryProcessingMeasureDto) {
-    return this.sensoryProcessingMeasureService.create(createSensoryProcessingMeasureDto);
+  async createSpm(@Body() createSensoryProcessingMeasureDto: CreateSensoryProcessingMeasureDto) {
+    return await this.sensoryProcessingMeasureService.createSpm(createSensoryProcessingMeasureDto);
   }
 
   @Get()
-  findAll() {
-    return this.sensoryProcessingMeasureService.findAll();
+  async findAllSpm() {
+    return await this.sensoryProcessingMeasureService.findAllSpm();
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.sensoryProcessingMeasureService.findOne(+id);
+  async findOneSpm(@Param('id') id: string) {
+    return await this.sensoryProcessingMeasureService.findOneSpm(id);
   }
 
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateSensoryProcessingMeasureDto: UpdateSensoryProcessingMeasureDto) {
-    return this.sensoryProcessingMeasureService.update(+id, updateSensoryProcessingMeasureDto);
+  @Put(':id')
+  async updateSpm(@Param('id') id: string, @Body() updateSensoryProcessingMeasureDto: UpdateSensoryProcessingMeasureDto) {
+    return await this.sensoryProcessingMeasureService.updateSpm(id, updateSensoryProcessingMeasureDto);
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.sensoryProcessingMeasureService.remove(+id);
+  async deleteSpm(@Param('id') id: string) {
+    return await this.sensoryProcessingMeasureService.deleteSpm(id);
   }
 }
