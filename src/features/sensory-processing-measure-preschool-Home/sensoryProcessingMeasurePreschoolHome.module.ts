@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
-import { SensoryProcessingMeasurePreschoolService } from './sensoryProcessingMeasurePreschool.service';
-import { SensoryProcessingMeasurePreschoolController } from './sensoryProcessingMeasurePreschool.controller';
+import { SensoryProcessingMeasurePreschoolService } from './sensoryProcessingMeasurePreschoolHome.service';
+import { SensoryProcessingMeasurePreschoolController } from './sensoryProcessingMeasurePreschoolHome.controller';
 
 @Module({
   controllers: [SensoryProcessingMeasurePreschoolController],

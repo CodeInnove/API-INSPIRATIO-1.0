@@ -1,5 +1,5 @@
 import { Schema, Document } from 'mongoose';
-import { ISpm } from 'src/features/sensory-processing-measure/types/spm';
+import { ISpm } from 'src/features/sensory-processing-measure-home/types/spm';
 
 export const SensoryProcessingMeasureSchema = new Schema({
   _id: { type: Schema.Types.ObjectId, required: true, auto: true },
