@@ -38,4 +38,4 @@ export const IncomeAssessmentSchema = new Schema({
   evaluatorsSignaturePshyco: { type: Schema.Types.Mixed, required: true },
 });
 
-export interface ISensoryProcessingMeasureSchoolPreSchoolEntity extends Omit<IIaPsychoPedagogical, '_id'>, Document {}
+export interface IIncomeAssessmentEntity extends Omit<IIaPsychoPedagogical, '_id'>, Document {}

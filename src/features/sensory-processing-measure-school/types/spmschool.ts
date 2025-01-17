@@ -1,4 +1,4 @@
-import { ISensoryProcessingMeasureSchool } from "src/features/sensory-processing-measure-school/types/sensoryProcessingMeasureSchool"
+
 import { IParticipationSocialSchool } from "src/features/sensory-processing-measure-school/types/sensoryProcessingMeasureSchool"
 import { IVisionSchool } from "src/features/sensory-processing-measure-school/types/sensoryProcessingMeasureSchool"
 import { IHearingSchool } from "src/features/sensory-processing-measure-school/types/sensoryProcessingMeasureSchool"
@@ -9,7 +9,15 @@ import { IBalanceAndMovementSchool } from "src/features/sensory-processing-measu
 import { IPlanningAndIdeationSchool } from "src/features/sensory-processing-measure-school/types/sensoryProcessingMeasureSchool"
 
 export interface ISpmSchool{
-    identificationSpmSchool: ISensoryProcessingMeasureSchool;
+    doctor: string;
+    responsable: string;
+    relationshipWithChild: string;
+    patient: string;
+    gender: string;
+    age: string;
+    bitrhDate: string;
+    ethnicity: string;
+    date: string;
     participationSocialSchool: IParticipationSocialSchool;
     visionSchool: IVisionSchool;
     hearingSchool: IHearingSchool;

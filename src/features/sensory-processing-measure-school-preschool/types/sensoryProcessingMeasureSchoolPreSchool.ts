@@ -1,121 +1,108 @@
-export class ISensoryProcessingMeasureSchoolPreSchool {
-
-    nameParentOrId: string;
-    relationshipWithChild: string;
-    date: Date;
-    nameOrId: string;
-    gender: 'M' | 'F';
-    ageYears: number;
-    ageMonths: number;
-    ethnicity: Ethnicity;
-    behaviorComments: string;
+export enum Ethnicity {
+  AMERICAN_INDIAN_ALASKA_NATIVE = 'American Indian/Alaska Native',
+  ASIAN = 'Asian',
+  BLACK_AFRICAN_AMERICAN = 'Black/African American',
+  HISPANIC_LATINO = 'Hispanic/Latino',
+  NATIVE_HAWAIIAN_PACIFIC_ISLANDER = 'Native Hawaiian/Pacific Islander',
+  WHITE = 'White',
+  OTHER = 'Other',
+}
+  
+  export interface IParticipationSocialSchoolPreSchool {
+    participatesInGamesAndActivitiesSchoolPreSchool: string;
+    waitsForTurnSchoolPreSchool: string;
+    participatesInCircleTimeSchoolPreSchool: string;
+    transitionsEasilyToNewActivitiesSchoolPreSchool: string;
+    joinsGamesWithoutInterruptingSchoolPreSchool: string;
+    followsClassRulesAndRoutinesSchoolPreSchool: string;
+    sharesToysAndMaterialsSchoolPreSchool: string;
+    cooperatesWithPeersForCommonGoalsSchoolPreSchool: string;
+    interactsWithPeersDuringPlaySchoolPreSchool: string;
+    resolvesConflictsWithPeersIndependentlySchoolPreSchool: string;
   }
   
-  export enum Ethnicity {
-    AMERICAN_INDIAN_ALASKA_NATIVE = 'American Indian/Alaska Native',
-    ASIAN = 'Asian',
-    BLACK_AFRICAN_AMERICAN = 'Black/African American',
-    HISPANIC_LATINO = 'Hispanic/Latino',
-    NATIVE_HAWAIIAN_PACIFIC_ISLANDER = 'Native Hawaiian/Pacific Islander',
-    WHITE = 'White',
-    OTHER = 'Other',
+  export interface IVisionSchoolPreSchool {
+    coversEyesOrComplainsAboutLightingSchoolPreSchool: string;
+    distractedByVisualStimuliSchoolPreSchool: string;
+    difficultyLocatingObjectsSchoolPreSchool: string;
+    difficultyFindingItemsOnDeskOrTableSchoolPreSchool: string;
+    looksAroundDuringTeachersSpeechSchoolPreSchool: string;
+    difficultyPairingItemsByShapeAndColorSchoolPreSchool: string;
+    walksAmongOtherChildrenPlayingSchoolPreSchool: string;
+    staresAtPeopleOrObjectsSchoolPreSchool: string;
+    enjoysWatchingMovingObjectsSchoolPreSchool: string;
+    enjoysLookingAtMovingObjectsWithPeripheralVisionSchoolPreSchool: string;
   }
   
-  export class IParticipationSocialSpmsps {
-    participatesInGamesAndActivities: boolean;
-    waitsForTurn: boolean;
-    participatesInCircleTime: boolean;
-    transitionsEasilyToNewActivities: boolean;
-    joinsGamesWithoutInterrupting: boolean;
-    followsClassRulesAndRoutines: boolean;
-    sharesToysAndMaterials: boolean;
-    cooperatesWithPeersForCommonGoals: boolean;
-    interactsWithPeersDuringPlay: boolean;
-    resolvesConflictsWithPeersIndependently: boolean;
+  export interface IHearingSchoolPreSchool {
+    discomfortWithLoudSoundsSchoolPreSchool: string;
+    discomfortWithSingingOrMusicSchoolPreSchool: string;
+    unawareOfNewVoicesAndSoundsSchoolPreSchool: string;
+    unableToIdentifySoundSourceSchoolPreSchool: string;
+    makesRepetitiveSoundsSchoolPreSchool: string;
+    enjoysRepetitiveNoisesSchoolPreSchool: string;
+    unawareOfCertainSoundsSchoolPreSchool: string;
+    difficultyFocusingInNoisyEnvironmentsSchoolPreSchool: string;
+    unableToFollowVerbalInstructionsSchoolPreSchool: string;
+    disturbedByBackgroundNoiseSchoolPreSchool: string;
   }
   
-  export class IVisionSpmsps {
-    coversEyesOrComplainsAboutLighting: boolean;
-    distractedByVisualStimuli: boolean;
-    difficultyLocatingObjects: boolean;
-    difficultyFindingItemsOnDeskOrTable: boolean;
-    looksAroundDuringTeachersSpeech: boolean;
-    difficultyPairingItemsByShapeAndColor: boolean;
-    walksAmongOtherChildrenPlaying: boolean;
-    staresAtPeopleOrObjects: boolean;
-    enjoysWatchingMovingObjects: boolean;
-    enjoysLookingAtMovingObjectsWithPeripheralVision: boolean;
+  export interface ITouchSchoolPreSchool {
+    avoidsBeingTouchedSchoolPreSchool: string;
+    discomfortWithDirtyHandsOrFaceSchoolPreSchool: string;
+    discomfortWithWashingHandsSchoolPreSchool: string;
+    reactsNegativelyToAccidentalTouchSchoolPreSchool: string;
+    doesNotWipeFaceAfterEatingSchoolPreSchool: string;
+    distressedByCertainTexturesSchoolPreSchool: string;
+    refusesToWearCostumesOrTightClothesSchoolPreSchool: string;
+    hasHighPainToleranceSchoolPreSchool: string;
+    ignoresNeedToUseBathroomSchoolPreSchool: string;
+    avoidsMessyActivitiesSchoolPreSchool: string;
   }
   
-  export class IHearingSpmsps {
-    discomfortWithLoudSounds: boolean;
-    discomfortWithSingingOrMusic: boolean;
-    unawareOfNewVoicesAndSounds: boolean;
-    unableToIdentifySoundSource: boolean;
-    makesRepetitiveSounds: boolean;
-    enjoysRepetitiveNoises: boolean;
-    unawareOfCertainSounds: boolean;
-    difficultyFocusingInNoisyEnvironments: boolean;
-    unableToFollowVerbalInstructions: boolean;
-    disturbedByBackgroundNoise: boolean;
+  export interface ISmellAndTasteSchoolPreSchool {
+    chewsNonFoodItemsSchoolPreSchool: string;
+    doesNotNoticeStrongOrUnusualOdorsSchoolPreSchool: string;
+    discomfortWithCertainScentsSchoolPreSchool: string;
+    refusesToTryNewFoodsSchoolPreSchool: string;
   }
   
-  export class ITouchSpmsps {
-    avoidsBeingTouched: boolean;
-    discomfortWithDirtyHandsOrFace: boolean;
-    discomfortWithWashingHands: boolean;
-    reactsNegativelyToAccidentalTouch: boolean;
-    doesNotWipeFaceAfterEating: boolean;
-    distressedByCertainTextures: boolean;
-    refusesToWearCostumesOrTightClothes: boolean;
-    hasHighPainTolerance: boolean;
-    ignoresNeedToUseBathroom: boolean;
-    avoidsMessyActivities: boolean;
+  export interface IBodyAwarenessSchoolPreSchool {
+    enjoysMovingFurnitureSchoolPreSchool: string;
+    breaksObjectsFromExcessiveForceSchoolPreSchool: string;
+    excessivelyJumpsOrClimbsSchoolPreSchool: string;
+    opensOrClosesDoorsWithExcessiveForceSchoolPreSchool: string;
+    usesExcessiveForceWhenPlayingWithObjectsSchoolPreSchool: string;
+    bumpsIntoPeersExcessivelySchoolPreSchool: string;
+    chewsOnNonFoodItemsSchoolPreSchool: string;
+    strugglesToManipulateFoodContainersSchoolPreSchool: string;
+    knocksOverOthersToysSchoolPreSchool: string;
+    squeezesScissorsExcessivelySchoolPreSchool: string;
   }
   
-  export class ISmellAndTasteSpmsps {
-    chewsNonFoodItems: boolean;
-    doesNotNoticeStrongOrUnusualOdors: boolean;
-    discomfortWithCertainScents: boolean;
-    refusesToTryNewFoods: boolean;
+  export interface IBalanceAndMovementSchoolPreSchool {
+    enjoysSpinningInRotatingEquipmentSchoolPreSchool: string;
+    needsSupportWhenStandingSchoolPreSchool: string;
+    fallsFromChairOrTendsToLeanSchoolPreSchool: string;
+    fearfulOfMovementActivitiesSchoolPreSchool: string;
+    excessivelyEnthusiasticAboutSpinningSchoolPreSchool: string;
+    clumsyWhenBendingToPickUpObjectsSchoolPreSchool: string;
+    strugglesToBalanceAndAvoidFallingSchoolPreSchool: string;
+    discomfortWithHeightsSchoolPreSchool: string;
+    poorCoordinationSchoolPreSchool: string;
+    difficultyWithRhythmicBodyMovementsSchoolPreSchool: string;
   }
   
-  export class IBodyAwarenessSpmsps {
-    enjoysMovingFurniture: boolean;
-    breaksObjectsFromExcessiveForce: boolean;
-    excessivelyJumpsOrClimbs: boolean;
-    opensOrClosesDoorsWithExcessiveForce: boolean;
-    usesExcessiveForceWhenPlayingWithObjects: boolean;
-    bumpsIntoPeersExcessively: boolean;
-    chewsOnNonFoodItems: boolean;
-    strugglesToManipulateFoodContainers: boolean;
-    knocksOverOthersToys: boolean;
-    squeezesScissorsExcessively: boolean;
-  }
-  
-  export class IBalanceAndMovementSpmsps {
-    enjoysSpinningInRotatingEquipment: boolean;
-    needsSupportWhenStanding: boolean;
-    fallsFromChairOrTendsToLean: boolean;
-    fearfulOfMovementActivities: boolean;
-    excessivelyEnthusiasticAboutSpinning: boolean;
-    clumsyWhenBendingToPickUpObjects: boolean;
-    strugglesToBalanceAndAvoidFalling: boolean;
-    discomfortWithHeights: boolean;
-    poorCoordination: boolean;
-    difficultyWithRhythmicBodyMovements: boolean;
-  }
-  
-  export class IPlanningAndIdeationSpmsps {
-    overlyFocusedOnIndividualActivities: boolean;
-    strugglesToGenerateNewIdeasInPlay: boolean;
-    repeatsActivitiesWithoutChangingThem: boolean;
-    needsRealObjectsToPlay: boolean;
-    strugglesToImitateActionsCorrectly: boolean;
-    playsWithOwnGamesAvoidingImitation: boolean;
-    strugglesToCopyAdultsOrPeersInBuildingActivities: boolean;
-    hasDifficultyUsingBothHandsForTasks: boolean;
-    cannotCompleteMultistepTasks: boolean;
-    strugglesWithRoutineSequences: boolean;
+  export interface IPlanningAndIdeationSchoolPreSchool {
+    overlyFocusedOnIndividualActivitiesSchoolPreSchool: string;
+    strugglesToGenerateNewIdeasInPlaySchoolPreSchool: string;
+    repeatsActivitiesWithoutChangingThemSchoolPreSchool: string;
+    needsRealObjectsToPlaySchoolPreSchool: string;
+    strugglesToImitateActionsCorrectlySchoolPreSchool: string;
+    playsWithOwnGamesAvoidingImitationSchoolPreSchool: string;
+    strugglesToCopyAdultsOrPeersInBuildingActivitiesSchoolPreSchool: string;
+    hasDifficultyUsingBothHandsForTasksSchoolPreSchool: string;
+    cannotCompleteMultistepTasksSchoolPreSchool: string;
+    strugglesWithRoutineSequencesSchoolPreSchool: string;
   }
   

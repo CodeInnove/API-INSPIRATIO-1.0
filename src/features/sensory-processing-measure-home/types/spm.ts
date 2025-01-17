@@ -1,4 +1,4 @@
-import { ISensoryProcessingMeasure } from "./sensoryProcessingMeasure"
+import { Ethnicity } from "./sensoryProcessingMeasure"
 import { IParticipationSocial } from "./sensoryProcessingMeasure"
 import { ISmellAndTaste } from "./sensoryProcessingMeasure"
 import { ITouch } from "./sensoryProcessingMeasure"
@@ -8,8 +8,16 @@ import { IBodyAwareness } from "./sensoryProcessingMeasure"
 import { IBalanceAndMovement } from "./sensoryProcessingMeasure"
 import { IPlanningAndIdeation } from "./sensoryProcessingMeasure"
 
-export interface ISpm{
-    sensoryProcessingMeasure: ISensoryProcessingMeasure;
+export interface ISpmHome {
+    doctor: string;
+    responsable: string;
+    relationshipWithChild: string;
+    patient: string;
+    gender: string;
+    age: number;
+    bitrhDate: string;
+    ethnicity: Ethnicity;
+    comment: string;
     participationSocial: IParticipationSocial;
     vision: IVision;
     hearing: IHearing;
