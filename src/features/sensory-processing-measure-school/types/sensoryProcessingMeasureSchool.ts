@@ -1,16 +1,4 @@
-export class ISensoryProcessingMeasureSchool {
-    
-    nameParentOrId: string;
-    relationshipWithChild: string;
-    date: Date;
-    nameOrId: string;
-    gender: 'M' | 'F';
-    ageYears: number;
-    ageMonths: number;
-    ethnicity: Ethnicity;
-    behaviorComments: string;
-  }
-  
+
   export enum Ethnicity {
     AMERICAN_INDIAN_ALASKA_NATIVE = 'American Indian/Alaska Native',
     ASIAN = 'Asian',
@@ -21,7 +9,7 @@ export class ISensoryProcessingMeasureSchool {
     OTHER = 'Other',
   }
   
-  export class IParticipationSocialSchool {
+  export interface IParticipationSocialSchool {
     knowsHowToWorkInGroup: boolean;
     resolvesConflictsIndependently: boolean;
     handlesFrustrationWithoutAggression: boolean;
@@ -34,7 +22,7 @@ export class ISensoryProcessingMeasureSchool {
     switchesConversationTopicsAppropriately: boolean;
   }
   
-  export class IVisionSchool {
+  export interface IVisionSchool {
     botheredByLight: boolean;
     distractedByVisualStimuli: boolean;
     looksAroundInsteadOfPayingAttention: boolean;
@@ -43,7 +31,7 @@ export class ISensoryProcessingMeasureSchool {
     botheredByDimLightsInCinema: boolean;
   }
   
-  export class IHearingSchool {
+  export interface IHearingSchool {
     botheredByLoudSounds: boolean;
     botheredByMusicOrInstruments: boolean;
     doesntRespondToNewSounds: boolean;
@@ -53,7 +41,7 @@ export class ISensoryProcessingMeasureSchool {
     makesUnusualNoisesAlone: boolean;
   }
   
-  export class ITouchSchool {
+  export interface ITouchSchool {
     botheredByMessyHandsOrFace: boolean;
     doesntTolerateDirtOnHandsOrClothes: boolean;
     discomfortWithCertainTextures: boolean;
@@ -64,14 +52,14 @@ export class ISensoryProcessingMeasureSchool {
     doesntWipeFoodOrSalivaFromFace: boolean;
   }
   
-  export class ISmellAndTasteSchool {
+  export interface ISmellAndTasteSchool {
     botheredByTastesOrSmellsOfCertainFoods: boolean;
     doesntNoticeStrongOdors: boolean;
     cantDistinguishBetweenOdors: boolean;
     triesToTasteOrLickNonFoodItems: boolean;
   }
   
-  export class IBodyAwarenessSchool {
+  export interface IBodyAwarenessSchool {
     spillsWhenOpeningContainers: boolean;
     chewsOnObjectsOrClothing: boolean;
     movesChairAbruptly: boolean;
@@ -81,7 +69,7 @@ export class ISensoryProcessingMeasureSchool {
     opensOrClosesDoorsWithExcessiveForce: boolean;
   }
   
-  export class IBalanceAndMovementSchool {
+  export interface IBalanceAndMovementSchool {
     usesWallsForSupportWhenWalking: boolean;
     tanglesFeetInChairLegs: boolean;
     rocksInChairWhenSeated: boolean;
@@ -93,7 +81,7 @@ export class ISensoryProcessingMeasureSchool {
     poorCoordinationAppearsClumsy: boolean;
   }
   
-  export class IPlanningAndIdeationSchool {
+  export interface IPlanningAndIdeationSchool {
     inconsistentInDailyTasks: boolean;
     strugglesToSolveProblemsEffectively: boolean;
     dropsItemsWhenCarryingMultipleObjects: boolean;
