@@ -1,34 +1,36 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param, Delete, Put } from '@nestjs/common';
 import { SensoryProcessingMeasureSchoolPreschoolService } from './sensoryProcessingMeasureSchoolPreSchool.service';
 import { CreateSensoryProcessingMeasureSchoolPreschoolDto } from './dto/createSensoryProcessingMeasureSchoolPreSchool.dto';
 import { UpdateSensoryProcessingMeasureSchoolPreschoolDto } from './dto/updateSensoryProcessingMeasureSchoolPreSchool.dto';
+import { ApiTags } from '@nestjs/swagger';
 
-@Controller('sensory-processing-measure-school-preschool')
+@ApiTags('SPM PreSchool School')
+@Controller('sensory-processing-measure-PreSchool-School')
 export class SensoryProcessingMeasureSchoolPreschoolController {
-  constructor(private readonly sensoryProcessingMeasureSchoolPreschoolService: SensoryProcessingMeasureSchoolPreschoolService) {}
+  constructor(private readonly sensoryProcessingMeasureSchool: SensoryProcessingMeasureSchoolPreschoolService) {}
 
   @Post()
-  create(@Body() createSensoryProcessingMeasureSchoolPreschoolDto: CreateSensoryProcessingMeasureSchoolPreschoolDto) {
-    return this.sensoryProcessingMeasureSchoolPreschoolService.create(createSensoryProcessingMeasureSchoolPreschoolDto);
+  async create(@Body() createSensoryProcessingMeasureDto: CreateSensoryProcessingMeasureSchoolPreschoolDto) {
+    return await this.sensoryProcessingMeasureSchool.create(createSensoryProcessingMeasureDto);
   }
 
   @Get()
-  findAll() {
-    return this.sensoryProcessingMeasureSchoolPreschoolService.findAll();
+  async findAll() {
+    return await this.sensoryProcessingMeasureSchool.findAll();
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.sensoryProcessingMeasureSchoolPreschoolService.findOne(+id);
+  async findOne(@Param('id') id: string) {
+    return await this.sensoryProcessingMeasureSchool.findOne(id);
   }
 
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateSensoryProcessingMeasureSchoolPreschoolDto: UpdateSensoryProcessingMeasureSchoolPreschoolDto) {
-    return this.sensoryProcessingMeasureSchoolPreschoolService.update(+id, updateSensoryProcessingMeasureSchoolPreschoolDto);
+  @Put(':id')
+  async update(@Param('id') id: string, @Body() updateSPMPreSchoolDto: UpdateSensoryProcessingMeasureSchoolPreschoolDto) {
+    return await this.sensoryProcessingMeasureSchool.update(id, updateSPMPreSchoolDto);
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.sensoryProcessingMeasureSchoolPreschoolService.remove(+id);
+  async delete(@Param('id') id: string) {
+    return await this.sensoryProcessingMeasureSchool.delete(id);
   }
 }

@@ -1,26 +1,52 @@
-import { Injectable } from '@nestjs/common';
+import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { CreateSensoryProcessingMeasureSchoolPreschoolDto } from './dto/createSensoryProcessingMeasureSchoolPreSchool.dto';
 import { UpdateSensoryProcessingMeasureSchoolPreschoolDto } from './dto/updateSensoryProcessingMeasureSchoolPreSchool.dto';
+import { SpmSchoolPreSchoolRepository } from './sensoryProcessingMeasureSchoolPreSchool.repository';
+import { ISensoryProcessingMeasureSchoolPreSchoolEntity } from 'src/entities/sensoryProcessingMeasureSchoolPreSchool.entity';
 
 @Injectable()
 export class SensoryProcessingMeasureSchoolPreschoolService {
-  create(createSensoryProcessingMeasureSchoolPreschoolDto: CreateSensoryProcessingMeasureSchoolPreschoolDto) {
-    return 'This action adds a new sensoryProcessingMeasureSchoolPreschool';
+  constructor(
+    private readonly spmSchoolPreSchoolRepository: SpmSchoolPreSchoolRepository
+  ) {}
+
+  async create(data: CreateSensoryProcessingMeasureSchoolPreschoolDto): Promise<ISensoryProcessingMeasureSchoolPreSchoolEntity> {
+    try {
+      return await this.spmSchoolPreSchoolRepository.create(data);
+    } catch (error) {
+      throw new HttpException(error, HttpStatus.BAD_REQUEST);
+    }
   }
 
-  findAll() {
-    return `This action returns all sensoryProcessingMeasureSchoolPreschool`;
+  async findAll(): Promise<ISensoryProcessingMeasureSchoolPreSchoolEntity[]> {
+    try {
+      return await this.spmSchoolPreSchoolRepository.findAll();
+    } catch (error) {
+      throw new HttpException(error, HttpStatus.BAD_REQUEST);
+    }
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} sensoryProcessingMeasureSchoolPreschool`;
+  async findOne(id: string): Promise<ISensoryProcessingMeasureSchoolPreSchoolEntity> {
+    try {
+      return await this.spmSchoolPreSchoolRepository.findOne(id);
+    } catch (error) {
+      throw new HttpException(error, HttpStatus.BAD_REQUEST);
+    }
   }
 
-  update(id: number, updateSensoryProcessingMeasureSchoolPreschoolDto: UpdateSensoryProcessingMeasureSchoolPreschoolDto) {
-    return `This action updates a #${id} sensoryProcessingMeasureSchoolPreschool`;
+  async update(id: string, update: UpdateSensoryProcessingMeasureSchoolPreschoolDto): Promise<ISensoryProcessingMeasureSchoolPreSchoolEntity> {
+    try {
+      return await this.spmSchoolPreSchoolRepository.update(id, update);
+    } catch (error) {
+      throw new HttpException(error, HttpStatus.BAD_REQUEST);
+    }
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} sensoryProcessingMeasureSchoolPreschool`;
+  async delete(id: string): Promise<ISensoryProcessingMeasureSchoolPreSchoolEntity> {
+    try {
+      return await this.spmSchoolPreSchoolRepository.delete(id);
+    } catch (error) {
+      throw new HttpException(error, HttpStatus.BAD_REQUEST);
+    }
   }
 }

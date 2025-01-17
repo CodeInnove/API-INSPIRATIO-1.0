@@ -4,7 +4,7 @@ import { ISpmSchool } from 'src/features/sensory-processing-measure-school/types
 
 export const SensoryProcessingMeasureSchoolSchema = new Schema({
   _id: { type: Schema.Types.ObjectId, required: true, auto: true },
-   doctor: { type: Schema.Types.ObjectId, ref: 'User', required: true },
+  doctor: { type: Schema.Types.ObjectId, ref: 'User', required: true },
   responsable: { type: Schema.Types.ObjectId, required: true, ref: 'User' },
   relationshipWithChild: { type: String, required: false},
   patient: { type: Schema.Types.ObjectId, required: true, ref: 'User' },
