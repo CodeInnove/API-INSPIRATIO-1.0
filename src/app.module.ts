@@ -36,6 +36,7 @@ import { PerformanceAssessmentModule } from './features/performance-assessment/p
 import { VbmappPeiModule } from './features/vbmapp-pei/vbmapp-pei.module';
 import { PediatricNeurologicalEvaluationModule } from './features/pediatric-neurological-evaluation/pediatric-neurological-evaluation.module';
 import { AbaEyeContactModule } from './features/aba-eye-contact/aba-eye-contact.module';
+import { ServiceEvolutionModule } from './features/service-evolution/service-evolution.module';
 
 
 @Module({
@@ -113,6 +114,7 @@ import { AbaEyeContactModule } from './features/aba-eye-contact/aba-eye-contact.
     VbmappPeiModule,
     PediatricNeurologicalEvaluationModule,
     AbaEyeContactModule,
+    ServiceEvolutionModule,
   ],
   controllers: [AppController],
   providers: [AppService],
