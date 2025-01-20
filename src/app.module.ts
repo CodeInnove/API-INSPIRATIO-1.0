@@ -38,6 +38,7 @@ import { PediatricNeurologicalEvaluationModule } from './features/pediatric-neur
 import { AbaEyeContactModule } from './features/aba-eye-contact/aba-eye-contact.module';
 import { ServiceEvolutionModule } from './features/service-evolution/service-evolution.module';
 import { SessionSummaryAtModule } from './features/session-summary-at/session-summary-at.module';
+import { SessionSummaryAbaModule } from './features/session-summary-aba/session-summary-aba.module';
 
 
 @Module({
@@ -117,6 +118,7 @@ import { SessionSummaryAtModule } from './features/session-summary-at/session-su
     AbaEyeContactModule,
     ServiceEvolutionModule,
     SessionSummaryAtModule,
+    SessionSummaryAbaModule,
   ],
   controllers: [AppController],
   providers: [AppService],
