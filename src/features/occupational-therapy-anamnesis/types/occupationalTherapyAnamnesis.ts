@@ -1,23 +1,11 @@
-export class IOccupationalTherapyAnamnesis {
-    dateOfApplication: Date;
-    evaluator: string;
-    fullName: string;
-    birthDate: Date;
-    gender: 'M' | 'F';
-    age: number;
-    diagnoses: string;
-    fatherName: string;
-    motherName: string;
-    contactPhone: string;
-    address: string;
-}
 
-export class IGeneralObservations {
+
+export interface IGeneralObservations {
     consultationReason: string;
     mainConcernOfResponsible: string;
 }
 
-export class IClinicalHistory {
+export interface IClinicalHistory {
     pregnancy: 'Planejada' | 'Não planejada';
     complicationsDuringPregnancy: string;
     birth: 'Normal' | 'Cesárea';
@@ -29,7 +17,7 @@ export class IClinicalHistory {
     pastDiseasesOrHospitalizations: string;
 }
 
-export class INeuropsychomotorDevelopment {
+export interface INeuropsychomotorDevelopment {
     headControlMonths: number;
     sittingWithoutSupportMonths: number;
     crawlingMonths: number;
@@ -39,7 +27,7 @@ export class INeuropsychomotorDevelopment {
     regressionOrLossOfSkills: string;
 }
 
-export class IActivitiesOfDailyLiving {
+export interface IActivitiesOfDailyLiving {
     feeding: 'Independente' | 'Necessita de auxílio' | 'Alimentação por sonda';
     feedingHelpDetails: string;
     aversionToCertainFoods: 'Sim' | 'Não';
@@ -61,27 +49,27 @@ export class IActivitiesOfDailyLiving {
     strategiesUsedByCaregiversOrSchool: string;
 }
 
-export class ISignsOfReadiness {
+export interface ISignsOfReadiness {
     signsOfReadiness: 'Percepção de xixi/cocô' | 'Desconforto com a fralda' | 'Ser capaz de apontar o que deseja' | 'Ficar seco por 2h ou mais' | 'Seguir comandos' | 'Ficar sentado de 3 a 5 minutos';
     specificDifficultiesInToiletTraining: string;
 }
 
-export class IInstrumentalActivitiesOfDailyLiving {
+export interface IInstrumentalActivitiesOfDailyLiving {
     participatesInSchoolOrHomeTasks: 'Sim' | 'Não';
     taskDetails: string;
 }
 
-export class ISchoolAndSocialRoutine {
+export interface ISchoolAndSocialRoutine {
     enrolledInSchool: 'Sim' | 'Não';
     educationType: 'Regular' | 'Regular com apoio' | 'Especial';
 }
 
-export class ITeacherReportedDifficulties {
+export interface ITeacherReportedDifficulties {
     participatesInGroupRecreationalActivities: 'Sim' | 'Não';
     interactionWithOtherChildrenAndAdults: 'Busca interação' | 'Evita interação' | 'Prefere brincar sozinho';
 }
 
-export class ISensoryAndBehavioralAspects {
+export interface ISensoryAndBehavioralAspects {
     sensorySensitivities: 'Tátil' | 'Auditiva' | 'Visual' | 'Olfativa' | 'Outras';
 	taskDetailsSensitivities: string;
     repetitiveOrStereotypedBehaviors: 'Sim' | 'Não';
@@ -91,18 +79,18 @@ export class ISensoryAndBehavioralAspects {
     crisesDetails: string;
 }
 
-export class IPlayAndLeisureAspects {
+export interface IPlayAndLeisureAspects {
     prefersStructuredOrFreePlay:  'Estruturadas' | 'Livres';
     favoriteToysOrActivities: string;
     difficultyStartingOrMaintainingPlay: 'Sim' | 'Não';
 }
 
-export class ISupportNetworkAndPreviousTreatments {
+export interface ISupportNetworkAndPreviousTreatments {
     previousTherapies: 'Fonoaudiologia' | 'Fisioterapia' | 'Psicologia' | 'Outros';
     familyOrCaregiversInTherapies: string;
 }
 
-export class IResponsibleGeneralObservations {
+export interface IResponsibleGeneralObservations {
     essentialObservationsForTreatmentPlanning: 'Sim' | 'Não';
     responsibleObservations: string;
 }
