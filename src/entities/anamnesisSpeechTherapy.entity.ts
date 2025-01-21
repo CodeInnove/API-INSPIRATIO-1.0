@@ -3,47 +3,29 @@ import { IAnamnesisSpeechTherapy } from 'src/features/anamnesis-speech-therapy/t
 
 export const AnamnesisSpeechTherapySchema = new Schema({
   _id: { type: Schema.Types.ObjectId, required: true, auto: true },
-
-  //identification: {
-  //patient: {type: Schema.Types.ObjectId, required: true, ref: "Patient"},
-  //birthDate: {type: Schema.Types.ObjectId, required: true, ref: "Patient"},
-  //maritalStatus: {type: String},
-  //placeOfBirth: {type: String},
-  //age: {type: Number},
-  //sex: {type: Schema.Types.ObjectId, required: true, ref: "Patient"},
-  //nationality: {type: Schema.Types.ObjectId, required: true, ref: "Patient"},
-  //schoolName: {type: String},
-  //studyPeriod: {type: String},
-  //},
-  //affiliation: {
-  //fatherName: {type: Schema.Types.ObjectId, required: true, ref: "User"},
-  //fatherAge: {type: Number},
-  //fatherProfession: {type: String},
-  //fatherEducation: {type: String},
-  //motherName: {type: Schema.Types.ObjectId, required: true, ref: "User"},
-  //motherAge: {type: Number},
-  //motherProfession: {type: String},
-  //motherEducation: {type: String},
-  //siblingsNamesOne: {type: String},
-  //ageSiblingsNamesOne: {type: Number},
-  //siblingsNamesTwo: {type: String},
-  //ageSiblingsNamesTwo: {type: Number},
-  //},
-  //address: {
-  //street: {type: String},
-  //city: {type: String},
-  //number: {type: String},
-  //state: {type: String},
-  //zipCode: {type: String},
-  //phoneNumbers: {type: String},
-  //responsible: {type: String},
-  //referredBy: {type: String},
-  //anamnesisDate: {type: String},
-  //professional: {type: Schema.Types.ObjectId, ref: "User"},
-  //},
-
+  doctor: {type: Schema.Types.ObjectId, required: true, ref: "User"},
+  patient: {type: Schema.Types.ObjectId, required: true, ref: "User"},
+  birthDate: {type: Schema.Types.ObjectId, required: true, ref: "User"},
+  maritalStatus: {type: String},
+  placeOfBirth: {type: String},
+  age: {type: Number},
+  sex: {type: String, enum: ['M', 'F']},
+  nationality: {type: Schema.Types.ObjectId, required: true, ref: "User"},
+  schoolName: {type: String},
+  studyPeriod: {type: String},
+  fatherName: {type: String},
+  fatherAge: {type: Number},
+  fatherProfession: {type: String},
+  fatherEducation: {type: String},
+  motherName: {type: String},
+  motherAge: {type: Number},
+  motherProfession: {type: String},
+  motherEducation: {type: String},
+  siblingsNamesOne: {type: String},
+  ageSiblingsNamesOne: {type: Number},
+  siblingsNamesTwo: {type: String},
+  ageSiblingsNamesTwo: {type: Number},
   complaintAndDuration: { type: String },
-
   backgorund: {
     gestation: { type: String },
     typeOfDelivery: { type: String },
@@ -151,6 +133,5 @@ export const AnamnesisSpeechTherapySchema = new Schema({
   importantObservation: { type: String },
 });
 
-export interface IAnamnesisSpeechTherapyEntity
-  extends Omit<IAnamnesisSpeechTherapy, '_id'>,
-    Document {}
+
+export interface IAnamnesisSpeechTherapyEntity extends Omit<IAnamnesisSpeechTherapy, '_id'>, Document {}
