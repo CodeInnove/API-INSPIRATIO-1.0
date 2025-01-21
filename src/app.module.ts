@@ -27,7 +27,6 @@ import { SensoryProcessingMeasurePreschoolModule } from './features/sensory-proc
 import { SensoryProcessingMeasureSchoolPreschoolModule } from './features/sensory-processing-measure-school-preschool/sensoryProcessingMeasureSchoolPreSchool.module';
 import { OccupationalTherapyAnamnesisModule } from './features/occupational-therapy-anamnesis/occupationalTherapyAnamnesis.module';
 import { SpeechLanguagePathologyEvaluationForDysphagiaModule } from './features/speech-language-pathology-evaluation-for-dysphagia/speechLanguagePathologyEvaluationForDysphagia.module';
-import { IncomeAssessmentModule } from './features/income-assessment/incomeAssessment.module';
 import { ChecklistDenverModule } from './features/checklist-denver/checklist-denver.module';
 import { PortageGuidetoPhysiotherapyModule } from './features/portage-guideto-physiotherapy/portage-guideto-physiotherapy.module';
 import { AmiofeModule } from './features/amiofe/amiofe.module';
@@ -39,6 +38,8 @@ import { AbaEyeContactModule } from './features/aba-eye-contact/aba-eye-contact.
 import { ServiceEvolutionModule } from './features/service-evolution/service-evolution.module';
 import { SessionSummaryAtModule } from './features/session-summary-at/session-summary-at.module';
 import { SessionSummaryAbaModule } from './features/session-summary-aba/session-summary-aba.module';
+import { IncomeAssessmentModule } from './features/income-assessment/incomeAssessment.module';
+
 
 
 @Module({
@@ -107,7 +108,6 @@ import { SessionSummaryAbaModule } from './features/session-summary-aba/session-
     SensoryProcessingMeasureSchoolPreschoolModule,
     OccupationalTherapyAnamnesisModule,
     SpeechLanguagePathologyEvaluationForDysphagiaModule,
-    IncomeAssessmentModule,
     ChecklistDenverModule,
     PortageGuidetoPhysiotherapyModule,
     AmiofeModule,
@@ -119,6 +119,7 @@ import { SessionSummaryAbaModule } from './features/session-summary-aba/session-
     ServiceEvolutionModule,
     SessionSummaryAtModule,
     SessionSummaryAbaModule,
+    IncomeAssessmentModule,
   ],
   controllers: [AppController],
   providers: [AppService],

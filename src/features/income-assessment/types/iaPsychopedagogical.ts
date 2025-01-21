@@ -1,4 +1,4 @@
-import { IIncomeAssessment } from "./incomeAssessment";
+
 import { IObservedAspectsPshyco } from "./incomeAssessment";
 import { IEvaluationofPerformanceBody2At4YearsPshyco } from "./incomeAssessment";
 import { IEvaluationOfPerformanceBody5At6YearsPshyco } from "./incomeAssessment";
@@ -25,11 +25,15 @@ import { IPortugueseLanguage4GradePshyco } from "./incomeAssessment";
 import { IMathematics4GradePshyco } from "./incomeAssessment";
 import { IPortugueseLanguage5GradePshyco } from "./incomeAssessment";
 import { IMathematics5GradePshyco } from "./incomeAssessment";
-import { IObservationIaPshyco } from "./incomeAssessment";
-import { IEvaluatorsSignaturePshyco } from "./incomeAssessment";
+
 
 export interface IIaPsychoPedagogical {
-    identificatioPshyco: IIncomeAssessment;
+    doctor: string;
+    dateOfApplication: string;
+    patient: string;
+    dateOfBirth: string;
+    familyOurSchoolComplaint: string;
+    observation: string;
     observedAspectsPshyco: IObservedAspectsPshyco;
     evaluationofPerformanceBody2At4YearsPshyco: IEvaluationofPerformanceBody2At4YearsPshyco;
     evaluationOfPerformanceBody5At6YearsPshyco: IEvaluationOfPerformanceBody5At6YearsPshyco;
@@ -56,6 +60,6 @@ export interface IIaPsychoPedagogical {
     mathematics4GradePshyco: IMathematics4GradePshyco;
     portugueseLanguage5GradePshyco: IPortugueseLanguage5GradePshyco;
     mathematics5GradePshyco: IMathematics5GradePshyco;
-    observationIaPshyco: IObservationIaPshyco;
-    evaluatorsSignaturePshyco: IEvaluatorsSignaturePshyco;
+    observationIaPshyco: string;
+    evaluatorsSignaturePshyco: string;
 };
