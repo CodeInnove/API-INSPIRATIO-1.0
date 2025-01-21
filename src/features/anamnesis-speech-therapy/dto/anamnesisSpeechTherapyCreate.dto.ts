@@ -475,6 +475,106 @@ export class DevelopmentSocioCulturalDto{
 }
 
 export class CreateAnamnesisSpeechTherapyDto {
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  patient: string
+
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  birthDate:string
+
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  maritalStatus: string
+
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  placeOfBirth: string
+
+  @ApiProperty()
+  @IsOptional()
+  age:  number
+
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  sex: string
+
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  nationality: string
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  schoolName: string
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  studyPeriod: string
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  fatherName: string
+  
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  fatherAge: string
+
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  fatherProfession: string
+
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  fatherEducation: string
+
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  motherName: string
+
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  motherAge: string
+
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  motherProfession: string
+
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  motherEducation: string
+
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  siblingsNamesOne:string
+
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  ageSiblingsNamesOne: string
+
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  siblingsNamesTwo: string
+
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  ageSiblingsNamesTwo: string
     
   @ApiProperty()
   @IsOptional()
