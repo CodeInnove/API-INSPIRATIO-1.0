@@ -78,7 +78,7 @@ interface Idevelopment {
   howSolvesProblems: string;
 }
 interface IsocioCultural {
-  relationshipWithParents: string;
+  relationshipWithParents: string
   relationshipWithAdults: string;
   relationshipWithOtherChildren: string;
   whoAreYourBestFriends: string;
@@ -104,6 +104,27 @@ interface IimportantObservations {
 }
 
 export interface IAnamnesisSpeechTherapy {
+  patient: string
+  birthDate:string
+  maritalStatus: string
+  placeOfBirth: string
+  age:  number
+  sex: string
+  nationality: string
+  schoolName: string
+  studyPeriod: string
+  fatherName: string
+  fatherAge: string
+  fatherProfession: string
+  fatherEducation: string
+  motherName: string
+  motherAge: string
+  motherProfession: string
+  motherEducation: string
+  siblingsNamesOne:string
+  ageSiblingsNamesOne: string
+  siblingsNamesTwo: string
+  ageSiblingsNamesTwo: string
   complaintAndDuration: IcomplaintAndDurations;
   antecedents: IBackground;
   development: Idevelopment;

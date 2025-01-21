@@ -10,27 +10,27 @@ export class FunctionalIndependencyMetricsController {
   constructor(private readonly functionalIndependencyMetricsService: FunctionalIndependencyMetricsService) {}
 
   @Post()
-  create(@Body() data: CreateFunctionalIndependencyMetricDTO) {
-    return this.functionalIndependencyMetricsService.create(data);
+  async create(@Body() data: CreateFunctionalIndependencyMetricDTO) {
+    return await this.functionalIndependencyMetricsService.create(data);
   }
 
   @Get()
-  findAll() {
-    return this.functionalIndependencyMetricsService.findAll();
+  async findAll() {
+    return await this.functionalIndependencyMetricsService.findAll();
   }
 
   @Get(':id')
-  findById(@Param('id') id: string) {
-    return this.functionalIndependencyMetricsService.findById(id);
+  async findById(@Param('id') id: string) {
+    return await this.functionalIndependencyMetricsService.findById(id);
   }
 
   @Put(':id')
-  update(@Param('id') id: string, @Body() data: FunctionalIndependencyMetricsUpdateDTO) {
-    return this.functionalIndependencyMetricsService.update(id, data);
+  async update(@Param('id') id: string, @Body() data: FunctionalIndependencyMetricsUpdateDTO) {
+    return await this.functionalIndependencyMetricsService.update(id, data);
   }
 
   @Delete(':id')
-  delete(@Param('id') id: string) {
-    return this.functionalIndependencyMetricsService.delete(id);
+  async delete(@Param('id') id: string) {
+    return await this.functionalIndependencyMetricsService.delete(id);
   }
 }

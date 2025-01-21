@@ -1,4 +1,3 @@
-import { IOccupationalTherapyAnamnesis } from "./occupationalTherapyAnamnesis";
 import { IGeneralObservations } from "./occupationalTherapyAnamnesis";
 import { IClinicalHistory } from "./occupationalTherapyAnamnesis";
 import { INeuropsychomotorDevelopment } from "./occupationalTherapyAnamnesis";
@@ -13,7 +12,17 @@ import { ISupportNetworkAndPreviousTreatments } from "./occupationalTherapyAnamn
 import { IResponsibleGeneralObservations } from "./occupationalTherapyAnamnesis";
 
 export interface IOta {
-    identificatioOta: IOccupationalTherapyAnamnesis;
+    dateOfApplication: Date;
+    doctor: string;
+    patient: string;
+    birthDate: Date;
+    gender: 'M' | 'F';
+    age: number;
+    diagnoses: string;
+    fatherName: string;
+    motherName: string;
+    contactPhone: string;
+    address: string;
     generalObservations: IGeneralObservations;
     clinicalHistory: IClinicalHistory;
     neuropsychomotorDevelopment: INeuropsychomotorDevelopment;
