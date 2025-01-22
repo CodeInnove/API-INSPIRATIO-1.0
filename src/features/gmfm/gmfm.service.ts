@@ -166,11 +166,11 @@ export class GmfmService {
           const gmfmToSave: GmfmWithScores = {
             ...gmfm,
             ...gmfmWithScores,
-            dimensionScores: gmfmWithScores.dimensionScores,
-            totalScore: gmfmWithScores.totalScore, 
+             scores: gmfmWithScores.percentageScores,
+             totalScore: gmfmWithScores.totalScore
           };
           const createdGmfm = await this.gmfmRepository.create(gmfmToSave); 
-          return createdGmfm; 
+          return createdGmfm
         } catch (error) {
           throw new HttpException(error, HttpStatus.BAD_REQUEST);
         }

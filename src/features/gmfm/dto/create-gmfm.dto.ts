@@ -422,13 +422,7 @@ export class CreateGmfmDto {
     @ApiProperty()
     walkRunJump: IWalkRunJump
     
-    @ApiProperty({ type: PercentageScoresDto })
-    @ValidateNested()
-    @Type(() => PercentageScoresDto)
-    scores: PercentageScoresDto;
-  
-    @ApiProperty()
-    totalScore: number;
+   
   
   
   }

@@ -7,7 +7,7 @@ export interface ICreateGmfm{
   standing: Standing
   alkRunJump: WalkRunJump
   gmfmResults: GmfmResults
-  totalScore: number;
+
 }
 
   interface DimensionScores {

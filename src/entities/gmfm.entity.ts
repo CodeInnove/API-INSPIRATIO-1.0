@@ -117,5 +117,12 @@ export const GmfmSchema = new Schema ({
 }, { timestamps: true });
 
 export interface IGmfmEntity extends Omit<ICreateGmfm, '_id'>, Document {
-    totalScore: number; // Adicionado aqui
+    scores: {
+        a: number,
+        b: number,
+        c: number,
+        d: number,
+        e: number
+      }
+      totalScore: number; 
 }
