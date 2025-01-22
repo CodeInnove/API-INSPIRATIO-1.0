@@ -102,7 +102,20 @@ export const GmfmSchema = new Schema ({
         standingClimbs4StepsAlternating: { type: Number },
         standingDescends4StepsAlternating: { type: Number },
         standingJumpsDownFromStepBothFeet: { type: Number },
-    }
-});
+    },
+    scores: {
+        a: { type: Number },
+        b: { type: Number },
+        c: { type: Number },
+        d: { type: Number },
+        e: { type: Number }
+    },
+    totalScore: { type: Number },
 
-export interface IGmfmEntity extends Omit<ICreateGmfm, '_id'>, Document {}
+  
+    
+}, { timestamps: true });
+
+export interface IGmfmEntity extends Omit<ICreateGmfm, '_id'>, Document {
+    totalScore: number; // Adicionado aqui
+}

@@ -1,5 +1,7 @@
 import { ApiProperty } from "@nestjs/swagger"
-import { IsNumber } from "class-validator"
+import { Type } from "class-transformer"
+import { IsArray, IsNumber, IsOptional, ValidateNested } from "class-validator"
+import { PercentageScoresDto } from "./porcentage.dto"
 
 class LieDownAndRollOver {
 
@@ -366,25 +368,67 @@ export class IWalkRunJump{
     standingJumpsDownFromStepBothFeet: Number
 }
 
+
+export class DimensionScores {
+    a: number;
+    b: number;
+    c: number;
+    d: number;
+    e: number;
+}
+    
+export class GmfmResults {
+    @ApiProperty({ type: DimensionScores })
+    @ValidateNested()
+    @Type(() => DimensionScores)
+    dimensionScores: DimensionScores;
+
+    @ApiProperty({ type: PercentageScoresDto })
+    @ValidateNested()
+    @Type(() => PercentageScoresDto)
+    percentageScores: PercentageScoresDto;
+    
+    
+    @ApiProperty()
+    totalScore: number;
+    
+
+    
+    @ApiProperty()
+    results: number;
+    
+}
+
+    
 export class CreateGmfmDto {
     @ApiProperty()
     patient: string
-
+    
     @ApiProperty()
     doctor: string
-
+    
     @ApiProperty()
     lieDownAndRollOver: LieDownAndRollOver
-
+    
     @ApiProperty()
     toSit: IToSit
-
+    
     @ApiProperty()
     crawlAndKneel: ICrawlAndKneel
-
+    
     @ApiProperty()
     standing: IStanding
-
+    
     @ApiProperty()
     walkRunJump: IWalkRunJump
-}
+    
+    @ApiProperty({ type: PercentageScoresDto })
+    @ValidateNested()
+    @Type(() => PercentageScoresDto)
+    scores: PercentageScoresDto;
+  
+    @ApiProperty()
+    totalScore: number;
+  
+  
+  }
