@@ -20,7 +20,7 @@ export class PortageGuidetoPreschoolEducationRepository {
     return await this.portageGuidetoModel.find().exec();
   }
 
-  async findOne(id: string): Promise<IPortageGuidetoPreschoolEducationEntity> {
+  async findById(id: string): Promise<IPortageGuidetoPreschoolEducationEntity> {
     return await this.portageGuidetoModel.findById(id).exec();
   }
 

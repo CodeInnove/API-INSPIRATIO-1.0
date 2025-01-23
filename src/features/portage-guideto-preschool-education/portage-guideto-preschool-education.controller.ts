@@ -4,15 +4,16 @@ import { CreatePortageGuidetoPreschoolEducationDto } from './dto/create-portage-
 import { ApiTags } from '@nestjs/swagger';
 import { IPortageGuidetoPreschoolEducationEntity } from 'src/entities/portage-guideto-preschool-education.entity';
 
+
 @ApiTags('PortageGuidetoPreschoolEducation')
 @Controller('portage-guideto-preschool-education')
 export class PortageGuidetoPreschoolEducationController {
   constructor(private readonly portageGuidetoPreschoolEducationService: PortageGuidetoPreschoolEducationService) {}
 
-   @Post()
-    async create(@Body() data: CreatePortageGuidetoPreschoolEducationDto): Promise<IPortageGuidetoPreschoolEducationEntity> {
-      return await this.portageGuidetoPreschoolEducationService.create(data);
-    }
+  @Post()
+  async create(@Body() data: CreatePortageGuidetoPreschoolEducationDto): Promise<IPortageGuidetoPreschoolEducationEntity> {
+    return await this.portageGuidetoPreschoolEducationService.create(data);
+  }
   
     @Get()
     async findAll(): Promise<IPortageGuidetoPreschoolEducationEntity[]> {
@@ -20,8 +21,8 @@ export class PortageGuidetoPreschoolEducationController {
     }
   
     @Get(':id')
-    async findOne(@Param() id: string): Promise<IPortageGuidetoPreschoolEducationEntity> {
-      return await this.portageGuidetoPreschoolEducationService.findOne(id);
+    async findById(@Param() id: string): Promise<IPortageGuidetoPreschoolEducationEntity> {
+      return await this.portageGuidetoPreschoolEducationService.findById(id);
     }
   
     @Put(':id')
