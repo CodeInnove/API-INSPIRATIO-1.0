@@ -1,13 +1,38 @@
 export interface ICreateGmfm{
-    patient: string;
-    doctor: string;
-    lieDownAndRollOver: LieDownAndRollOver
-    toSit: ToSit
-    crawlAndKneel: CrawlAndKneel
-    standing: Standing
-    alkRunJump: WalkRunJump
-  }
+  patient: string;
+  doctor: string;
+  data: string | Date;
+  dataBirth: string | Date;
+  lieDownAndRollOver: LieDownAndRollOver
+  toSit: ToSit
+  crawlAndKneel: CrawlAndKneel
+  standing: Standing
+  alkRunJump: WalkRunJump
+  gmfmResults: GmfmResults
 
+}
+
+  interface DimensionScores {
+    a: number;
+    b: number;
+    c: number;
+    d: number;
+    e: number;
+  }
+  
+  
+  interface GmfmResults  {
+    dimensionScores: DimensionScores;
+    percentageScores: {
+      a: number;
+      b: number;
+      c: number;
+      d: number;
+      e: number;
+    };
+    totalScore: number;
+    targetScore?: number; 
+  }
   export interface LieDownAndRollOver{
     supHeadInMidline: number,
     supHandsToMidline: number,
@@ -110,3 +135,4 @@ export interface WalkRunJump {
     standingDescends4StepsAlternating: number,
     standingJumpsDownFromStepBothFeet: number
 }
+

@@ -1,10 +1,13 @@
 import { Document, Schema } from 'mongoose'
 import { ICreateGmfm } from 'src/features/gmfm/types/gmfm';
+import { format, parse } from 'date-fns';
 
 export const GmfmSchema = new Schema ({
     _id: { type: Schema.Types.ObjectId, auto: true },
     patient: { type: Schema.Types.ObjectId, ref: 'User' },
     doctor: { type: Schema.Types.ObjectId, ref: 'User' },
+    data: { type: String, get: (data:Date) => data ? format(data,'dd/MM/yyyy') : undefined  }, // Removido
+    dataBirth: { type: String, get: (data:Date) => data ? format(data,'dd/MM/yyyy') : undefined }, // Removido
     lieDownAndRollOver: { 
         supHeadInMidline: { type: Number },
         supHandsToMidline: { type: Number },
@@ -102,7 +105,27 @@ export const GmfmSchema = new Schema ({
         standingClimbs4StepsAlternating: { type: Number },
         standingDescends4StepsAlternating: { type: Number },
         standingJumpsDownFromStepBothFeet: { type: Number },
-    }
-});
+    },
+    scores: {
+        a: { type: Number },
+        b: { type: Number },
+        c: { type: Number },
+        d: { type: Number },
+        e: { type: Number }
+    },
+    totalScore: { type: Number },
 
-export interface IGmfmEntity extends Omit<ICreateGmfm, '_id'>, Document {}
+  
+    
+}, { timestamps: true });
+
+export interface IGmfmEntity extends Omit<ICreateGmfm, '_id'>, Document {
+    scores: {
+        a: number,
+        b: number,
+        c: number,
+        d: number,
+        e: number
+      }
+      totalScore: number; 
+}
