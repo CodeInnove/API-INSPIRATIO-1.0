@@ -3,6 +3,7 @@ import { CreatePortageGuidetoPreschoolEducationDto,  } from "./dto/create-portag
 import { UpdatePortageGuidetoPreschoolEducationDto } from "./dto/update-portage-guideto-preschool-education.dto";
 import { IPortageGuidetoPreschoolEducationEntity } from "src/entities/portage-guideto-preschool-education.entity";
 import { PortageGuidetoPreschoolEducationRepository } from "./portage-guideto-preschool-education.repository";
+import { QueryPortageGuidetoDto } from "./dto/query-portage-guideto-preschool-educational.dto";
 
 type ResponseBoolean = 'SIM' | 'SIM COM MEDIACAO' | 'NAO';
 
@@ -106,9 +107,9 @@ export class PortageGuidetoPreschoolEducationService {
   }
 
 
-  async findAll(): Promise<IPortageGuidetoPreschoolEducationEntity[]> {
+  async findAll(query: QueryPortageGuidetoDto) {
     try {
-      return await this.portageGuidetoPreschoolEducationRepository.findAll()
+      return await this.portageGuidetoPreschoolEducationRepository.findAll(query)
     } catch (error) {
       throw new HttpException(error, HttpStatus.BAD_REQUEST);
     }
