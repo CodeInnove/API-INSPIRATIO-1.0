@@ -1,2744 +1,2770 @@
 import { ApiProperty } from "@nestjs/swagger";
-import { IsBoolean,  IsOptional } from "class-validator";
+import { IsBoolean, IsOptional } from "class-validator";
+
+export enum ResponseBoolean {
+  'NAO' = 'NAO',
+  'SIM COM MEDIACAO' = 'SIM COM MEDIACAO',
+  'SIM' = 'SIM',
+}
 
 
-
-
-
-export class Socialization0To1Year { 
+export class Socialization0To1Year {
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  observesAPersonMovingInTheirVisualField?: boolean;
-
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  smilesInResponseToAdultAttention?: boolean;
-
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  vocalizesInResponseToAttention?: boolean;
+  observesAPersonMovingInTheirVisualField?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  looksAtOwnHandSmilingOrVocalizing?: boolean;
+  smilesInResponseToAdultAttention?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  respondsToFamilyCircleSmilingVocalizingOrStoppingCrying?: boolean;
+  vocalizesInResponseToAttention?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  smilesInResponseToOthersFacialExpressions?: boolean;
+  looksAtOwnHandSmilingOrVocalizing?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  smilesAndVocalizesWhenSeeingImageInMirror?: boolean;
+  respondsToFamilyCircleSmilingVocalizingOrStoppingCrying?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  caressesOrTouchesAdultsFacesPullsHairNoseGlassesEtc?: boolean;
+  smilesInResponseToOthersFacialExpressions?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  reachesTowardsAnOfferedObject?: boolean;
+  smilesAndVocalizesWhenSeeingImageInMirror?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  reachesArmsTowardsFamilyMembers?: boolean;
+  caressesOrTouchesAdultsFacesPullsHairNoseGlassesEtc?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  extendsHandAndTouchesOwnReflectedImageInMirror?: boolean;
+  reachesTowardsAnOfferedObject?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  holdsAndExaminesGivenObjectFor1Minute?: boolean;
+  reachesArmsTowardsFamilyMembers?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  shakesOrSqueezesAnObjectPlacedInHandProducingInvoluntarySounds?: boolean;
+  extendsHandAndTouchesOwnReflectedImageInMirror?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  playsAloneFor10Minutes?: boolean;
+  holdsAndExaminesGivenObjectFor1Minute?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  seeksEyeContactWhenSomeonePaysAttentionFor2To3Minutes?: boolean;
+  shakesOrSqueezesAnObjectPlacedInHandProducingInvoluntarySounds?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  playsAloneWithoutComplainingFor15To20MinutesNearAnAdult?: boolean;
+  playsAloneFor10Minutes?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  vocalizesToGetAttention?: boolean;
+  seeksEyeContactWhenSomeonePaysAttentionFor2To3Minutes?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  imitatesAdultInPeekABooGames?: boolean;
+  playsAloneWithoutComplainingFor15To20MinutesNearAnAdult?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  clapsHandsImitatingAnAdult?: boolean;
+  vocalizesToGetAttention?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  wavesHandImitatingAnAdult?: boolean;
+  imitatesAdultInPeekABooGames?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  raisesArmsToExpressBigImitatingAnAdult?: boolean;
+  clapsHandsImitatingAnAdult?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  offersSomethingButDoesNotAlwaysDeliver?: boolean;
+  wavesHandImitatingAnAdult?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  hugsCaressesAndKissesFamilyMembers?: boolean;
+  raisesArmsToExpressBigImitatingAnAdult?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  respondsToOwnNameLookingOrExtendingArmToBePickedUp?: boolean;
+  offersSomethingButDoesNotAlwaysDeliver?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  squeezesOrShakesToyToProduceSoundsInImitation?: boolean;
+  hugsCaressesAndKissesFamilyMembers?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  manipulatesToyOrObject?: boolean;
+  respondsToOwnNameLookingOrExtendingArmToBePickedUp?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  extendsAToyOrObjectToAnAdultAndDeliversIt?: boolean;
+  squeezesOrShakesToyToProduceSoundsInImitation?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  imitatesMovementsOfOtherChildrenWhilePlaying?: boolean;
+  manipulatesToyOrObject?: ResponseBoolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  extendsAToyOrObjectToAnAdultAndDeliversIt?: ResponseBoolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  imitatesMovementsOfOtherChildrenWhilePlaying?: ResponseBoolean;
 }
 
 export class Socialization1To2Years {
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  imitatesAnAdultInASimpleTask?: boolean;
+  imitatesAnAdultInASimpleTask?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  playsNextToAnotherChildEachPerformingDifferentTasks?: boolean;
+  playsNextToAnotherChildEachPerformingDifferentTasks?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  takesPartInAPlayWithAnotherChildFor2To5Minutes?: boolean;
+  takesPartInAPlayWithAnotherChildFor2To5Minutes?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  acceptsParentsAbsenceAlthoughMayComplain?: boolean;
+  acceptsParentsAbsenceAlthoughMayComplain?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  activelyExploresItsEnvironment?: boolean;
+  activelyExploresItsEnvironment?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  performsManipulativeActivityWithAnotherPerson?: boolean;
+  performsManipulativeActivityWithAnotherPerson?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  hugsAndCarriesADollOrSoftToy?: boolean;
+  hugsAndCarriesADollOrSoftToy?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  repeatsActionsThatProduceLaughterAndAttention?: boolean;
+  repeatsActionsThatProduceLaughterAndAttention?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  givesABookForAnAdultToReadOrForBothToShare?: boolean;
+  givesABookForAnAdultToReadOrForBothToShare?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  pullsAPersonToShowThemSomething?: boolean;
+  pullsAPersonToShowThemSomething?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  withdrawsHandOrSaysNoWhenNearForbiddenObjectAndSomeoneRemindsIt?: boolean;
+  withdrawsHandOrSaysNoWhenNearForbiddenObjectAndSomeoneRemindsIt?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  whenPlacedInChairOrChangingTableWaitsToBeAttended?: boolean;
+  whenPlacedInChairOrChangingTableWaitsToBeAttended?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  playsWith2Or3ChildrenOfSameAge?: boolean;
+  playsWith2Or3ChildrenOfSameAge?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  sharesAnObjectOrFoodWithAnotherChild?: boolean;
+  sharesAnObjectOrFoodWithAnotherChild?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  greetsPeersOrAdultsWhenReminded?: boolean;
+  greetsPeersOrAdultsWhenReminded?: ResponseBoolean;
 }
 
 export class Socialization2To3Years {
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  obeysParentsOrdersAtLeastHalfTheTime?: boolean;
+  obeysParentsOrdersAtLeastHalfTheTime?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  seeksOrTakesAnObjectOrPersonWhenAsked?: boolean;
+  seeksOrTakesAnObjectOrPersonWhenAsked?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  paysAttentionToStoryOrMusicFor5To10Minutes?: boolean;
+  paysAttentionToStoryOrMusicFor5To10Minutes?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  saysPleaseOrThankYouWhenReminded?: boolean;
+  saysPleaseOrThankYouWhenReminded?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  triesToHelpParentsPerformTasksByDoingPartOfIt?: boolean;
+  triesToHelpParentsPerformTasksByDoingPartOfIt?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  playsAtWearingAdultsClothes?: boolean;
+  playsAtWearingAdultsClothes?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  makesAChoiceWhenAsked?: boolean;
+  makesAChoiceWhenAsked?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  demonstratesUnderstandingOfFeelingsExpressingThem?: boolean;
+  demonstratesUnderstandingOfFeelingsExpressingThem?: ResponseBoolean;
 }
 
 export class Socialization3To4Years {
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  singsAndDancesWhenHearingMusic?: boolean;
+  singsAndDancesWhenHearingMusic?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  followsRulesOfAGameImitatingActionsOfOtherChildren?: boolean;
+  followsRulesOfAGameImitatingActionsOfOtherChildren?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  greetsFamilyMembersWithoutBeingReminded?: boolean;
+  greetsFamilyMembersWithoutBeingReminded?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  followsRulesInGroupGamesDirectedByAdults?: boolean;
+  followsRulesInGroupGamesDirectedByAdults?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  asksPermissionToPlayWithAToyBeingUsedByAnotherChild?: boolean;
+  asksPermissionToPlayWithAToyBeingUsedByAnotherChild?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  saysPleaseAndThankYouWithoutBeingRemindedHalfTheTime?: boolean;
+  saysPleaseAndThankYouWithoutBeingRemindedHalfTheTime?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  answersThePhoneCallingAnAdultAndSpeakingWithFamilyMembers?: boolean;
+  answersThePhoneCallingAnAdultAndSpeakingWithFamilyMembers?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  waitsItsTurn?: boolean;
+  waitsItsTurn?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  followsRulesInGamesDirectedByAnOlderChild?: boolean;
+  followsRulesInGamesDirectedByAnOlderChild?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  obeysParentsInstructionsInPublicPlaces?: boolean;
+  obeysParentsInstructionsInPublicPlaces?: ResponseBoolean;
 }
-
 
 export class Socialization4To5Years {
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  asksForHelpWhenHavingDifficulties?: boolean;
+  asksForHelpWhenHavingDifficulties?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  contributesToAdultConversation?: boolean;
+  contributesToAdultConversation?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  repeatsRhymesSongsOrDancesForOthers?: boolean;
+  repeatsRhymesSongsOrDancesForOthers?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  doesATaskAloneFor20To30Minutes?: boolean;
+  doesATaskAloneFor20To30Minutes?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  apologizesWithoutBeingReminded75PercentOfTheTime?: boolean;
+  apologizesWithoutBeingReminded75PercentOfTheTime?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  waitsItsTurnInPlayInvolving8To9Children?: boolean;
+  waitsItsTurnInPlayInvolving8To9Children?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  playsWith2To3ChildrenFor20MinutesInAnActivityInvolvingCooperation?: boolean;
+  playsWith2To3ChildrenFor20MinutesInAnActivityInvolvingCooperation?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  whenInPublicPresentsASociallyAcceptableBehavior?: boolean;
+  whenInPublicPresentsASociallyAcceptableBehavior?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  asksPermissionToUseOthersObjects75PercentOfTheTime?: boolean;
+  asksPermissionToUseOthersObjects75PercentOfTheTime?: ResponseBoolean;
 }
 
 export class Socialization5To6Years {
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  expressesItsFeelings?: boolean;
+  expressesItsFeelings?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  playsWith4To5ChildrenInCooperativeActivityFor20MinutesWithoutSupervision?: boolean;
+  playsWith4To5ChildrenInCooperativeActivityFor20MinutesWithoutSupervision?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  explainsToOthersTheRulesOfTheGameOrActivity?: boolean;
+  explainsToOthersTheRulesOfTheGameOrActivity?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  imitatesAdultRoles?: boolean;
+  imitatesAdultRoles?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  collaboratesInConversationDuringMeals?: boolean;
+  collaboratesInConversationDuringMeals?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  followsRulesOfAGameInvolvingVerbalReasoning?: boolean;
+  followsRulesOfAGameInvolvingVerbalReasoning?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  comfortsPeersWhenTheyAreSad?: boolean;
+  comfortsPeersWhenTheyAreSad?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  choosesItsOwnFriends?: boolean;
+  choosesItsOwnFriends?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  plansAndBuildsUsingSimpleTools?: boolean;
+  plansAndBuildsUsingSimpleTools?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  setsGoalsForItselfAndPerformsActivityToAchieveThem?: boolean;
+  setsGoalsForItselfAndPerformsActivityToAchieveThem?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  dramatizesExcerptsFromStoriesPlayingARoleOrUsingPuppets?: boolean;
+  dramatizesExcerptsFromStoriesPlayingARoleOrUsingPuppets?: ResponseBoolean;
 }
 
+
+// LINGUAGEM
 export class Language0To1Years {
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  expressesItsFeelings?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    expressesItsFeelings?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  playsWith4To5ChildrenInCooperativeActivityFor20MinutesWithoutSupervision?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    playsWith4To5ChildrenInCooperativeActivityFor20MinutesWithoutSupervision?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  explainsToOthersTheRulesOfTheGameOrActivity?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    explainsToOthersTheRulesOfTheGameOrActivity?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  imitatesAdultRoles?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    imitatesAdultRoles?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  collaboratesInConversationDuringMeals?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    collaboratesInConversationDuringMeals?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  followsRulesOfAGameInvolvingVerbalReasoning?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    followsRulesOfAGameInvolvingVerbalReasoning?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  comfortsPeersWhenTheyAreSad?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    comfortsPeersWhenTheyAreSad?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  choosesItsOwnFriends?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    choosesItsOwnFriends?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  plansAndBuildsUsingSimpleTools?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    plansAndBuildsUsingSimpleTools?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  setsGoalsForItselfAndPerformsActivityToAchieveThem?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    setsGoalsForItselfAndPerformsActivityToAchieveThem?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  dramatizesExcerptsFromStoriesPlayingARoleOrUsingPuppets?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    dramatizesExcerptsFromStoriesPlayingARoleOrUsingPuppets?: ResponseBoolean;
 }
 
 export class Language1To2Years {
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  says5DifferentWords?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    says5DifferentWords?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  asksForMore?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    asksForMore?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  saysDone?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    saysDone?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  obeys3DifferentOrdersThatAreNotAccompaniedByIndicativeGestures?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    obeys3DifferentOrdersThatAreNotAccompaniedByIndicativeGestures?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  managesToGiveOrShowWhenAsked?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    managesToGiveOrShowWhenAsked?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  pointsTo12ObjectsWhenNamed?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    pointsTo12ObjectsWhenNamed?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  pointsTo3To5FiguresInABook?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    pointsTo3To5FiguresInABook?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  pointsTo3PartsOfOwnBody?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    pointsTo3PartsOfOwnBody?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  saysOwnNameOrNicknameWhenAsked?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    saysOwnNameOrNicknameWhenAsked?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  respondsToTheQuestionWhatIsThis?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    respondsToTheQuestionWhatIsThis?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  combinesWordsAndGesturesToExpressWishes?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    combinesWordsAndGesturesToExpressWishes?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  names5FamilyMembersIncludingAnimals?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    names5FamilyMembersIncludingAnimals?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  names4Toys?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    names4Toys?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  producesAnimalSoundsOrNamesThemByTheSound?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    producesAnimalSoundsOrNamesThemByTheSound?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  asksForKnownFoodsByNameWhenShown?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    asksForKnownFoodsByNameWhenShown?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  asksQuestionsVaryingIntonationOfVoice?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    asksQuestionsVaryingIntonationOfVoice?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  names3BodyPartsOnADollOrAnotherPerson?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    names3BodyPartsOnADollOrAnotherPerson?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  respondsToYesNoQuestions?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    respondsToYesNoQuestions?: ResponseBoolean;
 }
 
 export class Language2To3Years {
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  combinesNounsOrAdjectivesAndNounsIn2WordSentences?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    combinesNounsOrAdjectivesAndNounsIn2WordSentences?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  combinesNounAndVerbIn2WordSentences?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    combinesNounAndVerbIn2WordSentences?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  usesAWordToIndicateThatWantsToGoToTheBathroom?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    usesAWordToIndicateThatWantsToGoToTheBathroom?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  combinesVerbOrNounWithThereAndHereIn2WordSentences?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    combinesVerbOrNounWithThereAndHereIn2WordSentences?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  combines2WordsToExpressPossession?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    combines2WordsToExpressPossession?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  usesNoInSpeech?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    usesNoInSpeech?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  respondsToTheQuestionWhatIsDoingForHabitualActivity?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    respondsToTheQuestionWhatIsDoingForHabitualActivity?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  respondsToQuestionsLikeWhereIsObject?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    respondsToQuestionsLikeWhereIsObject?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  namesFamiliarEnvironmentalSounds?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    namesFamiliarEnvironmentalSounds?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  givesMoreThanOneObjectWhenUsingThePluralFormInTheRequest?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    givesMoreThanOneObjectWhenUsingThePluralFormInTheRequest?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  whenSpeakingRefersToItselfByName?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    whenSpeakingRefersToItselfByName?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  pointsToFiguresOfCommonObjectsDescribedByUseUpTo10WhatIsUsedToEatSpoon?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    pointsToFiguresOfCommonObjectsDescribedByUseUpTo10WhatIsUsedToEatSpoon?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  showsAgeByFingers?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    showsAgeByFingers?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  saysSexWhenAsked?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    saysSexWhenAsked?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  obeysTheSequenceOfTwoRelatedOrders?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    obeysTheSequenceOfTwoRelatedOrders?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  usesTheVerbFormInTheGerund?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    usesTheVerbFormInTheGerund?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  employsRegularPluralForms?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    employsRegularPluralForms?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  employsSomeIrregularFormsOfVerbsInThePastSystematically?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    employsSomeIrregularFormsOfVerbsInThePastSystematically?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  asksQuestionsLikeWhatIsThis?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    asksQuestionsLikeWhatIsThis?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  controlsVolumeOfVoice90PercentOfTheTime?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    controlsVolumeOfVoice90PercentOfTheTime?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  usesThisAndThatInSpeech?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    usesThisAndThatInSpeech?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  employsIsAndIsLocatedInSimpleSentences?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    employsIsAndIsLocatedInSimpleSentences?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  saysIMeMineInsteadOfOwnName?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    saysIMeMineInsteadOfOwnName?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  pointsToObjectsAndSaysTheyAreNotOtherThings?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    pointsToObjectsAndSaysTheyAreNotOtherThings?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  respondsToTheQuestionWhoGivingAName?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    respondsToTheQuestionWhoGivingAName?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  employsPossessiveFormsOfNouns?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    employsPossessiveFormsOfNouns?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  usesArticlesWhenSpeaking?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    usesArticlesWhenSpeaking?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  usesNounsThatIndicateAGroupOrCategory?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    usesNounsThatIndicateAGroupOrCategory?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  usesTheVerbsToBeToExistAndToHaveInThePresentWithFewErrors?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    usesTheVerbsToBeToExistAndToHaveInThePresentWithFewErrors?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  saysIfObjectsAreOpenOrClosed?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    saysIfObjectsAreOpenOrClosed?: ResponseBoolean;
 }
 
 export class Language3To4Years {
-@ApiProperty()
-@IsBoolean()
-@IsOptional()
-expressesDiminutivesAndAugmentativesWhenSpeaking?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    expressesDiminutivesAndAugmentativesWhenSpeaking?: ResponseBoolean;
 
-@ApiProperty()
-@IsBoolean()
-@IsOptional()
-paysAttentionFor5MinutesToAReadStory?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    paysAttentionFor5MinutesToAReadStory?: ResponseBoolean;
 
-@ApiProperty()
-@IsBoolean()
-@IsOptional()
-obeysSequenceOf2UnrelatedOrders?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    obeysSequenceOf2UnrelatedOrders?: ResponseBoolean;
 
-@ApiProperty()
-@IsBoolean()
-@IsOptional()
-saysFullNameWhenAsked?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    saysFullNameWhenAsked?: ResponseBoolean;
 
-@ApiProperty()
-@IsBoolean()
-@IsOptional()
-respondsSimpleQuestionsInvolvingHow?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    respondsSimpleQuestionsInvolvingHow?: ResponseBoolean;
 
-@ApiProperty()
-@IsBoolean()
-@IsOptional()
-employsRegularVerbsInThePast?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    employsRegularVerbsInThePast?: ResponseBoolean;
 
-@ApiProperty()
-@IsBoolean()
-@IsOptional()
-reportsImmediateExperiences?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    reportsImmediateExperiences?: ResponseBoolean;
 
-@ApiProperty()
-@IsBoolean()
-@IsOptional()
-saysHowCommonObjectsAreUsed?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    saysHowCommonObjectsAreUsed?: ResponseBoolean;
 
-@ApiProperty()
-@IsBoolean()
-@IsOptional()
-expressesFutureActionsUsingVerbsToGoToHaveAndToWant?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    expressesFutureActionsUsingVerbsToGoToHaveAndToWant?: ResponseBoolean;
 
-@ApiProperty()
-@IsBoolean()
-@IsOptional()
-usesMasculineAndFeminineAppropriatelyInSpeech?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    usesMasculineAndFeminineAppropriatelyInSpeech?: ResponseBoolean;
 
-@ApiProperty()
-@IsBoolean()
-@IsOptional()
-usesImperativeFormsOfVerbsWhenAskingForFavors?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    usesImperativeFormsOfVerbsWhenAskingForFavors?: ResponseBoolean;
 
-@ApiProperty()
-@IsBoolean()
-@IsOptional()
-tells2FactsInOrderOfOccurrence?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    tells2FactsInOrderOfOccurrence?: ResponseBoolean;
 }
 
 export class Language4To5Years {
-@ApiProperty()
-@IsBoolean()
-@IsOptional()
-obeysASequenceInvolving3Orders?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    obeysASequenceInvolving3Orders?: ResponseBoolean;
 
-@ApiProperty()
-@IsBoolean()
-@IsOptional()
-demonstratesUnderstandingOfReflexiveVerbsUsingThemOccasionallyExHeGotHurt?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    demonstratesUnderstandingOfReflexiveVerbsUsingThemOccasionallyExHeGotHurt?: ResponseBoolean;
 
-@ApiProperty()
-@IsBoolean()
-@IsOptional()
-managesToIdentifyObjectsFiguresThatFormAPairUponRequest?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    managesToIdentifyObjectsFiguresThatFormAPairUponRequest?: ResponseBoolean;
 
-@ApiProperty()
-@IsBoolean()
-@IsOptional()
-employsFutureWhenSpeaking?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    employsFutureWhenSpeaking?: ResponseBoolean;
 
-@ApiProperty()
-@IsBoolean()
-@IsOptional()
-usesSentencesComposedByCoordination?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    usesSentencesComposedByCoordination?: ResponseBoolean;
 
-@ApiProperty()
-@IsBoolean()
-@IsOptional()
-managesToIdentifyTheTopAndBottomPartOfObjectsWhenRequested?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    managesToIdentifyTheTopAndBottomPartOfObjectsWhenRequested?: ResponseBoolean;
 
-@ApiProperty()
-@IsBoolean()
-@IsOptional()
-employsOccasionallyTheConditionalWhenSpeakingCouldWouldCouldWouldMake?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    employsOccasionallyTheConditionalWhenSpeakingCouldWouldCouldWouldMake?: ResponseBoolean;
 
-@ApiProperty()
-@IsBoolean()
-@IsOptional()
-managesToIdentifyAbsurditiesInFigures?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    managesToIdentifyAbsurditiesInFigures?: ResponseBoolean;
 
-@ApiProperty()
-@IsBoolean()
-@IsOptional()
-employsTheFollowingWordsBrotherSisterGrandmotherGrandfather?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    employsTheFollowingWordsBrotherSisterGrandmotherGrandfather?: ResponseBoolean;
 
-@ApiProperty()
-@IsBoolean()
-@IsOptional()
-completesSentencesWithAntonyms?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    completesSentencesWithAntonyms?: ResponseBoolean;
 
-@ApiProperty()
-@IsBoolean()
-@IsOptional()
-tellsAKnownStoryWithoutHelpOfFigures?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    tellsAKnownStoryWithoutHelpOfFigures?: ResponseBoolean;
 
-@ApiProperty()
-@IsBoolean()
-@IsOptional()
-inAFigureNamesTheObjectThatDoesNotBelongToACertainCategory?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    inAFigureNamesTheObjectThatDoesNotBelongToACertainCategory?: ResponseBoolean;
 
-@ApiProperty()
-@IsBoolean()
-@IsOptional()
-saysIfTwoWordsRhymeOrNot?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    saysIfTwoWordsRhymeOrNot?: ResponseBoolean;
 
-@ApiProperty()
-@IsBoolean()
-@IsOptional()
-usesComplexSentencesComposedBySubordination?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    usesComplexSentencesComposedBySubordination?: ResponseBoolean;
 
-@ApiProperty()
-@IsBoolean()
-@IsOptional()
-saysIfASoundIsLoudOrSoft?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    saysIfASoundIsLoudOrSoft?: ResponseBoolean;
 }
-
 
 export class Language5To6Years {
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  managesToIndicateSomeManyAndSeveralElements?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    managesToIndicateSomeManyAndSeveralElements?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  saysOwnAddress?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    saysOwnAddress?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  saysOwnPhoneNumber?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    saysOwnPhoneNumber?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  pointsToTheSetThatHasMoreLessOrFewElements?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    pointsToTheSetThatHasMoreLessOrFewElements?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  tellsSimpleJokes?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    tellsSimpleJokes?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  reportsDailyExperiences?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    reportsDailyExperiences?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  describesALocationOrMovementThroughOrBetweenAwayFromFromSinceToOverUpTo?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    describesALocationOrMovementThroughOrBetweenAwayFromFromSinceToOverUpTo?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  answersTheQuestionWhyWithAnExplanation?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    answersTheQuestionWhyWithAnExplanation?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  ordersAndTellsAStoryOf2To5EpisodesInTheCorrectSequence?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    ordersAndTellsAStoryOf2To5EpisodesInTheCorrectSequence?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  definesWords?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    definesWords?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  respondsAppropriatelyToTheQuestionWhatIsTheOppositeOf?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    respondsAppropriatelyToTheQuestionWhatIsTheOppositeOf?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  respondsToTheQuestionWhatHappensIf?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    respondsToTheQuestionWhatHappensIf?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  usesYesterdayAndTomorrowCorrectly?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    usesYesterdayAndTomorrowCorrectly?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  asksTheMeaningOfNewOrKnownQuestions?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    asksTheMeaningOfNewOrKnownQuestions?: ResponseBoolean;
 }
 
+// COGNIÇÃO
 export class Cognition0To1Year {
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  removesAClothFromFaceThatObscuresVision?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    removesAClothFromFaceThatObscuresVision?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  looksForObjectThatHasBeenRemovedFromItsVisualField?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    looksForObjectThatHasBeenRemovedFromItsVisualField?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  removesAnObjectFromAReceptacleByPuttingHandInsideIt?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    removesAnObjectFromAReceptacleByPuttingHandInsideIt?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  placesAnObjectInAReceptacleImitatingAnAdult?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    placesAnObjectInAReceptacleImitatingAnAdult?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  placesAnObjectInAReceptacleWhenGivenInstructions?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    placesAnObjectInAReceptacleWhenGivenInstructions?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  shakesAToyThatProducesSoundHangingFromAString?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    shakesAToyThatProducesSoundHangingFromAString?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  placesThreeObjectsInAReceptacleAndEmptiesIt?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    placesThreeObjectsInAReceptacleAndEmptiesIt?: ResponseBoolean;
 
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    transfersAnObjectFromOneHandToAnotherToPickUpAnotherObject?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  transfersAnObjectFromOneHandToAnotherToPickUpAnotherObject?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    dropsAndPicksUpAToy?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  dropsAndPicksUpAToy?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    discoversAnObjectHiddenUnderAReceptacle?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  discoversAnObjectHiddenUnderAReceptacle?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    pushes3BlocksAsIfItWereATrain?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  pushes3BlocksAsIfItWereATrain?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    removesACircleFromABoardByImitation?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  removesACircleFromABoardByImitation?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    placesARoundPinInAPinBoardWhenRequested?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  placesARoundPinInAPinBoardWhenRequested?: boolean;
-
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  performsSimpleGesturesWhenRequested?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    performsSimpleGesturesWhenRequested?: ResponseBoolean;
 }
 
 export class Cognition1To2Years{
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  removes6ObjectsFromAReceptacleOneAtATime?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    removes6ObjectsFromAReceptacleOneAtATime?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  pointsToAPartOfTheBody?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    pointsToAPartOfTheBody?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  stacks3BlocksGivenTheOrder?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    stacks3BlocksGivenTheOrder?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  matchesSimilarObjects?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    matchesSimilarObjects?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  scribblesOnPaper?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    scribblesOnPaper?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  pointsToItselfWhenAskedWhereIsName?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    pointsToItselfWhenAskedWhereIsName?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  places5RoundPinsGivenTheOrder?: boolean;
-  
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  matchesObjectsWithTheFigureOfTheSameName?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    places5RoundPinsGivenTheOrder?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  pointsToTheNamedFigure?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    matchesObjectsWithTheFigureOfTheSameName?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  turnsThePagesOfABook23AtATimeToFindTheNamedFigure?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    pointsToTheNamedFigure?: ResponseBoolean;
+
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    turnsThePagesOfABook23AtATimeToFindTheNamedFigure?: ResponseBoolean;
 }
 
-export class Cognition2To3YearsDto  {
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  findsACertainBookWhenRequested?: boolean;
+export class Cognition2To3YearsDto {
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    findsACertainBookWhenRequested?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  completesA3PieceJigsawPuzzle?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    completesA3PieceJigsawPuzzle?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  names4CommonObjectsInFigures?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    names4CommonObjectsInFigures?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  drawsAVerticalLineImitatingAnAdult?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    drawsAVerticalLineImitatingAnAdult?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  drawsAHorizontalLineImitatingAnAdult?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    drawsAHorizontalLineImitatingAnAdult?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  copiesACircle?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    copiesACircle?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  matchesObjectsWithTheSameTexture?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    matchesObjectsWithTheSameTexture?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  pointsToSmallAndBigWhenRequested?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    pointsToSmallAndBigWhenRequested?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  drawsAPlusSignImitatingAnAdult?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    drawsAPlusSignImitatingAnAdult?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  matches3Colors?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    matches3Colors?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  placesObjectsInsideOnTopAndUnderAReceptacleGivenTheOrder?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    placesObjectsInsideOnTopAndUnderAReceptacleGivenTheOrder?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  namesObjectsWhenHearsTheNoiseTheyMake?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    namesObjectsWhenHearsTheNoiseTheyMake?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  mountsA4PieceFittingToy?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    mountsA4PieceFittingToy?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  namesActionsInFiguresWhatIsDoing?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    namesActionsInFiguresWhatIsDoing?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  matchesGeometricShapeWithTheFigureOfTheSame?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    matchesGeometricShapeWithTheFigureOfTheSame?: ResponseBoolean;
 
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  stacks5OrMoreRingsOnARodInOrder?: boolean;
+    @ApiProperty()
+    @IsBoolean()
+    @IsOptional()
+    stacks5OrMoreRingsOnARodInOrder?: ResponseBoolean;
 }
 
 export class Cognition3To4YearsDto {
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  namesObjectsAsBeingBigOrSmall?: boolean;
+  namesObjectsAsBeingBigOrSmall?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  pointsTo10PartsOfTheBodyWhenRequested?: boolean;
+  pointsTo10PartsOfTheBodyWhenRequested?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  pointsToBoyAndGirlGivenTheOrder?: boolean;
+  pointsToBoyAndGirlGivenTheOrder?: ResponseBoolean;
   
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  saysIfAnObjectIsHeavyOrLight?: boolean;
+  saysIfAnObjectIsHeavyOrLight?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  unites2PartsOfAFigureToFormTheWhole?: boolean;
+  unites2PartsOfAFigureToFormTheWhole?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  describes2EventsOrCharactersFromAFamiliarStoryOrTvProgram?: boolean;
+  describes2EventsOrCharactersFromAFamiliarStoryOrTvProgram?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  repeatsGamesRhymesOrSongsThatInvolveCoordinatedMovements?: boolean;
+  repeatsGamesRhymesOrSongsThatInvolveCoordinatedMovements?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  matches3OrMoreObjects?: boolean;
+  matches3OrMoreObjects?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  pointsToLongOrShortObjects?: boolean;
+  pointsToLongOrShortObjects?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  associatesCorrespondingObjectsExSockShoe?: boolean;
+  associatesCorrespondingObjectsExSockShoe?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  countsUpTo3ImitatingAnAdult?: boolean;
+  countsUpTo3ImitatingAnAdult?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  groupsObjectsIntoCategories?: boolean;
+  groupsObjectsIntoCategories?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  tracesAVInImitation?: boolean;
+  tracesAVInImitation?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  tracesADiagonalLineGivenTheExample?: boolean;
+  tracesADiagonalLineGivenTheExample?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  countsUpTo10ObjectsImitatingAnAdult?: boolean;
+  countsUpTo10ObjectsImitatingAnAdult?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  buildsABridgeWith3BlocksByImitation?: boolean;
+  buildsABridgeWith3BlocksByImitation?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  matchesASequenceOrPatternSizeColorOfBlocksOrBeads?: boolean;
+  matchesASequenceOrPatternSizeColorOfBlocksOrBeads?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  copiesASeriesOfInterconnectedV?: boolean;
+  copiesASeriesOfInterconnectedV?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  addsALegOrArmToAnIncompleteDrawingOfTheHumanFigure?: boolean;
+  addsALegOrArmToAnIncompleteDrawingOfTheHumanFigure?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  completesA6PiecePuzzle?: boolean;
+  completesA6PiecePuzzle?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  indicatesIfObjectsAreEqualOrDifferent?: boolean;
+  indicatesIfObjectsAreEqualOrDifferent?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  drawsASquareImitatingAnAdult?: boolean;
+  drawsASquareImitatingAnAdult?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  names3ColorsBeingRequested?: boolean;
+  names3ColorsBeingRequested?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  names3GeometricShapesSquareTriangleAndCircle?: boolean;
+  names3GeometricShapesSquareTriangleAndCircle?: ResponseBoolean;
 }
 
 export class Cognition4To5YearsDto {
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  picksUpFrom1To5ObjectsWhenRequested?: boolean;
+  picksUpFrom1To5ObjectsWhenRequested?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  names5DifferentTextures?: boolean;
+  names5DifferentTextures?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  copiesATriangleWhenRequested?: boolean;
+  copiesATriangleWhenRequested?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  remembers4ObjectsThatHadBeenSeenInAFigure?: boolean;
+  remembers4ObjectsThatHadBeenSeenInAFigure?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  saysTheTimeOfTheDayAssociatedWithEachActivity?: boolean;
+  saysTheTimeOfTheDayAssociatedWithEachActivity?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  repeatsFamiliarRhymes?: boolean;
+  repeatsFamiliarRhymes?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  saysIfAnObjectIsHeavierOrLighterObjectsWithADifferenceOf05Kilo?: boolean;
+  saysIfAnObjectIsHeavierOrLighterObjectsWithADifferenceOf05Kilo?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  saysWhatIsMissingWhenAnObjectIsRemovedFromAGroupOf3Objects?: boolean;
+  saysWhatIsMissingWhenAnObjectIsRemovedFromAGroupOf3Objects?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  names8Colors?: boolean;
+  names8Colors?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  identifiesTheValueOf3Coins?: boolean;
+  identifiesTheValueOf3Coins?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  matchesSymbolsLettersAndNumbers?: boolean;
+  matchesSymbolsLettersAndNumbers?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  saysTheColorOfNamedObjects?: boolean;
+  saysTheColorOfNamedObjects?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  reports5MainFactsOfAStoryTold3Times?: boolean;
+  reports5MainFactsOfAStoryTold3Times?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  drawsHumanFigureHeadTorsoAnd4Limbs?: boolean;
+  drawsHumanFigureHeadTorsoAnd4Limbs?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  sings5VersesOfASong?: boolean;
+  sings5VersesOfASong?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  buildsAPyramidOf10BlocksByImitation?: boolean;
+  buildsAPyramidOf10BlocksByImitation?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  namesObjectsAsBeingLongOrShort?: boolean;
+  namesObjectsAsBeingLongOrShort?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  placesObjectsBehindBesideOrNextToOthers?: boolean;
+  placesObjectsBehindBesideOrNextToOthers?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  makesEqualSetsOf10ObjectsAccordingToModel?: boolean;
+  makesEqualSetsOf10ObjectsAccordingToModel?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  namesOrPointsToTheMissingPartOfTheFigure?: boolean;
+  namesOrPointsToTheMissingPartOfTheFigure?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  countsFrom1To20?: boolean;
+  countsFrom1To20?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  identifiesTheObjectThatIsPlacedInTheMiddleInFirstAndLastPlace?: boolean;
+  identifiesTheObjectThatIsPlacedInTheMiddleInFirstAndLastPlace?: ResponseBoolean;
 }
 
 export class Cognition5To6YearsDto {
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  countsUpTo20ObjectsAndAnswersAppropriatelyToTheQuestionHowManyDidYouCount?: boolean;
+  countsUpTo20ObjectsAndAnswersAppropriatelyToTheQuestionHowManyDidYouCount?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  names10Numerals?: boolean;
+  names10Numerals?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  identifiesWhichIsItsLeftAndWhichIsItsRight?: boolean;
+  identifiesWhichIsItsLeftAndWhichIsItsRight?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  saysTheVowelsInOrder?: boolean;
+  saysTheVowelsInOrder?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  writesOwnNameWithBlockLetters?: boolean;
+  writesOwnNameWithBlockLetters?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  names5LettersOfTheAlphabet?: boolean;
+  names5LettersOfTheAlphabet?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  objectsInSequenceOfLengthAndWidth?: boolean;
+  objectsInSequenceOfLengthAndWidth?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  namesTheUppercaseLettersOfTheAlphabet?: boolean;
+  namesTheUppercaseLettersOfTheAlphabet?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  placesNumeralsFrom1To10InTheCorrectSequence?: boolean;
+  placesNumeralsFrom1To10InTheCorrectSequence?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  identifiesThePositionOfObjectsInFirstSecondAndThirdPlace?: boolean;
+  identifiesThePositionOfObjectsInFirstSecondAndThirdPlace?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  namesTheLowercaseLettersOfTheAlphabet?: boolean;
+  namesTheLowercaseLettersOfTheAlphabet?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  matchesUppercaseLettersWithLowercaseOnes?: boolean;
+  matchesUppercaseLettersWithLowercaseOnes?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  pointsToNumeralsFrom1To25?: boolean;
+  pointsToNumeralsFrom1To25?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  copiesARhombus?: boolean;
+  copiesARhombus?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  completesASimpleLabyrinth?: boolean;
+  completesASimpleLabyrinth?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  saysTheDaysOfTheWeekInOrder?: boolean;
+  saysTheDaysOfTheWeekInOrder?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  addsAndSubtractsCombinationsOfUpTo3Elements?: boolean;
+  addsAndSubtractsCombinationsOfUpTo3Elements?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  saysTheMonthAndDayOfOwnBirthday?: boolean;
+  saysTheMonthAndDayOfOwnBirthday?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  reads10PrintedWords?: boolean;
+  reads10PrintedWords?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  predictsWhatWillOccur?: boolean;
+  predictsWhatWillOccur?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  pointsToWholeAndHalfObjects?: boolean;
+  pointsToWholeAndHalfObjects?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  countsFromMemoryFrom1To100AskToStopAt40AndContinueAt80IfNoErrorsUntil40?: boolean;
+  countsFromMemoryFrom1To100AskToStopAt40AndContinueAt80IfNoErrorsUntil40?: ResponseBoolean;
 }
 
+// SELF CARE
 export class SelfCare0To1YearDto {
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  sucksAndSwallowsLiquids?: boolean;
+  sucksAndSwallowsLiquids?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  eatsPorridgeOrSoup?: boolean;
+  eatsPorridgeOrSoup?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  extendsHandsTowardsBabyBottleTryingToGrabIt?: boolean;
+  extendsHandsTowardsBabyBottleTryingToGrabIt?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  eatsPureedFoodsGivenByParents?: boolean;
+  eatsPureedFoodsGivenByParents?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  holdsBabyBottleWithoutHelpWhileDrinking?: boolean;
+  holdsBabyBottleWithoutHelpWhileDrinking?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  bringsBottleToMouthOrRefusesItPushingItAway?: boolean;
+  bringsBottleToMouthOrRefusesItPushingItAway?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  eatsMashedFoodsGivenByParents?: boolean;
+  eatsMashedFoodsGivenByParents?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  drinksFromAMugHeldByParents?: boolean;
+  drinksFromAMugHeldByParents?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  eatsSemisolidFoodsGivenByParents?: boolean;
+  eatsSemisolidFoodsGivenByParents?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  feedsItselfUsingFingers?: boolean;
+  feedsItselfUsingFingers?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  holdsTheMugWithBothHandsAndDrinks?: boolean;
+  holdsTheMugWithBothHandsAndDrinks?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  bringsASpoonFullOfFoodToMouthWithHelp?: boolean;
+  bringsASpoonFullOfFoodToMouthWithHelp?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  stretchesArmsAndLegsWhenBeingDressed?: boolean;
+  stretchesArmsAndLegsWhenBeingDressed?: ResponseBoolean;
 }
+
 export class SelfCare1To2YearsDto {
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  eatsWithSpoonIndependently?: boolean;
+  eatsWithSpoonIndependently?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  holdsMugWithOneHandAndDrinks?: boolean;
+  holdsMugWithOneHandAndDrinks?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  putsHandInWaterAndPatsFaceWithWetHandsImitatingSomeone?: boolean;
+  putsHandInWaterAndPatsFaceWithWetHandsImitatingSomeone?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  sitsOnAPottyOrChildsToiletFor5Minutes?: boolean;
+  sitsOnAPottyOrChildsToiletFor5Minutes?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  putsAHatOnHeadAndRemovesIt?: boolean;
+  putsAHatOnHeadAndRemovesIt?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  takesOffSocks?: boolean;
+  takesOffSocks?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  pushesArmsThroughSleevesAndFeetThroughTrouserLegs?: boolean;
+  pushesArmsThroughSleevesAndFeetThroughTrouserLegs?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  takesOffShoesWhenLacesAreUntied?: boolean;
+  takesOffShoesWhenLacesAreUntied?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  takesOffCoatWhenUnbuttoned?: boolean;
+  takesOffCoatWhenUnbuttoned?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  takesOffTrousersWhenUnbuttoned?: boolean;
+  takesOffTrousersWhenUnbuttoned?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  pullsALargeZipperUpAndDown?: boolean;
+  pullsALargeZipperUpAndDown?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  usesWordsOrGesturesIndicatingNeedToGoToTheBathroom?: boolean;
+  usesWordsOrGesturesIndicatingNeedToGoToTheBathroom?: ResponseBoolean;
 }
 
 export class SelfCare2To3YearsDto {
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  eatsAloneUsingSpoonOrMugSpillingALittleFoodOrLiquid?: boolean;
+  eatsAloneUsingSpoonOrMugSpillingALittleFoodOrLiquid?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  whenGivenATowelDriesHandsAndFaceWithHelp?: boolean;
+  whenGivenATowelDriesHandsAndFaceWithHelp?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  sucksLiquidFromTheGlassOrMugUsingAStraw?: boolean;
+  sucksLiquidFromTheGlassOrMugUsingAStraw?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  takesForkfuls?: boolean;
+  takesForkfuls?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  chewsAndSwallowsOnlyEdibleSubstances?: boolean;
+  chewsAndSwallowsOnlyEdibleSubstances?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  driesHandsWithoutHelpWhenGivenATowel?: boolean;
+  driesHandsWithoutHelpWhenGivenATowel?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  warnsThatWantsToGoToTheBathroomEvenIfItIsTooLate?: boolean;
+  warnsThatWantsToGoToTheBathroomEvenIfItIsTooLate?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  controlsOwnDrool?: boolean;
+  controlsOwnDrool?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  urinatesOrDefecatesWhenPlacedInPottyAtLeast3TimesAWeek?: boolean;
+  urinatesOrDefecatesWhenPlacedInPottyAtLeast3TimesAWeek?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  putsOnShoes?: boolean;
+  putsOnShoes?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  brushesTeethImitatingAnAdult?: boolean;
-  
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  removesSimpleClothesThatHaveBeenUnbuttoned?: boolean;
+  brushesTeethImitatingAnAdult?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  usesTheBathroomToDefecateFailsOnlyOnceAWeek?: boolean;
+  removesSimpleClothesThatHaveBeenUnbuttoned?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  obtainsWaterFromAFaucetWithoutHelp?: boolean;
+  usesTheBathroomToDefecateFailsOnlyOnceAWeek?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  washesHandsAndFaceWithSoap?: boolean;
+  obtainsWaterFromAFaucetWithoutHelp?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  warnsThatWantsToGoToTheBathroomDuringTheDayInTime?: boolean;
+  washesHandsAndFaceWithSoap?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  hangsCoatOnAHookAtItsOwnHeight?: boolean;
+  warnsThatWantsToGoToTheBathroomDuringTheDayInTime?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  staysDryWhenSleepingDuringTheDay?: boolean;
+  hangsCoatOnAHookAtItsOwnHeight?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  avoidsRisksExSharpEdgesOnFurnitureAndStairsWithoutHandrail?: boolean;
+  staysDryWhenSleepingDuringTheDay?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  usesANapkinWhenRecommended?: boolean;
+  avoidsRisksExSharpEdgesOnFurnitureAndStairsWithoutHandrail?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  piercesTheForkInTheFoodTakingItToTheMouth?: boolean;
+  usesANapkinWhenRecommended?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  poursLiquidFromASmallPitcherIntoAGlassWithoutHelp?: boolean;
+  piercesTheForkInTheFoodTakingItToTheMouth?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  unfastensClothesFastenedWithASnapFastener?: boolean;
+  poursLiquidFromASmallPitcherIntoAGlassWithoutHelp?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  washesArmsAndLegsWhenGivenABath?: boolean;
+  unfastensClothesFastenedWithASnapFastener?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  putsOnSocks?: boolean;
+  washesArmsAndLegsWhenGivenABath?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  wearsCoatJacketOrShirt?: boolean;
+  putsOnSocks?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  identifiesTheFrontPartOfClothes?: boolean;
+  wearsCoatJacketOrShirt?: ResponseBoolean;
+
+  @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  identifiesTheFrontPartOfClothes?: ResponseBoolean;
 }
 
 export class SelfCare3To4YearsDto {
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  feedsItselfAloneForEntireMeal?: boolean;
+  feedsItselfAloneForEntireMeal?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  dressesItselfAloneNeedingHelpOnlyWhenThereAreJacketsOrTShirtsWithClosedCollarsOrButtonsAndFasteners?: boolean;
+  dressesItselfAloneNeedingHelpOnlyWhenThereAreJacketsOrTShirtsWithClosedCollarsOrButtonsAndFasteners?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  wipesNoseWhenReminded?: boolean;
+  wipesNoseWhenReminded?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  wakesUpDry2MorningsAWeek?: boolean;
+  wakesUpDry2MorningsAWeek?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  ifBoyUrinatesInTheToiletWhileStanding?: boolean;
+  ifBoyUrinatesInTheToiletWhileStanding?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  dressesAndUndressesItselfAloneExceptForButtonsAndFasteners75PercentOfTheTime?: boolean;
+  dressesAndUndressesItselfAloneExceptForButtonsAndFasteners75PercentOfTheTime?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  fastensClothesWithSnapsOrHooks?: boolean;
+  fastensClothesWithSnapsOrHooks?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  blowsNoseWhenReminded?: boolean;
+  blowsNoseWhenReminded?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  avoidsCommonDangersExBrokenGlass?: boolean;
+  avoidsCommonDangersExBrokenGlass?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  hangsClothesOnAHangerAndPutsInClosetWhenAsked?: boolean;
+  hangsClothesOnAHangerAndPutsInClosetWhenAsked?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  brushesTeethWhenReceivesInstruction?: boolean;
+  brushesTeethWhenReceivesInstruction?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  putsOnGloves?: boolean;
+  putsOnGloves?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  putsOnBoots?: boolean;
+  putsOnBoots?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  unbuttonsLargeButtons?: boolean;
+  unbuttonsLargeButtons?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  buttonsLargeButtons?: boolean;
+  buttonsLargeButtons?: ResponseBoolean;
 }
 
 export class SelfCare4To5YearsDto {
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  cleansWhatItSpilledOnOwn?: boolean;
+  cleansWhatItSpilledOnOwn?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  avoidsPoisonAndAllHarmfulSubstances?: boolean;
+  avoidsPoisonAndAllHarmfulSubstances?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  unbuttonsOwnClothes?: boolean;
+  unbuttonsOwnClothes?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  buttonsOwnClothes?: boolean;
+  buttonsOwnClothes?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  removesPlateAndCutleryFromTheTable?: boolean;
+  removesPlateAndCutleryFromTheTable?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  fitsZipperIntoItsTermination?: boolean;
+  fitsZipperIntoItsTermination?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  washesHandsAndFace?: boolean;
+  washesHandsAndFace?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  usesAppropriateCutleryToEat?: boolean;
+  usesAppropriateCutleryToEat?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  wakesUpAtNightToGoToTheBathroomOrWakesUpDry?: boolean;
+  wakesUpAtNightToGoToTheBathroomOrWakesUpDry?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  cleansAndBlowsItsNose75PercentOfTheTimeWithoutBeingReminded?: boolean;
+  cleansAndBlowsItsNose75PercentOfTheTimeWithoutBeingReminded?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  bathesAloneNeedingHelpOnlyToWashBackNeckAndEars?: boolean;
+  bathesAloneNeedingHelpOnlyToWashBackNeckAndEars?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  usesAKnifeToSpreadButterOnBread?: boolean;
+  usesAKnifeToSpreadButterOnBread?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  tightensAndLoosensBeltsOrBuckles?: boolean;
+  tightensAndLoosensBeltsOrBuckles?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  dressesItselfAloneButDoesNotTieLaces?: boolean;
+  dressesItselfAloneButDoesNotTieLaces?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  servesItselfAtTheTableWhileHoldingTheFoodPlatter?: boolean;
+  servesItselfAtTheTableWhileHoldingTheFoodPlatter?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  helpsSetTheTableCorrectlyWhenReceivesInstructions?: boolean;
+  helpsSetTheTableCorrectlyWhenReceivesInstructions?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  brushesTeeth?: boolean;
+  brushesTeeth?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  goesToTheBathroomInTimeRemovesClothesUsesToiletPaperFlushesAndDressesWithoutHelp?: boolean;
+  goesToTheBathroomInTimeRemovesClothesUsesToiletPaperFlushesAndDressesWithoutHelp?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  combsOrBrushesHair?: boolean;
+  combsOrBrushesHair?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  hangsClothesOnHangers?: boolean;
+  hangsClothesOnHangers?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  walksAroundTheNeighborhoodWithoutConstantSupervision?: boolean;
+  walksAroundTheNeighborhoodWithoutConstantSupervision?: ResponseBoolean;
+
+   @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+   threadsLacesIntoShoes?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  threadsLacesIntoShoes?: boolean;
-
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  tiesOrLacesShoelaces?: boolean;
+  tiesOrLacesShoelaces?: ResponseBoolean;
 }
+
 export class SelfCare5To6YearsDto {
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  isResponsibleForAWeeklyTaskAndPerformsItWhenReminded?: boolean;
+  isResponsibleForAWeeklyTaskAndPerformsItWhenReminded?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  selectsAppropriateClothingForClimateAndOccasion?: boolean;
+  selectsAppropriateClothingForClimateAndOccasion?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  stopsOnTheSidewalkLooksBothWaysAndCrossesTheStreetWithoutNeedingToBeReminded?: boolean;
+  stopsOnTheSidewalkLooksBothWaysAndCrossesTheStreetWithoutNeedingToBeReminded?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  servesItselfAtTheTableAndPassesThePotOfFoodToOthers?: boolean;
+  servesItselfAtTheTableAndPassesThePotOfFoodToOthers?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  preparesOwnCupOfCoffeeWithMilk?: boolean;
+  preparesOwnCupOfCoffeeWithMilk?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  isResponsibleForADailyTaskAtHome?: boolean;
+  isResponsibleForADailyTaskAtHome?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  adjustsTheTemperatureOfWaterForBathing?: boolean;
+  adjustsTheTemperatureOfWaterForBathing?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  preparesOwnSnack?: boolean;
+  preparesOwnSnack?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  walksAloneUpToADistanceOf2BlocksFromHome?: boolean;
+  walksAloneUpToADistanceOf2BlocksFromHome?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  cutsTenderFoodsWithAKnife?: boolean;
+  cutsTenderFoodsWithAKnife?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  findsTheBathroomInAPublicPlaceCorrectly?: boolean;
+  findsTheBathroomInAPublicPlaceCorrectly?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  opensTheMilkPackage?: boolean;
+  opensTheMilkPackage?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  picksUpATrayWithFoodCarryingItAndPlacingItOnTheTable?: boolean;
+  picksUpATrayWithFoodCarryingItAndPlacingItOnTheTable?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  tiesTheLacesOnJacketsWithHood?: boolean;
+  tiesTheLacesOnJacketsWithHood?: ResponseBoolean;
 
-  @ApiProperty()
+   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  fastensTheCarSeatBelt?: boolean;
+  fastensTheCarSeatBelt?: ResponseBoolean;
 }
-
 export class MotorDevelopment0To1YearDto {
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  reachesForAnObjectPlacedInFrontOfIt15To20Cm?: boolean;
+  reachesForAnObjectPlacedInFrontOfIt15To20Cm?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  grabsAnObjectPlacedInFrontOfIt8Cm?: boolean;
+  grabsAnObjectPlacedInFrontOfIt8Cm?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  extendsArmsTowardAnObjectInFrontOfItAndGrabsIt?: boolean;
+  extendsArmsTowardAnObjectInFrontOfItAndGrabsIt?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  reachesForAPreferredObject?: boolean;
+  reachesForAPreferredObject?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  putsObjectsInMouth?: boolean;
+  putsObjectsInMouth?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  raisesHeadAndTorsoSupportingSelfOnArmsWhenLyingOnStomach?: boolean;
+  raisesHeadAndTorsoSupportingSelfOnArmsWhenLyingOnStomach?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  raisesHeadAndTorsoSupportingSelfOnOneArm?: boolean;
+  raisesHeadAndTorsoSupportingSelfOnOneArm?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  touchesAndExploresObjectsWithMouth?: boolean;
+  touchesAndExploresObjectsWithMouth?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  inPronePositionTurnsToTheSideAndMaintainsThisPositionHalfTheTime?: boolean;
+  inPronePositionTurnsToTheSideAndMaintainsThisPositionHalfTheTime?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  inPronePositionTurnsOnBack?: boolean;
+  inPronePositionTurnsOnBack?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  inPronePositionMovesForwardTheEquivalentOfItsHeight?: boolean;
+  inPronePositionMovesForwardTheEquivalentOfItsHeight?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  inSupinePositionRollsToTheSide?: boolean;
+  inSupinePositionRollsToTheSide?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  inSupinePositionTurnsFromStomachToBack?: boolean;
+  inSupinePositionTurnsFromStomachToBack?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  makesEffortToSitHoldingOntoAdultsFingers?: boolean;
+  makesEffortToSitHoldingOntoAdultsFingers?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  turnsHeadEasilyWhenTheBodyIsSupported?: boolean;
+  turnsHeadEasilyWhenTheBodyIsSupported?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  sitsFor2Minutes?: boolean;
+  sitsFor2Minutes?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  releasesAnObjectToGrabAnother?: boolean;
+  releasesAnObjectToGrabAnother?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  grabsAndDropsAnObjectPurposefully?: boolean;
+  grabsAndDropsAnObjectPurposefully?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  standsWithMaximumSupport?: boolean;
+  standsWithMaximumSupport?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  whileStandingWithSupportJumpsUpAndDown?: boolean;
+  whileStandingWithSupportJumpsUpAndDown?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  crawlsToGrabAnObjectDistantItsHeight?: boolean;
+  crawlsToGrabAnObjectDistantItsHeight?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  sitsSupportingSelfAlone?: boolean;
+  sitsSupportingSelfAlone?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  whileSittingTurnsToCrawling?: boolean;
+  whileSittingTurnsToCrawling?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  whileInPronePositionManagesToSit?: boolean;
+  whileInPronePositionManagesToSit?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  sitsWithoutHandSupport?: boolean;
+  sitsWithoutHandSupport?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  throwsObjectsAtRandom?: boolean;
+  throwsObjectsAtRandom?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  swaysBackAndForthWhenCrawling?: boolean;
+  swaysBackAndForthWhenCrawling?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  transfersObjectsFromOneHandToAnotherWhenSitting?: boolean;
+  transfersObjectsFromOneHandToAnotherWhenSitting?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  retains2CubesOf25CmInOneHand?: boolean;
+  retains2CubesOf25CmInOneHand?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  getsOnKnees?: boolean;
+  getsOnKnees?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  standsSupportingSelfOnSomething?: boolean;
+  standsSupportingSelfOnSomething?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  usesPincerGripToPickUpObjects?: boolean;
+  usesPincerGripToPickUpObjects?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  crawls?: boolean;
+  crawls?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  whileCrawlingExtendsOneHandUpwards?: boolean;
+  whileCrawlingExtendsOneHandUpwards?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  standsWithMinimumSupport?: boolean;
+  standsWithMinimumSupport?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  licksFoodAroundMouth?: boolean;
+  licksFoodAroundMouth?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  maintainsSelfStandingAloneFor1Minute?: boolean;
+  maintainsSelfStandingAloneFor1Minute?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  knocksDownAnObjectThatIsInsideAReceptacle?: boolean;
+  knocksDownAnObjectThatIsInsideAReceptacle?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  turnsSeveralPagesOfABookAtTheSameTime?: boolean;
+  turnsSeveralPagesOfABookAtTheSameTime?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  scoopsWithASpoonOrSpade?: boolean;
+  scoopsWithASpoonOrSpade?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  placesSmallObjectsInsideAReceptacle?: boolean;
+  placesSmallObjectsInsideAReceptacle?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  whileStandingLowersItselfAndSits?: boolean;
+  whileStandingLowersItselfAndSits?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  clapsHands?: boolean;
+  clapsHands?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  walksWithMinimumSupport?: boolean;
+  walksWithMinimumSupport?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  takesAFewStepsWithoutSupport?: boolean;
+  takesAFewStepsWithoutSupport?: ResponseBoolean;
 }
 
 export class MotorDevelopment1To2YearsDto {
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  climbsStairsCrawling?: boolean;
+  climbsStairsCrawling?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  placesItselfStandingWhileSitting?: boolean;
+  placesItselfStandingWhileSitting?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  rollsABallImitatingAnAdult?: boolean;
+  rollsABallImitatingAnAdult?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  climbsOntoAnAdultChairTurnsAndSits?: boolean;
+  climbsOntoAnAdultChairTurnsAndSits?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  puts4RingsOnASmallStake?: boolean;
+  puts4RingsOnASmallStake?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  removes25CmPinsFromABoardOrTray?: boolean;
+  removes25CmPinsFromABoardOrTray?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  fits25CmPinsIntoAFittingBoard?: boolean;
+  fits25CmPinsIntoAFittingBoard?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  buildsATowerOf3Blocks?: boolean;
+  buildsATowerOf3Blocks?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  makesTracesOnPaperWithPencilOrCrayon?: boolean;
+  makesTracesOnPaperWithPencilOrCrayon?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  walksAlone?: boolean;
+  walksAlone?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  goesDownStairsSittingPuttingFeetFirst?: boolean;
+  goesDownStairsSittingPuttingFeetFirst?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  sitsInASmallChair?: boolean;
+  sitsInASmallChair?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  crouchesAndReturnsToStand?: boolean;
+  crouchesAndReturnsToStand?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  pushesAndPullsToysWhenWalking?: boolean;
+  pushesAndPullsToysWhenWalking?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  usesAChairOrRockingHorse?: boolean;
+  usesAChairOrRockingHorse?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  climbsStairsWithHelp?: boolean;
+  climbsStairsWithHelp?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  bendsTheBodyWithoutFallingToPickUpObjectsOnTheFloor?: boolean;
+  bendsTheBodyWithoutFallingToPickUpObjectsOnTheFloor?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  imitatesACircularMovement?: boolean;
+  imitatesACircularMovement?: ResponseBoolean;
 }
 
 export class MotorDevelopment2To3YearsDto {
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  threads4LargeBeadsOnACordIn2Minutes?: boolean;
+  threads4LargeBeadsOnACordIn2Minutes?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  turnsLatchesOrDoorknobsOnDoors?: boolean;
+  turnsLatchesOrDoorknobsOnDoors?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  jumpsInTheSamePlaceWithBothFeet?: boolean;
+  jumpsInTheSamePlaceWithBothFeet?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  walksBackwards?: boolean;
+  walksBackwards?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  goesDownStairsWithoutHelp?: boolean;
+  goesDownStairsWithoutHelp?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  throwsABallToAnAdultAtA1HalfDistance?: boolean;
+  throwsABallToAnAdultAtA1HalfDistance?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  buildsATowerOf5To6Blocks?: boolean;
+  buildsATowerOf5To6Blocks?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  turnsPagesOfABookOneAtATime?: boolean;
+  turnsPagesOfABookOneAtATime?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  unwrapsASmallObject?: boolean;
+  unwrapsASmallObject?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  foldsAPaperInHalfImitatingAnAdult?: boolean;
+  foldsAPaperInHalfImitatingAnAdult?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  dismantlesAndRebuildsPressureFitToys?: boolean;
+  dismantlesAndRebuildsPressureFitToys?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  unscrewsToysThatFitWithThreads?: boolean;
+  unscrewsToysThatFitWithThreads?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  kicksALargeBallThatIsStill?: boolean;
+  kicksALargeBallThatIsStill?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  makesBallsOfClayMudOrPlasticine?: boolean;
+  makesBallsOfClayMudOrPlasticine?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  holdsThePencilBetweenTheThumbAndIndexFingerRestingItOnTheMiddleFinger?: boolean;
+  holdsThePencilBetweenTheThumbAndIndexFingerRestingItOnTheMiddleFinger?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  doesForwardTumbleWithHelp?: boolean;
+  doesForwardTumbleWithHelp?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  hammersToFit5PinsInTheirHoles?: boolean;
+  hammersToFit5PinsInTheirHoles?: ResponseBoolean;
 }
-
 
 export class MotorDevelopment3To4YearsDto {
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  makesAPuzzleOf3Pieces?: boolean;
+  makesAPuzzleOf3Pieces?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  cutsSomethingIntoPiecesWithScissors?: boolean;
+  cutsSomethingIntoPiecesWithScissors?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  jumpsFromAHeightOf20Cm?: boolean;
+  jumpsFromAHeightOf20Cm?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  kicksALargeBallWhenSentToYou?: boolean;
+  kicksALargeBallWhenSentToYou?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  walksOnTiptoes?: boolean;
+  walksOnTiptoes?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  runs10StepsCoordinatingAndAlternatingTheMovementOfArmsAndFeet?: boolean;
+  runs10StepsCoordinatingAndAlternatingTheMovementOfArmsAndFeet?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  pedalsWithTricycleTheDistanceOf1AndAHalfMeters?: boolean;
+  pedalsWithTricycleTheDistanceOf1AndAHalfMeters?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  swingsOnASwingWhenItIsInMotion?: boolean;
+  swingsOnASwingWhenItIsInMotion?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  climbsOnASlideOf120MTo180MAndSlidesDown?: boolean;
+  climbsOnASlideOf120MTo180MAndSlidesDown?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  doesForwardTumbles?: boolean;
+  doesForwardTumbles?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  climbsStairsAlternatingFeet?: boolean;
+  climbsStairsAlternatingFeet?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  marchesWalksInARhythmicalWay?: boolean;
+  marchesWalksInARhythmicalWay?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  parriesTheBallWithBothHands?: boolean;
+  parriesTheBallWithBothHands?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  drawsFiguresFollowingOutlinesOrDottedLines?: boolean;
+  drawsFiguresFollowingOutlinesOrDottedLines?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  cutsAlongAStraightLine20CmMovingSlightlyAwayFromTheLine?: boolean;
+  cutsAlongAStraightLine20CmMovingSlightlyAwayFromTheLine?: ResponseBoolean;
 }
 
 export class MotorDevelopment4To5YearsDto {
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  standsOnOneFootWithoutSupportFor4To8Seconds?: boolean;
+  standsOnOneFootWithoutSupportFor4To8Seconds?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  changesDirectionWhenRunning?: boolean;
+  changesDirectionWhenRunning?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  walksOnABeamOrBoardMaintainingBalance?: boolean;
+  walksOnABeamOrBoardMaintainingBalance?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  jumpsForward10TimesWithoutFalling?: boolean;
+  jumpsForward10TimesWithoutFalling?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  jumpsOverARopeSuspended5CmFromTheGround?: boolean;
+  jumpsOverARopeSuspended5CmFromTheGround?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  jumpsBackwards6Times?: boolean;
+  jumpsBackwards6Times?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  reboundsAndCatchesALargeBall?: boolean;
+  reboundsAndCatchesALargeBall?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  joins2To3PiecesOfPlasticine?: boolean;
+  joins2To3PiecesOfPlasticine?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  cutsAroundCurvedLines?: boolean;
+  cutsAroundCurvedLines?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  fitsScrewObjects?: boolean;
+  fitsScrewObjects?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  goesDownStairsAlternatingFeet?: boolean;
+  goesDownStairsAlternatingFeet?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  pedalsATricycleMakingTurns?: boolean;
+  pedalsATricycleMakingTurns?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  jumpsOnOneFoot5ConsecutiveTimes?: boolean;
+  jumpsOnOneFoot5ConsecutiveTimes?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  cutsACircleIn5Cm?: boolean;
+  cutsACircleIn5Cm?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  drawsSimpleEasilyIdentifiableFiguresExHouse?: boolean;
+  drawsSimpleEasilyIdentifiableFiguresExHouse?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  cutsAndPastesSimpleShapes?: boolean;
+  cutsAndPastesSimpleShapes?: ResponseBoolean;
 }
 
 export class MotorDevelopment5To6YearsDto {
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  writesUppercaseLettersIsolatedAndLargeAnywhereOnThePaper?: boolean;
+  writesUppercaseLettersIsolatedAndLargeAnywhereOnThePaper?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  walksOnABoardBackwardsForwardsAndSidewaysMaintainingBalance?: boolean;
+  walksOnABoardBackwardsForwardsAndSidewaysMaintainingBalance?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  walksWhileHopping?: boolean;
+  walksWhileHopping?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  swingsOnASwingStartingAndMaintainingTheMovement?: boolean;
+  swingsOnASwingStartingAndMaintainingTheMovement?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  stretchesFingersTouchingThumbToEachOfThem?: boolean;
+  stretchesFingersTouchingThumbToEachOfThem?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  copiesCapitalLetters?: boolean;
+  copiesCapitalLetters?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  climbsOnLaddersOrASlideOf3M?: boolean;
+  climbsOnLaddersOrASlideOf3M?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  hammersANailWithAHammer?: boolean;
+  hammersANailWithAHammer?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  reboundsTheBallAsItWalksWithDirection?: boolean;
+  reboundsTheBallAsItWalksWithDirection?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  managesToColorWithoutGoingOutOfTheMargin95PercentOfTheTime?: boolean;
+  managesToColorWithoutGoingOutOfTheMargin95PercentOfTheTime?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  cutsOutFiguresWithoutLeavingMoreThan6MmFromTheMargin?: boolean;
+  cutsOutFiguresWithoutLeavingMoreThan6MmFromTheMargin?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  usesPencilSharpener?: boolean;
+  usesPencilSharpener?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  copiesComplexDrawingsSchoolShip?: boolean;
+  copiesComplexDrawingsSchoolShip?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  tearsSimpleFiguresFromThePaper?: boolean;
+  tearsSimpleFiguresFromThePaper?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  foldsASquarePaper2XDiagonallyByImitation?: boolean;
+  foldsASquarePaper2XDiagonallyByImitation?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  catchesALightBallWithOneHand?: boolean;
+  catchesALightBallWithOneHand?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  jumpsRopeAlone?: boolean;
+  jumpsRopeAlone?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  strikesABallWithAStickOrPieceOfWood?: boolean;
+  strikesABallWithAStickOrPieceOfWood?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  catchesAnObjectOnTheFloorWhileRunning?: boolean;
+  catchesAnObjectOnTheFloorWhileRunning?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  skatesADistanceOf3MOrUsesASkateboard?: boolean;
+  skatesADistanceOf3MOrUsesASkateboard?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  ridesABicycle?: boolean;
+  ridesABicycle?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  slidesDownAHillOfSandOrEarth?: boolean;
+  slidesDownAHillOfSandOrEarth?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  walksOrPlaysInASwimmingPoolHavingWaterUpToItsWaist?: boolean;
+  walksOrPlaysInASwimmingPoolHavingWaterUpToItsWaist?: ResponseBoolean;
+
+   @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  drivesAScooterGivingImpulseWithOneFootOnly?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  drivesAScooterGivingImpulseWithOneFootOnly?: boolean;
+  jumpsAndTurnsOnOneFoot?: ResponseBoolean;
+
+   @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  writesOwnNameWithBlockLettersInLinedNotebook?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  jumpsAndTurnsOnOneFoot?: boolean;
+  jumpsFromAHeightOf30CmAndFallsOnTiptoes?: ResponseBoolean;
+
+   @ApiProperty()
+  @IsBoolean()
+  @IsOptional()
+  stopsOnOneFootWithoutSupportWithEyesClosedFor10Seconds?: ResponseBoolean;
 
   @ApiProperty()
   @IsBoolean()
   @IsOptional()
-  writesOwnNameWithBlockLettersInLinedNotebook?: boolean;
-
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  jumpsFromAHeightOf30CmAndFallsOnTiptoes?: boolean;
-
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  stopsOnOneFootWithoutSupportWithEyesClosedFor10Seconds?: boolean;
-
-  @ApiProperty()
-  @IsBoolean()
-  @IsOptional()
-  hangsfor10SecondsOnAHorizontalBar?: boolean;
+  hangsfor10SecondsOnAHorizontalBar?: ResponseBoolean;
 }
 
 
  export class CreatePortageGuidetoPreschoolEducationDto {
+
+  @ApiProperty()
+  patient: string;
+
+  @ApiProperty({
+  type: String,
+  format: 'date',
+  example: 'dd/MM/yyyy'})
+  @IsOptional()
+  birthDay: string;
+
+  @ApiProperty()
+  doctor: string;
+
+  @ApiProperty({
+  type: String,
+  format: 'date',
+  example: 'dd/MM/yyyy'})
+  @IsOptional()
+  Date: string;
+
+
 
   @ApiProperty({ type: Socialization0To1Year})
   socialization0To1Years: Socialization0To1Year
@@ -2829,4 +2855,8 @@ export class MotorDevelopment5To6YearsDto {
 
   @ApiProperty({ type: MotorDevelopment5To6YearsDto})
   MotorDevelopment5To6YearsDto:MotorDevelopment5To6YearsDto
+
+
+  @ApiProperty()
+  totalResult: number;
 }

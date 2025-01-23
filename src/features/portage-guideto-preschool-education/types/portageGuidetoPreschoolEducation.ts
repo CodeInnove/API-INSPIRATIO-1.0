@@ -574,6 +574,9 @@ export interface IMotorDevelopment3To4Years {
   cutsAlongAStraightLine20CmMovingSlightlyAwayFromTheLine: boolean
 }
 
+
+
+
 export interface IMotorDevelopment4To5Years {
   standsOnOneFootWithoutSupportFor4To8Seconds: boolean,
   changesDirectionWhenRunning: boolean,
