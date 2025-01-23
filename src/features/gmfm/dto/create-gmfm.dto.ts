@@ -406,6 +406,21 @@ export class CreateGmfmDto {
     
     @ApiProperty()
     doctor: string
+
+    @ApiProperty({
+        type: String,
+        format: 'date',
+        example: 'dd/MM/yyyy'})
+    @IsOptional()
+     data?:string
+
+     @ApiProperty({
+        type: String,
+        format: 'date',
+        example: 'dd/MM/yyyy'})
+    @IsOptional()
+    dataBirth: string
+   
     
     @ApiProperty()
     lieDownAndRollOver: LieDownAndRollOver
@@ -421,8 +436,4 @@ export class CreateGmfmDto {
     
     @ApiProperty()
     walkRunJump: IWalkRunJump
-    
-   
-  
-  
-  }
+}

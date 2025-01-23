@@ -4,6 +4,7 @@ import { UpdateGmfmDto } from './dto/update-gmfm.dto';
 import { IGmfmEntity } from 'src/entities/gmfm.entity';
 import { GmfmRepository } from './gmfm.repository';
 import { PercentageScoresDto } from './dto/porcentage.dto';
+import { QueryGmfmDto } from './dto/query-gmfm.dto';
 
 
 type GmfmWithScores = CreateGmfmDto & { 
@@ -178,17 +179,17 @@ export class GmfmService {
 
       
 
-  async findAll(): Promise<IGmfmEntity[]> {
+  async findAll(query: QueryGmfmDto) {
     try {
-      return await this.gmfmRepository.findAll();
+      return await this.gmfmRepository.findAll(query);
     } catch (error) {
       throw new HttpException(error, HttpStatus.BAD_REQUEST);
     }
   }
 
-  async findOne(id: string): Promise<IGmfmEntity> {
+  async findById(id: string): Promise<IGmfmEntity> {
     try {
-      return await this.gmfmRepository.findOne(id);
+      return await this.gmfmRepository.findById(id);
     } catch (error) {
       throw new HttpException(error, HttpStatus.BAD_REQUEST);
     }
