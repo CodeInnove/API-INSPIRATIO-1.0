@@ -1,8 +1,10 @@
-import { Controller, Get, Post, Body, Put, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Put, Param, Delete, Query } from '@nestjs/common';
 import { PortageGuidetoPreschoolEducationService } from './portage-guideto-preschool-education.service';
 import { CreatePortageGuidetoPreschoolEducationDto } from './dto/create-portage-guideto-preschool-education.dto';
 import { ApiTags } from '@nestjs/swagger';
 import { IPortageGuidetoPreschoolEducationEntity } from 'src/entities/portage-guideto-preschool-education.entity';
+import { query } from 'express';
+import { QueryPortageGuidetoDto } from './dto/query-portage-guideto-preschool-educational.dto';
 
 
 @ApiTags('PortageGuidetoPreschoolEducation')
@@ -16,8 +18,8 @@ export class PortageGuidetoPreschoolEducationController {
   }
   
     @Get()
-    async findAll(): Promise<IPortageGuidetoPreschoolEducationEntity[]> {
-      return await this.portageGuidetoPreschoolEducationService.findAll();
+    async findAll(@Query() query: QueryPortageGuidetoDto) {
+      return await this.portageGuidetoPreschoolEducationService.findAll(query);
     }
   
     @Get(':id')
