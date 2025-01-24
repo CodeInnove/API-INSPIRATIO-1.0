@@ -3,6 +3,7 @@ import { InjectModel } from "@nestjs/mongoose";
 import { Model } from "mongoose";
 import { IIntraverbalAssessmentEntity } from "src/entities/intraverbalAssessment.entity";
 import { CreateIntraverbalAssessmentDto } from "./dto/intraverbalAssessmentCreate.dto";
+import { UpdateIntraverbalAssessmentDto } from "./dto/intraverbalAssessmentUpdate.dto";
 
 @Injectable()
 export class IntraverbalAssessmentRepository {
@@ -22,7 +23,7 @@ export class IntraverbalAssessmentRepository {
     return this.intraverbalAssessmentModel.findById(id);
   }
 
-  async update(id: string, data: IIntraverbalAssessmentEntity): Promise<IIntraverbalAssessmentEntity> {
+  async update(id: string, data: UpdateIntraverbalAssessmentDto): Promise<IIntraverbalAssessmentEntity> {
     return this.intraverbalAssessmentModel.findByIdAndUpdate(id, data);
   }
 

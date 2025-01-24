@@ -3,6 +3,7 @@ import { CreateOccupationalTherapyAnamnesisDto } from './dto/createOccupationalT
 import { UpdateOccupationalTherapyAnamnesisDto } from './dto/updateOccupationalTherapyAnamnesis.dto';
 import { OccupationalTherapyAnamnesisRepository } from './occupationalTherapyAnamnesis.repository';
 import { IOccupationalTherapyAnamnesisEntity } from 'src/entities/occupationalTherapyAnamnesis.entity';
+import { QueryOccupationalAnamnesisTherapyDto } from './dto/queryOccupationalTherapyAnamnesis.dto';
 
 @Injectable()
 export class OccupationalTherapyAnamnesisService {
@@ -18,17 +19,17 @@ export class OccupationalTherapyAnamnesisService {
     }
   }
 
-  async findAll(): Promise<IOccupationalTherapyAnamnesisEntity[]> {
+  async findAll(query: QueryOccupationalAnamnesisTherapyDto){
     try {
-      return await this.occupationalTherapyAnamnesisRepository.findAll();
+      return await this.occupationalTherapyAnamnesisRepository.findAll(query);
     } catch (error) {
       throw new HttpException(error, HttpStatus.BAD_REQUEST);
     }
   }
 
-  async findOne(id: string): Promise<IOccupationalTherapyAnamnesisEntity> {
+  async findById(id: string): Promise<IOccupationalTherapyAnamnesisEntity> {
     try {
-      return await this.occupationalTherapyAnamnesisRepository.findOne(id);
+      return await this.occupationalTherapyAnamnesisRepository.findById(id);
     } catch (error) {
       throw new HttpException(error, HttpStatus.BAD_REQUEST);
     }

@@ -4,23 +4,18 @@ import { IOta } from 'src/features/occupational-therapy-anamnesis/types/ota';
 
 export const OccupationalTherapyAnamnesisSchema = new Schema({
   _id: { type: Schema.Types.ObjectId, required: true, auto: true },
+  doctor: { type: Schema.Types.ObjectId, ref: 'User' },
+  patient: { type: Schema.Types.ObjectId, ref: 'User'  },
   dateOfApplication: { type: Date, default: Date.now },
-  doctor: { type: String},
-  patient: { type: Schema.Types.ObjectId, },
-  birthDate: { type: String},
-  gender: {type: String, enum: ['M', 'F']},
-  age: { type: Number},
-  diagnoses: { type: String},
-  fatherName: { type: String},
-  motherName: { type: String},
-  contactPhone: { type: String},
-  address: { type: String},
-  consultationReason: { type: String},
-  mainConcernOfResponsible: { type: String},
+  //diagnoses: { type: String},
+  //responsable: { type: Schema.Types.ObjectId, ref: 'User' },
+  generalObservations: {
+    consultationReason: { type: String},
+    mainConcernOfResponsible: { type: String},
+  },
   clinicalHistory: {
-    pregnancy: {type: String, enum: ['Planejada', 'Não planejada']},
+    pregnancy: {type: String},
     complicationsDuringPregnancy: { type: String},
-    birth: {type: String, enum: ['Normal', 'Cesárea']},
     prematurity: {type: String, enum: ['Sim', 'Não']},
     gestationalWeeks: {type: Number},
     apgarAtBirth: {type: Number},
@@ -52,14 +47,14 @@ export const OccupationalTherapyAnamnesisSchema = new Schema({
     bathSpecificDetails: { type: String},
     dressing: {type: String, enum: ['Completa independência' , 'Dificuldade com botões, zíperes, etc' , 'Auxílio completo']},
     dressingDifficultyDetails: { type: String},
-    sphincterControl: {type: String, enum: ['Total' , 'Parcial (usa fralda em determinadas situações)', 'Necessita de fralda o tempo todo']},
+    sphincterControl: {type: String, enum: ['Total' , 'Parcial', 'Necessita de fralda o tempo todo']},
     specificSituationsForDiaper: { type: String},
     inToiletTraining: {type: String, enum: ['Sim', 'Não']},
     toiletTrainingDuration: { type: String},
     strategiesUsedByCaregiversOrSchool: { type: String},
   },
   signsOfReadiness: {
-    signsOfReadiness: {type: String, enum: ['Percepção de xixi/cocô' , 'Desconforto com a fralda' , 'Ser capaz de apontar o que deseja' , 'Ficar seco por 2h ou mais' , 'Seguir comandos' , 'Ficar sentado de 3 a 5 minutos']},
+    signsOfReadiness: {type: String},
     specificDifficultiesInToiletTraining: { type: String},
   },
   instrumentalActivitiesOfDailyLiving: {
@@ -69,6 +64,8 @@ export const OccupationalTherapyAnamnesisSchema = new Schema({
   schoolAndSocialRoutine: {
     enrolledInSchool: {type: String, enum: ['Sim', 'Não']},
     educationType: {type: String, enum: [ 'Regular' , 'Regular com apoio' , 'Especial']},
+    enrolledInSchoolDetails: { type: String},
+    difficultiesReportedByTeachers: { type: String},
   },
   teacherReportedDifficulties: {
     participatesInGroupRecreationalActivities: {type: String, enum: ['Sim', 'Não']},
@@ -84,12 +81,13 @@ export const OccupationalTherapyAnamnesisSchema = new Schema({
     crisesDetails: { type: String},
   },
   playAndLeisureAspects: {
-    prefersStructuredOrFreePlay: {type: String, enum: ['Estruturadas' , 'Livres']}, 
+    prefersStructuredOrFreePlay: {type: String}, 
     favoriteToysOrActivities: { type: String},
-    difficultyStartingOrMaintainingPlay: {type: String, enum: ['Sim', 'Não']},
+    difficultyStartingOrMaintainingPlay: {type: String},
   },
   supportNetworkAndPreviousTreatments: {
-    previousTherapies: {type: String, enum: ['Fonoaudiologia' , 'Fisioterapia' , 'Psicologia' , 'Outros']},  
+    previousTherapies: {type: String}, 
+    previousTherapiesDetails: { type: String}, 
     familyOrCaregiversInTherapies: { type: String},
   },
   responsibleGeneralObservations: {

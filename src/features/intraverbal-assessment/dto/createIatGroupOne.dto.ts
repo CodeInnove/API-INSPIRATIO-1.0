@@ -121,8 +121,4 @@ export class IAnimalSounds {
   @IsOptional()
   @ApiProperty()
   other2Group1Score: string;
-
-  @IsOptional()
-  @ApiProperty()
-  subtotalPointsGroup1: Number;
 }

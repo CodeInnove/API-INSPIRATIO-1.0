@@ -1,63 +1,27 @@
 import { ApiProperty } from '@nestjs/swagger';
 
-export class CreateOccupationalTherapyAnamnesisDto {
-  @ApiProperty()
-  dateOfApplication: Date;
 
-  @ApiProperty()
-  doctor: string;
+export class ClinicalHistoryDto {
+@ApiProperty()
+pregnancy: string;
+@ApiProperty()
+complicationsDuringPregnancy: string;
 
-  @ApiProperty()
-  patient: string;
+@ApiProperty()
+prematurity: string;
+@ApiProperty()
+gestationalWeeks: number;
+@ApiProperty()
+apgarAtBirth: number;
+@ApiProperty()
+neonatalHospitalization: string;
+@ApiProperty()
+hospitalizationTime: string;
+@ApiProperty()
+pastDiseasesOrHospitalizations: string;
+}
 
-  @ApiProperty()
-  birthDate: Date;
-
-  @ApiProperty()
-  gender: string;
-
-  @ApiProperty()
-  age: number;
-
-  @ApiProperty()
-  diagnoses: string;
-
-  @ApiProperty()
-  fatherName: string;
-
-  @ApiProperty()
-  motherName: string;
-
-  @ApiProperty()
-  contactPhone: string;
-
-  @ApiProperty()
-  address: string;
-
-  @ApiProperty()
-  consultationReason: string;
-  @ApiProperty()
-  mainConcernOfResponsible: string;
-
-  @ApiProperty()
-  pregnancy: string;
-  @ApiProperty()
-  complicationsDuringPregnancy: string;
-  @ApiProperty()
-  birth: string;
-  @ApiProperty()
-  prematurity: string;
-  @ApiProperty()
-  gestationalWeeks: number;
-  @ApiProperty()
-  apgarAtBirth: number;
-  @ApiProperty()
-  neonatalHospitalization: string;
-  @ApiProperty()
-  hospitalizationTime: string;
-  @ApiProperty()
-  pastDiseasesOrHospitalizations: string;
-
+export class NeuropsychomotorDevelopment {
   @ApiProperty()
   headControlMonths: number;
   @ApiProperty()
@@ -72,7 +36,9 @@ export class CreateOccupationalTherapyAnamnesisDto {
   sphincterControlYears: number;
   @ApiProperty()
   regressionOrLossOfSkills: string;
+}
 
+export class ActivitiesOfDailyLivingDto {
   @ApiProperty()
   feeding: string;
   @ApiProperty()
@@ -111,17 +77,27 @@ export class CreateOccupationalTherapyAnamnesisDto {
   toiletTrainingDuration: string;
   @ApiProperty()
   strategiesUsedByCaregiversOrSchool: string;
+}
 
+
+
+export class SignsOfReadinessDto {
   @ApiProperty()
   signsOfReadiness: string;
   @ApiProperty()
   specificDifficultiesInToiletTraining: string;
+}
 
+export class InstrumentalActivitiesOfDailyLivingDto {
   @ApiProperty()
   participatesInSchoolOrHomeTasks: string;
   @ApiProperty()
   taskDetails: string;
 
+}
+
+
+export class SchoolAndSocialRoutineDto {
   @ApiProperty()
   enrolledInSchool: string;
   @ApiProperty()
@@ -130,12 +106,17 @@ export class CreateOccupationalTherapyAnamnesisDto {
   educationType: string;
   @ApiProperty()
   difficultiesReportedByTeachers: string;
+}
 
+
+export class TeacherReportedDifficultiesDto {
   @ApiProperty()
   participatesInGroupRecreationalActivities: string;
   @ApiProperty()
   interactionWithOtherChildrenAndAdults: string;
+}
 
+export class SensoryAndBehavioralAspectsDto {
   @ApiProperty()
   sensorySensitivities: string;
   @ApiProperty()
@@ -150,23 +131,88 @@ export class CreateOccupationalTherapyAnamnesisDto {
   behaviorCrises: string;
   @ApiProperty()
   crisesDetails: string;
+}
 
+
+export class PlayAndLeisureAspectsDto {
   @ApiProperty()
   prefersStructuredOrFreePlay: string;
   @ApiProperty()
   favoriteToysOrActivities: string;
   @ApiProperty()
   difficultyStartingOrMaintainingPlay: string;
+}
 
+export class SupportNetworkAndPreviousTreatmentsDto{
   @ApiProperty()
   previousTherapies: string;
   @ApiProperty()
   previousTherapiesDetails: string;
   @ApiProperty()
   familyOrCaregiversInTherapies: string;
+}
 
+
+export class ResponsibleGeneralObservationsDto{
   @ApiProperty()
   essentialObservationsForTreatmentPlanning: string;
   @ApiProperty()
   responsibleObservations: string;
+}
+
+export class CreateOccupationalTherapyAnamnesisDto {
+  @ApiProperty()
+  dateOfApplication: Date;
+
+  @ApiProperty()
+  doctor: string;
+
+  @ApiProperty()
+  patient: string;
+
+  @ApiProperty()
+  diagnoses: string;
+
+  @ApiProperty()
+  consultationReason: string;
+
+  @ApiProperty()
+  mainConcernOfResponsible: string;
+
+  @ApiProperty()
+  clinicalHistory: ClinicalHistoryDto;
+
+  @ApiProperty()
+  neuropsychomotorDevelopment: NeuropsychomotorDevelopment;
+
+  @ApiProperty()
+  activitiesOfDailyLiving: ActivitiesOfDailyLivingDto
+
+  @ApiProperty()
+  signsOfReadiness: SignsOfReadinessDto
+
+  @ApiProperty()
+  instrumentalActivitiesOfDailyLiving: InstrumentalActivitiesOfDailyLivingDto
+
+  @ApiProperty()
+  schoolAndSocialRoutine: SchoolAndSocialRoutineDto
+  
+  @ApiProperty()
+  teacherReportedDifficulties: TeacherReportedDifficultiesDto
+
+  @ApiProperty()
+  sensoryAndBehavioralAspects: SensoryAndBehavioralAspectsDto
+
+
+  @ApiProperty()
+  playAndLeisureAspects: PlayAndLeisureAspectsDto
+
+
+  @ApiProperty()
+  supportNetworkAndPreviousTreatments: SupportNetworkAndPreviousTreatmentsDto
+
+
+  @ApiProperty()
+  responsibleGeneralObservations: ResponsibleGeneralObservationsDto
+
 }
