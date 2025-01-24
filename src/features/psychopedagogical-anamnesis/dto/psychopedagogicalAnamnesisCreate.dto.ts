@@ -115,12 +115,12 @@ class ObservationDto {
   @ApiProperty()
   @IsNumber()
   @IsOptional()
-  bedtime: string;
+  bedtime: number;
 
   @ApiProperty()
   @IsNumber()
   @IsOptional()
-  wakeUpTime: string;
+  wakeUpTime: number;
 
   @ApiProperty()
   @IsString()
@@ -133,7 +133,7 @@ class ObservationDto {
   externalServiceActivities: string;
 
   @ApiProperty()
-  @IsBoolean()
+  @IsString()
   @IsOptional()
   doYouUseAdaptedActivitiesAtSchool: string;
 
@@ -143,17 +143,17 @@ class ObservationDto {
   whatActivitiesAreAdapted: string;
 
   @ApiProperty()
-  @IsBoolean()
+  @IsString()
   @IsOptional()
   doYouHaveDifficultyInSocialInteraction: string;
 
   @ApiProperty()
-  @IsBoolean()
+  @IsString()
   @IsOptional()
   whatDifficultyInSocialInteraction: string;
 
   @ApiProperty()
-  @IsBoolean()
+  @IsString()
   @IsOptional()
   resistanceToRoutineChange: string;
 
@@ -163,7 +163,7 @@ class ObservationDto {
   whatResistanceToRoutineChange: string;
 
   @ApiProperty()
-  @IsBoolean()
+  @IsString()
   @IsOptional()
   eyeContact: string;
 
@@ -173,7 +173,7 @@ class ObservationDto {
   whatEyeContact: string;
 
   @ApiProperty()
-  @IsBoolean()
+  @IsString()
   @IsOptional()
   interestInLearning: string;
 
@@ -183,7 +183,7 @@ class ObservationDto {
   whatInterestInLearning: string;
 
   @ApiProperty()
-  @IsBoolean()
+  @IsString()
   @IsOptional()
   hyperactivity: string;
 
@@ -193,7 +193,7 @@ class ObservationDto {
   whatHyperactivity: string;
 
   @ApiProperty()
-  @IsBoolean()
+  @IsString()
   @IsOptional()
   inattention: string;
 
@@ -203,7 +203,7 @@ class ObservationDto {
   whatInattention: string;
 
   @ApiProperty()
-  @IsBoolean()
+  @IsString()
   @IsOptional()
   areYouLiterate: string;
 
@@ -213,7 +213,7 @@ class ObservationDto {
   whatAreYouLiterate: string;
 
   @ApiProperty()
-  @IsBoolean()
+  @IsString()
   @IsOptional()
   changeInLanguageAndCommunication: string;
 
@@ -223,7 +223,7 @@ class ObservationDto {
   whatLanguageAndCommunication: string;
 
   @ApiProperty()
-  @IsBoolean()
+  @IsString()
   @IsOptional()
   inappropriateReactionToFrustration: string;
 
@@ -233,7 +233,7 @@ class ObservationDto {
   whatReactionToFrustration: string;
 
   @ApiProperty()
-  @IsBoolean()
+  @IsString()
   @IsOptional()
   crisisTypeCrisisTrigger: string;
 
@@ -243,7 +243,7 @@ class ObservationDto {
   whatTypeCrisisTrigger: string;
 
   @ApiProperty()
-  @IsBoolean()
+  @IsString()
   @IsOptional()
   stereotypy: string;
 
@@ -253,7 +253,7 @@ class ObservationDto {
   whatStereotypy: string;
 
   @ApiProperty()
-  @IsBoolean()
+  @IsString()
   @IsOptional()
   medication: string;
 
@@ -263,7 +263,7 @@ class ObservationDto {
   whatMedication: string;
 
   @ApiProperty()
-  @IsBoolean()
+  @IsString()
   @IsOptional()
   allergy: string;
 
@@ -305,22 +305,22 @@ class LearningAssessmentDto {
   preSyllabicWritingLevel: string;
 
   @ApiProperty()
-  @IsBoolean()
+  @IsString()
   @IsOptional()
   doYouRecognizeTheColors: string;
 
   @ApiProperty()
-  @IsBoolean()
+  @IsString()
   @IsOptional()
   difficultyRecognizeTheColors: string;
 
   @ApiProperty()
-  @IsBoolean()
+  @IsString()
   @IsOptional()
   doYouHaveDifficultyTracingTheNumerals: string;
 
   @ApiProperty()
-  @IsBoolean()
+  @IsString()
   @IsOptional()
   difficultyRecognizingNumbers: string;
 
@@ -330,12 +330,12 @@ class LearningAssessmentDto {
   doYouHaveAChangeWhenCarryingOutOperations: string;
 
   @ApiProperty()
-  @IsBoolean()
+  @IsString()
   @IsOptional()
   difficultyCarryingOutOperations: string;
 
   @ApiProperty()
-  @IsBoolean()
+  @IsString()
   @IsOptional()
   doesItSolveProblemSituations: string;
 }
