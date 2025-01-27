@@ -2,718 +2,582 @@ import { ApiProperty } from "@nestjs/swagger";
 import { IsBoolean, IsOptional } from "class-validator";
 
 
+export enum ResponseType {
+  'NAO' = 'NAO',
+  'AV' = 'AV',
+  'SIM' = 'SIM',
+}
 
 export class MotorDevelopment0To1YearDto {
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  reachesForAnObjectPlacedInFrontOfIt15To20Cm?: boolean;
+  reachesForAnObjectPlacedInFrontOfIt15To20Cm?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  grabsAnObjectPlacedInFrontOfIt8Cm?: boolean;
+  grabsAnObjectPlacedInFrontOfIt8Cm?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  extendsArmsTowardAnObjectInFrontOfItAndGrabsIt?: boolean;
+  extendsArmsTowardAnObjectInFrontOfItAndGrabsIt?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  reachesForAPreferredObject?: boolean;
+  reachesForAPreferredObject?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  putsObjectsInMouth?: boolean;
+  putsObjectsInMouth?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  raisesHeadAndTorsoSupportingSelfOnArmsWhenLyingOnStomach?: boolean;
+  raisesHeadAndTorsoSupportingSelfOnArmsWhenLyingOnStomach?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  raisesHeadAndTorsoSupportingSelfOnOneArm?: boolean;
+  raisesHeadAndTorsoSupportingSelfOnOneArm?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  touchesAndExploresObjectsWithMouth?: boolean;
+  touchesAndExploresObjectsWithMouth?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  inPronePositionTurnsToTheSideAndMaintainsThisPositionHalfTheTime?: boolean;
+  inPronePositionTurnsToTheSideAndMaintainsThisPositionHalfTheTime?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  inPronePositionTurnsOnBack?: boolean;
+  inPronePositionTurnsOnBack?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  inPronePositionMovesForwardTheEquivalentOfItsHeight?: boolean;
+  inPronePositionMovesForwardTheEquivalentOfItsHeight?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  inSupinePositionRollsToTheSide?: boolean;
+  inSupinePositionRollsToTheSide?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  inSupinePositionTurnsFromStomachToBack?: boolean;
+  inSupinePositionTurnsFromStomachToBack?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  makesEffortToSitHoldingOntoAdultsFingers?: boolean;
+  makesEffortToSitHoldingOntoAdultsFingers?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  turnsHeadEasilyWhenTheBodyIsSupported?: boolean;
+  turnsHeadEasilyWhenTheBodyIsSupported?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  sitsFor2Minutes?: boolean;
+  sitsFor2Minutes?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  releasesAnObjectToGrabAnother?: boolean;
+  releasesAnObjectToGrabAnother?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  grabsAndDropsAnObjectPurposefully?: boolean;
+  grabsAndDropsAnObjectPurposefully?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  standsWithMaximumSupport?: boolean;
+  standsWithMaximumSupport?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  whileStandingWithSupportJumpsUpAndDown?: boolean;
+  whileStandingWithSupportJumpsUpAndDown?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  crawlsToGrabAnObjectDistantItsHeight?: boolean;
+  crawlsToGrabAnObjectDistantItsHeight?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  sitsSupportingSelfAlone?: boolean;
+  sitsSupportingSelfAlone?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  whileSittingTurnsToCrawling?: boolean;
+  whileSittingTurnsToCrawling?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  whileInPronePositionManagesToSit?: boolean;
+  whileInPronePositionManagesToSit?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  sitsWithoutHandSupport?: boolean;
+  sitsWithoutHandSupport?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  throwsObjectsAtRandom?: boolean;
+  throwsObjectsAtRandom?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  swaysBackAndForthWhenCrawling?: boolean;
+  swaysBackAndForthWhenCrawling?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  transfersObjectsFromOneHandToAnotherWhenSitting?: boolean;
+  transfersObjectsFromOneHandToAnotherWhenSitting?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  retains2CubesOf25CmInOneHand?: boolean;
+  retains2CubesOf25CmInOneHand?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  getsOnKnees?: boolean;
+  getsOnKnees?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  standsSupportingSelfOnSomething?: boolean;
+  standsSupportingSelfOnSomething?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  usesPincerGripToPickUpObjects?: boolean;
+  usesPincerGripToPickUpObjects?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  crawls?: boolean;
+  crawls?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  whileCrawlingExtendsOneHandUpwards?: boolean;
+  whileCrawlingExtendsOneHandUpwards?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  standsWithMinimumSupport?: boolean;
+  standsWithMinimumSupport?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  licksFoodAroundMouth?: boolean;
+  licksFoodAroundMouth?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  maintainsSelfStandingAloneFor1Minute?: boolean;
+  maintainsSelfStandingAloneFor1Minute?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  knocksDownAnObjectThatIsInsideAReceptacle?: boolean;
+  knocksDownAnObjectThatIsInsideAReceptacle?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  turnsSeveralPagesOfABookAtTheSameTime?: boolean;
+  turnsSeveralPagesOfABookAtTheSameTime?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  scoopsWithASpoonOrSpade?: boolean;
+  scoopsWithASpoonOrSpade?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  placesSmallObjectsInsideAReceptacle?: boolean;
+  placesSmallObjectsInsideAReceptacle?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  whileStandingLowersItselfAndSits?: boolean;
+  whileStandingLowersItselfAndSits?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  clapsHands?: boolean;
+  clapsHands?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  walksWithMinimumSupport?: boolean;
+  walksWithMinimumSupport?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  takesAFewStepsWithoutSupport?: boolean;
+  takesAFewStepsWithoutSupport?: ResponseType;
 }
 
 export class MotorDevelopment1To2YearsDto {
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  climbsStairsCrawling?: boolean;
+  climbsStairsCrawling?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  placesItselfStandingWhileSitting?: boolean;
+  placesItselfStandingWhileSitting?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  rollsABallImitatingAnAdult?: boolean;
+  rollsABallImitatingAnAdult?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  climbsOntoAnAdultChairTurnsAndSits?: boolean;
+  climbsOntoAnAdultChairTurnsAndSits?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  puts4RingsOnASmallStake?: boolean;
+  puts4RingsOnASmallStake?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  removes25CmPinsFromABoardOrTray?: boolean;
+  removes25CmPinsFromABoardOrTray?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  fits25CmPinsIntoAFittingBoard?: boolean;
+  fits25CmPinsIntoAFittingBoard?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  buildsATowerOf3Blocks?: boolean;
+  buildsATowerOf3Blocks?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  makesTracesOnPaperWithPencilOrCrayon?: boolean;
+  makesTracesOnPaperWithPencilOrCrayon?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  walksAlone?: boolean;
+  walksAlone?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  goesDownStairsSittingPuttingFeetFirst?: boolean;
+  goesDownStairsSittingPuttingFeetFirst?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  sitsInASmallChair?: boolean;
+  sitsInASmallChair?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  crouchesAndReturnsToStand?: boolean;
+  crouchesAndReturnsToStand?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  pushesAndPullsToysWhenWalking?: boolean;
+  pushesAndPullsToysWhenWalking?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  usesAChairOrRockingHorse?: boolean;
+  usesAChairOrRockingHorse?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  climbsStairsWithHelp?: boolean;
+  climbsStairsWithHelp?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  bendsTheBodyWithoutFallingToPickUpObjectsOnTheFloor?: boolean;
+  bendsTheBodyWithoutFallingToPickUpObjectsOnTheFloor?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  imitatesACircularMovement?: boolean;
+  imitatesACircularMovement?: ResponseType;
 }
 
 export class MotorDevelopment2To3YearsDto {
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  threads4LargeBeadsOnACordIn2Minutes?: boolean;
+  threads4LargeBeadsOnACordIn2Minutes?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  turnsLatchesOrDoorknobsOnDoors?: boolean;
+  turnsLatchesOrDoorknobsOnDoors?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  jumpsInTheSamePlaceWithBothFeet?: boolean;
+  jumpsInTheSamePlaceWithBothFeet?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  walksBackwards?: boolean;
+  walksBackwards?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  goesDownStairsWithoutHelp?: boolean;
+  goesDownStairsWithoutHelp?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  throwsABallToAnAdultAtA1HalfDistance?: boolean;
+  throwsABallToAnAdultAtA1HalfDistance?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  buildsATowerOf5To6Blocks?: boolean;
+  buildsATowerOf5To6Blocks?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  turnsPagesOfABookOneAtATime?: boolean;
+  turnsPagesOfABookOneAtATime?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  unwrapsASmallObject?: boolean;
+  unwrapsASmallObject?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  foldsAPaperInHalfImitatingAnAdult?: boolean;
+  foldsAPaperInHalfImitatingAnAdult?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  dismantlesAndRebuildsPressureFitToys?: boolean;
+  dismantlesAndRebuildsPressureFitToys?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  unscrewsToysThatFitWithThreads?: boolean;
+  unscrewsToysThatFitWithThreads?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  kicksALargeBallThatIsStill?: boolean;
+  kicksALargeBallThatIsStill?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  makesBallsOfClayMudOrPlasticine?: boolean;
+  makesBallsOfClayMudOrPlasticine?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  holdsThePencilBetweenTheThumbAndIndexFingerRestingItOnTheMiddleFinger?: boolean;
+  holdsThePencilBetweenTheThumbAndIndexFingerRestingItOnTheMiddleFinger?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  doesForwardTumbleWithHelp?: boolean;
+  doesForwardTumbleWithHelp?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  hammersToFit5PinsInTheirHoles?: boolean;
+  hammersToFit5PinsInTheirHoles?: ResponseType;
 }
 
-
 export class MotorDevelopment3To4YearsDto {
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  makesAPuzzleOf3Pieces?: boolean;
+  makesAPuzzleOf3Pieces?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  cutsSomethingIntoPiecesWithScissors?: boolean;
+  cutsSomethingIntoPiecesWithScissors?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  jumpsFromAHeightOf20Cm?: boolean;
+  jumpsFromAHeightOf20Cm?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  kicksALargeBallWhenSentToYou?: boolean;
+  kicksALargeBallWhenSentToYou?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  walksOnTiptoes?: boolean;
+  walksOnTiptoes?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  runs10StepsCoordinatingAndAlternatingTheMovementOfArmsAndFeet?: boolean;
+  runs10StepsCoordinatingAndAlternatingTheMovementOfArmsAndFeet?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  pedalsWithTricycleTheDistanceOf1AndAHalfMeters?: boolean;
+  pedalsWithTricycleTheDistanceOf1AndAHalfMeters?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  swingsOnASwingWhenItIsInMotion?: boolean;
+  swingsOnASwingWhenItIsInMotion?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  climbsOnASlideOf120MTo180MAndSlidesDown?: boolean;
+  climbsOnASlideOf120MTo180MAndSlidesDown?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  doesForwardTumbles?: boolean;
+  doesForwardTumbles?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  climbsStairsAlternatingFeet?: boolean;
+  climbsStairsAlternatingFeet?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  marchesWalksInARhythmicalWay?: boolean;
+  marchesWalksInARhythmicalWay?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  parriesTheBallWithBothHands?: boolean;
+  parriesTheBallWithBothHands?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  drawsFiguresFollowingOutlinesOrDottedLines?: boolean;
+  drawsFiguresFollowingOutlinesOrDottedLines?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  cutsAlongAStraightLine20CmMovingSlightlyAwayFromTheLine?: boolean;
+  cutsAlongAStraightLine20CmMovingSlightlyAwayFromTheLine?: ResponseType;
 }
 
 export class MotorDevelopment4To5YearsDto {
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  standsOnOneFootWithoutSupportFor4To8Seconds?: boolean;
+  standsOnOneFootWithoutSupportFor4To8Seconds?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  changesDirectionWhenRunning?: boolean;
+  changesDirectionWhenRunning?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  walksOnABeamOrBoardMaintainingBalance?: boolean;
+  walksOnABeamOrBoardMaintainingBalance?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  jumpsForward10TimesWithoutFalling?: boolean;
+  jumpsForward10TimesWithoutFalling?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  jumpsOverARopeSuspended5CmFromTheGround?: boolean;
+  jumpsOverARopeSuspended5CmFromTheGround?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  jumpsBackwards6Times?: boolean;
+  jumpsBackwards6Times?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  reboundsAndCatchesALargeBall?: boolean;
+  reboundsAndCatchesALargeBall?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  joins2To3PiecesOfPlasticine?: boolean;
+  joins2To3PiecesOfPlasticine?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  cutsAroundCurvedLines?: boolean;
+  cutsAroundCurvedLines?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  fitsScrewObjects?: boolean;
+  fitsScrewObjects?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  goesDownStairsAlternatingFeet?: boolean;
+  goesDownStairsAlternatingFeet?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  pedalsATricycleMakingTurns?: boolean;
+  pedalsATricycleMakingTurns?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  jumpsOnOneFoot5ConsecutiveTimes?: boolean;
+  jumpsOnOneFoot5ConsecutiveTimes?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  cutsACircleIn5Cm?: boolean;
+  cutsACircleIn5Cm?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  drawsSimpleEasilyIdentifiableFiguresExHouse?: boolean;
+  drawsSimpleEasilyIdentifiableFiguresExHouse?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  cutsAndPastesSimpleShapes?: boolean;
+  cutsAndPastesSimpleShapes?: ResponseType;
 }
 
 export class MotorDevelopment5To6YearsDto {
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  writesUppercaseLettersIsolatedAndLargeAnywhereOnThePaper?: boolean;
+  writesUppercaseLettersIsolatedAndLargeAnywhereOnThePaper?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  walksOnABoardBackwardsForwardsAndSidewaysMaintainingBalance?: boolean;
+  walksOnABoardBackwardsForwardsAndSidewaysMaintainingBalance?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  walksWhileHopping?: boolean;
+  walksWhileHopping?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  swingsOnASwingStartingAndMaintainingTheMovement?: boolean;
+  swingsOnASwingStartingAndMaintainingTheMovement?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  stretchesFingersTouchingThumbToEachOfThem?: boolean;
+  stretchesFingersTouchingThumbToEachOfThem?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  copiesCapitalLetters?: boolean;
+  copiesCapitalLetters?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  climbsOnLaddersOrASlideOf3M?: boolean;
+  climbsOnLaddersOrASlideOf3M?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  hammersANailWithAHammer?: boolean;
+  hammersANailWithAHammer?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  reboundsTheBallAsItWalksWithDirection?: boolean;
+  reboundsTheBallAsItWalksWithDirection?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  managesToColorWithoutGoingOutOfTheMargin95PercentOfTheTime?: boolean;
+  managesToColorWithoutGoingOutOfTheMargin95PercentOfTheTime?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  cutsOutFiguresWithoutLeavingMoreThan6MmFromTheMargin?: boolean;
+  cutsOutFiguresWithoutLeavingMoreThan6MmFromTheMargin?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  usesPencilSharpener?: boolean;
+  usesPencilSharpener?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  copiesComplexDrawingsSchoolShip?: boolean;
+  copiesComplexDrawingsSchoolShip?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  tearsSimpleFiguresFromThePaper?: boolean;
+  tearsSimpleFiguresFromThePaper?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  foldsASquarePaper2XDiagonallyByImitation?: boolean;
+  foldsASquarePaper2XDiagonallyByImitation?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  catchesALightBallWithOneHand?: boolean;
+  catchesALightBallWithOneHand?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  jumpsRopeAlone?: boolean;
+  jumpsRopeAlone?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  strikesABallWithAStickOrPieceOfWood?: boolean;
+  strikesABallWithAStickOrPieceOfWood?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  catchesAnObjectOnTheFloorWhileRunning?: boolean;
+  catchesAnObjectOnTheFloorWhileRunning?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  skatesADistanceOf3MOrUsesASkateboard?: boolean;
+  skatesADistanceOf3MOrUsesASkateboard?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  ridesABicycle?: boolean;
+  ridesABicycle?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  slidesDownAHillOfSandOrEarth?: boolean;
+  slidesDownAHillOfSandOrEarth?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  walksOrPlaysInASwimmingPoolHavingWaterUpToItsWaist?: boolean;
+  walksOrPlaysInASwimmingPoolHavingWaterUpToItsWaist?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  drivesAScooterGivingImpulseWithOneFootOnly?: boolean;
+  drivesAScooterGivingImpulseWithOneFootOnly?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  jumpsAndTurnsOnOneFoot?: boolean;
+  jumpsAndTurnsOnOneFoot?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  writesOwnNameWithBlockLettersInLinedNotebook?: boolean;
+  writesOwnNameWithBlockLettersInLinedNotebook?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  jumpsFromAHeightOf30CmAndFallsOnTiptoes?: boolean;
+  jumpsFromAHeightOf30CmAndFallsOnTiptoes?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  stopsOnOneFootWithoutSupportWithEyesClosedFor10Seconds?: boolean;
+  stopsOnOneFootWithoutSupportWithEyesClosedFor10Seconds?: ResponseType;
 
-  @ApiProperty()
-  @IsBoolean()
+  @ApiProperty({ enum: ResponseType })
   @IsOptional()
-  hangsfor10SecondsOnAHorizontalBar?: boolean;
+  hangsfor10SecondsOnAHorizontalBar?: ResponseType;
 }
 
 export class CreatePortageGuidetoPhysiotherapyDto{
@@ -733,4 +597,7 @@ export class CreatePortageGuidetoPhysiotherapyDto{
 
   @ApiProperty()
   motorDevelopment5To6Years: MotorDevelopment5To6YearsDto;
+
+  @ApiProperty()
+  motor: number;
 }

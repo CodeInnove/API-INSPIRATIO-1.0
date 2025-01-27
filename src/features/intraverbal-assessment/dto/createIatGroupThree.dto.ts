@@ -122,7 +122,4 @@ export class ISimpleQuestionsPartOne {
   @ApiProperty()
   other2Group3Score: string;
 
-  @IsOptional()
-  @ApiProperty()
-  subtotalPointsGroup3: Number;
 }

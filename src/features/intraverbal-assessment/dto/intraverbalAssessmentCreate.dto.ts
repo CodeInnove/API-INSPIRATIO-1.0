@@ -18,10 +18,35 @@ import { IMultipleQuestionsPartOne } from './createIatGroupSeven.dto';
 import { IMultipleQuestionsPartTwo } from './createIatGroupEight.dto';
 
 export class CreateIntraverbalAssessmentDto {
-  /*@IsDateString()
-    @IsNotEmpty()
-    @ApiProperty()   
-    dataOfApplication: string | Date;*/
+
+  @ApiProperty()
+  @IsString()
+  patient: string;
+
+  @ApiProperty()
+  @IsString()
+  doctor: string;
+
+  @ApiProperty({
+  type: String,
+  format: 'date',
+  example: 'dd/MM/yyyy'})
+  @IsOptional() 
+  birthDate: Date;
+
+
+
+  @ApiProperty({
+  type: String,
+  format: 'date',
+  example: 'dd/MM/yyyy'})
+  @IsOptional() 
+  dataOfApplication: string | Date;
+
+  @ApiProperty()
+  @IsOptional()
+  diagonostic: string;
+
   @ValidateNested()
   @Type(() => IAnimalSounds)
   @ApiProperty({ type: IAnimalSounds })
@@ -61,4 +86,13 @@ export class CreateIntraverbalAssessmentDto {
   @Type(() => IMultipleQuestionsPartTwo)
   @ApiProperty({ type: IMultipleQuestionsPartTwo })
   group8: IMultipleQuestionsPartTwo;
+
+
+  @ApiProperty()
+  @IsOptional()
+  totalScore?: number
+
+  @ApiProperty()
+  @IsOptional()
+  classification?: string
 }

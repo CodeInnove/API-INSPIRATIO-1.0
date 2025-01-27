@@ -122,7 +122,4 @@ export class ICategories {
   @ApiProperty()
   other2Group5Score: string;
 
-  @IsOptional()
-  @ApiProperty()
-  subtotalPointsGroup5: Number;
 }

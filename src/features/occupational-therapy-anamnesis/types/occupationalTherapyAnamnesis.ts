@@ -4,13 +4,12 @@ export interface IGeneralObservations {
 }
 
 export interface IClinicalHistory {
-  pregnancy: 'Planejada' | 'Não planejada';
+  pregnancy: string;
   complicationsDuringPregnancy: string;
-  birth: 'Normal' | 'Cesárea';
-  prematurity: 'Sim' | 'Não';
+  prematurity: string;
   gestationalWeeks: number;
   apgarAtBirth: number;
-  neonatalHospitalization: 'Sim' | 'Não';
+  neonatalHospitalization: string;
   hospitalizationTime: string;
   pastDiseasesOrHospitalizations: string;
 }
@@ -26,97 +25,72 @@ export interface INeuropsychomotorDevelopment {
 }
 
 export interface IActivitiesOfDailyLiving {
-  feeding: 'Independente' | 'Necessita de auxílio' | 'Alimentação por sonda';
+  feeding: string;
   feedingHelpDetails: string;
-  aversionToCertainFoods: 'Sim' | 'Não';
+  aversionToCertainFoods: string;
   aversionFoodDetails: string;
-  acceptsNewFoodsEasily: 'Sim' | 'Não';
-  needsSpecificStrategiesForFeeding: 'Sim' | 'Não';
+  acceptsNewFoodsEasily: string;
+  needsSpecificStrategiesForFeeding: string;
   feedingStrategies: string;
   prefersSpecificFoodConsistency: string;
-  personalHygiene:
-    | 'Independente'
-    | 'Com auxílio parcial'
-    | 'Necessita de supervisão total';
+  personalHygiene: string;
   hygieneDetails: string;
-  bathing:
-    | 'Independente'
-    | 'Auxílio para partes específicas (especificar)'
-    | 'Necessita de supervisão completa';
+  bathing:string;
   bathSpecificDetails: string;
-  dressing:
-    | 'Completa independência'
-    | 'Dificuldade com botões, zíperes, etc'
-    | 'Auxílio completo';
+  dressing:string;
   dressingDifficultyDetails: string;
-  sphincterControl:
-    | 'Total'
-    | 'Parcial (usa fralda em determinadas situações)'
-    | 'Necessita de fralda o tempo todo';
+  sphincterControl:string;
   specificSituationsForDiaper: string;
-  inToiletTraining: 'Sim' | 'Não';
+  inToiletTraining: string;
   toiletTrainingDuration: string;
   strategiesUsedByCaregiversOrSchool: string;
 }
 
 export interface ISignsOfReadiness {
-  signsOfReadiness:
-    | 'Percepção de xixi/cocô'
-    | 'Desconforto com a fralda'
-    | 'Ser capaz de apontar o que deseja'
-    | 'Ficar seco por 2h ou mais'
-    | 'Seguir comandos'
-    | 'Ficar sentado de 3 a 5 minutos';
+  signsOfReadiness:string;
   specificDifficultiesInToiletTraining: string;
 }
 
 export interface IInstrumentalActivitiesOfDailyLiving {
-  participatesInSchoolOrHomeTasks: 'Sim' | 'Não';
+  participatesInSchoolOrHomeTasks: string;
   taskDetails: string;
 }
 
 export interface ISchoolAndSocialRoutine {
-  enrolledInSchool: 'Sim' | 'Não';
+  enrolledInSchool: string;
   enrolledInSchoolDetails: string;
-  educationType: 'Regular' | 'Regular com apoio' | 'Especial';
+  educationType:string;
   difficultiesReportedByTeachers: string;
 }
 
 export interface ITeacherReportedDifficulties {
-  participatesInGroupRecreationalActivities: 'Sim' | 'Não';
-  interactionWithOtherChildrenAndAdults:
-    | 'Busca interação'
-    | 'Evita interação'
-    | 'Prefere brincar sozinho';
+  participatesInGroupRecreationalActivities: string;
+  interactionWithOtherChildrenAndAdults:string;
 }
 
 export interface ISensoryAndBehavioralAspects {
-  sensorySensitivities: 'Tátil' | 'Auditiva' | 'Visual' | 'Olfativa' | 'Outras';
+  sensorySensitivities: string;
   taskDetailsSensitivities: string;
-  repetitiveOrStereotypedBehaviors: 'Sim' | 'Não';
+  repetitiveOrStereotypedBehaviors: string;
   repetitiveBehaviorsDescription: string;
-  responsesToRoutineChanges: 'Boa adaptação' | 'Dificuldade significativa';
-  behaviorCrises: 'Sim' | 'Não';
+  responsesToRoutineChanges: string;
+  behaviorCrises: string;
   crisesDetails: string;
 }
 
 export interface IPlayAndLeisureAspects {
-  prefersStructuredOrFreePlay: 'Estruturadas' | 'Livres';
+  prefersStructuredOrFreePlay: string;
   favoriteToysOrActivities: string;
-  difficultyStartingOrMaintainingPlay: 'Sim' | 'Não';
+  difficultyStartingOrMaintainingPlay: string;
 }
 
 export interface ISupportNetworkAndPreviousTreatments {
-  previousTherapies:
-    | 'Fonoaudiologia'
-    | 'Fisioterapia'
-    | 'Psicologia'
-    | 'Outros';
+  previousTherapies:string; 
   previousTherapiesDetails: string;
   familyOrCaregiversInTherapies: string;
 }
 
 export interface IResponsibleGeneralObservations {
-  essentialObservationsForTreatmentPlanning: 'Sim' | 'Não';
+  essentialObservationsForTreatmentPlanning: string;
   responsibleObservations: string;
 }

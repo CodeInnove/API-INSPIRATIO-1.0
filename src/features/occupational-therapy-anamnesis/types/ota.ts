@@ -15,14 +15,8 @@ export interface IOta {
     dateOfApplication: Date;
     doctor: string;
     patient: string;
-    birthDate: Date;
-    gender: 'M' | 'F';
-    age: number;
     diagnoses: string;
-    fatherName: string;
-    motherName: string;
-    contactPhone: string;
-    address: string;
+    responsable: string;
     generalObservations: IGeneralObservations;
     clinicalHistory: IClinicalHistory;
     neuropsychomotorDevelopment: INeuropsychomotorDevelopment;

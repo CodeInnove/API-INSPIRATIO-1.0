@@ -122,7 +122,5 @@ export class IMultipleQuestionsPartTwo {
   @ApiProperty()
   other2Group8Score: string;
 
-  @IsOptional()
-  @ApiProperty()
-  subtotalPointsGroup8: Number;
+
 }

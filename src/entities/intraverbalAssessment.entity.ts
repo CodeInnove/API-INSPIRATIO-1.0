@@ -1,10 +1,14 @@
 import { Schema, Document } from 'mongoose';
+import { format } from 'date-fns';
 import { IIntraverbalAssessment } from 'src/features/intraverbal-assessment/types/intraverbalAssessment';
 
 export const IntraverbalAssessmentSchema = new Schema({
+  _id: { type: Schema.Types.ObjectId, required: true, auto: true },
   patient: { type: Schema.Types.ObjectId, ref: 'User' },
-  //dateOfApplication: { type: String, required: true },
   doctor: { type: Schema.Types.ObjectId, ref: 'User' },
+  birthDate: { type: String, get: (data:Date) => data ? format(data,'dd/MM/yyyy') : undefined  },
+  dateOfApplication: { type: String, get: (data:Date) => data ? format(data,'dd/MM/yyyy') : undefined  },
+  diagonostic: { type: String, required: false },
   group1: {
     theCatSays: { type: String, required: false },
     theCatSaysScore: { type: String, required: false },
@@ -36,7 +40,6 @@ export const IntraverbalAssessmentSchema = new Schema({
     other1Group1Score: { type: String, required: false },
     other2Group1: { type: String, required: false },
     other2Group1Score: { type: String, required: false },
-    subtotalPointsGroup1: { type: Number, required: false },
   },
   group2: {
     whatIsYourName: { type: String, required: false },
@@ -63,7 +66,6 @@ export const IntraverbalAssessmentSchema = new Schema({
     other1Group2Score: { type: String, required: false },
     other2Group2: { type: String, required: false },
     other2Group2Score: { type: String, required: false },
-    subtotalPointsGroup2: { type: Number, required: false },
   },
   group3: {
     whatCanYouDrink: { type: String, required: false },
@@ -90,7 +92,6 @@ export const IntraverbalAssessmentSchema = new Schema({
     other1Group3Score: { type: String, required: false },
     other2Group3: { type: String, required: false },
     other2Group3Score: { type: String, required: false },
-    subtotalPointsGroup3: { type: Number, required: false },
   },
   group4: {
     whoIsYourTeacher: { type: String, required: false },
@@ -117,7 +118,7 @@ export const IntraverbalAssessmentSchema = new Schema({
     other1Group4Score: { type: String, required: false },
     other2Group4: { type: String, required: false },
     other2Group4Score: { type: String, required: false },
-    subtotalPointsGroup4: { type: Number, required: false },
+  
   },
   group5: {
     whatIsTheShapeOfTheTire: { type: String, required: false },
@@ -144,7 +145,7 @@ export const IntraverbalAssessmentSchema = new Schema({
     other1Group5Score: { type: String, required: false },
     other2Group5: { type: String, required: false },
     other2Group5Score: { type: String, required: false },
-    subtotalPointsGroup5: { type: Number, required: false },
+    
   },
   group6: {
     whatDoYouWearOnYourHead: { type: String, required: false },
@@ -171,7 +172,7 @@ export const IntraverbalAssessmentSchema = new Schema({
     other1Group6Score: { type: String, required: false },
     other2Group6: { type: String, required: false },
     other2Group6Score: { type: String, required: false },
-    subtotalPointsGroup6: { type: Number, required: false },
+    
   },
   group7: {
     whatMakesYouSad: { type: String, required: false },
@@ -201,7 +202,7 @@ export const IntraverbalAssessmentSchema = new Schema({
     other1Group7Score: { type: String, required: false },
     other2Group7: { type: String, required: false },
     other2Group7Score: { type: String, required: false },
-    subtotalPointsGroup7: { type: Number, required: false },
+   
   },
   group8: {
     whereDoYouPutDirtyClothes: { type: String, required: false },
@@ -234,10 +235,10 @@ export const IntraverbalAssessmentSchema = new Schema({
     other1Group8Score: { type: String, required: false },
     other2Group8: { type: String, required: false },
     other2Group8Score: { type: String, required: false },
-    subtotalPointsGroup8: { type: Number, required: false },
   },
 
-  //totalGroupIssuesWithMultipleParts2:{ type: Number}
+  totalScore: {type: Number, required: false},
+  classification: {type: String, required: false}
 });
 
 export interface IIntraverbalAssessmentEntity
