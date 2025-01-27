@@ -39,6 +39,7 @@ import { ServiceEvolutionModule } from './features/service-evolution/service-evo
 import { SessionSummaryAtModule } from './features/session-summary-at/session-summary-at.module';
 import { SessionSummaryAbaModule } from './features/session-summary-aba/session-summary-aba.module';
 import { IncomeAssessmentModule } from './features/income-assessment/incomeAssessment.module';
+import { FilesModule } from './features/files/files.module';
 
 
 
@@ -120,6 +121,7 @@ import { IncomeAssessmentModule } from './features/income-assessment/incomeAsses
     SessionSummaryAtModule,
     SessionSummaryAbaModule,
     IncomeAssessmentModule,
+    FilesModule,
   ],
   controllers: [AppController],
   providers: [AppService],

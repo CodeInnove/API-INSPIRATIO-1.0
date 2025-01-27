@@ -4,7 +4,7 @@ import { Model } from "mongoose";
 import { UpdateIncomeAssessmentDto } from "./dto/updateIncomeAssessment.dto";
 import { CreateIncomeAssessmentDto } from "./dto/createIncomeAssessment.dto";
 import { IIncomeAssessmentEntity } from "src/entities/incomeAssessment.entity";
-import { QueryIncomeAssessmentDto } from "./dto/queryIncomeAssessment.dto";
+import { QueryIncomeAssessmentDto } from "./dto/queryincomeAssessment.dto";
 
 
 

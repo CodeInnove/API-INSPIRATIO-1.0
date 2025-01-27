@@ -1,7 +1,7 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { CreateIncomeAssessmentDto } from './dto/createIncomeAssessment.dto';
 import { UpdateIncomeAssessmentDto } from './dto/updateIncomeAssessment.dto';
-import { QueryIncomeAssessmentDto } from './dto/queryIncomeAssessment.dto';
+import { QueryIncomeAssessmentDto } from './dto/queryincomeAssessment.dto';
 import { IncomeAssessmentRepository } from './incomeAssessment.repository';
 import { IIncomeAssessmentEntity } from 'src/entities/incomeAssessment.entity';
 
