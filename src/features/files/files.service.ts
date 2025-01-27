@@ -6,9 +6,16 @@ import { FileQueryDTO } from "./dto/query.dto";
 
 @Injectable()
 export class FilesService {
-  constructor(private readonly fileRepository: FilesRepository) {}
+  constructor(private readonly fileRepository: FilesRepository) { }
 
-  async create(data: any) {
+  async create(data: any, files: Express.MulterS3.File[]) {
+    const filesData = files.map(async (file) => await this.fileRepository.create({
+      name: file.filename,
+      url: file.location,
+      type: data.type,
+      userId: data.userId,
+    }));
+
     return this.fileRepository.create(data);
   }
 
@@ -18,13 +25,5 @@ export class FilesService {
 
   async findById(id: string) {
     return this.fileRepository.findById(id);
-  }
-
-  async update(id: string, data: any) {
-    return this.fileRepository.update(id, data);
-  }
-
-  async delete(id: string) {
-    return this.fileRepository.delete(id);
   }
 }

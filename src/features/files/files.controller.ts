@@ -1,6 +1,9 @@
-import { Controller, HttpException, Get, Post, Put, Delete, Param, Query, HttpStatus } from "@nestjs/common";
+import { Controller, HttpException, Get, Post, Param, Query, HttpStatus, UseInterceptors, UploadedFiles, Body } from "@nestjs/common";
 import { FilesService } from "./files.service";
 import { FileQueryDTO } from "./dto/query.dto";
+import { FilesInterceptor } from "@nestjs/platform-express";
+import storageTypes from "src/core/file/storage-types";
+import { CreateFileDTO } from "./dto/create-file.dto";
 
 @Controller('files')
 export class FilesController {
@@ -27,27 +30,22 @@ export class FilesController {
   }
 
   @Post()
-  async create(@Param() data: any) {
+  @UseInterceptors(
+    FilesInterceptor('file', 20, {
+      limits: {
+        fileSize: 7 * 1024 * 1024,
+        files: 20,
+        fields: 100,
+      },
+      fileFilter: (req, file, cb) => {
+        cb(null, true);
+      },
+      storage: storageTypes['s3'],
+    }),
+  )
+  async create(@UploadedFiles() files: Express.MulterS3.File[], @Body() data: CreateFileDTO) {
     try {
-      return await this.filesService.create(data);
-    } catch (error) {
-      throw new HttpException(error, HttpStatus.BAD_REQUEST);
-    }
-  }
-
-  @Put(':id')
-  async update(@Param('id') id: string, @Param() data: any) {
-    try {
-      return await this.filesService.update(id, data);
-    } catch (error) {
-      throw new HttpException(error, HttpStatus.BAD_REQUEST);
-    }
-  }
-
-  @Delete(':id')
-  async delete(@Param('id') id: string) {
-    try {
-      return await this.filesService.delete(id);
+      return await this.filesService.create(data, files);
     } catch (error) {
       throw new HttpException(error, HttpStatus.BAD_REQUEST);
     }
