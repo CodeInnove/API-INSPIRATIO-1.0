@@ -6,21 +6,22 @@ export interface IGeneralObservations {
 export interface IClinicalHistory {
   pregnancy: string;
   complicationsDuringPregnancy: string;
+  childbirth: string;
   prematurity: string;
-  gestationalWeeks: number;
-  apgarAtBirth: number;
+  gestationalWeeks: string;
+  apgarAtBirth: string;
   neonatalHospitalization: string;
   hospitalizationTime: string;
   pastDiseasesOrHospitalizations: string;
 }
 
 export interface INeuropsychomotorDevelopment {
-  headControlMonths: number;
-  sittingWithoutSupportMonths: number;
-  crawlingMonths: number;
-  walkingMonths: number;
-  firstWordsMonths: number;
-  sphincterControlYears: number;
+  headControlMonths: string;
+  sittingWithoutSupportMonths: string;
+  crawlingMonths: string;
+  walkingMonths: string;
+  firstWordsMonths: string;
+  sphincterControlYears: string;
   regressionOrLossOfSkills: string;
 }
 
@@ -35,11 +36,11 @@ export interface IActivitiesOfDailyLiving {
   prefersSpecificFoodConsistency: string;
   personalHygiene: string;
   hygieneDetails: string;
-  bathing:string;
+  bathing: string;
   bathSpecificDetails: string;
-  dressing:string;
+  dressing: string;
   dressingDifficultyDetails: string;
-  sphincterControl:string;
+  sphincterControl: string;
   specificSituationsForDiaper: string;
   inToiletTraining: string;
   toiletTrainingDuration: string;
@@ -47,7 +48,7 @@ export interface IActivitiesOfDailyLiving {
 }
 
 export interface ISignsOfReadiness {
-  signsOfReadiness:string;
+  signsOfReadiness: string;
   specificDifficultiesInToiletTraining: string;
 }
 
@@ -59,13 +60,13 @@ export interface IInstrumentalActivitiesOfDailyLiving {
 export interface ISchoolAndSocialRoutine {
   enrolledInSchool: string;
   enrolledInSchoolDetails: string;
-  educationType:string;
+  educationType: string;
   difficultiesReportedByTeachers: string;
 }
 
 export interface ITeacherReportedDifficulties {
   participatesInGroupRecreationalActivities: string;
-  interactionWithOtherChildrenAndAdults:string;
+  interactionWithOtherChildrenAndAdults: string;
 }
 
 export interface ISensoryAndBehavioralAspects {
@@ -85,7 +86,7 @@ export interface IPlayAndLeisureAspects {
 }
 
 export interface ISupportNetworkAndPreviousTreatments {
-  previousTherapies:string; 
+  previousTherapies: string;
   previousTherapiesDetails: string;
   familyOrCaregiversInTherapies: string;
 }
