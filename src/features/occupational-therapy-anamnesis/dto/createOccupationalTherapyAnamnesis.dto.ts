@@ -1,6 +1,17 @@
 import { ApiProperty } from '@nestjs/swagger';
+import { Type } from 'class-transformer';
+import { IsArray, IsString, ValidateNested } from 'class-validator';
 
-export class ClinicalHistoryDto {
+class GeneralObservationsDto {
+  @ApiProperty()
+  @IsString()
+  consultationReason: string;
+
+  @ApiProperty()
+  @IsString()
+  mainConcernOfResponsible: string;
+}
+class ClinicalHistoryDto {
   @ApiProperty()
   pregnancy: string;
 
@@ -29,7 +40,7 @@ export class ClinicalHistoryDto {
   pastDiseasesOrHospitalizations: string;
 }
 
-export class NeuropsychomotorDevelopmentDto {
+class NeuropsychomotorDevelopmentDto {
   @ApiProperty()
   headControlMonths: string;
 
@@ -52,7 +63,7 @@ export class NeuropsychomotorDevelopmentDto {
   regressionOrLossOfSkills: string;
 }
 
-export class ActivitiesOfDailyLivingDto {
+ class ActivitiesOfDailyLivingDto {
   @ApiProperty()
   feeding: string;
 
@@ -111,7 +122,7 @@ export class ActivitiesOfDailyLivingDto {
   strategiesUsedByCaregiversOrSchool: string;
 }
 
-export class SignsOfReadinessDto {
+ class SignsOfReadinessDto {
   @ApiProperty()
   signsOfReadiness: string;
 
@@ -119,7 +130,7 @@ export class SignsOfReadinessDto {
   specificDifficultiesInToiletTraining: string;
 }
 
-export class InstrumentalActivitiesOfDailyLivingDto {
+class InstrumentalActivitiesOfDailyLivingDto {
   @ApiProperty()
   participatesInSchoolOrHomeTasks: string;
 
@@ -127,7 +138,7 @@ export class InstrumentalActivitiesOfDailyLivingDto {
   taskDetails: string;
 }
 
-export class SchoolAndSocialRoutineDto {
+ class SchoolAndSocialRoutineDto {
   @ApiProperty()
   enrolledInSchool: string;
 
@@ -141,7 +152,7 @@ export class SchoolAndSocialRoutineDto {
   difficultiesReportedByTeachers: string;
 }
 
-export class TeacherReportedDifficultiesDto {
+ class TeacherReportedDifficultiesDto {
   @ApiProperty()
   participatesInGroupRecreationalActivities: string;
 
@@ -149,7 +160,7 @@ export class TeacherReportedDifficultiesDto {
   interactionWithOtherChildrenAndAdults: string;
 }
 
-export class SensoryAndBehavioralAspectsDto {
+ class SensoryAndBehavioralAspectsDto {
   @ApiProperty()
   sensorySensitivities: string;
 
@@ -172,7 +183,7 @@ export class SensoryAndBehavioralAspectsDto {
   crisesDetails: string;
 }
 
-export class PlayAndLeisureAspectsDto {
+ class PlayAndLeisureAspectsDto {
   @ApiProperty()
   prefersStructuredOrFreePlay: string;
 
@@ -183,7 +194,7 @@ export class PlayAndLeisureAspectsDto {
   difficultyStartingOrMaintainingPlay: string;
 }
 
-export class SupportNetworkAndPreviousTreatmentsDto {
+ class SupportNetworkAndPreviousTreatmentsDto {
   @ApiProperty()
   previousTherapies: string;
 
@@ -194,7 +205,7 @@ export class SupportNetworkAndPreviousTreatmentsDto {
   familyOrCaregiversInTherapies: string;
 }
 
-export class ResponsibleGeneralObservationsDto {
+ class ResponsibleGeneralObservationsDto {
   @ApiProperty()
   essentialObservationsForTreatmentPlanning: string;
 
@@ -215,42 +226,63 @@ export class CreateOccupationalTherapyAnamnesisDto {
   @ApiProperty()
   diagnoses: string;
 
-  @ApiProperty()
-  consultationReason: string;
+  @ValidateNested()
+  @Type(() => GeneralObservationsDto)
+  @ApiProperty({ type: GeneralObservationsDto })
+  generalObservations: GeneralObservationsDto;
 
-  @ApiProperty()
-  mainConcernOfResponsible: string;
-
-  @ApiProperty()
+   @ValidateNested()
+  @Type(() => ClinicalHistoryDto)
+  @ApiProperty({ type: ClinicalHistoryDto })
   clinicalHistory: ClinicalHistoryDto;
 
-  @ApiProperty()
+  @ValidateNested()
+  @Type(() => NeuropsychomotorDevelopmentDto)
+  @ApiProperty({ type: NeuropsychomotorDevelopmentDto })
   neuropsychomotorDevelopment: NeuropsychomotorDevelopmentDto;
 
-  @ApiProperty()
+  @ValidateNested()
+  @Type(() => ActivitiesOfDailyLivingDto)
+  @ApiProperty({ type: ActivitiesOfDailyLivingDto })
   activitiesOfDailyLiving: ActivitiesOfDailyLivingDto;
 
-  @ApiProperty()
+  @ValidateNested()
+  @Type(() => SignsOfReadinessDto)
+  @ApiProperty({ type: SignsOfReadinessDto })
   signsOfReadiness: SignsOfReadinessDto;
 
-  @ApiProperty()
+  @ValidateNested()
+  @Type(() => InstrumentalActivitiesOfDailyLivingDto)
+  @ApiProperty({ type: InstrumentalActivitiesOfDailyLivingDto })
   instrumentalActivitiesOfDailyLiving: InstrumentalActivitiesOfDailyLivingDto;
 
-  @ApiProperty()
+  @ValidateNested()
+  @Type(() => SchoolAndSocialRoutineDto)
+  @ApiProperty({ type: SchoolAndSocialRoutineDto })
   schoolAndSocialRoutine: SchoolAndSocialRoutineDto;
 
-  @ApiProperty()
+  @ValidateNested()
+  @Type(() => TeacherReportedDifficultiesDto)
+  @ApiProperty({ type: TeacherReportedDifficultiesDto })
   teacherReportedDifficulties: TeacherReportedDifficultiesDto;
 
-  @ApiProperty()
+  @ValidateNested()
+  @Type(() => SensoryAndBehavioralAspectsDto)
+  @ApiProperty({ type: SensoryAndBehavioralAspectsDto })
   sensoryAndBehavioralAspects: SensoryAndBehavioralAspectsDto;
 
-  @ApiProperty()
+  @ValidateNested()
+  @Type(() => PlayAndLeisureAspectsDto)
+  @ApiProperty({ type: PlayAndLeisureAspectsDto })
   playAndLeisureAspects: PlayAndLeisureAspectsDto;
 
-  @ApiProperty()
+  @ValidateNested()
+  @Type(() => SupportNetworkAndPreviousTreatmentsDto)
+  @ApiProperty({ type: SupportNetworkAndPreviousTreatmentsDto })
   supportNetworkAndPreviousTreatments: SupportNetworkAndPreviousTreatmentsDto;
 
-  @ApiProperty()
+  @ValidateNested()
+  @Type(() => ResponsibleGeneralObservationsDto)
+  @ApiProperty({ type: ResponsibleGeneralObservationsDto })
   responsibleGeneralObservations: ResponsibleGeneralObservationsDto;
 }
