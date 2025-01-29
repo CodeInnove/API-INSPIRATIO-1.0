@@ -1,9 +1,7 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { IsOptional, IsString } from 'class-validator';
 
-
 export class IBackgroundDto {
-
   @ApiProperty()
   @IsOptional()
   @IsString()
@@ -57,12 +55,12 @@ export class IBackgroundDto {
   @IsOptional()
   @IsString()
   parentsWorkHours: string;
-  
+
   @ApiProperty()
   @IsOptional()
   @IsString()
   childCaregiver: string;
-  
+
   @ApiProperty()
   @IsOptional()
   @IsString()
@@ -70,7 +68,6 @@ export class IBackgroundDto {
 }
 
 export class IPhysicalDto {
-
   @ApiProperty()
   @IsOptional()
   @IsString()
@@ -214,7 +211,7 @@ export class IPhysicalDto {
   @ApiProperty()
   @IsOptional()
   @IsString()
-  diurnalSphincterControl: string; 
+  diurnalSphincterControl: string;
 
   @ApiProperty()
   @IsOptional()
@@ -240,7 +237,6 @@ export class IPhysicalDto {
   @IsOptional()
   @IsString()
   quietBaby: string;
-
 
   @ApiProperty()
   @IsOptional()
@@ -291,7 +287,6 @@ export class IPhysicalDto {
   @IsOptional()
   @IsString()
   otherHabits: string;
-
 
   @ApiProperty()
   @IsOptional()
@@ -353,7 +348,6 @@ export class IPhysicalDto {
   @IsString()
   closesZipper: string;
 
-
   @ApiProperty()
   @IsOptional()
   @IsString()
@@ -375,9 +369,7 @@ export class IPhysicalDto {
   howSolvesProblems: string;
 }
 
-
-export class DevelopmentSocioCulturalDto{
-
+export class DevelopmentSocioCulturalDto {
   @ApiProperty()
   @IsOptional()
   @IsString()
@@ -478,108 +470,108 @@ export class CreateAnamnesisSpeechTherapyDto {
   @ApiProperty()
   @IsOptional()
   @IsString()
-  patient: string
+  patient: string;
 
   @ApiProperty()
   @IsOptional()
   @IsString()
-  birthDate:string
+  date: string;
+
+  /*@ApiProperty()
+  @IsOptional()
+  @IsString()
+  maritalStatus: string;
 
   @ApiProperty()
   @IsOptional()
   @IsString()
-  maritalStatus: string
+  placeOfBirth: string;
+
+  @ApiProperty()
+  @IsOptional()
+  age: number;
 
   @ApiProperty()
   @IsOptional()
   @IsString()
-  placeOfBirth: string
-
-  @ApiProperty()
-  @IsOptional()
-  age:  number
+  sex: string;
 
   @ApiProperty()
   @IsOptional()
   @IsString()
-  sex: string
+  nationality: string;
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  schoolName: string;
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  studyPeriod: string;
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  fatherName: string;
 
   @ApiProperty()
   @IsOptional()
   @IsString()
-  nationality: string
-  @ApiProperty()
-  @IsOptional()
-  @IsString()
-  schoolName: string
-  @ApiProperty()
-  @IsOptional()
-  @IsString()
-  studyPeriod: string
-  @ApiProperty()
-  @IsOptional()
-  @IsString()
-  fatherName: string
-  
-  @ApiProperty()
-  @IsOptional()
-  @IsString()
-  fatherAge: string
+  fatherAge: string;
 
   @ApiProperty()
   @IsOptional()
   @IsString()
-  fatherProfession: string
+  fatherProfession: string;
 
   @ApiProperty()
   @IsOptional()
   @IsString()
-  fatherEducation: string
+  fatherEducation: string;
 
   @ApiProperty()
   @IsOptional()
   @IsString()
-  motherName: string
+  motherName: string;
 
   @ApiProperty()
   @IsOptional()
   @IsString()
-  motherAge: string
+  motherAge: string;
 
   @ApiProperty()
   @IsOptional()
   @IsString()
-  motherProfession: string
+  motherProfession: string;
 
   @ApiProperty()
   @IsOptional()
   @IsString()
-  motherEducation: string
+  motherEducation: string;
 
   @ApiProperty()
   @IsOptional()
   @IsString()
-  siblingsNamesOne:string
+  siblingsNamesOne: string;
 
   @ApiProperty()
   @IsOptional()
   @IsString()
-  ageSiblingsNamesOne: string
+  ageSiblingsNamesOne: string;
 
   @ApiProperty()
   @IsOptional()
   @IsString()
-  siblingsNamesTwo: string
+  siblingsNamesTwo: string;
 
   @ApiProperty()
   @IsOptional()
   @IsString()
-  ageSiblingsNamesTwo: string
-    
+  ageSiblingsNamesTwo: string;*/
+
   @ApiProperty()
   @IsOptional()
   @IsString()
-  complaintAndDurations: string;
+  complaintAndDuration: string;
 
   @ApiProperty()
   @IsOptional()
@@ -596,8 +588,5 @@ export class CreateAnamnesisSpeechTherapyDto {
   @ApiProperty()
   @IsOptional()
   @IsString()
-  importantObservations: string;
-    
-
-
-};
+  importantObservation: string;
+}

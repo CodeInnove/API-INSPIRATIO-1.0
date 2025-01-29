@@ -57,7 +57,7 @@ interface Idevelopment {
   breathing: string;
   presentsNoiseEffort: string;
   leftOrRightHanded: string;
-  usedPacifierBottleFinger: string;
+  usedPacifierBottleFinger: string[];
   untilWhenUsedPacifierBottleFinger: string;
   otherHabits: string;
   bathesAlone: string;
@@ -78,7 +78,7 @@ interface Idevelopment {
   howSolvesProblems: string;
 }
 interface IsocioCultural {
-  relationshipWithParents: string
+  relationshipWithParents: string;
   relationshipWithAdults: string;
   relationshipWithOtherChildren: string;
   whoAreYourBestFriends: string;
@@ -104,8 +104,10 @@ interface IimportantObservations {
 }
 
 export interface IAnamnesisSpeechTherapy {
-  patient: string
-  birthDate:string
+  dateOfApplication: Date;
+  doctor: string;
+  patient: string;
+  /*birthDate:string
   maritalStatus: string
   placeOfBirth: string
   age:  number
@@ -124,7 +126,7 @@ export interface IAnamnesisSpeechTherapy {
   siblingsNamesOne:string
   ageSiblingsNamesOne: string
   siblingsNamesTwo: string
-  ageSiblingsNamesTwo: string
+  ageSiblingsNamesTwo: string*/
   complaintAndDuration: IcomplaintAndDurations;
   antecedents: IBackground;
   development: Idevelopment;
