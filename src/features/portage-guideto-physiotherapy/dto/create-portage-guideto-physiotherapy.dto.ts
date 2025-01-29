@@ -1,5 +1,5 @@
 import { ApiProperty } from "@nestjs/swagger";
-import { IsBoolean, IsOptional } from "class-validator";
+import { IsBoolean, IsEnum, IsNumber, IsOptional } from "class-validator";
 
 
 export enum ResponseType {
@@ -7,6 +7,8 @@ export enum ResponseType {
   'AV' = 'AV',
   'SIM' = 'SIM',
 }
+
+
 
 export class MotorDevelopment0To1YearDto {
   @ApiProperty({ enum: ResponseType })
@@ -581,6 +583,35 @@ export class MotorDevelopment5To6YearsDto {
 }
 
 export class CreatePortageGuidetoPhysiotherapyDto{
+
+  @ApiProperty()
+  patient: string;
+
+  @ApiProperty({
+  type: String,
+  format: 'date',
+  example: 'dd/MM/yyyy'})
+  @IsOptional()
+  date: Date;
+
+  @ApiProperty({
+  type: String,
+  format: 'date',
+  example: 'dd/MM/yyyy'})
+  @IsOptional()
+  birthDay: string;
+
+  @ApiProperty()
+  doctor: string;
+
+  @ApiProperty()
+  diagnoses: string;
+
+  
+  @ApiProperty()
+  @IsNumber()
+  year: number;
+
   @ApiProperty()
   motorDevelopment0To1Year: MotorDevelopment0To1YearDto;
 
@@ -593,6 +624,7 @@ export class CreatePortageGuidetoPhysiotherapyDto{
   @ApiProperty()
   motorDevelopment3To4Years: MotorDevelopment3To4YearsDto;
 
+  @ApiProperty()
   motorDevelopment4To5Years: MotorDevelopment4To5YearsDto;
 
   @ApiProperty()
@@ -601,3 +633,4 @@ export class CreatePortageGuidetoPhysiotherapyDto{
   @ApiProperty()
   motor: number;
 }
+
