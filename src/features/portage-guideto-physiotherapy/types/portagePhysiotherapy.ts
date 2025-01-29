@@ -1,168 +1,180 @@
 export interface MotorDevelopmentPhysio{
-    motor0To1Years: IMotorDevelopment0To1YearPhysio;
-    motor1To2Years: IMotorDevelopment1To2YearsPhysio;
-    motor2To3Years: IMotorDevelopment2To3YearsPhysio;
-    motor3To4Years: IMotorDevelopment3To4YearsPhysio;
-    motor4To5Years: IMotorDevelopment4To5YearsPhysio;
-    motor5To6Years: IMotorDevelopment5To6YearsPhysio
+  patient: string;
+  date: Date | string;
+  birthDay: Date | string;
+  doctor: string;
+  diagnoses: string;
+  motor0To1Years1: IMotorDevelopment0To1YearPhysio;
+  motor1To2Years2: IMotorDevelopment1To2YearsPhysio;
+  motor2To3Years3: IMotorDevelopment2To3YearsPhysio;
+  motor3To4Years4: IMotorDevelopment3To4YearsPhysio;
+  motor4To5Years5: IMotorDevelopment4To5YearsPhysio;
+  motor5To6Years6: IMotorDevelopment5To6YearsPhysio;
+  year: number;
+  motorDevelopment0To1YearScore: number;
+  motorDevelopment1To2YearsScore: number;
+  motorDevelopment2To3YearsScore: number;
+  motorDevelopment3To4YearsScore: number;
+  motorDevelopment4To5YearsScore: number;
+  motorDevelopment5To6YearsScore: number;
+  motor: number;
 }
 
 export interface IMotorDevelopment0To1YearPhysio {
-    reachesForAnObjectPlacedInFrontOfIt15To20Cm: boolean,
-    grabsAnObjectPlacedInFrontOfIt8Cm: boolean,
-    extendsArmsTowardAnObjectInFrontOfItAndGrabsIt: boolean,
-    reachesForAPreferredObject: boolean,
-    putsObjectsInMouth: boolean,
-    raisesHeadAndTorsoSupportingSelfOnArmsWhenLyingOnStomach: boolean,
-    raisesHeadAndTorsoSupportingSelfOnOneArm: boolean,
-    touchesAndExploresObjectsWithMouth: boolean,
-    inPronePositionTurnsToTheSideAndMaintainsThisPositionHalfTheTime: boolean,
-    inPronePositionTurnsOnBack: boolean,
-    inPronePositionMovesForwardTheEquivalentOfItsHeight: boolean,
-    inSupinePositionRollsToTheSide: boolean,
-    inSupinePositionTurnsFromStomachToBack: boolean,
-    makesEffortToSitHoldingOntoAdultsFingers: boolean,
-    turnsHeadEasilyWhenTheBodyIsSupported: boolean,
-    sitsFor2Minutes: boolean,
-    releasesAnObjectToGrabAnother: boolean,
-    grabsAndDropsAnObjectPurposefully: boolean,
-    standsWithMaximumSupport: boolean,
-    whileStandingWithSupportJumpsUpAndDown: boolean,
-    crawlsToGrabAnObjectDistantItsHeight: boolean,
-    sitsSupportingSelfAlone: boolean,
-    whileSittingTurnsToCrawling: boolean,
-    whileInPronePositionManagesToSit: boolean,
-    sitsWithoutHandSupport: boolean,
-    throwsObjectsAtRandom: boolean,
-    swaysBackAndForthWhenCrawling: boolean,
-    transfersObjectsFromOneHandToAnotherWhenSitting: boolean,
-    retains2CubesOf25CmInOneHand: boolean,
-    getsOnKnees: boolean,
-    standsSupportingSelfOnSomething: boolean,
-    usesPincerGripToPickUpObjects: boolean,
-    crawls: boolean,
-    whileCrawlingExtendsOneHandUpwards: boolean,
-    standsWithMinimumSupport: boolean,
-    licksFoodAroundMouth: boolean,
-    maintainsSelfStandingAloneFor1Minute: boolean,
-    knocksDownAnObjectThatIsInsideAReceptacle: boolean,
-    turnsSeveralPagesOfABookAtTheSameTime: boolean,
-    scoopsWithASpoonOrSpade: boolean,
-    placesSmallObjectsInsideAReceptacle: boolean,
-    whileStandingLowersItselfAndSits: boolean,
-    clapsHands: boolean,
-    walksWithMinimumSupport: boolean,
-    takesAFewStepsWithoutSupport: boolean
-  }
-  
-  
-  export interface IMotorDevelopment1To2YearsPhysio {
-    climbsStairsCrawling: boolean,
-    placesItselfStandingWhileSitting: boolean,
-    rollsABallImitatingAnAdult: boolean,
-    climbsOntoAnAdultChairTurnsAndSits: boolean,
-    puts4RingsOnASmallStake: boolean,
-    removes25CmPinsFromABoardOrTray: boolean,
-    fits25CmPinsIntoAFittingBoard: boolean,
-    buildsATowerOf3Blocks: boolean,
-    makesTracesOnPaperWithPencilOrCrayon: boolean,
-    walksAlone: boolean,
-    goesDownStairsSittingPuttingFeetFirst: boolean,
-    sitsInASmallChair: boolean,
-    crouchesAndReturnsToStand: boolean,
-    pushesAndPullsToysWhenWalking: boolean,
-    usesAChairOrRockingHorse: boolean,
-    climbsStairsWithHelp: boolean,
-    bendsTheBodyWithoutFallingToPickUpObjectsOnTheFloor: boolean,
-    imitatesACircularMovement: boolean
-  }
-  
-  export interface IMotorDevelopment2To3YearsPhysio {
-    threads4LargeBeadsOnACordIn2Minutes: boolean,
-    turnsLatchesOrDoorknobsOnDoors: boolean,
-    jumpsInTheSamePlaceWithBothFeet: boolean,
-    walksBackwards: boolean,
-    goesDownStairsWithoutHelp: boolean,
-    throwsABallToAnAdultAtA1HalfDistance: boolean,
-    buildsATowerOf5To6Blocks: boolean,
-    turnsPagesOfABookOneAtATime: boolean,
-    unwrapsASmallObject: boolean,
-    foldsAPaperInHalfImitatingAnAdult: boolean,
-    dismantlesAndRebuildsPressureFitToys: boolean,
-    unscrewsToysThatFitWithThreads: boolean,
-    kicksALargeBallThatIsStill: boolean,
-    makesBallsOfClayMudOrPlasticine: boolean,
-    holdsThePencilBetweenTheThumbAndIndexFingerRestingItOnTheMiddleFinger: boolean,
-    doesForwardTumbleWithHelp: boolean,
-    hammersToFit5PinsInTheirHoles: boolean
-  }
-  
-  export interface IMotorDevelopment3To4YearsPhysio {
-    makesAPuzzleOf3Pieces: boolean,
-    cutsSomethingIntoPiecesWithScissors: boolean,
-    jumpsFromAHeightOf20Cm: boolean,
-    kicksALargeBallWhenSentToYou: boolean,
-    walksOnTiptoes: boolean,
-    runs10StepsCoordinatingAndAlternatingTheMovementOfArmsAndFeet: boolean,
-    pedalsWithTricycleTheDistanceOf1AndAHalfMeters: boolean,
-    swingsOnASwingWhenItIsInMotion: boolean,
-    climbsOnASlideOf120MTo180MAndSlidesDown: boolean,
-    doesForwardTumbles: boolean,
-    climbsStairsAlternatingFeet: boolean,
-    marchesWalksInARhythmicalWay: boolean,
-    parriesTheBallWithBothHands: boolean,
-    drawsFiguresFollowingOutlinesOrDottedLines: boolean,
-    cutsAlongAStraightLine20CmMovingSlightlyAwayFromTheLine: boolean
-  }
-  
-  export interface IMotorDevelopment4To5YearsPhysio {
-    standsOnOneFootWithoutSupportFor4To8Seconds: boolean,
-    changesDirectionWhenRunning: boolean,
-    walksOnABeamOrBoardMaintainingBalance: boolean,
-    jumpsForward10TimesWithoutFalling: boolean,
-    jumpsOverARopeSuspended5CmFromTheGround: boolean,
-    jumpsBackwards6Times: boolean,
-    reboundsAndCatchesALargeBall: boolean,
-    joins2To3PiecesOfPlasticine: boolean,
-    cutsAroundCurvedLines: boolean,
-    fitsScrewObjects: boolean,
-    goesDownStairsAlternatingFeet: boolean,
-    pedalsATricycleMakingTurns: boolean,
-    jumpsOnOneFoot5ConsecutiveTimes: boolean,
-    cutsACircleIn5Cm: boolean,
-    drawsSimpleEasilyIdentifiableFiguresExHouse: boolean,
-    cutsAndPastesSimpleShapes: boolean
-  }
-  
-  export interface IMotorDevelopment5To6YearsPhysio {
-    writesUppercaseLettersIsolatedAndLargeAnywhereOnThePaper: boolean,
-    walksOnABoardBackwardsForwardsAndSidewaysMaintainingBalance: boolean,
-    walksWhileHopping: boolean,
-    swingsOnASwingStartingAndMaintainingTheMovement: boolean,
-    stretchesFingersTouchingThumbToEachOfThem: boolean,
-    copiesCapitalLetters: boolean,
-    climbsOnLaddersOrASlideOf3M: boolean,
-    hammersANailWithAHammer: boolean,
-    reboundsTheBallAsItWalksWithDirection: boolean,
-    managesToColorWithoutGoingOutOfTheMargin95PercentOfTheTime: boolean,
-    cutsOutFiguresWithoutLeavingMoreThan6Mmfromthemargin: boolean,
-    usesPencilSharpener: boolean,
-    copiesComplexDrawingsSchoolShip: boolean,
-    tearsSimpleFiguresFromThePaper: boolean,
-    foldsASquarePaper2XDiagonallyByImitation: boolean,
-    catchesALightBallWithOneHand: boolean,
-    jumpsRopeAlone: boolean,
-    strikesABallWithAStickOrPieceOfWood: boolean,
-    catchesAnObjectOnTheFloorWhileRunning: boolean,
-    skatesADistanceOf3MOrUsesASkateboard: boolean,
-    ridesABicycle: boolean,
-    slidesDownAHillOfSandOrEarth: boolean,
-    walksOrPlaysInASwimmingPoolHavingWaterUpToItsWaist: boolean,
-    drivesAScooterGivingImpulseWithOneFootOnly: boolean,
-    jumpsAndTurnsOnOneFoot: boolean,
-    writesOwnNameWithBlockLettersInLinedNotebook: boolean,
-    jumpsFromAHeightOf30CmAndFallsOnTiptoes: boolean,
-    stopsOnOneFootWithoutSupportWithEyesClosedFor10Seconds: boolean,
-    hangsFor10SecondsOnAHorizontalBar: boolean
-  }
+  reachesForAnObjectPlacedInFrontOfIt15To20Cm: string,
+  grabsAnObjectPlacedInFrontOfIt8Cm: string,
+  extendsArmsTowardAnObjectInFrontOfItAndGrabsIt: string,
+  reachesForAPreferredObject: string,
+  putsObjectsInMouth: string,
+  raisesHeadAndTorsoSupportingSelfOnArmsWhenLyingOnStomach: string,
+  raisesHeadAndTorsoSupportingSelfOnOneArm: string,
+  touchesAndExploresObjectsWithMouth: string,
+  inPronePositionTurnsToTheSideAndMaintainsThisPositionHalfTheTime: string,
+  inPronePositionTurnsOnBack: string,
+  inPronePositionMovesForwardTheEquivalentOfItsHeight: string,
+  inSupinePositionRollsToTheSide: string,
+  inSupinePositionTurnsFromStomachToBack: string,
+  makesEffortToSitHoldingOntoAdultsFingers: string,
+  turnsHeadEasilyWhenTheBodyIsSupported: string,
+  sitsFor2Minutes: string,
+  releasesAnObjectToGrabAnother: string,
+  grabsAndDropsAnObjectPurposefully: string,
+  standsWithMaximumSupport: string,
+  whileStandingWithSupportJumpsUpAndDown: string,
+  crawlsToGrabAnObjectDistantItsHeight: string,
+  sitsSupportingSelfAlone: string,
+  whileSittingTurnsToCrawling: string,
+  whileInPronePositionManagesToSit: string,
+  sitsWithoutHandSupport: string,
+  throwsObjectsAtRandom: string,
+  swaysBackAndForthWhenCrawling: string,
+  transfersObjectsFromOneHandToAnotherWhenSitting: string,
+  retains2CubesOf25CmInOneHand: string,
+  getsOnKnees: string,
+  standsSupportingSelfOnSomething: string,
+  usesPincerGripToPickUpObjects: string,
+  crawls: string,
+  whileCrawlingExtendsOneHandUpwards: string,
+  standsWithMinimumSupport: string,
+  licksFoodAroundMouth: string,
+  maintainsSelfStandingAloneFor1Minute: string,
+  knocksDownAnObjectThatIsInsideAReceptacle: string,
+  turnsSeveralPagesOfABookAtTheSameTime: string,
+  scoopsWithASpoonOrSpade: string,
+  placesSmallObjectsInsideAReceptacle: string,
+  whileStandingLowersItselfAndSits: string,
+  clapsHands: string,
+  walksWithMinimumSupport: string,
+  takesAFewStepsWithoutSupport: string,
+}
+
+export interface IMotorDevelopment1To2YearsPhysio {
+  climbsStairsCrawling: string,
+  placesItselfStandingWhileSitting: string,
+  rollsABallImitatingAnAdult: string,
+  climbsOntoAnAdultChairTurnsAndSits: string,
+  puts4RingsOnASmallStake: string,
+  removes25CmPinsFromABoardOrTray: string,
+  fits25CmPinsIntoAFittingBoard: string,
+  buildsATowerOf3Blocks: string,
+  makesTracesOnPaperWithPencilOrCrayon: string,
+  walksAlone: string,
+  goesDownStairsSittingPuttingFeetFirst: string,
+  sitsInASmallChair: string,
+  crouchesAndReturnsToStand: string,
+  pushesAndPullsToysWhenWalking: string,
+  usesAChairOrRockingHorse: string,
+  climbsStairsWithHelp: string,
+  bendsTheBodyWithoutFallingToPickUpObjectsOnTheFloor: string,
+  imitatesACircularMovement: string,
+}
+
+export interface IMotorDevelopment2To3YearsPhysio {
+  threads4LargeBeadsOnACordIn2Minutes: string,
+  turnsLatchesOrDoorknobsOnDoors: string,
+  jumpsInTheSamePlaceWithBothFeet: string,
+  walksBackwards: string,
+  goesDownStairsWithoutHelp: string,
+  throwsABallToAnAdultAtA1HalfDistance: string,
+  buildsATowerOf5To6Blocks: string,
+  turnsPagesOfABookOneAtATime: string,
+  unwrapsASmallObject: string,
+  foldsAPaperInHalfImitatingAnAdult: string,
+  dismantlesAndRebuildsPressureFitToys: string,
+  unscrewsToysThatFitWithThreads: string,
+  kicksALargeBallThatIsStill: string,
+  makesBallsOfClayMudOrPlasticine: string,
+  holdsThePencilBetweenTheThumbAndIndexFingerRestingItOnTheMiddleFinger: string,
+  doesForwardTumbleWithHelp: string,
+  hammersToFit5PinsInTheirHoles: string,
+}
+
+export interface IMotorDevelopment3To4YearsPhysio {
+  makesAPuzzleOf3Pieces: string,
+  cutsSomethingIntoPiecesWithScissors: string,
+  jumpsFromAHeightOf20Cm: string,
+  kicksALargeBallWhenSentToYou: string,
+  walksOnTiptoes: string,
+  runs10StepsCoordinatingAndAlternatingTheMovementOfArmsAndFeet: string,
+  pedalsWithTricycleTheDistanceOf1AndAHalfMeters: string,
+  swingsOnASwingWhenItIsInMotion: string,
+  climbsOnASlideOf120MTo180MAndSlidesDown: string,
+  doesForwardTumbles: string,
+  climbsStairsAlternatingFeet: string,
+  marchesWalksInARhythmicalWay: string,
+  parriesTheBallWithBothHands: string,
+  drawsFiguresFollowingOutlinesOrDottedLines: string,
+  cutsAlongAStraightLine20CmMovingSlightlyAwayFromTheLine: string,
+}
+
+export interface IMotorDevelopment4To5YearsPhysio {
+  standsOnOneFootWithoutSupportFor4To8Seconds: string,
+  changesDirectionWhenRunning: string,
+  walksOnABeamOrBoardMaintainingBalance: string,
+  jumpsForward10TimesWithoutFalling: string,
+  jumpsOverARopeSuspended5CmFromTheGround: string,
+  jumpsBackwards6Times: string,
+  reboundsAndCatchesALargeBall: string,
+  joins2To3PiecesOfPlasticine: string,
+  cutsAroundCurvedLines: string,
+  fitsScrewObjects: string,
+  goesDownStairsAlternatingFeet: string,
+  pedalsATricycleMakingTurns: string,
+  jumpsOnOneFoot5ConsecutiveTimes: string,
+  cutsACircleIn5Cm: string,
+  drawsSimpleEasilyIdentifiableFiguresExHouse: string,
+  cutsAndPastesSimpleShapes: string,
+}
+
+export interface IMotorDevelopment5To6YearsPhysio {
+  writesUppercaseLettersIsolatedAndLargeAnywhereOnThePaper: string,
+  walksOnABoardBackwardsForwardsAndSidewaysMaintainingBalance: string,
+  walksWhileHopping: string,
+  swingsOnASwingStartingAndMaintainingTheMovement: string,
+  stretchesFingersTouchingThumbToEachOfThem: string,
+  copiesCapitalLetters: string,
+  climbsOnLaddersOrASlideOf3M: string,
+  hammersANailWithAHammer: string,
+  reboundsTheBallAsItWalksWithDirection: string,
+  managesToColorWithoutGoingOutOfTheMargin95PercentOfTheTime: string,
+  cutsOutFiguresWithoutLeavingMoreThan6Mmfromthemargin: string,
+  usesPencilSharpener: string,
+  copiesComplexDrawingsSchoolShip: string,
+  tearsSimpleFiguresFromThePaper: string,
+  foldsASquarePaper2XDiagonallyByImitation: string,
+  catchesALightBallWithOneHand: string,
+  jumpsRopeAlone: string,
+  strikesABallWithAStickOrPieceOfWood: string,
+  catchesAnObjectOnTheFloorWhileRunning: string,
+  skatesADistanceOf3MOrUsesASkateboard: string,
+  ridesABicycle: string,
+  slidesDownAHillOfSandOrEarth: string,
+  walksOrPlaysInASwimmingPoolHavingWaterUpToItsWaist: string,
+  drivesAScooterGivingImpulseWithOneFootOnly: string,
+  jumpsAndTurnsOnOneFoot: string,
+  writesOwnNameWithBlockLettersInLinedNotebook: string,
+  jumpsFromAHeightOf30CmAndFallsOnTiptoes: string,
+  stopsOnOneFootWithoutSupportWithEyesClosedFor10Seconds: string,
+  hangsFor10SecondsOnAHorizontalBar: string,
+}
 

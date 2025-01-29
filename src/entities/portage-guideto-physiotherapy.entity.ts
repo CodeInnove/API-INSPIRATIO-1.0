@@ -1,9 +1,23 @@
 import {Schema, Document} from 'mongoose'
 import { ResponseType } from 'src/features/portage-guideto-physiotherapy/dto/create-portage-guideto-physiotherapy.dto';
 import { MotorDevelopmentPhysio } from 'src/features/portage-guideto-physiotherapy/types/portagePhysiotherapy';
+import { format } from 'date-fns';
 
 export const PortageGuidetoPhysiotherapySchema = new Schema ({
     _id: { type: Schema.Types.ObjectId, auto: true },
+    patient: { type: Schema.Types.ObjectId, ref: 'User' },
+    date: { 
+        type: String,
+        get: (data: Date) => (data ? format(data, 'dd/MM/yyyy') : undefined),
+    },
+
+    birthDay: { 
+        type: String,
+        get: (data: Date) => (data ? format(data, 'dd/MM/yyyy') : undefined),
+    },
+
+    doctor: { type: Schema.Types.ObjectId, ref: 'User' },
+    diagnoses: { type: String },
     motorDevelopment0To1Year: {
         reachesForAnObjectPlacedInFrontOfIt15To20Cm: { type: String, ResponseType },
         grabsAnObjectPlacedInFrontOfIt8Cm: { type: String, ResponseType },
@@ -157,7 +171,15 @@ export const PortageGuidetoPhysiotherapySchema = new Schema ({
          hangsFor10SecondsOnAHorizontalBar: { type: String, ResponseType }
     },
 
+    motorDevelopment0To1YearScore: { type: Number },
+    motorDevelopment1To2YearsScore: { type: Number },
+    motorDevelopment2To3YearsScore: { type: Number },
+    motorDevelopment3To4YearsScore: { type: Number },
+    motorDevelopment4To5YearsScore: { type: Number },
+    motorDevelopment5To6YearsScore: { type: Number },
     motor: { type: Number }
-}, { timestamps: true});
+});
 
-export interface IPortageGuidetoPhysiotherapyEntity extends Omit<MotorDevelopmentPhysio, '_id'>, Document {}
+export interface IPortageGuidetoPhysiotherapyEntity extends Omit<MotorDevelopmentPhysio, '_id'>, Document {
+   
+}
