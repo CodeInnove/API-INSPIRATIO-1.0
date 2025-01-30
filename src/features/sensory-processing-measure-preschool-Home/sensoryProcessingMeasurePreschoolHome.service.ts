@@ -93,7 +93,17 @@ export class SensoryProcessingMeasurePreschoolService {
 
 
     private transformUpdateDtoToSpmp(data: UpdateSensoryProcessingMeasurePreschoolDto): UpdateSensoryProcessingMeasurePreschoolDto {
-      const { participationSocialPreSchool, visionPreSchool, hearingPreSchool, touchPreSchool, smellAndTastePreSchool, bodyAwarenessPreSchool, balanceAndMovementPreSchool, planningAndIdeationPreSchool, birthDate, doctor, responsable, relationshipWithChild, patient, date, age, ethnicity, gender, comment, ...rest } = data;
+      const { participationSocialPreSchool, 
+        visionPreSchool, hearingPreSchool, 
+        touchPreSchool, 
+        smellAndTastePreSchool, 
+        bodyAwarenessPreSchool, 
+        balanceAndMovementPreSchool, 
+        planningAndIdeationPreSchool,
+         birthDate, doctor, responsable,
+          relationshipWithChild, patient,
+           date, age, ethnicity, gender, 
+           comment, ...rest } = data;
        const scores = this.calculateScores(data);
         return {
             ...rest,

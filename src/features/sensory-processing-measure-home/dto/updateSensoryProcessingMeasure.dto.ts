@@ -1,4 +1,4 @@
 import { PartialType } from '@nestjs/swagger';
-import { CreateSensoryProcessingMeasureDto } from './createSensoryProcessingMeasure.dto';
+import { CreateSensoryProcessingMeasureHomeDto } from './createSensoryProcessingMeasure.dto';
 
-export class UpdateSensoryProcessingMeasureDto extends PartialType(CreateSensoryProcessingMeasureDto) {}
+export class UpdateSensoryProcessingMeasureDto extends PartialType(CreateSensoryProcessingMeasureHomeDto) {}
