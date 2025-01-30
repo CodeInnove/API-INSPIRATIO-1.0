@@ -3,11 +3,14 @@ export interface IPsychopedagogicalAnamnesis {
   dateOfApplication: string;
   dateBirth: string;
   age: number;
-  teacherName: string;
-  supportProfessional: string;
-  schoolName: string;
-  schoolPeriod: string;
-  schoolYear: string;
+
+  schoolIdentification: {
+    teacherName: string;
+    supportProfessional: string;
+    schoolName: string;
+    schoolPeriod: string;
+    schoolYear: string;
+  };
 
   familyLearningHistory: {
     fatherName: string;
@@ -78,7 +81,7 @@ export interface IPsychopedagogicalAnamnesis {
     difficultyRecognizeTheColors: string;
     doYouHaveDifficultyTracingTheNumerals: string;
     difficultyRecognizingNumbers: string;
-    doYouHaveAChangeWhenCarryingOutOperations: string;
+    doYouHaveAChangeWhenCarryingOutOperations: string[];
     difficultyCarryingOutOperations: string;
     doesItSolveProblemSituations: string;
   };

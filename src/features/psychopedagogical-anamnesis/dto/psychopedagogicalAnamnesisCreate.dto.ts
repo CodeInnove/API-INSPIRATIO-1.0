@@ -9,6 +9,32 @@ import {
 } from 'class-validator';
 import { Type } from 'class-transformer';
 
+class schoolIdentification {
+  @ApiProperty()
+  @IsString()
+  @IsOptional()
+  teacherName: string;
+
+  @ApiProperty()
+  @IsString()
+  @IsOptional()
+  supportProfessional: string;
+
+  @ApiProperty()
+  @IsString()
+  @IsOptional()
+  schoolName: string;
+
+  @ApiProperty()
+  @IsString()
+  @IsOptional()
+  schoolPeriod: string;
+
+  @ApiProperty()
+  @IsString()
+  @IsOptional()
+  schoolYear: string;
+}
 class FamilyLearningHistoryDto {
   @ApiProperty()
   @IsString()
@@ -342,14 +368,13 @@ class LearningAssessmentDto {
 
 export class PsychopedagogicalAnamnesisCreateDto {
   @ApiProperty()
-  @IsString()
-  @IsOptional()
-  patient: string;
+  date: Date;
 
   @ApiProperty()
-  @IsString()
-  @IsOptional()
-  dateOfApplication: string;
+  doctor: string;
+
+  @ApiProperty()
+  patient: string;
 
   @ApiProperty()
   @IsString()
@@ -362,30 +387,9 @@ export class PsychopedagogicalAnamnesisCreateDto {
   age: number;
 
   @ApiProperty()
-  @IsString()
-  @IsOptional()
-  teacherName: string;
-
-  @ApiProperty()
-  @IsString()
-  @IsOptional()
-  supportProfessional: string;
-
-  @ApiProperty()
-  @IsString()
-  @IsOptional()
-  schoolName: string;
-
-  @ApiProperty()
-  @IsString()
-  @IsOptional()
-  schoolPeriod: string;
-
-  @ApiProperty()
-  @IsString()
-  @IsOptional()
-  schoolYear: string;
-
+  @ValidateNested()
+  @Type(() => schoolIdentification)
+  schoolIdentification: schoolIdentification;
   @ApiProperty()
   @ValidateNested()
   @Type(() => FamilyLearningHistoryDto)
