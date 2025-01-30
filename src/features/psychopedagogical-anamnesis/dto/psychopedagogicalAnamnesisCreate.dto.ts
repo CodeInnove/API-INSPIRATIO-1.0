@@ -1,5 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
 import {
+  IsArray,
   IsBoolean,
   IsNotEmpty,
   IsNumber,
@@ -42,9 +43,9 @@ class FamilyLearningHistoryDto {
   fatherName: string;
 
   @ApiProperty()
-  @IsNumber()
+  @IsString()
   @IsOptional()
-  ageFather: number;
+  ageFather: string;
 
   @ApiProperty()
   @IsString()
@@ -62,9 +63,9 @@ class FamilyLearningHistoryDto {
   motherName: string;
 
   @ApiProperty()
-  @IsNumber()
+  @IsString()
   @IsOptional()
-  ageMother: number;
+  ageMother: string;
 
   @ApiProperty()
   @IsString()
@@ -82,9 +83,9 @@ class FamilyLearningHistoryDto {
   nameBrotherOne: string;
 
   @ApiProperty()
-  @IsNumber()
+  @IsString()
   @IsOptional()
-  ageBrotherOne: number;
+  ageBrotherOne: string;
 
   @ApiProperty()
   @IsString()
@@ -102,9 +103,9 @@ class FamilyLearningHistoryDto {
   nameBrotherTwo: string;
 
   @ApiProperty()
-  @IsNumber()
+  @IsString()
   @IsOptional()
-  ageBrotherTwo: number;
+  ageBrotherTwo: string;
 
   @ApiProperty()
   @IsString()
@@ -122,9 +123,9 @@ class FamilyLearningHistoryDto {
   nameBrotherThree: string;
 
   @ApiProperty()
-  @IsNumber()
+  @IsString()
   @IsOptional()
-  ageBrotherThree: number;
+  ageBrotherThree: string;
 
   @ApiProperty()
   @IsString()
@@ -137,16 +138,16 @@ class FamilyLearningHistoryDto {
   difficultyBrotherThree: string;
 }
 
-class ObservationDto {
+class ObservationsDto {
   @ApiProperty()
-  @IsNumber()
+  @IsString()
   @IsOptional()
-  bedtime: number;
+  bedtime: string;
 
   @ApiProperty()
-  @IsNumber()
+  @IsString()
   @IsOptional()
-  wakeUpTime: number;
+  wakeUpTime: string;
 
   @ApiProperty()
   @IsString()
@@ -351,7 +352,7 @@ class LearningAssessmentDto {
   difficultyRecognizingNumbers: string;
 
   @ApiProperty()
-  @IsString()
+  @IsArray()
   @IsOptional()
   doYouHaveAChangeWhenCarryingOutOperations: string;
 
@@ -364,6 +365,18 @@ class LearningAssessmentDto {
   @IsString()
   @IsOptional()
   doesItSolveProblemSituations: string;
+}
+
+class ResponsibleForInformingDto {
+  @ApiProperty()
+  @IsString()
+  @IsOptional()
+  informationOfficer: string;
+
+  @ApiProperty()
+  @IsString()
+  @IsOptional()
+  choiseInformationOfficer: string;
 }
 
 export class PsychopedagogicalAnamnesisCreateDto {
@@ -382,14 +395,15 @@ export class PsychopedagogicalAnamnesisCreateDto {
   dateBirth: string;
 
   @ApiProperty()
-  @IsNumber()
+  @IsString()
   @IsOptional()
-  age: number;
+  age: string;
 
   @ApiProperty()
   @ValidateNested()
   @Type(() => schoolIdentification)
   schoolIdentification: schoolIdentification;
+
   @ApiProperty()
   @ValidateNested()
   @Type(() => FamilyLearningHistoryDto)
@@ -397,8 +411,8 @@ export class PsychopedagogicalAnamnesisCreateDto {
 
   @ApiProperty()
   @ValidateNested()
-  @Type(() => ObservationDto)
-  observation: ObservationDto;
+  @Type(() => ObservationsDto)
+  observation: ObservationsDto;
 
   @ApiProperty()
   @ValidateNested()
@@ -406,17 +420,7 @@ export class PsychopedagogicalAnamnesisCreateDto {
   learningAssessment: LearningAssessmentDto;
 
   @ApiProperty()
-  @IsString()
-  @IsOptional()
-  therapistInCharge: string;
-
-  @ApiProperty()
-  @IsString()
-  @IsOptional()
-  informationOfficer: string;
-
-  @ApiProperty()
-  @IsString()
-  @IsOptional()
-  choiseInformationOfficer: string;
+  @ValidateNested()
+  @Type(() => ResponsibleForInformingDto)
+  responsibleForInforming: ResponsibleForInformingDto;
 }
