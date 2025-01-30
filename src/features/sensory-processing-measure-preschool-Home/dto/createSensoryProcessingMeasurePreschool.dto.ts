@@ -1,383 +1,407 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsNumber, IsString } from 'class-validator';
+import { IsNumber, IsString, IsOptional } from 'class-validator';
 
-export class SocialParticipationPreSchool {
-    @ApiProperty()
-    @IsString()
-    playsWithFriendsPreSchool: string;
-
-    @ApiProperty()
-    @IsString()
-    sharesThingsPreSchool: string;
-
-    @ApiProperty()
-    @IsString()
-    participatesInGroupGamesPreSchool: string;
-
-    @ApiProperty()
-    @IsString()
-    participatesAtMealsPreSchool: string;
-
-    @ApiProperty()
-    @IsString()
-    participatesInFamilyOutingsPreSchool: string;
-
-    @ApiProperty()
-    @IsString()
-    participatesInFamilyMeetingsPreSchool: string;
-
-    @ApiProperty()
-    @IsString()
-    participatesWithFriendsPreSchool: string;
-
-    @ApiProperty()
-    @IsString()
-    helpsWithFamilyActivitiesPreSchool: string;
+export interface ScoreDto {
+    SOC: number;
+    VIS: number;
+    HEA: number;
+    TOU: number;
+    ITEMS: number;
+    BOD: number;
+    BAL: number;
+    PLA: number;
 }
 
-export class VisionPreSchool {
-    @ApiProperty()
-    @IsString()
-    botheredByBrightLightsPreSchool: string;
+class SocialParticipationPreSchool {
+  @ApiProperty()
+  @IsString()
+  playsWithFriendsPreSchool: string;
 
-    @ApiProperty()
-    @IsString()
-    difficultyFindingObjectsPreSchool: string;
+  @ApiProperty()
+  @IsString()
+  sharesThingsPreSchool: string;
 
-    @ApiProperty()
-    @IsString()
-    difficultyRecognizingObjectsPreSchool: string;
+  @ApiProperty()
+  @IsString()
+  participatesInGroupGamesPreSchool: string;
 
-    @ApiProperty()
-    @IsString()
-    likesWatchingMovingObjectsPreSchool: string;
+  @ApiProperty()
+  @IsString()
+  participatesAtMealsPreSchool: string;
 
-    @ApiProperty()
-    @IsString()
-    walksThroughObjectsPreSchool: string;
+  @ApiProperty()
+  @IsString()
+  participatesInFamilyOutingsPreSchool: string;
 
-    @ApiProperty()
-    @IsString()
-    likesSwitchingLightsPreSchool: string;
+  @ApiProperty()
+  @IsString()
+  participatesInFamilyMeetingsPreSchool: string;
 
-    @ApiProperty()
-    @IsString()
-    likesLookingAtMovingObjectsPreSchool: string;
+  @ApiProperty()
+  @IsString()
+  participatesWithFriendsPreSchool: string;
 
-    @ApiProperty()
-    @IsString()
-    difficultyPayingAttentionPreSchool: string;
-
-    @ApiProperty()
-    @IsString()
-    botheredByVisualStimuliPreSchool: string;
-
-    @ApiProperty()
-    @IsString()
-    distractedWhileWalkingPreSchool: string;
-
-     @ApiProperty()
-     @IsString()
-     difficultyCompletingTasksPreSchool: string;
+  @ApiProperty()
+  @IsString()
+  helpsWithFamilyActivitiesPreSchool: string;
 }
 
-export class HearingPreSchool {
-    @ApiProperty()
-    @IsString()
-    botheredByNormalSoundsPreSchool: string;
+class VisionPreSchool {
+  @ApiProperty()
+  @IsString()
+  botheredByBrightLightsPreSchool: string;
 
-    @ApiProperty()
-    @IsString()
-    reactsNegativelyToLoudNoisesPreSchool: string;
+  @ApiProperty()
+  @IsString()
+  difficultyFindingObjectsPreSchool: string;
 
-    @ApiProperty()
-    @IsString()
-    seemsNotToHearPreSchool: string;
+  @ApiProperty()
+  @IsString()
+  difficultyRecognizingObjectsPreSchool: string;
 
-    @ApiProperty()
-    @IsString()
-    overlySensitiveToSoundsPreSchool: string;
+  @ApiProperty()
+  @IsString()
+  likesWatchingMovingObjectsPreSchool: string;
 
-    @ApiProperty()
-    @IsString()
-    easilyDistractedByNoisesPreSchool: string;
+  @ApiProperty()
+  @IsString()
+  walksThroughObjectsPreSchool: string;
 
-    @ApiProperty()
-    @IsString()
-    likesMakingCertainSoundsPreSchool: string;
+  @ApiProperty()
+  @IsString()
+  likesSwitchingLightsPreSchool: string;
 
-    @ApiProperty()
-    @IsString()
-    distressedBySharpNoisesPreSchool: string;
+  @ApiProperty()
+  @IsString()
+  likesLookingAtMovingObjectsPreSchool: string;
 
-    @ApiProperty()
-    @IsString()
-    distressedInLoudPlacesPreSchool: string;
+  @ApiProperty()
+  @IsString()
+  difficultyPayingAttentionPreSchool: string;
 
-    @ApiProperty()
-    @IsString()
-    startledByLoudSoundsPreSchool: string;
+  @ApiProperty()
+  @IsString()
+  botheredByVisualStimuliPreSchool: string;
+
+  @ApiProperty()
+  @IsString()
+  distractedWhileWalkingPreSchool: string;
+
+  @ApiProperty()
+  @IsString()
+  difficultyCompletingTasksPreSchool: string;
 }
 
-export class TouchPreSchool {
-    @ApiProperty()
-    @IsString()
-    avoidsBeingTouchedPreSchool: string;
+class HearingPreSchool {
+  @ApiProperty()
+  @IsString()
+  botheredByNormalSoundsPreSchool: string;
 
-    @ApiProperty()
-    @IsString()
-    prefersTouchingOthersPreSchool: string;
+  @ApiProperty()
+  @IsString()
+  reactsNegativelyToLoudNoisesPreSchool: string;
 
-    @ApiProperty()
-    @IsString()
-    distressedByNailCuttingPreSchool: string;
+  @ApiProperty()
+  @IsString()
+  seemsNotToHearPreSchool: string;
 
-    @ApiProperty()
-    @IsString()
-    botheredByFaceTouchPreSchool: string;
+  @ApiProperty()
+  @IsString()
+  overlySensitiveToSoundsPreSchool: string;
 
-    @ApiProperty()
-    @IsString()
-    avoidsMessyActivitiesPreSchool: string;
+  @ApiProperty()
+  @IsString()
+  easilyDistractedByNoisesPreSchool: string;
 
-    @ApiProperty()
-    @IsString()
-    highPainTolerancePreSchool: string;
+  @ApiProperty()
+  @IsString()
+  likesMakingCertainSoundsPreSchool: string;
 
-    @ApiProperty()
-    @IsString()
-    dislikesBrushingTeethPreSchool: string;
+  @ApiProperty()
+  @IsString()
+  distressedBySharpNoisesPreSchool: string;
 
-    @ApiProperty()
-    @IsString()
-    enjoysPainfulSensationsPreSchool: string;
+  @ApiProperty()
+  @IsString()
+  distressedInLoudPlacesPreSchool: string;
 
-    @ApiProperty()
-    @IsString()
-    dislikesHairCarePreSchool: string;
-
-    @ApiProperty()
-    @IsString()
-    dislikesHaircutsPreSchool: string;
-
-    @ApiProperty()
-    @IsString()
-    avoidsCertainTexturesPreSchool: string;
-
-    @ApiProperty()
-    @IsString()
-    vomitsDueToTexturesPreSchool: string;
-
-    @ApiProperty()
-    @IsString()
-    dislikesFaceCleaningPreSchool: string;
-
-    @ApiProperty()
-    @IsString()
-    droolsExcessivelyPreSchool: string;
+  @ApiProperty()
+  @IsString()
+  startledByLoudSoundsPreSchool: string;
 }
 
-export class SmellAndTastePreSchool {
-    @ApiProperty()
-    @IsString()
-    eatsNonFoodItemsPreSchool: string;
+class TouchPreSchool {
+  @ApiProperty()
+  @IsString()
+  avoidsBeingTouchedPreSchool: string;
 
-    @ApiProperty()
-    @IsString()
-    ignoresStrongOdorsPreSchool: string;
+  @ApiProperty()
+  @IsString()
+  prefersTouchingOthersPreSchool: string;
 
-    @ApiProperty()
-    @IsString()
-    prefersCertainFlavorsPreSchool: string;
+  @ApiProperty()
+  @IsString()
+  distressedByNailCuttingPreSchool: string;
 
-    @ApiProperty()
-    @IsString()
-    refusesToothpastePreSchool: string;
+  @ApiProperty()
+  @IsString()
+  botheredByFaceTouchPreSchool: string;
+
+  @ApiProperty()
+  @IsString()
+  avoidsMessyActivitiesPreSchool: string;
+
+  @ApiProperty()
+  @IsString()
+  highPainTolerancePreSchool: string;
+
+  @ApiProperty()
+  @IsString()
+  dislikesBrushingTeethPreSchool: string;
+
+  @ApiProperty()
+  @IsString()
+  enjoysPainfulSensationsPreSchool: string;
+
+  @ApiProperty()
+  @IsString()
+  dislikesHairCarePreSchool: string;
+
+  @ApiProperty()
+  @IsString()
+  dislikesHaircutsPreSchool: string;
+
+  @ApiProperty()
+  @IsString()
+  avoidsCertainTexturesPreSchool: string;
+
+  @ApiProperty()
+  @IsString()
+  vomitsDueToTexturesPreSchool: string;
+
+  @ApiProperty()
+  @IsString()
+  dislikesFaceCleaningPreSchool: string;
+
+  @ApiProperty()
+  @IsString()
+  droolsExcessivelyPreSchool: string;
 }
 
-export class BodyAwarenessPreSchool {
-    @ApiProperty()
-    @IsString()
-    holdsObjectsTooTightlyPreSchool: string;
+class SmellAndTastePreSchool {
+  @ApiProperty()
+  @IsString()
+  eatsNonFoodItemsPreSchool: string;
 
-    @ApiProperty()
-    @IsString()
-    seeksPushPullActivitiesPreSchool: string;
+  @ApiProperty()
+  @IsString()
+  ignoresStrongOdorsPreSchool: string;
 
-    @ApiProperty()
-    @IsString()
-    insecureDuringMovementPreSchool: string;
+  @ApiProperty()
+  @IsString()
+  prefersCertainFlavorsPreSchool: string;
 
-    @ApiProperty()
-    @IsString()
-    holdsObjectsTooLooselyPreSchool: string;
-
-    @ApiProperty()
-    @IsString()
-    excessivePressurePreSchool: string;
-
-    @ApiProperty()
-    @IsString()
-    jumpsExcessivelyPreSchool: string;
-
-    @ApiProperty()
-    @IsString()
-    roughWithAnimalsPreSchool: string;
-
-    @ApiProperty()
-    @IsString()
-    pushesOthersPreSchool: string;
-
-    @ApiProperty()
-    @IsString()
-    chewsObjectsPreSchool: string;
+  @ApiProperty()
+  @IsString()
+  refusesToothpastePreSchool: string;
 }
 
-export class BalanceAndMovementPreSchool {
-    @ApiProperty()
-    @IsString()
-    overlyAfraidOfMovementPreSchool: string;
+class BodyAwarenessPreSchool {
+  @ApiProperty()
+  @IsString()
+  holdsObjectsTooTightlyPreSchool: string;
 
-    @ApiProperty()
-    @IsString()
-    avoidsBalanceActivitiesPreSchool: string;
+  @ApiProperty()
+  @IsString()
+  seeksPushPullActivitiesPreSchool: string;
 
-    @ApiProperty()
-    @IsString()
-    fallsFromChairPreSchool: string;
+  @ApiProperty()
+  @IsString()
+  insecureDuringMovementPreSchool: string;
 
-    @ApiProperty()
-    @IsString()
-    failsToCatchSelfWhenFallingPreSchool: string;
+  @ApiProperty()
+  @IsString()
+  holdsObjectsTooLooselyPreSchool: string;
 
-    @ApiProperty()
-    @IsString()
-    doesntGetDizzyPreSchool: string;
+  @ApiProperty()
+  @IsString()
+  excessivePressurePreSchool: string;
 
-    @ApiProperty()
-    @IsString()
-    spinsExcessivelyPreSchool: string;
+  @ApiProperty()
+  @IsString()
+  jumpsExcessivelyPreSchool: string;
 
-    @ApiProperty()
-    @IsString()
-    distressedByHeadTiltingPreSchool: string;
+  @ApiProperty()
+  @IsString()
+  roughWithAnimalsPreSchool: string;
 
-    @ApiProperty()
-    @IsString()
-    poorCoordinationPreSchool: string;
+  @ApiProperty()
+  @IsString()
+  pushesOthersPreSchool: string;
 
-     @ApiProperty()
-     @IsString()
-     needsSupportToRisePreSchool: string;
-
-     @ApiProperty()
-     @IsString()
-     rocksBodyPreSchool: string;
-
-    @ApiProperty()
-    @IsString()
-    afraidOfStairsPreSchool: string;
+  @ApiProperty()
+  @IsString()
+  chewsObjectsPreSchool: string;
 }
 
-export class PlanningAndIdeationPreSchool {
-    @ApiProperty()
+class BalanceAndMovementPreSchool {
+  @ApiProperty()
+  @IsString()
+  overlyAfraidOfMovementPreSchool: string;
+
+  @ApiProperty()
+  @IsString()
+  avoidsBalanceActivitiesPreSchool: string;
+
+  @ApiProperty()
+  @IsString()
+  fallsFromChairPreSchool: string;
+
+  @ApiProperty()
+  @IsString()
+  failsToCatchSelfWhenFallingPreSchool: string;
+
+  @ApiProperty()
+  @IsString()
+  doesntGetDizzyPreSchool: string;
+
+  @ApiProperty()
+  @IsString()
+  spinsExcessivelyPreSchool: string;
+
+  @ApiProperty()
+  @IsString()
+  distressedByHeadTiltingPreSchool: string;
+
+  @ApiProperty()
+  @IsString()
+  poorCoordinationPreSchool: string;
+
+  @ApiProperty()
     @IsString()
-    difficultyCarryingMultipleItemsPreSchool: string;
+  needsSupportToRisePreSchool: string;
 
     @ApiProperty()
     @IsString()
-    difficultyOrganizingItemsPreSchool: string;
+    rocksBodyPreSchool: string;
 
-    @ApiProperty()
-    @IsString()
-    confusedByRoutineStepsPreSchool: string;
+  @ApiProperty()
+  @IsString()
+  afraidOfStairsPreSchool: string;
+}
 
-    @ApiProperty()
-    @IsString()
-    difficultyCompletingMultiStepTasksPreSchool: string;
+class PlanningAndIdeationPreSchool {
+  @ApiProperty()
+  @IsString()
+  difficultyCarryingMultipleItemsPreSchool: string;
 
-     @ApiProperty()
-     @IsString()
-     troubleImitatingActionsPreSchool: string;
+  @ApiProperty()
+  @IsString()
+  difficultyOrganizingItemsPreSchool: string;
 
-    @ApiProperty()
-    @IsString()
-    cantCopyOthersPreSchool: string;
+  @ApiProperty()
+  @IsString()
+  confusedByRoutineStepsPreSchool: string;
 
-    @ApiProperty()
-    @IsString()
-    difficultyWithNewIdeasPreSchool: string;
+  @ApiProperty()
+  @IsString()
+  difficultyCompletingMultiStepTasksPreSchool: string;
 
-    @ApiProperty()
-    @IsString()
-    repetitiveInPlayPreSchool: string;
+  @ApiProperty()
+  @IsString()
+  troubleImitatingActionsPreSchool: string;
 
-    @ApiProperty()
-    @IsString()
-    troubleExitingCarSeatPreSchool: string;
+  @ApiProperty()
+  @IsString()
+  cantCopyOthersPreSchool: string;
+
+  @ApiProperty()
+  @IsString()
+  difficultyWithNewIdeasPreSchool: string;
+
+  @ApiProperty()
+  @IsString()
+  repetitiveInPlayPreSchool: string;
+
+  @ApiProperty()
+  @IsString()
+  troubleExitingCarSeatPreSchool: string;
 }
 
 
 export class CreateSensoryProcessingMeasurePreschoolDto {
-    @ApiProperty()
-    @IsString()
-    doctor: string;
+  @ApiProperty()
+  @IsString()
+  doctor: string;
+
+  @ApiProperty()
+  @IsString()
+  responsable: string;
+
+  @ApiProperty()
+  @IsString()
+  relationshipWithChild: string;
+
+  @ApiProperty()
+  @IsString()
+  patient: string;
+
+  @ApiProperty()
+  @IsString()
+  gender: string;
+
+  @ApiProperty()
+  @IsNumber()
+  age: number;
 
     @ApiProperty()
     @IsString()
-    responsable: string;
+    birthDate: string;
+
+
+  @ApiProperty()
+  @IsString()
+  ethnicity: string;
+
+  @ApiProperty()
+  @IsString()
+  date: string;
 
     @ApiProperty()
-    @IsString()
-    relationshipWithChild: string;
+    @IsOptional()
+    comment?: string;
 
-    @ApiProperty()
-    @IsString()
-    patient: string;
+  @ApiProperty()
+  @IsOptional()
+  participationSocialPreSchool: SocialParticipationPreSchool;
 
-    @ApiProperty()
-    @IsString()
-    gender: string;
+  @ApiProperty()
+  @IsOptional()
+  visionPreSchool: VisionPreSchool;
 
+  @ApiProperty()
+    @IsOptional()
+  hearingPreSchool: HearingPreSchool;
 
-    @ApiProperty()
-    age: number;
+  @ApiProperty()
+    @IsOptional()
+  touchPreSchool: TouchPreSchool;
 
+  @ApiProperty()
+    @IsOptional()
+  smellAndTastePreSchool: SmellAndTastePreSchool;
 
-    @ApiProperty()
-    bitrhDate: string;
+  @ApiProperty()
+    @IsOptional()
+  bodyAwarenessPreSchool: BodyAwarenessPreSchool;
 
+  @ApiProperty()
+  @IsOptional()
+  balanceAndMovementPreSchool: BalanceAndMovementPreSchool;
 
-    @ApiProperty()
-    @IsString()
-    ethnicity: string;
-
-    @ApiProperty()
-    date: string;
-
-
-
-    @ApiProperty()
-    participationSocialPreSchool: SocialParticipationPreSchool
-
-    @ApiProperty()
-    visionPreSchool: VisionPreSchool
-
-    @ApiProperty()
-    hearingPreSchool: HearingPreSchool
-
-    @ApiProperty()
-    touchPreSchool: TouchPreSchool
-
-    @ApiProperty()
-    smellAndTastePreSchool: SmellAndTastePreSchool
-
-    @ApiProperty()
-    bodyAwarenessPreSchool: BodyAwarenessPreSchool
-
-    @ApiProperty()
-    balanceAndMovementPreSchool: BalanceAndMovementPreSchool
-
-    @ApiProperty()
-    planningAndIdeationPreSchool: PlanningAndIdeationPreSchool
+  @ApiProperty()
+    @IsOptional()
+  planningAndIdeationPreSchool: PlanningAndIdeationPreSchool;
+   @ApiProperty()
+  scores: ScoreDto;
 }
