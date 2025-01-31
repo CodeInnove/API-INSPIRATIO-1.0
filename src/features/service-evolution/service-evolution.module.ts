@@ -8,7 +8,7 @@ import { ServiceEvolutionSchema } from 'src/entities/service-evolution.entity';
 @Module({
   imports: [
     MongooseModule.forFeature([
-      { name: 'Service Evolution', schema: ServiceEvolutionSchema },
+      { name: 'ServiceEvolution', schema: ServiceEvolutionSchema },
     ])
   ],
   providers: [ServiceEvolutionService, ServiceEvolutionRepository],

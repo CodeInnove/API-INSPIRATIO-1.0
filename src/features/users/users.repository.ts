@@ -136,4 +136,196 @@ export class UsersRepository {
   async delete(id: string): Promise<User> {
     return this.userModel.findByIdAndDelete(id).exec();
   }
+
+  async getAllUserReports(id: string) {
+    return this.userModel.aggregate([
+      {
+        $match: { _id: id }
+      },
+      {
+        $lookup: {
+          from: 'Amiofe',
+          localField: '_id',
+          foreignField: 'pacient',
+          as: 'amiofes'
+        },
+      },
+      {
+        $lookup: {
+          from: 'afcp',
+          localField: '_id',
+          foreignField: 'pacient',
+          as: 'afcp'
+        }
+      },
+      {
+        $lookup: {
+          from: 'AnamnesisSpeechTherapy',
+          localField: '_id',
+          foreignField: 'pacient',
+          as: 'anamnesisSpeechTherapy'
+        }
+      },
+      {
+        $lookup: {
+          from: 'File',
+          localField: '_id',
+          foreignField: 'pacient',
+          as: 'files'
+        }
+      },
+      {
+        $lookup: {
+          from: 'FunctionalIndependencyMetric',
+          localField: '_id',
+          foreignField: 'pacient',
+          as: 'functionalIndependencyMetric'
+        }
+      },
+      {
+        $lookup: {
+          from: 'Gmfm',
+          localField: '_id',
+          foreignField: 'pacient',
+          as: 'gmfm'
+        }
+      },
+      {
+        $lookup: {
+          from: 'IncomeAssessment',
+          localField: '_id',
+          foreignField: 'pacient',
+          as: 'incomeAssessment'
+        }
+      },
+      {
+        $lookup: {
+          from: 'incometable',
+          localField: '_id',
+          foreignField: 'pacient',
+          as: 'incometable'
+        }
+      },
+      {
+        $lookup: {
+          from: 'IntraverbalAssessment',
+          localField: '_id',
+          foreignField: 'pacient',
+          as: 'intraverbalAssessment'
+        }
+      },
+      {
+        $lookup: {
+          from: 'OccupationalTherapyAnamnesis',
+          localField: '_id',
+          foreignField: 'pacient',
+          as: 'occupationalTherapyAnamnesis'
+        }
+      },
+      {
+        $lookup: {
+          from: 'PediatricNeurologicalEvaluation',
+          localField: '_id',
+          foreignField: 'pacient',
+          as: 'pediatricNeurologicalEvaluation'
+        }
+      },
+      {
+        $lookup: {
+          from: 'PerformanceAssessment',
+          localField: '_id',
+          foreignField: 'pacient',
+          as: 'performanceAssessment'
+        }
+      },
+      {
+        $lookup: {
+          from: 'portageGuidetoPhysiotherapy',
+          localField: '_id',
+          foreignField: 'pacient',
+          as: 'portageGuidetoPhysiotherapy'
+        }
+      },
+      {
+        $lookup: {
+          from: 'portageGuidetoPreschoolEducation',
+          localField: '_id',
+          foreignField: 'pacient',
+          as: 'portageGuidetoPreschoolEducation'
+        }
+      },
+      {
+        $lookup: {
+          from: 'psychopedagogicalAnamnesis',
+          localField: '_id',
+          foreignField: 'pacient',
+          as: 'psychopedagogicalAnamnesis'
+        }
+      },
+      {
+        $lookup: {
+          from: 'SPMHome',
+          localField: '_id',
+          foreignField: 'pacient',
+          as: 'sPMHome'
+        }
+      },
+      {
+        $lookup: {
+          from: 'SensoryProcessingMeasurePreSchoolHome',
+          localField: '_id',
+          foreignField: 'pacient',
+          as: 'sensoryProcessingMeasurePreSchoolHome'
+        }
+      },
+      {
+        $lookup: {
+          from: 'SpmSchool',
+          localField: '_id',
+          foreignField: 'pacient',
+          as: 'spmSchool'
+        }
+      },
+      {
+        $lookup: {
+          from: 'SpmSchoolPreSchool',
+          localField: '_id',
+          foreignField: 'pacient',
+          as: 'spmSchoolPreSchool'
+        }
+      },
+      {
+        $lookup: {
+          from: 'ServiceEvolution',
+          localField: '_id',
+          foreignField: 'pacient',
+          as: 'serviceEvolution'
+        }
+      },
+      {
+        $lookup: {
+          from: 'SessionSummaryABA',
+          localField: '_id',
+          foreignField: 'pacient',
+          as: 'sessionSummaryABA'
+        }
+      },
+      {
+        $lookup: {
+          from: 'SessionSummaryAT',
+          localField: '_id',
+          foreignField: 'pacient',
+          as: 'sessionSummaryAT'
+        }
+      },
+      {
+        $lookup: {
+          from: 'SessionSummaryAT',
+          localField: '_id',
+          foreignField: 'pacient',
+          as: 'sessionSummaryAT'
+        }
+      },
+    ]);
+  }
 }

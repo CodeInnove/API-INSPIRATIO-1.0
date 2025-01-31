@@ -8,7 +8,7 @@ import { SessionSummaryABASchema } from 'src/entities/session-summary-aba.entity
 @Module({
   imports: [
     MongooseModule.forFeature([
-      {name: 'Session Summary ABA', schema: SessionSummaryABASchema}
+      {name: 'SessionSummaryABA', schema: SessionSummaryABASchema}
     ])
   ],
   providers: [SessionSummaryAbaService, SessionSummaryABARepository],

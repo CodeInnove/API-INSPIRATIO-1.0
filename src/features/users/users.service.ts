@@ -88,6 +88,17 @@ export class UserService {
     }
   }
 
+  async getAllReports(id: string) {
+    try {
+      return await this.userRepository.getAllUserReports(id);
+    } catch (error) {
+      throw new HttpException(
+        { message: error.message },
+        HttpStatus.BAD_REQUEST,
+      );
+    }
+  }
+
   async forgotPassword(email: string) {
     try {
       const user = await this.userRepository.findByEmail(email);

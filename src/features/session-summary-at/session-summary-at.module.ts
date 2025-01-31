@@ -8,7 +8,7 @@ import { SessionSummaryATRepository } from './session-summary-at.repository';
 @Module({
   imports: [
     MongooseModule.forFeature([
-      {name: 'session summary A.T', schema: SessionSummaryAtSchema}
+      {name: 'SessionSummaryAT', schema: SessionSummaryAtSchema}
     ])
   ],
   providers: [SessionSummaryAtService, SessionSummaryATRepository],

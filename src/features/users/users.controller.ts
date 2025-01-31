@@ -49,6 +49,11 @@ export class UsersController {
     return this.user.findById(id);
   }
 
+  @Get(':id/reports')
+  getReports(@Param('id') id: string) {
+    return this.user.getAllReports(id);
+  }
+
   @Put(':id')
   update(@Param('id') id: string, @Body() data: UpdateUserDto) {
     return this.user.update(id, data);
