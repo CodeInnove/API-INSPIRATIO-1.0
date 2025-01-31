@@ -18,5 +18,8 @@ export class CreateAflDto {
 
   @ApiProperty()
   vocationalLifeSkills: any;
+
+  @ApiProperty()
+  patient: string;
 }
 

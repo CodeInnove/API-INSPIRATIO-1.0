@@ -144,9 +144,17 @@ export class UsersRepository {
       },
       {
         $lookup: {
+          from: 'Afl',
+          localField: '_id',
+          foreignField: 'patient',
+          as: 'afl'
+        }
+      },
+      {
+        $lookup: {
           from: 'Amiofe',
           localField: '_id',
-          foreignField: 'pacient',
+          foreignField: 'patient',
           as: 'amiofes'
         },
       },
@@ -154,7 +162,7 @@ export class UsersRepository {
         $lookup: {
           from: 'afcp',
           localField: '_id',
-          foreignField: 'pacient',
+          foreignField: 'patient',
           as: 'afcp'
         }
       },
@@ -162,7 +170,7 @@ export class UsersRepository {
         $lookup: {
           from: 'AnamnesisSpeechTherapy',
           localField: '_id',
-          foreignField: 'pacient',
+          foreignField: 'patient',
           as: 'anamnesisSpeechTherapy'
         }
       },
@@ -170,7 +178,7 @@ export class UsersRepository {
         $lookup: {
           from: 'File',
           localField: '_id',
-          foreignField: 'pacient',
+          foreignField: 'patient',
           as: 'files'
         }
       },
@@ -178,7 +186,7 @@ export class UsersRepository {
         $lookup: {
           from: 'FunctionalIndependencyMetric',
           localField: '_id',
-          foreignField: 'pacient',
+          foreignField: 'patient',
           as: 'functionalIndependencyMetric'
         }
       },
@@ -186,7 +194,7 @@ export class UsersRepository {
         $lookup: {
           from: 'Gmfm',
           localField: '_id',
-          foreignField: 'pacient',
+          foreignField: 'patient',
           as: 'gmfm'
         }
       },
@@ -194,7 +202,7 @@ export class UsersRepository {
         $lookup: {
           from: 'IncomeAssessment',
           localField: '_id',
-          foreignField: 'pacient',
+          foreignField: 'patient',
           as: 'incomeAssessment'
         }
       },
@@ -202,7 +210,7 @@ export class UsersRepository {
         $lookup: {
           from: 'incometable',
           localField: '_id',
-          foreignField: 'pacient',
+          foreignField: 'patient',
           as: 'incometable'
         }
       },
@@ -210,7 +218,7 @@ export class UsersRepository {
         $lookup: {
           from: 'IntraverbalAssessment',
           localField: '_id',
-          foreignField: 'pacient',
+          foreignField: 'patient',
           as: 'intraverbalAssessment'
         }
       },
@@ -218,7 +226,7 @@ export class UsersRepository {
         $lookup: {
           from: 'OccupationalTherapyAnamnesis',
           localField: '_id',
-          foreignField: 'pacient',
+          foreignField: 'patient',
           as: 'occupationalTherapyAnamnesis'
         }
       },
@@ -226,7 +234,7 @@ export class UsersRepository {
         $lookup: {
           from: 'PediatricNeurologicalEvaluation',
           localField: '_id',
-          foreignField: 'pacient',
+          foreignField: 'patient',
           as: 'pediatricNeurologicalEvaluation'
         }
       },
@@ -234,7 +242,7 @@ export class UsersRepository {
         $lookup: {
           from: 'PerformanceAssessment',
           localField: '_id',
-          foreignField: 'pacient',
+          foreignField: 'patient',
           as: 'performanceAssessment'
         }
       },
@@ -242,7 +250,7 @@ export class UsersRepository {
         $lookup: {
           from: 'portageGuidetoPhysiotherapy',
           localField: '_id',
-          foreignField: 'pacient',
+          foreignField: 'patient',
           as: 'portageGuidetoPhysiotherapy'
         }
       },
@@ -250,7 +258,7 @@ export class UsersRepository {
         $lookup: {
           from: 'portageGuidetoPreschoolEducation',
           localField: '_id',
-          foreignField: 'pacient',
+          foreignField: 'patient',
           as: 'portageGuidetoPreschoolEducation'
         }
       },
@@ -258,7 +266,7 @@ export class UsersRepository {
         $lookup: {
           from: 'psychopedagogicalAnamnesis',
           localField: '_id',
-          foreignField: 'pacient',
+          foreignField: 'patient',
           as: 'psychopedagogicalAnamnesis'
         }
       },
@@ -266,7 +274,7 @@ export class UsersRepository {
         $lookup: {
           from: 'SPMHome',
           localField: '_id',
-          foreignField: 'pacient',
+          foreignField: 'patient',
           as: 'sPMHome'
         }
       },
@@ -274,7 +282,7 @@ export class UsersRepository {
         $lookup: {
           from: 'SensoryProcessingMeasurePreSchoolHome',
           localField: '_id',
-          foreignField: 'pacient',
+          foreignField: 'patient',
           as: 'sensoryProcessingMeasurePreSchoolHome'
         }
       },
@@ -282,7 +290,7 @@ export class UsersRepository {
         $lookup: {
           from: 'SpmSchool',
           localField: '_id',
-          foreignField: 'pacient',
+          foreignField: 'patient',
           as: 'spmSchool'
         }
       },
@@ -290,7 +298,7 @@ export class UsersRepository {
         $lookup: {
           from: 'SpmSchoolPreSchool',
           localField: '_id',
-          foreignField: 'pacient',
+          foreignField: 'patient',
           as: 'spmSchoolPreSchool'
         }
       },
@@ -298,7 +306,7 @@ export class UsersRepository {
         $lookup: {
           from: 'ServiceEvolution',
           localField: '_id',
-          foreignField: 'pacient',
+          foreignField: 'patient',
           as: 'serviceEvolution'
         }
       },
@@ -306,7 +314,7 @@ export class UsersRepository {
         $lookup: {
           from: 'SessionSummaryABA',
           localField: '_id',
-          foreignField: 'pacient',
+          foreignField: 'patient',
           as: 'sessionSummaryABA'
         }
       },
@@ -314,7 +322,7 @@ export class UsersRepository {
         $lookup: {
           from: 'SessionSummaryAT',
           localField: '_id',
-          foreignField: 'pacient',
+          foreignField: 'patient',
           as: 'sessionSummaryAT'
         }
       },
@@ -322,7 +330,7 @@ export class UsersRepository {
         $lookup: {
           from: 'SessionSummaryAT',
           localField: '_id',
-          foreignField: 'pacient',
+          foreignField: 'patient',
           as: 'sessionSummaryAT'
         }
       },

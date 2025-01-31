@@ -9,6 +9,7 @@ export const AflSchema = new Schema({
   independentLifeSkills: { type: Schema.Types.Mixed, required: true },
   schoolLifeSkills: { type: Schema.Types.Mixed, required: true },
   vocationalLifeSkills: { type: Schema.Types.Mixed, required: true },
+  patient: { type: Schema.Types.ObjectId, ref: 'User', required: true },
 }, { timestamps: true });
 
 export interface IAflEntity extends Omit<IAfl, '_id'>, Document {}
