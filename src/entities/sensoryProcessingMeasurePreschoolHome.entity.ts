@@ -1,18 +1,20 @@
 import { Schema, Document } from 'mongoose';
 import { Ethnicity } from 'src/features/sensory-processing-measure-home/types/sensoryProcessingMeasure';
-import { ISpmpSchool } from 'src/features/sensory-processing-measure-preschool-Home/types/spmps';
+import { ISpmpSchool } from 'src/features/sensory-processing-measure-preschool-Home/types/sensoryProcessingMeasurePreschool';
+
 
 export const SensoryProcessingMeasurePreschoolSchema = new Schema({
   _id: { type: Schema.Types.ObjectId, required: true, auto: true },
-  doctor: { type: Schema.Types.ObjectId, ref: 'User', required: true },
-  responsable: { type: Schema.Types.ObjectId, required: true, ref: 'User' },
+  doctor: { type: Schema.Types.ObjectId, ref: 'User', required: false },
+  responsable: { type: Schema.Types.ObjectId, ref: 'User', required: true },
   relationshipWithChild: { type: String, required: false},
-  patient: { type: Schema.Types.ObjectId, required: true, ref: 'User' },
+  date: { type: String, required: true, },
+  patient: { type: Schema.Types.ObjectId, ref: 'User', required: true },
   gender: { type: String, required: false, enum: ['M', 'F'] },
   age: { type: Number, required: false},
-  bitrhDate: { type: String, required: false},
+  birthDate: { type: String, required: false},
   ethnicity: { type: String, required: false, enum: Ethnicity },
-  date: { type: String, required: true, },
+  comment: { type: String, required: false },
   participationSocialPreSchool: { 
     playsWithFriendsPreSchool: { type: String, required: false, enum: ['N', 'O', 'F', 'S']},
     sharesThingsPreSchool:{ type: String, required: false, enum: ['N', 'O', 'F', 'S']},
@@ -104,6 +106,16 @@ export const SensoryProcessingMeasurePreschoolSchema = new Schema({
     repetitiveInPlayPreSchool: { type: String, required: false, enum: ['N', 'O', 'F', 'S']},
     troubleExitingCarSeatPreSchool: { type: String, required: false, enum: ['N', 'O', 'F', 'S']},
   },
-});
+   scores: {
+        SOC: { type: Number, default: 0 },
+        VIS: { type: Number, default: 0 },
+        HEA: { type: Number, default: 0 },
+        TOU: { type: Number, default: 0 },
+        ITEMS: { type: Number, default: 0 },
+        BOD: { type: Number, default: 0 },
+        BAL: { type: Number, default: 0 },
+        PLA: { type: Number, default: 0 },
+    },
+}, { timestamps: true, versionKey: false });
 
-export interface ISensoryProcessingMeasurePreschoolEntity extends Omit<ISpmpSchool, '_id'>, Document {}
+export interface ISensoryProcessingMeasurePreschoolEntity extends Omit<ISpmpSchool, '_id'>, Document {} 
