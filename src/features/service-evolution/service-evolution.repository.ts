@@ -8,7 +8,7 @@ import { UpdateServiceEvolutionDto } from "./dto/update-service-evolution.dto";
 @Injectable()
 export class ServiceEvolutionRepository {
   constructor(
-    @InjectModel('Service Evolution') private readonly serviceEvolutionModel: Model<ServiceEvolutionEntity>
+    @InjectModel('ServiceEvolution') private readonly serviceEvolutionModel: Model<ServiceEvolutionEntity>
   ) {}
 
   async create(data: CreateServiceEvolutionDto): Promise<ServiceEvolutionEntity> {

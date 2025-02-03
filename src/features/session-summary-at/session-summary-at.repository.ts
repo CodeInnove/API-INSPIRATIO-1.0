@@ -9,7 +9,7 @@ import { SessionSummaryAtEntity } from "src/entities/session-summary-at.entity";
 @Injectable()
 export class SessionSummaryATRepository {
   constructor(
-    @InjectModel('session summary A.T') private readonly sessionSummaryModel: Model<SessionSummaryAtEntity>
+    @InjectModel('SessionSummaryAT') private readonly sessionSummaryModel: Model<SessionSummaryAtEntity>
   ) {}
 
   async create(data: CreateSessionSummaryAtDto): Promise<SessionSummaryAtEntity> {

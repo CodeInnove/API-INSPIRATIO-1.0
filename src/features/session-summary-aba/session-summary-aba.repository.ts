@@ -8,7 +8,7 @@ import { ISessionSummaryABAEntity } from "src/entities/session-summary-aba.entit
 @Injectable()
 export class SessionSummaryABARepository {
   constructor(
-    @InjectModel('Session Summary ABA') private readonly sessionABAModel: Model<ISessionSummaryABAEntity>
+    @InjectModel('SessionSummaryABA') private readonly sessionABAModel: Model<ISessionSummaryABAEntity>
   ) {}
 
   async create(data: CreateSessionSummaryAbaDto): Promise<ISessionSummaryABAEntity> {
