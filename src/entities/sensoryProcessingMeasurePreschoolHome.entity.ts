@@ -104,7 +104,7 @@ export const SensoryProcessingMeasurePreschoolSchema = new Schema({
     difficultyWithNewIdeasPreSchool: { type: String, required: false},
     repetitiveInPlayPreSchool: { type: String, required: false},
     troubleExitingCarSeatPreSchool: { type: String, required: false},
-  },,
+  },
   scores: {
        SOC: { type: Number, default: 0 },
        VIS: { type: Number, default: 0 },
