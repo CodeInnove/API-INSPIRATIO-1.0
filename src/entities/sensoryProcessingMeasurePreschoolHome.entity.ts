@@ -1,6 +1,7 @@
 import { Schema, Document } from 'mongoose';
 import { Ethnicity } from 'src/features/sensory-processing-measure-home/types/sensoryProcessingMeasure';
-import { ISpmpSchool } from 'src/features/sensory-processing-measure-preschool-Home/types/spmps';
+import { ISpmpSchool } from 'src/features/sensory-processing-measure-preschool-Home/types/sensoryProcessingMeasurePreschool';
+
 
 export const SensoryProcessingMeasurePreschoolSchema = new Schema({
   _id: { type: Schema.Types.ObjectId, required: true, auto: true },
@@ -103,7 +104,17 @@ export const SensoryProcessingMeasurePreschoolSchema = new Schema({
     difficultyWithNewIdeasPreSchool: { type: String, required: false},
     repetitiveInPlayPreSchool: { type: String, required: false},
     troubleExitingCarSeatPreSchool: { type: String, required: false},
-  },
-});
+  },,
+  scores: {
+       SOC: { type: Number, default: 0 },
+       VIS: { type: Number, default: 0 },
+       HEA: { type: Number, default: 0 },
+       TOU: { type: Number, default: 0 },
+       ITEMS: { type: Number, default: 0 },
+       BOD: { type: Number, default: 0 },
+       BAL: { type: Number, default: 0 },
+       PLA: { type: Number, default: 0 },
+   },
+}, { timestamps: true, versionKey: false });
 
-export interface ISensoryProcessingMeasurePreschoolEntity extends Omit<ISpmpSchool, '_id'>, Document {}
+export interface ISensoryProcessingMeasurePreschoolEntity extends Omit<ISpmpSchool, '_id'>, Document {} 

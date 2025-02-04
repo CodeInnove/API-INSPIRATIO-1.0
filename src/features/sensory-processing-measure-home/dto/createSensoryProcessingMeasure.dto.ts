@@ -1,8 +1,18 @@
 import { ApiProperty } from "@nestjs/swagger";
-import { IsString} from "class-validator";
+import { IsString, IsNumber, IsOptional } from "class-validator";
 
+export interface ScoreDto {
+    SOC: number;
+    VIS: number;
+    HEA: number;
+    TOU: number;
+    ITEMS: number;
+    BOD: number;
+    BAL: number;
+    PLA: number;
+}
 
-export class ParticipationSocial {
+class SocialParticipation {
     @ApiProperty()
     @IsString()
     playsWithFriends: string;
@@ -10,7 +20,6 @@ export class ParticipationSocial {
     @ApiProperty()
     @IsString()
     interactsWithParents: string;
-
 
     @ApiProperty()
     @IsString()
@@ -45,7 +54,7 @@ export class ParticipationSocial {
     participatesInFriendActivities: string;
 }
 
-export class Vision {
+class Vision {
     @ApiProperty()
     @IsString()
     botheredByLight: string;
@@ -92,7 +101,7 @@ export class Vision {
     usesPeripheralVision: string;
 }
 
-export class Hearing {
+class Hearing {
     @ApiProperty()
     @IsString()
     botheredByNormalSounds: string;
@@ -126,7 +135,7 @@ export class Hearing {
     botheredByHighPitchedSounds: string;
 }
 
-export class Touch {
+class Touch {
     @ApiProperty()
     @IsString()
     withdrawsFromLightTouch: string;
@@ -174,7 +183,7 @@ export class Touch {
     difficultyFindingThingsByTouch: string;
 }
 
-export class SmellAndTaste {
+class SmellAndTaste {
     @ApiProperty()
     @IsString()
     triesInedibleItems: string;
@@ -196,7 +205,7 @@ export class SmellAndTaste {
     ignoresStrongOdors: string;
 }
 
-export class BodyAwareness {
+class BodyAwareness {
     @ApiProperty()
     @IsString()
     gripsObjectsTooTightly: string;
@@ -211,7 +220,7 @@ export class BodyAwareness {
 
     @ApiProperty()
     @IsString()
-    gripsObjectsTooLoosely: string;
+    holdsObjectsTooLoosely: string;
 
     @ApiProperty()
     @IsString()
@@ -238,7 +247,7 @@ export class BodyAwareness {
     breaksObjectsFromForce: string;
 }
 
-export class BalanceAndMovement {
+class BalanceAndMovement {
     @ApiProperty()
     @IsString()
     exaggeratedFearOfMovement: string;
@@ -268,7 +277,7 @@ export class BalanceAndMovement {
 
     @ApiProperty()
     @IsString()
-    botheredByHeadPositionChanges: string;
+    distressedByHeadTilting: string;
 
     @ApiProperty()
     @IsString()
@@ -283,7 +292,7 @@ export class BalanceAndMovement {
     leansOnObjects: string;
 }
 
-export class PlanningAndIdeation {
+class PlanningAndIdeation {
     @ApiProperty()
     @IsString()
     inconsistentDailyTasks: string;
@@ -322,7 +331,7 @@ export class PlanningAndIdeation {
 }
 
 
-export class CreateSensoryProcessingMeasureDto {
+export class CreateSensoryProcessingMeasureHomeDto {
     @ApiProperty()
     @IsString()
     doctor: string;
@@ -353,31 +362,38 @@ export class CreateSensoryProcessingMeasureDto {
     //ethnicity: string;
 
     @ApiProperty()
+    @IsString()
     date: string;
+
+    @ApiProperty()
+    @IsOptional()
+    comment?: string;
 
 
     @ApiProperty()
-    participationSocial: ParticipationSocial;
+    participationSocial: SocialParticipation;
 
     @ApiProperty()
     vision: Vision;
 
     @ApiProperty()
-    hearing: Hearing
+    hearing: Hearing;
 
     @ApiProperty()
-    touch: Touch
+    touch: Touch;
 
     @ApiProperty()
-    smellAndTaste:SmellAndTaste
+    smellAndTaste: SmellAndTaste;
 
     @ApiProperty()
-    bodyAwareness: BodyAwareness
+    bodyAwareness: BodyAwareness;
 
     @ApiProperty()
-    balanceAndMovement:BalanceAndMovement
+    balanceAndMovement: BalanceAndMovement;
 
     @ApiProperty()
-    planningAndIdeation:PlanningAndIdeation
-
+    planningAndIdeation: PlanningAndIdeation;
+    
+    @ApiProperty()
+    scores: ScoreDto;
 }
