@@ -27,21 +27,21 @@ export class CreateIntraverbalAssessmentDto {
   @IsString()
   doctor: string;
 
+  /*@ApiProperty({
+  type: String,
+  format: 'date',
+  example: 'dd/MM/yyyy'})
+  @IsOptional() 
+  birthDate: Date;*/
+
+
+
   @ApiProperty({
   type: String,
   format: 'date',
   example: 'dd/MM/yyyy'})
   @IsOptional() 
-  birthDate: Date;
-
-
-
-  @ApiProperty({
-  type: String,
-  format: 'date',
-  example: 'dd/MM/yyyy'})
-  @IsOptional() 
-  dataOfApplication: string | Date;
+  date: string | Date;
 
   @ApiProperty()
   @IsOptional()
@@ -50,49 +50,49 @@ export class CreateIntraverbalAssessmentDto {
   @ValidateNested()
   @Type(() => IAnimalSounds)
   @ApiProperty({ type: IAnimalSounds })
-  group1: IAnimalSounds;
+  animalSounds: IAnimalSounds;
 
   @ValidateNested()
   @Type(() => INames)
   @ApiProperty({ type: INames })
-  group2: INames;
+  names: INames;
 
   @ValidateNested()
   @Type(() => ISimpleQuestionsPartOne)
   @ApiProperty({ type: ISimpleQuestionsPartOne })
-  group3: ISimpleQuestionsPartOne;
+  simpleQuestionsPartOne: ISimpleQuestionsPartOne;
 
   @ValidateNested()
   @Type(() => ISimpleQuestionsPartTwo)
   @ApiProperty({ type: ISimpleQuestionsPartTwo })
-  group4: ISimpleQuestionsPartTwo;
+  simpleQuestionsPartTwo: ISimpleQuestionsPartTwo;
 
   @ValidateNested()
   @Type(() => ICategories)
   @ApiProperty({ type: ICategories })
-  group5: ICategories;
+  categories: ICategories;
 
   @ValidateNested()
   @Type(() => IAdjectives)
   @ApiProperty({ type: IAdjectives })
-  group6: IAdjectives;
+  adjectives: IAdjectives;
 
   @ValidateNested()
   @Type(() => IMultipleQuestionsPartOne)
   @ApiProperty({ type: IMultipleQuestionsPartOne })
-  group7: IMultipleQuestionsPartOne;
+  multipleQuestionsPartOne: IMultipleQuestionsPartOne;
 
   @ValidateNested()
   @Type(() => IMultipleQuestionsPartTwo)
   @ApiProperty({ type: IMultipleQuestionsPartTwo })
-  group8: IMultipleQuestionsPartTwo;
+  multipleQuestionsPartTwo: IMultipleQuestionsPartTwo;
 
 
-  @ApiProperty()
+  /*@ApiProperty()
   @IsOptional()
   totalScore?: number
 
   @ApiProperty()
   @IsOptional()
-  classification?: string
+  classification?: string*/
 }

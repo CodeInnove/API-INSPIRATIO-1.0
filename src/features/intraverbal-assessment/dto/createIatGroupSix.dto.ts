@@ -122,5 +122,10 @@ export class IAdjectives {
   @ApiProperty()
   other2Group6Score: string;
 
+  @IsString()
+  @IsOptional()
+  @ApiProperty()
+  subtotalPointsGroup6: string;
+
  
 }

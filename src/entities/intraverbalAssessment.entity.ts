@@ -1,25 +1,18 @@
 import { Schema, Document } from 'mongoose';
-import { format } from 'date-fns';
 import { IIntraverbalAssessment } from 'src/features/intraverbal-assessment/types/intraverbalAssessment';
 
 export const IntraverbalAssessmentSchema = new Schema({
   _id: { type: Schema.Types.ObjectId, required: true, auto: true },
-  patient: { type: Schema.Types.ObjectId, ref: 'User' },
-  doctor: { type: Schema.Types.ObjectId, ref: 'User' },
-  birthDate: { type: String, get: (data:Date) => data ? format(data,'dd/MM/yyyy') : undefined  },
-  dateOfApplication: { type: String, get: (data:Date) => data ? format(data,'dd/MM/yyyy') : undefined  },
-  diagonostic: { type: String, required: false },
-  group1: {
+  patient: { type: Schema.Types.ObjectId, required: true, ref: 'patient' },
+  doctor: { type: Schema.Types.ObjectId, required: true, ref: 'doctor' },
+  //birthDate: { type: String, get: (data:Date) => data ? format(data,'dd/MM/yyyy') : undefined  },
+  date: { type: Date, required: true },
+  //diagonostic: { type: String, required: false },
+  animalSounds: {
     theCatSays: { type: String, required: false },
     theCatSaysScore: { type: String, required: false },
-    theFrogDoesntWashHisFeetHeDoesntWashBecauseHeDoesnt: {
-      type: String,
-      required: false,
-    },
-    theFrogDoesntWashHisFeetHeDoesntWashBecauseHeDoesntScore: {
-      type: String,
-      required: false,
-    },
+    theFrogDoesntWashHisFeetHeDoesntWashBecauseHeDoesnt: { type: String, required: false },
+    theFrogDoesntWashHisFeetHeDoesntWashBecauseHeDoesntScore: { type: String, required: false },
     readyAim: { type: String, required: false },
     readyAimScore: { type: String, required: false },
     myLittleChickYellowFitsHereInMy: { type: String, required: false },
@@ -40,8 +33,9 @@ export const IntraverbalAssessmentSchema = new Schema({
     other1Group1Score: { type: String, required: false },
     other2Group1: { type: String, required: false },
     other2Group1Score: { type: String, required: false },
+    subtotalPointsGroup1: { type: String, required: false },
   },
-  group2: {
+  names: {
     whatIsYourName: { type: String, required: false },
     whatIsYourNameScore: { type: String, required: false },
     youBrushYour: { type: String, required: false },
@@ -66,8 +60,9 @@ export const IntraverbalAssessmentSchema = new Schema({
     other1Group2Score: { type: String, required: false },
     other2Group2: { type: String, required: false },
     other2Group2Score: { type: String, required: false },
+    subtotalPointsGroup2: { type: String, required: false },
   },
-  group3: {
+  simpleQuestionsPartOne: {
     whatCanYouDrink: { type: String, required: false },
     whatCanYouDrinkScore: { type: String, required: false },
     whatCanFly: { type: String, required: false },
@@ -92,8 +87,9 @@ export const IntraverbalAssessmentSchema = new Schema({
     other1Group3Score: { type: String, required: false },
     other2Group3: { type: String, required: false },
     other2Group3Score: { type: String, required: false },
+    subtotalPointsGroup3: { type: String, required: false },
   },
-  group4: {
+  simpleQuestionsPartTwo: {
     whoIsYourTeacher: { type: String, required: false },
     whoIsYourTeacherScore: { type: String, required: false },
     whereDoYouWashYourHands: { type: String, required: false },
@@ -118,9 +114,10 @@ export const IntraverbalAssessmentSchema = new Schema({
     other1Group4Score: { type: String, required: false },
     other2Group4: { type: String, required: false },
     other2Group4Score: { type: String, required: false },
+    subtotalPointsGroup4: { type: String, required: false },
   
   },
-  group5: {
+  categories: {
     whatIsTheShapeOfTheTire: { type: String, required: false },
     whatIsTheShapeOfTheTireScore: { type: String, required: false },
     whatGrowsInTheGarden: { type: String, required: false },
@@ -145,9 +142,10 @@ export const IntraverbalAssessmentSchema = new Schema({
     other1Group5Score: { type: String, required: false },
     other2Group5: { type: String, required: false },
     other2Group5Score: { type: String, required: false },
+    subtotalPointsGroup5: { type: String, required: false },
     
   },
-  group6: {
+  adjectives: {
     whatDoYouWearOnYourHead: { type: String, required: false },
     whatDoYouWearOnYourHeadScore: { type: String, required: false },
     whatDoYouUseToEat: { type: String, required: false },
@@ -172,18 +170,16 @@ export const IntraverbalAssessmentSchema = new Schema({
     other1Group6Score: { type: String, required: false },
     other2Group6: { type: String, required: false },
     other2Group6Score: { type: String, required: false },
+    subtotalPointsGroup6: { type: String, required: false },
     
   },
-  group7: {
+  multipleQuestionsPartOne: {
     whatMakesYouSad: { type: String, required: false },
     whatMakesYouSadScore: { type: String, required: false },
     whatAnimalHasAVeryLongNeck: { type: String, required: false },
     whatAnimalHasAVeryLongNeckScore: { type: String, required: false },
     sayTheNameOfSomethingThatIsNotForEating: { type: String, required: false },
-    sayTheNameOfSomethingThatIsNotForEatingScore: {
-      type: String,
-      required: false,
-    },
+    sayTheNameOfSomethingThatIsNotForEatingScore: { type: String, required: false },
     whatHelpsAFlowerGrow: { type: String, required: false },
     whatHelpsAFlowerGrowScore: { type: String, required: false },
     whatCanYouNotWear: { type: String, required: false },
@@ -202,9 +198,10 @@ export const IntraverbalAssessmentSchema = new Schema({
     other1Group7Score: { type: String, required: false },
     other2Group7: { type: String, required: false },
     other2Group7Score: { type: String, required: false },
+    subtotalPointsGroup7: { type: String, required: false },
    
   },
-  group8: {
+  multipleQuestionsPartTwo: {
     whereDoYouPutDirtyClothes: { type: String, required: false },
     whereDoYouPutDirtyClothesScore: { type: String, required: false },
     whatDoYouTakeToABirthday: { type: String, required: false },
@@ -219,14 +216,8 @@ export const IntraverbalAssessmentSchema = new Schema({
     whyDoPeopleWearGlassesScore: { type: String, required: false },
     whenDoYouSetTheTable: { type: String, required: false },
     whenDoYouSetTheTableScore: { type: String, required: false },
-    whatDoesTheCarHaveThatIsDifferentFromABicycle: {
-      type: String,
-      required: false,
-    },
-    whatDoesTheCarHaveThatIsDifferentFromABicycleScore: {
-      type: String,
-      required: false,
-    },
+    whatDoesTheCarHaveThatIsDifferentFromABicycle: { type: String, required: false },
+    whatDoesTheCarHaveThatIsDifferentFromABicycleScore: { type: String, required: false },
     howDoYouKnowIfSomeoneIsSick: { type: String, required: false },
     howDoYouKnowIfSomeoneIsSickScore: { type: String, required: false },
     whatDidYouDoTodayAtSchool: { type: String, required: false },
@@ -235,12 +226,11 @@ export const IntraverbalAssessmentSchema = new Schema({
     other1Group8Score: { type: String, required: false },
     other2Group8: { type: String, required: false },
     other2Group8Score: { type: String, required: false },
+    subtotalPointsGroup8: { type: String, required: false },
   },
 
-  totalScore: {type: Number, required: false},
-  classification: {type: String, required: false}
+  /*totalScore: {type: Number, required: false},
+  classification: {type: String, required: false}*/
 });
 
-export interface IIntraverbalAssessmentEntity
-  extends Omit<IIntraverbalAssessment, '_id'>,
-    Document {}
+export interface IIntraverbalAssessmentEntity extends Omit<IIntraverbalAssessment, '_id'>, Document {}
