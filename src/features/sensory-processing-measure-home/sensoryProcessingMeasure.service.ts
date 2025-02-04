@@ -58,36 +58,36 @@ export class SensoryProcessingMeasureService {
     }
 
    private transformDtoToSpmp(data: CreateSensoryProcessingMeasureHomeDto): CreateSensoryProcessingMeasureHomeDto {
-        const { participationSocial, 
-          vision, hearing, touch, 
-          smellAndTaste, bodyAwareness, 
-          balanceAndMovement, planningAndIdeation,
-           bitrhDate, doctor, responsable, 
-           relationshipWithChild, patient, date,
-            age, ethnicity, gender, 
-            comment, ...rest } = data;
-        
-        return {
-            ...rest,
-            bitrhDate: bitrhDate,
-            ethnicity: ethnicity as Ethnicity,
-              gender: gender as 'M' | 'F',
-           doctor: doctor,
-            responsable: responsable,
-            relationshipWithChild: relationshipWithChild,
-              patient: patient,
-                date: date,
-              age: age,
-              comment: comment,
+    const { participationSocial, vision, 
+      hearing, touch, smellAndTaste, 
+      bodyAwareness, balanceAndMovement, 
+      planningAndIdeation, /*bitrhDate*/
+      doctor, /*responsable*/
+      /*relationshipWithChild*/ 
+      patient, date, /*age*//* ethnicity*/
+      /*gender*/ comment, ...rest } = data;
+      const scores = this.calculateScores(data);
+    return {
+        ...rest,
+        //bitrhDate: bitrhDate,
+        //ethnicity: ethnicity as Ethnicity,
+         //gender: gender as 'M' | 'F',
+       doctor: doctor,
+        //responsable: responsable,
+        //relationshipWithChild: relationshipWithChild,
+          patient: patient,
+            date: date,
+          //age: age,
+            comment: comment,
             scores: {
-                SOC: 0,
-                VIS: 0,
-                HEA: 0,
-                TOU: 0,
-                ITEMS: 0,
-                BOD: 0,
-                BAL: 0,
-                PLA: 0,
+              SOC: scores.SOC,
+              VIS: scores.VIS,
+              HEA: scores.HEA,
+              TOU: scores.TOU,
+              ITEMS: scores.ITEMS,
+              BOD: scores.BOD,
+              BAL: scores.BAL,
+              PLA: scores.PLA
             },
             participationSocial: this.transformProperties(participationSocial),
             vision: this.transformProperties(vision),
@@ -104,23 +104,23 @@ export class SensoryProcessingMeasureService {
          const { participationSocial, vision, 
           hearing, touch, smellAndTaste, 
           bodyAwareness, balanceAndMovement, 
-          planningAndIdeation, bitrhDate, 
-          doctor, responsable, 
-          relationshipWithChild, 
-          patient, date, age, ethnicity, 
-          gender, comment, ...rest } = data;
+          planningAndIdeation, /*bitrhDate*/
+          doctor, /*responsable*/
+          /*relationshipWithChild*/ 
+          patient, date, /*age*//* ethnicity*/
+          /*gender*/ comment, ...rest } = data;
           const scores = this.calculateScores(data);
         return {
             ...rest,
-            bitrhDate: bitrhDate,
-            ethnicity: ethnicity as Ethnicity,
-             gender: gender as 'M' | 'F',
+            //bitrhDate: bitrhDate,
+            //ethnicity: ethnicity as Ethnicity,
+             //gender: gender as 'M' | 'F',
            doctor: doctor,
-            responsable: responsable,
-            relationshipWithChild: relationshipWithChild,
+            //responsable: responsable,
+            //relationshipWithChild: relationshipWithChild,
               patient: patient,
                 date: date,
-              age: age,
+              //age: age,
                 comment: comment,
                 scores: {
                   SOC: scores.SOC,

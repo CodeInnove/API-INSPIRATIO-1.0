@@ -335,14 +335,14 @@ export class CreateSensoryProcessingMeasureHomeDto {
     @ApiProperty()
     @IsString()
     doctor: string;
-    
-    @ApiProperty()
-    @IsString()
-    //responsable: string;
 
     @ApiProperty()
     @IsString()
-    //relationshipWithChild: string;
+   // responsable: string;
+
+    @ApiProperty()
+    @IsString()
+   // relationshipWithChild: string;
 
     @ApiProperty()
     @IsString()
@@ -353,12 +353,15 @@ export class CreateSensoryProcessingMeasureHomeDto {
     //gender: string;
 
     @ApiProperty()
-    //age: number;
+    @IsNumber()
+   // age: number;
 
     @ApiProperty()
+    @IsString()
     //bitrhDate: string;
 
     @ApiProperty()
+    @IsString()
     //ethnicity: string;
 
     @ApiProperty()

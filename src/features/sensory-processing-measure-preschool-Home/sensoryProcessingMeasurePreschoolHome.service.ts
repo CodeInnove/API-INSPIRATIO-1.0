@@ -55,19 +55,19 @@ export class SensoryProcessingMeasurePreschoolService {
     }
 
  private transformDtoToSpmp(data: CreateSensoryProcessingMeasurePreschoolDto): CreateSensoryProcessingMeasurePreschoolDto {
-        const { participationSocialPreSchool, visionPreSchool, hearingPreSchool, touchPreSchool, smellAndTastePreSchool, bodyAwarenessPreSchool, balanceAndMovementPreSchool, planningAndIdeationPreSchool, birthDate, doctor, responsable, relationshipWithChild, patient, date, age, ethnicity, gender, comment, ...rest } = data;
+        const { participationSocialPreSchool, visionPreSchool, hearingPreSchool, touchPreSchool, smellAndTastePreSchool, bodyAwarenessPreSchool, balanceAndMovementPreSchool, planningAndIdeationPreSchool, /*birthDate,*/ doctor, /*responsable,*/ /*relationshipWithChild,*/ patient, date, /*age,*/ /*ethnicity,*/ /*gender,*/ comment, ...rest } = data;
           const scores = this.calculateScores(data);
           return {
              ...rest,
-            birthDate: birthDate,
-            ethnicity: ethnicity as Ethnicity,
-            gender: gender as 'M' | 'F',
+            //birthDate: birthDate,
+            //ethnicity: ethnicity as Ethnicity,
+            //gender: gender as 'M' | 'F',
             doctor: doctor,
-            responsable: responsable,
-            relationshipWithChild: relationshipWithChild,
+            //responsable: responsable,
+            //relationshipWithChild: relationshipWithChild,
             patient: patient,
             date: date,
-            age: age,
+            //age: age,
             comment: comment,
             scores: {
                 SOC: scores.SOC,
@@ -100,22 +100,22 @@ export class SensoryProcessingMeasurePreschoolService {
         bodyAwarenessPreSchool, 
         balanceAndMovementPreSchool, 
         planningAndIdeationPreSchool,
-         birthDate, doctor, responsable,
-          relationshipWithChild, patient,
-           date, age, ethnicity, gender, 
+         /*birthDate,*/ doctor, /*responsable,*/
+          /*relationshipWithChild,*/ patient,
+           date, /*age,*/ /*ethnicity,*/ /*gender, */
            comment, ...rest } = data;
        const scores = this.calculateScores(data);
         return {
             ...rest,
-            birthDate: birthDate,
-            ethnicity: ethnicity as Ethnicity,
-             gender: gender as 'M' | 'F',
+            //birthDate: birthDate,
+            //ethnicity: ethnicity as Ethnicity,
+            // gender: gender as 'M' | 'F',
             doctor: doctor,
-            responsable: responsable,
-            relationshipWithChild: relationshipWithChild,
+            //responsable: responsable,
+            //relationshipWithChild: relationshipWithChild,
             patient: patient,
               date: date,
-             age: age,
+             //age: age,
               comment: comment,
               scores: {
                     SOC: scores.SOC,
