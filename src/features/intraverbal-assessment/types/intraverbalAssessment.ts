@@ -12,8 +12,8 @@ export interface IIntraverbalAssessment {
   adjectives: IAdjectives;
   multipleQuestionsPartOne: IMultipleQuestionsPartOne;
   multipleQuestionsPartTwo: IMultipleQuestionsPartTwo;
-  //totalScore?: string;
-  //classification?: string;
+  totalScore?: number;
+  classification?: string;
 }
 
 export interface IAnimalSounds {
@@ -41,7 +41,7 @@ export interface IAnimalSounds {
   other1Group1Score?: string;
   other2Group1?: string;
   other2Group1Score?: string;
-  subtotalPointsGroup1?: string;
+  subtotalPointsGroup1?: number;
 }
 
 export interface INames {
@@ -69,7 +69,7 @@ export interface INames {
   other1Group2Score?: string;
   other2Group2?: string;
   other2Group2Score?: string;
-  subtotalPointsGroup2?: string;
+  subtotalPointsGroup2?: number;
 }
 export interface ISimpleQuestionsPartOne {
   whatCanYouDrink?: string;
@@ -96,7 +96,7 @@ export interface ISimpleQuestionsPartOne {
   other1Group3Score?: string;
   other2Group3?: string;
   other2Group3Score?: string;
-  subtotalPointsGroup3?: string;
+  subtotalPointsGroup3?: number;
 }
 export interface ISimpleQuestionsPartTwo {
   whoIsYourTeacher?: string;
@@ -123,7 +123,7 @@ export interface ISimpleQuestionsPartTwo {
   other1Group4Score?: string;
   other2Group4?: string;
   other2Group4Score?: string;
-  subtotalPointsGroup4?: string;
+  subtotalPointsGroup4?: number;
 }
 export interface ICategories {
   whatIsTheShapeOfTheTire?: string;
@@ -150,7 +150,7 @@ export interface ICategories {
   other1Group5Score?: string;
   other2Group5?: string;
   other2Group5Score?: string;
-  subtotalPointsGroup5?: string;
+  subtotalPointsGroup5?: number;
 }
 export interface IAdjectives {
   whatDoYouWearOnYourHead?: string;
@@ -177,7 +177,7 @@ export interface IAdjectives {
   other1Group6Score?: string;
   other2Group6?: string;
   other2Group6Score?: string;
-  subtotalPointsGroup6?: string;
+  subtotalPointsGroup6?: number;
 }
 export interface IMultipleQuestionsPartOne {
   whatMakesYouSad?: string;
@@ -204,7 +204,7 @@ export interface IMultipleQuestionsPartOne {
   other1Group7Score?: string;
   other2Group7?: string;
   other2Group7Score?: string;
-  subtotalPointsGroup7?: string;
+  subtotalPointsGroup7?: number;
 }
 export interface IMultipleQuestionsPartTwo {
   whereDoYouPutDirtyClothes?: string;
@@ -231,5 +231,5 @@ export interface IMultipleQuestionsPartTwo {
   other1Group8Score?: string;
   other2Group8?: string;
   other2Group8Score?: string;
-  subtotalPointsGroup8?: string;
+  subtotalPointsGroup8?: number;
 }

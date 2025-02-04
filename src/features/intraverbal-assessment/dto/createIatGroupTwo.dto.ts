@@ -125,6 +125,6 @@ export class INames {
   @IsString()
   @IsOptional()
   @ApiProperty()
-  subtotalPointsGroup2: string;
+  subtotalPointsGroup2: number;
 
 }

@@ -125,7 +125,7 @@ export class IAdjectives {
   @IsString()
   @IsOptional()
   @ApiProperty()
-  subtotalPointsGroup6: string;
+  subtotalPointsGroup6: number;
 
  
 }

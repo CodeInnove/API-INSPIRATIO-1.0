@@ -88,11 +88,11 @@ export class CreateIntraverbalAssessmentDto {
   multipleQuestionsPartTwo: IMultipleQuestionsPartTwo;
 
 
-  /*@ApiProperty()
+  @ApiProperty()
   @IsOptional()
   totalScore?: number
 
   @ApiProperty()
   @IsOptional()
-  classification?: string*/
+  classification?: string
 }

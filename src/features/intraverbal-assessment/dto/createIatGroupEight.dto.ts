@@ -125,7 +125,7 @@ export class IMultipleQuestionsPartTwo {
   @IsString()
   @IsOptional()
   @ApiProperty()
-  subtotalPointsGroup8: string;
+  subtotalPointsGroup8: number;
 
 
 }

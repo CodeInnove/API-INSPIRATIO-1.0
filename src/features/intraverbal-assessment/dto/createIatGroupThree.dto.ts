@@ -125,6 +125,6 @@ export class ISimpleQuestionsPartOne {
   @IsString()
   @IsOptional()
   @ApiProperty()
-  subtotalPointsGroup3: string;
+  subtotalPointsGroup3: number;
 
 }

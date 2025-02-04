@@ -229,8 +229,8 @@ export const IntraverbalAssessmentSchema = new Schema({
     subtotalPointsGroup8: { type: String, required: false },
   },
 
-  /*totalScore: {type: Number, required: false},
-  classification: {type: String, required: false}*/
+  totalScore: {type: Number, required: false},
+  classification: {type: String, required: false}
 });
 
 export interface IIntraverbalAssessmentEntity extends Omit<IIntraverbalAssessment, '_id'>, Document {}

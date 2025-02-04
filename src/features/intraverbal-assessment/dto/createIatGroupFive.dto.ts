@@ -125,6 +125,6 @@ export class ICategories {
   @IsString()
   @IsOptional()
   @ApiProperty()
-  subtotalPointsGroup5: string;
+  subtotalPointsGroup5: number;
 
 }

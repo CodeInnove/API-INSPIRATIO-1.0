@@ -110,25 +110,25 @@ export class IntraverbalAssessmentService {
           return total;
       };
 
-      const group1Score = calculateGroupScore(data.group1);
-      const group2Score = calculateGroupScore(data.group2);
-      const group3Score = calculateGroupScore(data.group3);
-      const group4Score = calculateGroupScore(data.group4);
-      const group5Score = calculateGroupScore(data.group5);
-      const group6Score = calculateGroupScore(data.group6);
-      const group7Score = calculateGroupScore(data.group7);
-      const group8Score = calculateGroupScore(data.group8);
+      const animalSoundsScore = calculateGroupScore(data.animalSounds);
+      const namesScore = calculateGroupScore(data.names);
+      const simpleQuestionsPartOneScore = calculateGroupScore(data.simpleQuestionsPartOne);
+      const simpleQuestionsPartTwoScore = calculateGroupScore(data.simpleQuestionsPartTwo);
+      const categoriesScore = calculateGroupScore(data.categories);
+      const adjectivesScore = calculateGroupScore(data.adjectives);
+      const multipleQuestionsPartOneScore = calculateGroupScore(data.multipleQuestionsPartOne);
+      const multipleQuestionsPartTwoScore = calculateGroupScore(data.multipleQuestionsPartTwo);
 
       return {
           ...data,
-          group1: { ...data.group1, subtotalPointsGroup1: group1Score },
-          group2: { ...data.group2, subtotalPointsGroup2: group2Score },
-          group3: { ...data.group3, subtotalPointsGroup3: group3Score },
-          group4: { ...data.group4, subtotalPointsGroup4: group4Score },
-          group5: { ...data.group5, subtotalPointsGroup5: group5Score },
-          group6: { ...data.group6, subtotalPointsGroup6: group6Score },
-          group7: { ...data.group7, subtotalPointsGroup7: group7Score },
-          group8: { ...data.group8, subtotalPointsGroup8: group8Score },
+          animalSounds: { ...data.animalSounds, subtotalPointsGroup1: animalSoundsScore },
+          names: { ...data.names, subtotalPointsGroup2: namesScore },
+          simpleQuestionsPartOne: { ...data.simpleQuestionsPartOne, subtotalPointsGroup3: simpleQuestionsPartOneScore },
+          simpleQuestionsPartTwo: { ...data.simpleQuestionsPartTwo, subtotalPointsGroup4: simpleQuestionsPartTwoScore },
+          categories: { ...data.categories, subtotalPointsGroup5: categoriesScore },
+          adjectives: { ...data.adjectives, subtotalPointsGroup6: adjectivesScore },
+          multipleQuestionsPartOne: { ...data.multipleQuestionsPartOne, subtotalPointsGroup7: multipleQuestionsPartOneScore },
+          multipleQuestionsPartTwo: { ...data.multipleQuestionsPartTwo, subtotalPointsGroup8: multipleQuestionsPartTwoScore },
       };
   }
 
@@ -137,14 +137,14 @@ export class IntraverbalAssessmentService {
           throw new HttpException({ message: "Assessment not found" }, HttpStatus.NOT_FOUND);
       }
 
-      const grupo1Score = assessment.group1?.subtotalPointsGroup1 || 0;
-      const grupo2Score = assessment.group2?.subtotalPointsGroup2 || 0;
-      const grupo3Score = assessment.group3?.subtotalPointsGroup3 || 0;
-      const grupo4Score = assessment.group4?.subtotalPointsGroup4 || 0;
-      const grupo5Score = assessment.group5?.subtotalPointsGroup5 || 0;
-      const grupo6Score = assessment.group6?.subtotalPointsGroup6 || 0;
-      const grupo7Score = assessment.group7?.subtotalPointsGroup7 || 0;
-      const grupo8Score = assessment.group8?.subtotalPointsGroup8 || 0;
+      const grupo1Score = assessment.animalSounds?.subtotalPointsGroup1 || 0;
+      const grupo2Score = assessment.names?.subtotalPointsGroup2 || 0;
+      const grupo3Score = assessment.simpleQuestionsPartOne?.subtotalPointsGroup3 || 0;
+      const grupo4Score = assessment.simpleQuestionsPartTwo?.subtotalPointsGroup4 || 0;
+      const grupo5Score = assessment.categories?.subtotalPointsGroup5 || 0;
+      const grupo6Score = assessment.adjectives?.subtotalPointsGroup6 || 0;
+      const grupo7Score = assessment.multipleQuestionsPartOne?.subtotalPointsGroup7 || 0;
+      const grupo8Score = assessment.multipleQuestionsPartTwo?.subtotalPointsGroup8 || 0;
 
       const totalScore =
           grupo1Score +

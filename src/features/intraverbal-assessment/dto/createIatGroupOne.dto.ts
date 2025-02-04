@@ -125,5 +125,5 @@ export class IAnimalSounds {
   @IsString()
   @IsOptional()
   @ApiProperty()
-  subtotalPointsGroup1: string;
+  subtotalPointsGroup1: number;
 }
