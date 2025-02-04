@@ -329,11 +329,11 @@ export class CreateSensoryProcessingMeasureDto {
     
     @ApiProperty()
     @IsString()
-    responsable: string;
+    //responsable: string;
 
     @ApiProperty()
     @IsString()
-    relationshipWithChild: string;
+    //relationshipWithChild: string;
 
     @ApiProperty()
     @IsString()
@@ -341,16 +341,16 @@ export class CreateSensoryProcessingMeasureDto {
 
     @ApiProperty()
     @IsString()
-    gender: string;
+    //gender: string;
 
     @ApiProperty()
-    age: number;
+    //age: number;
 
     @ApiProperty()
-    bitrhDate: string;
+    //bitrhDate: string;
 
     @ApiProperty()
-    ethnicity: string;
+    //ethnicity: string;
 
     @ApiProperty()
     date: string;

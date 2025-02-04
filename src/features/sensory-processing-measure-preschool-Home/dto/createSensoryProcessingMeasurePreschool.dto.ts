@@ -322,14 +322,14 @@ export class CreateSensoryProcessingMeasurePreschoolDto {
     @ApiProperty()
     @IsString()
     doctor: string;
+    
+    @ApiProperty()
+    @IsString()
+    //responsable: string;
 
     @ApiProperty()
     @IsString()
-    responsable: string;
-
-    @ApiProperty()
-    @IsString()
-    relationshipWithChild: string;
+    //relationshipWithChild: string;
 
     @ApiProperty()
     @IsString()
@@ -337,20 +337,16 @@ export class CreateSensoryProcessingMeasurePreschoolDto {
 
     @ApiProperty()
     @IsString()
-    gender: string;
-
-
-    @ApiProperty()
-    age: number;
-
+    //gender: string;
 
     @ApiProperty()
-    bitrhDate: string;
-
+    //age: number;
 
     @ApiProperty()
-    @IsString()
-    ethnicity: string;
+    //bitrhDate: string;
+
+    @ApiProperty()
+    //ethnicity: string;
 
     @ApiProperty()
     date: string;

@@ -315,41 +315,37 @@ export class ParticipationSocialSchoolPreSchoolDto {
 
 
 export class CreateSensoryProcessingMeasureSchoolPreschoolDto {
-    @ApiProperty()
-    @IsString()
-    doctor: string;
+  @ApiProperty()
+  @IsString()
+  doctor: string;
+  
+  @ApiProperty()
+  @IsString()
+  //responsable: string;
 
-    @ApiProperty()
-    @IsString()
-    responsable: string;
+  @ApiProperty()
+  @IsString()
+  //relationshipWithChild: string;
 
-    @ApiProperty()
-    @IsString()
-    relationshipWithChild: string;
+  @ApiProperty()
+  @IsString()
+  patient: string;
 
-    @ApiProperty()
-    @IsString()
-    patient: string;
+  @ApiProperty()
+  @IsString()
+  //gender: string;
 
-    @ApiProperty()
-    @IsString()
-    gender: string;
+  @ApiProperty()
+  //age: number;
 
+  @ApiProperty()
+  //bitrhDate: string;
 
-    @ApiProperty()
-    age: number;
+  @ApiProperty()
+  //ethnicity: string;
 
-
-    @ApiProperty()
-    bitrhDate: string;
-
-
-    @ApiProperty()
-    @IsString()
-    ethnicity: string;
-
-    @ApiProperty()
-    date: string;
+  @ApiProperty()
+  date: string;
 
     
     @ApiProperty()

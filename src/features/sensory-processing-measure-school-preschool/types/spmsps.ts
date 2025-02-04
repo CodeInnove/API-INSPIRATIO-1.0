@@ -9,13 +9,13 @@ import { IPlanningAndIdeationSchoolPreSchool } from "./sensoryProcessingMeasureS
 
 export interface ISpmsps {
 	doctor: string;
-    responsable: string;
-    relationshipWithChild: string;
+    //responsable: string;
+    //relationshipWithChild: string;
     patient: string;
-    gender: string;
-    age: string;
-    bitrhDate: string;
-    ethnicity: string;
+    //gender: string;
+   // age: string;
+    //bitrhDate: string;
+    //ethnicity: string;
     date: string;
 	participationSocialSpmsps: IParticipationSocialSchoolPreSchool;
 	visionSpmsps: IVisionSchoolPreSchool;
