@@ -1,13 +1,12 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 
-import { ISensoryProcessingMeasurePreschoolEntity } from 'src/entities/sensoryProcessingMeasurePreschoolHome.entity';
 
 import { SpmHomeRepository } from './sensoryProcessingMeasure.repository';
 import { UpdateSensoryProcessingMeasureDto } from './dto/updateSensoryProcessingMeasure.dto';
 import { Ethnicity, ISpmpHome } from './types/sensoryProcessingMeasure';
-import { CreateSensoryProcessingMeasureHomeDto, ScoreDto } from './dto/createSensoryProcessingMeasure.dto';
+import { CreateSensoryProcessingMeasureHomeDto, ScoreHomeDto } from './dto/createSensoryProcessingMeasure.dto';
 import { QuerySpmHomeDto } from './dto/querySensoryProcessingMeasure.dto';
-import { ISensoryProcessingMeasureEntity } from 'src/entities/sensoryProcessingMeasureHome.entity';
+import { ISpmHomeEntity } from 'src/entities/sensoryProcessingMeasureHome.entity';
 
 type SpmpData = Omit<ISpmpHome, 'scores'> & { scores: { [key: string]: number } }
 
@@ -19,7 +18,7 @@ export class SensoryProcessingMeasureService {
 
     private scoreMap = { 'N': 1, 'O': 2, 'F': 3, 'S': 4 };
 
-    private calculateScores(data: CreateSensoryProcessingMeasureHomeDto | UpdateSensoryProcessingMeasureDto): ScoreDto {
+    private calculateScoresSpmHome(data: CreateSensoryProcessingMeasureHomeDto | UpdateSensoryProcessingMeasureDto): ScoreHomeDto {
         const scores = { SOC: 0, VIS: 0, HEA: 0, TOU: 0, ITEMS: 0, BOD: 0, BAL: 0, PLA: 0 };
 
         const sumScores = (category: keyof typeof scores, values: any) => {
@@ -41,10 +40,10 @@ export class SensoryProcessingMeasureService {
     sumScores('BAL', data.balanceAndMovement);
     sumScores('PLA', data.planningAndIdeation);
 
-        return scores as ScoreDto;
+        return scores as ScoreHomeDto;
     }
 
-    private transformProperties<T>(obj: Record<string, any> | undefined): T | undefined {
+    private transformPropertiesSpmHome<T>(obj: Record<string, any> | undefined): T | undefined {
         if (!obj) {
             return undefined;
         }
@@ -57,19 +56,19 @@ export class SensoryProcessingMeasureService {
         return transformed as T;
     }
 
-   private transformDtoToSpmp(data: CreateSensoryProcessingMeasureHomeDto): CreateSensoryProcessingMeasureHomeDto {
+   private transformDtoToSpmHome(data: CreateSensoryProcessingMeasureHomeDto): CreateSensoryProcessingMeasureHomeDto {
         const { participationSocial, 
           vision, hearing, touch, 
           smellAndTaste, bodyAwareness, 
           balanceAndMovement, planningAndIdeation,
-           bitrhDate, doctor, responsable, 
+          birthDate, doctor, responsable, 
            relationshipWithChild, patient, date,
             age, ethnicity, gender, 
             comment, ...rest } = data;
-        
+        const scoreHome = this.calculateScoresSpmHome(data);
         return {
             ...rest,
-            bitrhDate: bitrhDate,
+            birthDate: birthDate,
             ethnicity: ethnicity as Ethnicity,
               gender: gender as 'M' | 'F',
            doctor: doctor,
@@ -79,24 +78,24 @@ export class SensoryProcessingMeasureService {
                 date: date,
               age: age,
               comment: comment,
-            scores: {
-                SOC: 0,
-                VIS: 0,
-                HEA: 0,
-                TOU: 0,
-                ITEMS: 0,
-                BOD: 0,
-                BAL: 0,
-                PLA: 0,
+              scoresHome: {
+                SOC: scoreHome.SOC,
+                VIS: scoreHome.VIS,
+                HEA: scoreHome.HEA,
+                TOU: scoreHome.TOU,
+                ITEMS: scoreHome.ITEMS,
+                BOD: scoreHome.BOD,
+                BAL: scoreHome.BAL,
+                PLA: scoreHome.PLA,
             },
-            participationSocial: this.transformProperties(participationSocial),
-            vision: this.transformProperties(vision),
-            hearing: this.transformProperties(hearing),
-            touch: this.transformProperties(touch),
-            smellAndTaste: this.transformProperties(smellAndTaste),
-            bodyAwareness: this.transformProperties(bodyAwareness),
-            balanceAndMovement: this.transformProperties(balanceAndMovement),
-            planningAndIdeation: this.transformProperties(planningAndIdeation),
+            participationSocial: this.transformPropertiesSpmHome(participationSocial),
+            vision: this.transformPropertiesSpmHome(vision),
+            hearing: this.transformPropertiesSpmHome(hearing),
+            touch: this.transformPropertiesSpmHome(touch),
+            smellAndTaste: this.transformPropertiesSpmHome(smellAndTaste),
+            bodyAwareness: this.transformPropertiesSpmHome(bodyAwareness),
+            balanceAndMovement: this.transformPropertiesSpmHome(balanceAndMovement),
+            planningAndIdeation: this.transformPropertiesSpmHome(planningAndIdeation),
         } 
     }
 
@@ -104,49 +103,49 @@ export class SensoryProcessingMeasureService {
          const { participationSocial, vision, 
           hearing, touch, smellAndTaste, 
           bodyAwareness, balanceAndMovement, 
-          planningAndIdeation, bitrhDate, 
+          planningAndIdeation, birthDate, 
           doctor, responsable, 
           relationshipWithChild, 
           patient, date, age, ethnicity, 
           gender, comment, ...rest } = data;
-          const scores = this.calculateScores(data);
+          const scoreHome = this.calculateScoresSpmHome(data);
         return {
             ...rest,
-            bitrhDate: bitrhDate,
+            birthDate: birthDate,
             ethnicity: ethnicity as Ethnicity,
-             gender: gender as 'M' | 'F',
-           doctor: doctor,
+            gender: gender as 'M' | 'F',
+            doctor: doctor,
             responsable: responsable,
             relationshipWithChild: relationshipWithChild,
-              patient: patient,
-                date: date,
-              age: age,
-                comment: comment,
-                scores: {
-                  SOC: scores.SOC,
-                  VIS: scores.VIS,
-                  HEA: scores.HEA,
-                  TOU: scores.TOU,
-                  ITEMS: scores.ITEMS,
-                  BOD: scores.BOD,
-                  BAL: scores.BAL,
-                  PLA: scores.PLA
-                },
-           participationSocial: this.transformProperties(participationSocial),
-            vision: this.transformProperties(vision),
-            hearing: this.transformProperties(hearing),
-            touch: this.transformProperties(touch),
-            smellAndTaste: this.transformProperties(smellAndTaste),
-            bodyAwareness: this.transformProperties(bodyAwareness),
-            balanceAndMovement: this.transformProperties(balanceAndMovement),
-            planningAndIdeation: this.transformProperties(planningAndIdeation),
+            patient: patient,
+            date: date,
+            age: age,
+            comment: comment,
+              scoresHome: {
+                SOC: scoreHome.SOC,
+                VIS: scoreHome.VIS,
+                HEA: scoreHome.HEA,
+                TOU: scoreHome.TOU,
+                ITEMS: scoreHome.ITEMS,
+                BOD: scoreHome.BOD,
+                BAL: scoreHome.BAL,
+                PLA: scoreHome.PLA
+              },
+           participationSocial: this.transformPropertiesSpmHome(participationSocial),
+            vision: this.transformPropertiesSpmHome(vision),
+            hearing: this.transformPropertiesSpmHome(hearing),
+            touch: this.transformPropertiesSpmHome(touch),
+            smellAndTaste: this.transformPropertiesSpmHome(smellAndTaste),
+            bodyAwareness: this.transformPropertiesSpmHome(bodyAwareness),
+            balanceAndMovement: this.transformPropertiesSpmHome(balanceAndMovement),
+            planningAndIdeation: this.transformPropertiesSpmHome(planningAndIdeation),
         }
     }
 
 
-    async create(data: CreateSensoryProcessingMeasureHomeDto): Promise<ISensoryProcessingMeasurePreschoolEntity> {
+    async create(data: CreateSensoryProcessingMeasureHomeDto): Promise<ISpmHomeEntity> {
         try {
-              const spmpData = this.transformDtoToSpmp(data);
+              const spmpData = this.transformDtoToSpmHome(data);
             return await this.spmPreSchoolHomeRepository.create(spmpData);
         } catch (error) {
             throw new HttpException(error, HttpStatus.BAD_REQUEST);
@@ -161,7 +160,7 @@ export class SensoryProcessingMeasureService {
         }
     }
 
-    async findById(id: string): Promise<ISensoryProcessingMeasureEntity> {
+    async findById(id: string): Promise<ISpmHomeEntity> {
       try {
           return await this.spmPreSchoolHomeRepository.findById(id);
       } catch (error) {
@@ -169,7 +168,7 @@ export class SensoryProcessingMeasureService {
       }
   }
 
-    async update(id: string, update: UpdateSensoryProcessingMeasureDto): Promise<ISensoryProcessingMeasureEntity> {
+    async update(id: string, update: UpdateSensoryProcessingMeasureDto): Promise<ISpmHomeEntity> {
         try {
           const spmpData = this.transformUpdateDtoToSpmpHome(update);
           return await this.spmPreSchoolHomeRepository.update(id, spmpData);
@@ -178,7 +177,7 @@ export class SensoryProcessingMeasureService {
         }
     }
 
-    async delete(id: string): Promise<ISensoryProcessingMeasureEntity> {
+    async delete(id: string): Promise<ISpmHomeEntity> {
         try {
             return await this.spmPreSchoolHomeRepository.delete(id);
         } catch (error) {

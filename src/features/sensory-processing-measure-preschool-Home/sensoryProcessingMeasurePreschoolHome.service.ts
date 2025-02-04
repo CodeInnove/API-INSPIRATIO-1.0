@@ -87,7 +87,6 @@ export class SensoryProcessingMeasurePreschoolService {
             bodyAwarenessPreSchool: this.transformProperties(bodyAwarenessPreSchool),
             balanceAndMovementPreSchool: this.transformProperties(balanceAndMovementPreSchool),
             planningAndIdeationPreSchool: this.transformProperties(planningAndIdeationPreSchool),
-            
         }
     }
 

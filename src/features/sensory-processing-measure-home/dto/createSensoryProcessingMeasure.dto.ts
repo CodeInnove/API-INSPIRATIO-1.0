@@ -1,7 +1,7 @@
 import { ApiProperty } from "@nestjs/swagger";
 import { IsString, IsNumber, IsOptional } from "class-validator";
 
-export interface ScoreDto {
+export interface ScoreHomeDto {
     SOC: number;
     VIS: number;
     HEA: number;
@@ -358,7 +358,7 @@ export class CreateSensoryProcessingMeasureHomeDto {
 
     @ApiProperty()
     @IsString()
-    bitrhDate: string;
+    birthDate: string;
 
     @ApiProperty()
     @IsString()
@@ -374,29 +374,37 @@ export class CreateSensoryProcessingMeasureHomeDto {
 
 
     @ApiProperty()
+    @IsOptional()
     participationSocial: SocialParticipation;
 
     @ApiProperty()
+    @IsOptional()
     vision: Vision;
 
     @ApiProperty()
+    @IsOptional()
     hearing: Hearing;
 
     @ApiProperty()
+    @IsOptional()
     touch: Touch;
 
     @ApiProperty()
+    @IsOptional()
     smellAndTaste: SmellAndTaste;
 
     @ApiProperty()
+    @IsOptional()
     bodyAwareness: BodyAwareness;
 
     @ApiProperty()
+    @IsOptional()
     balanceAndMovement: BalanceAndMovement;
 
     @ApiProperty()
+    @IsOptional()
     planningAndIdeation: PlanningAndIdeation;
     
     @ApiProperty()
-    scores: ScoreDto;
+    scoresHome: ScoreHomeDto;
 }

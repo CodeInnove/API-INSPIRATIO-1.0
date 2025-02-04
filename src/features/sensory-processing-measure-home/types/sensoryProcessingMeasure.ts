@@ -120,7 +120,7 @@ export interface ISpmpHome {
   ethnicity: Ethnicity;
   date: string;
   comment?: string;
-    scores: {
+  scoresHome: {
       SOC: number;
       VIS: number;
       HEA: number;
