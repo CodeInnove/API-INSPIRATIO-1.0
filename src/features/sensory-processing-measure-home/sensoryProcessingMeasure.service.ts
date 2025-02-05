@@ -3,7 +3,7 @@ import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 
 import { SpmHomeRepository } from './sensoryProcessingMeasure.repository';
 import { UpdateSensoryProcessingMeasureDto } from './dto/updateSensoryProcessingMeasure.dto';
-import { Ethnicity, ISpmpHome } from './types/sensoryProcessingMeasure';
+import { ISpmpHome } from './types/sensoryProcessingMeasure';
 import { CreateSensoryProcessingMeasureHomeDto, ScoreHomeDto } from './dto/createSensoryProcessingMeasure.dto';
 import { QuerySpmHomeDto } from './dto/querySensoryProcessingMeasure.dto';
 import { ISpmHomeEntity } from 'src/entities/sensoryProcessingMeasureHome.entity';

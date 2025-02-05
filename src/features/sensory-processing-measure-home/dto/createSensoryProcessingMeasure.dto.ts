@@ -438,9 +438,6 @@ export class CreateSensoryProcessingMeasureHomeDto {
     @IsString()
     birthDate: string;
 
-    @ApiProperty()
-    @IsString()
-    ethnicity: string;
 
     @ApiProperty()
     @IsString()

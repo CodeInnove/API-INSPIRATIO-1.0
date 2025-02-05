@@ -1,7 +1,7 @@
 import { Schema, Document } from 'mongoose';
 import { ISpmpHome } from 'src/features/sensory-processing-measure-home/types/sensoryProcessingMeasure';
 
-import { Ethnicity } from 'src/features/sensory-processing-measure-school/types/sensoryProcessingMeasureSchool';
+
 
 export const SensoryProcessingMeasureSchema = new Schema({
   _id: { type: Schema.Types.ObjectId, required: true, auto: true },
@@ -12,7 +12,6 @@ export const SensoryProcessingMeasureSchema = new Schema({
   gender: { type: String, required: false, enum: ['M', 'F'] },
   age: { type: Number, required: false},
   birthDate: { type: String, required: false},
-  ethnicity: { type: String, required: false, enum: Ethnicity },
   date: { type: String, required: true, },
   comment: { type: String, required: false },
   participationSocial: {
