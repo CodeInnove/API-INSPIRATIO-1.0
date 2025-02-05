@@ -11,7 +11,7 @@ export const SensoryProcessingMeasureSchema = new Schema({
   patient: { type: Schema.Types.ObjectId, ref: 'User', required: true },
   gender: { type: String, required: false, enum: ['M', 'F'] },
   age: { type: Number, required: false},
-  bitrhDate: { type: String, required: false},
+  birthDate: { type: String, required: false},
   ethnicity: { type: String, required: false, enum: Ethnicity },
   date: { type: String, required: true, },
   comment: { type: String, required: false },
