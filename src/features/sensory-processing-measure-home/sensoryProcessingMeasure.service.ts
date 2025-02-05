@@ -13,7 +13,7 @@ type SpmpData = Omit<ISpmpHome, 'scores'> & { scores: { [key: string]: number } 
 @Injectable()
 export class SensoryProcessingMeasureService {
     constructor(
-        private readonly spmPreSchoolHomeRepository: SpmHomeRepository,
+        private readonly spmHomeRepository: SpmHomeRepository,
     ) { }
 
     private scoreMap = { 'N': 1, 'O': 2, 'F': 3, 'S': 4 };
@@ -77,7 +77,7 @@ export class SensoryProcessingMeasureService {
     async create(data: CreateSensoryProcessingMeasureHomeDto): Promise<ISpmHomeEntity> {
         try {
             const spmpData = this.transformDtoToSpmHome(data);
-            const createdRecord = await this.spmPreSchoolHomeRepository.create(spmpData);
+            const createdRecord = await this.spmHomeRepository.create(spmpData);
 
             return createdRecord.toObject(); //  Corrigido para retornar um documento Mongoose válido
         } catch (error) {
@@ -87,7 +87,7 @@ export class SensoryProcessingMeasureService {
 
     async findAll(query: QuerySpmHomeDto) {
         try {
-            return await this.spmPreSchoolHomeRepository.findAll(query);
+            return await this.spmHomeRepository.findAll(query);
         } catch (error) {
             throw new HttpException(error, HttpStatus.BAD_REQUEST);
         }
@@ -95,7 +95,7 @@ export class SensoryProcessingMeasureService {
 
     async findById(id: string): Promise<ISpmHomeEntity> {
       try {
-          return await this.spmPreSchoolHomeRepository.findById(id);
+          return await this.spmHomeRepository.findById(id);
       } catch (error) {
           throw new HttpException(error, HttpStatus.BAD_REQUEST);
       }
@@ -104,7 +104,7 @@ export class SensoryProcessingMeasureService {
   async update(id: string, update: UpdateSensoryProcessingMeasureDto): Promise<ISpmHomeEntity> {
     try {
         //  Buscar os dados atuais no banco para preencher valores ausentes
-        const existingRecord = await this.spmPreSchoolHomeRepository.findById(id);
+        const existingRecord = await this.spmHomeRepository.findById(id);
         if (!existingRecord) {
             throw new HttpException('Registro não encontrado', HttpStatus.NOT_FOUND);
         }
@@ -117,7 +117,7 @@ export class SensoryProcessingMeasureService {
 
         // Transformar os dados e atualizar no banco
         const spmpData = this.transformDtoToSpmHome(completeUpdate);
-        const updatedRecord = await this.spmPreSchoolHomeRepository.update(id, spmpData);
+        const updatedRecord = await this.spmHomeRepository.update(id, spmpData);
 
         return updatedRecord.toObject();
     } catch (error) {
@@ -127,7 +127,7 @@ export class SensoryProcessingMeasureService {
 
     async delete(id: string): Promise<ISpmHomeEntity> {
         try {
-            return await this.spmPreSchoolHomeRepository.delete(id);
+            return await this.spmHomeRepository.delete(id);
         } catch (error) {
             throw new HttpException(error, HttpStatus.BAD_REQUEST);
         }

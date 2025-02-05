@@ -1,9 +1,10 @@
 import { Schema, Document } from 'mongoose';
-import { Ethnicity } from 'src/features/sensory-processing-measure-school/types/sensoryProcessingMeasureSchool';
-import { ISpmSchool } from 'src/features/sensory-processing-measure-school/types/spmschool';  
+
+import { ISpmSchool } from 'src/features/sensory-processing-measure-school/types/sensoryProcessingMeasureSchool'; 
 
 export const SensoryProcessingMeasureSchoolSchema = new Schema({
   _id: { type: Schema.Types.ObjectId, required: true, auto: true },
+  date: { type: String, required: true, },
   doctor: { type: Schema.Types.ObjectId, ref: 'User', required: true },
   responsable: { type: Schema.Types.ObjectId, required: true, ref: 'User' },
   relationshipWithChild: { type: String, required: false},
@@ -11,8 +12,6 @@ export const SensoryProcessingMeasureSchoolSchema = new Schema({
   gender: { type: String, required: false, enum: ['M', 'F'] },
   age: { type: Number, required: false},
   bitrhDate: { type: String, required: false},
-  ethnicity: { type: String, required: false, enum: Ethnicity },
-  date: { type: String, required: true, },
   participationSocialSchool: { 
     knowsHowToWorkInGroupSchool: { type: String, required: false, enum: ['N', 'O', 'F', 'S']},
     resolvesConflictsIndependentlySchool:{ type: String, required: false, enum: ['N', 'O', 'F', 'S']},
@@ -94,6 +93,17 @@ export const SensoryProcessingMeasureSchoolSchema = new Schema({
     repeatsSameActivitiesDuringRecessSchool: { type: String, required: false, enum: ['N', 'O', 'F', 'S']},
     disorganizedMaterialsAtDeskSchool: { type: String, required: false, enum: ['N', 'O', 'F', 'S']},
   },
+
+  scoresSchool: {
+    SOC: { type: Number, default: 0 },
+    VIS: { type: Number, default: 0 },
+    HEA: { type: Number, default: 0 },
+    TOU: { type: Number, default: 0 },
+    ITEMS: { type: Number, default: 0 },
+    BOD: { type: Number, default: 0 },
+    BAL: { type: Number, default: 0 },
+    PLA: { type: Number, default: 0 },
+},
 });
 
 export interface ISensoryProcessingMeasureSchoolEntity extends Omit<ISpmSchool, '_id'>, Document {}
