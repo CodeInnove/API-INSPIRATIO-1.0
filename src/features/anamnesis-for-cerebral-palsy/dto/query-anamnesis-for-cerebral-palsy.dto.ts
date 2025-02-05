@@ -1,12 +1,23 @@
 import { ApiProperty } from '@nestjs/swagger';
 import {
   IsDate,
+  IsNumberString,
   IsOptional,
   IsString,
 } from 'class-validator';
 
 // Um parâmetro opcional para paginação
 export class QueryAfcpDto {
+  @IsOptional()
+  @IsNumberString()
+  @ApiProperty({ required: false })
+  page?: number;
+
+  @IsOptional()
+  @IsNumberString()
+  @ApiProperty({ required: false })
+  limit?: number;
+
   @IsOptional()
   @IsString()
   @ApiProperty()

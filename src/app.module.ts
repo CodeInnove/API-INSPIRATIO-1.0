@@ -40,7 +40,14 @@ import { SessionSummaryAtModule } from './features/session-summary-at/session-su
 import { SessionSummaryAbaModule } from './features/session-summary-aba/session-summary-aba.module';
 import { IncomeAssessmentModule } from './features/income-assessment/incomeAssessment.module';
 import { FilesModule } from './features/files/files.module';
-
+import { AbaCommandModule } from './features/AbaCommand/abaCommand.module';
+import { AbaIntraverbalModule } from './features/AbaIntraverbal/abaIntraverbal.module';
+import { AbaListenerModule } from './features/AbaListener/abaListener.module';
+import { AbaMotorImitationModule } from './features/AbaMotorImitation/abaMotorImitation.module';
+import { AbaPairingModule } from './features/AbaPairing/abaPairing.module';
+import { AbaToSitModule } from './features/AbaToSit/abaToSit.module';
+import { AbaTouchModule } from './features/AbaTouch/abaTouch.module';
+import { AbaWaitModule } from './features/AbaWait/abaWait.module';
 
 
 @Module({
@@ -122,6 +129,14 @@ import { FilesModule } from './features/files/files.module';
     SessionSummaryAbaModule,
     IncomeAssessmentModule,
     FilesModule,
+    AbaCommandModule,
+    AbaIntraverbalModule,
+    AbaListenerModule,
+    AbaMotorImitationModule,
+    AbaPairingModule,
+    AbaToSitModule,
+    AbaTouchModule,
+    AbaWaitModule,
   ],
   controllers: [AppController],
   providers: [AppService],
