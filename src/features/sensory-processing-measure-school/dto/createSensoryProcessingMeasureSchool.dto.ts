@@ -289,7 +289,7 @@ export class CreateSensoryProcessingMeasureSchoolDto {
 
   @ApiProperty()
   @IsString()
-  //relationshipWithChild: string;
+  relationshipWithChild: string;
 
   @ApiProperty()
   @IsString()
@@ -297,10 +297,10 @@ export class CreateSensoryProcessingMeasureSchoolDto {
 
   @ApiProperty()
   @IsString()
-  //gender: string;
+  gender: string;
 
   @ApiProperty()
-  //age: number;
+  age: number;
 
     @ApiProperty()
     bitrhDate: string;

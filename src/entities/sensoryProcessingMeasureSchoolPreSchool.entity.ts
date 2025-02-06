@@ -1,15 +1,15 @@
 import { Schema, Document } from 'mongoose';
-import { ISpmPreSchool } from 'src/features/sensory-processing-measure-school-preschool/types/sensoryProcessingMeasureSchoolPreSchool'; 
+import { ISpmPreSchool } from 'src/features/sensory-processing-measure-school-preschool/types/spmsps'; 
 
 export const SensoryProcessingMeasureSchoolPreSchoolSchema = new Schema({
   _id: { type: Schema.Types.ObjectId, required: true, auto: true },
   doctor: { type: Schema.Types.ObjectId, ref: 'User', required: true },
-  //responsable: { type: Schema.Types.ObjectId, required: true, ref: 'User' },
-  //relationshipWithChild: { type: String, required: false},
+  responsable: { type: Schema.Types.ObjectId, required: true, ref: 'User' },
+  relationshipWithChild: { type: String, required: false},
   patient: { type: Schema.Types.ObjectId, required: true, ref: 'User' },
   gender: { type: String, required: false, enum: ['M', 'F'] },
   age: { type: Number, required: false},
-  bitrhDate: { type: String, required: false},
+  birthDate: { type: String, required: false},
   date: { type: String, required: true, },
   comment: { type: String, required: false },
   participationSocialSpmsps: {
