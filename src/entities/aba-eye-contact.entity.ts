@@ -1,13 +1,26 @@
-import {Schema, Document} from 'mongoose'
+import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
+import { Document, Types } from 'mongoose';
 
-export const AbaEyeContactSchema = new Schema ({
-    _id: { type: Schema.Types.ObjectId, auto: true },
-    patient: { type: Schema.Types.ObjectId, ref: 'User'},
-    doctor: { type: Schema.Types.ObjectId, ref: 'User'},
-    reinforcer: { type: Schema.Types.ObjectId, ref: 'User'},
-    firstWeek: { type: Number, enum: ['AFT', 'AG', 'NF', 'I']},
-    secondWeek: { type: Number, enum: ['AFT', 'AG', 'NF', 'I']},
-    thirdWeek: { type: Number, enum: ['AFT', 'AG', 'NF', 'I']},
-    fourthWeek: { type: Number, enum: ['AFT', 'AG', 'NF', 'I']},
-    fifthWeek: { type: Number, enum: ['AFT', 'AG', 'NF', 'I']},
-})
+export type AbaEyeContactDocument = AbaEyeContact & Document;
+
+@Schema({ timestamps: true })
+export class AbaEyeContact {
+  @Prop({
+    type: [
+      {
+        atividade: { type: String, required: true },
+        status: { type: String, enum: ['AF', 'DV', 'I'], required: true },
+      },
+    ],
+    required: true,
+  })
+  atividades: { atividade: string; status: 'AF' | 'DV' | 'I' }[];
+
+  @Prop({ type: Types.ObjectId, ref: 'User', required: true })
+  patient: Types.ObjectId;
+
+  @Prop({ type: Types.ObjectId, ref: 'User', required: true })
+  doctor: Types.ObjectId;
+}
+
+export const AbaEyeContactSchema = SchemaFactory.createForClass(AbaEyeContact);

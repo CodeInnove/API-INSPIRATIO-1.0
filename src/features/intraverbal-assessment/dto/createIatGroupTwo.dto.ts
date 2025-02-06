@@ -122,4 +122,9 @@ export class INames {
   @ApiProperty()
   other2Group2Score: string;
 
+  @IsString()
+  @IsOptional()
+  @ApiProperty()
+  subtotalPointsGroup2: number;
+
 }

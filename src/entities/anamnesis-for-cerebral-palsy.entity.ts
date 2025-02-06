@@ -5,8 +5,8 @@ export const AnamneseCerebralSchema = new Schema({
   _id: { type: Schema.Types.ObjectId, required: true, auto: true },
   patient: { type: Schema.Types.ObjectId, required: true, ref: 'patient' },
   doctor: { type: Schema.Types.ObjectId, required: true, ref: 'doctor' },
-  age: { type: Schema.Types.ObjectId, required: true, ref: 'patient' },
-  bitrhDate: { type: Schema.Types.ObjectId, required: true, ref: 'patient' },
+  //age: { type: Schema.Types.ObjectId, required: true, ref: 'patient' },
+  //bitrhDate: { type: Schema.Types.ObjectId, required: true, ref: 'patient' },
   date: { type: Date, required: true },
 
   gestationalHistory: {

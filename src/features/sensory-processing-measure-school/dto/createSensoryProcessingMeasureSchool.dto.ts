@@ -16,261 +16,261 @@ export interface ScoreSchoolDto {  // Renomeei para ScoreDto para consistência
 export class IParticipationSocialSchool {
     @ApiProperty()
     @IsString()
-    knowsHowToWorkInGroupSchool: string;
+    knowsHowToWorkInGroup: string;
 
     @ApiProperty()
     @IsString()
-    resolvesConflictsIndependentlySchool: string;
+    resolvesConflictsIndependently: string;
 
     @ApiProperty()
     @IsString()
-    handlesFrustrationWithoutAggressionSchool: string;
+    handlesFrustrationWithoutAggression: string;
 
     @ApiProperty()
     @IsString()
-    participatesSpontaneouslyInGamesSchool: string;
+    participatesSpontaneouslyInGames: string;
 
     @ApiProperty()
     @IsString()
-    participatesWithoutInterruptingGamesSchool: string;
+    participatesWithoutInterruptingGames: string;
 
     @ApiProperty()
     @IsString()
-    hasFriendsAndChoosesToBeWithThemSchool: string;
+    hasFriendsAndChoosesToBeWithThem: string;
 
     @ApiProperty()
     @IsString()
-    understandsAndUsesHumorInPlaySchool: string;
+    understandsAndUsesHumorInPlay: string;
 
     @ApiProperty()
     @IsString()
-    maintainsAppropriatePersonalSpaceSchool: string;
+    maintainsAppropriatePersonalSpace: string;
 
     @ApiProperty()
     @IsString()
-    maintainsEyeContactAppropriatelySchool: string;
+    maintainsEyeContactAppropriately: string;
 
     @ApiProperty()
     @IsString()
-    switchesConversationTopicsAppropriatelySchool: string;
+    switchesConversationTopicsAppropriately: string;
   }
   
   export class IVisionSchool {
     @ApiProperty()
     @IsString()
-    botheredByLightSchool: string;
+    botheredByLight: string;
 
     @ApiProperty()
     @IsString()
-    distractedByVisualStimuliSchool: string;
+    distractedByVisualStimuli: string;
 
     @ApiProperty()
     @IsString()
-    looksAroundInsteadOfPayingAttentionSchool: string;
+    looksAroundInsteadOfPayingAttention: string;
 
     @ApiProperty()
     @IsString()
-    movesObjectsInFrontOfEyesSchool: string;
+    movesObjectsInFrontOfEyes: string;
 
     @ApiProperty()
     @IsString()
-    staresAtPeopleOrObjectsSchool: string;
+    staresAtPeopleOrObjects: string;
 
     @ApiProperty()
     @IsString()
-    botheredByDimLightsInCinemaSchool: string;
+    botheredByDimLightsInCinema: string;
   }
   
   export class IHearingSchool {
     @ApiProperty()
     @IsString()
-    botheredByLoudSoundsSchool: string;
+    botheredByLoudSounds: string;
 
     @ApiProperty()
     @IsString()
-    botheredByMusicOrInstrumentsSchool: string;
+    botheredByMusicOrInstruments: string;
 
     @ApiProperty()
     @IsString()
-    doesntRespondToNewSoundsSchool: string;
+    doesntRespondToNewSounds: string;
 
     @ApiProperty()
     @IsString()
-    cantDetermineSoundLocationSchool: string;
+    cantDetermineSoundLocation: string;
 
     @ApiProperty()
     @IsString()
-    makesNoiseWhileClassIsSilentSchool: string;
+    makesNoiseWhileClassIsSilent: string;
 
     @ApiProperty()
     @IsString()
-    talksLoudlyDuringRecessSchool: string;
+    talksLoudlyDuringRecess: string;
 
       @ApiProperty()
     @IsString()
-    makesUnusualNoisesAloneSchool: string;
+    makesUnusualNoisesAlone: string;
   }
   
   export class ITouchSchool {
     @ApiProperty()
     @IsString()
-    botheredByMessyHandsOrFaceSchool: string;
+    botheredByMessyHandsOrFace: string;
 
     @ApiProperty()
     @IsString()
-    doesntTolerateDirtOnHandsOrClothesSchool: string;
+    doesntTolerateDirtOnHandsOrClothes: string;
 
     @ApiProperty()
     @IsString()
-    discomfortWithCertainTexturesSchool: string;
+    discomfortWithCertainTextures: string;
 
     @ApiProperty()
     @IsString()
-    botheredByAccidentalTouchesFromFriendsSchool: string;
+    botheredByAccidentalTouchesFromFriends: string;
 
     @ApiProperty()
     @IsString()
-    doesntRespondToBeingTouchedSchool: string;
+    doesntRespondToBeingTouched: string;
 
     @ApiProperty()
     @IsString()
-    seeksHotOrColdTemperaturesSchool: string;
+    seeksHotOrColdTemperatures: string;
 
     @ApiProperty()
     @IsString()
-    touchesPeersInappropriatelySchool: string;
+    touchesPeersInappropriately: string;
 
     @ApiProperty()
     @IsString()
-    doesntWipeFoodOrSalivaFromFaceSchool: string;
+    doesntWipeFoodOrSalivaFromFace: string;
   }
   
   export class ISmellAndTasteSchool {
     @ApiProperty()
     @IsString()
-    botheredByTastesOrSmellsOfCertainFoodsSchool: string;
+    botheredByTastesOrSmellsOfCertainFoods: string;
 
     @ApiProperty()
     @IsString()
-    doesntNoticeStrongOdorsSchool: string;
+    doesntNoticeStrongOdors: string;
 
     @ApiProperty()
     @IsString()
-    cantDistinguishBetweenOdorsSchool: string;
+    cantDistinguishBetweenOdors: string;
 
     @ApiProperty()
     @IsString()
-    triesToTasteOrLickNonFoodItemsSchool: string;
+    triesToTasteOrLickNonFoodItems: string;
   }
   
   export class IBodyAwarenessSchool {
     @ApiProperty()
     @IsString()
-    spillsWhenOpeningContainersSchool: string;
+    spillsWhenOpeningContainers: string;
 
     @ApiProperty()
     @IsString()
-    chewsOnObjectsOrClothingSchool: string;
+    chewsOnObjectsOrClothing: string;
 
     @ApiProperty()
     @IsString()
-    movesChairAbruptlySchool: string;
+    movesChairAbruptly: string;
 
     @ApiProperty()
     @IsString()
-    runsOrJumpsInsteadOfWalkingSchool: string;
+    runsOrJumpsInsteadOfWalking: string;
 
     @ApiProperty()
     @IsString()
-    stompsFeetWhenWalkingSchool: string;
+    stompsFeetWhenWalking: string;
 
     @ApiProperty()
     @IsString()
-    jumpsHardOnStairsSchool: string;
+    jumpsHardOnStairs: string;
 
     @ApiProperty()
     @IsString()
-    opensOrClosesDoorsWithExcessiveForceSchool: string;
+    opensOrClosesDoorsWithExcessiveForce: string;
   }
   
   export class IBalanceAndMovementSchool {
     @ApiProperty()
     @IsString()
-    usesWallsForSupportWhenWalkingSchool: string;
+    usesWallsForSupportWhenWalking: string;
 
     @ApiProperty()
     @IsString()
-    tanglesFeetInChairLegsSchool: string;
+    tanglesFeetInChairLegs: string;
 
     @ApiProperty()
     @IsString()
-    rocksInChairWhenSeatedSchool: string;
+    rocksInChairWhenSeated: string;
 
       @ApiProperty()
     @IsString()
-    fidgetsWhenSeatedSchool: string;
+    fidgetsWhenSeated: string;
 
     @ApiProperty()
     @IsString()
-    fallsFromChairWhenSeatedSchool: string;
+    fallsFromChairWhenSeated: string;
 
     @ApiProperty()
     @IsString()
-    leansOnWallsOrFurnitureForSupportSchool: string;
+    leansOnWallsOrFurnitureForSupport: string;
 
     @ApiProperty()
     @IsString()
-    needsSupportToGetUpFromFloorSchool: string;
+    needsSupportToGetUpFromFloor: string;
 
     @ApiProperty()
     @IsString()
-    slumpsOrLeansOnDeskWhenSeatedSchool: string;
+    slumpsOrLeansOnDeskWhenSeated: string;
 
     @ApiProperty()
     @IsString()
-    poorCoordinationAppearsClumsySchool: string;
+    poorCoordinationAppearsClumsy: string;
   }
   
   export class IPlanningAndIdeationSchool {
     @ApiProperty()
     @IsString()
-    inconsistentInDailyTasksSchool: string;
+    inconsistentInDailyTasks: string;
 
     @ApiProperty()
     @IsString()
-    strugglesToSolveProblemsEffectivelySchool: string;
+    strugglesToSolveProblemsEffectively: string;
 
     @ApiProperty()
     @IsString()
-    dropsItemsWhenCarryingMultipleObjectsSchool: string;
+    dropsItemsWhenCarryingMultipleObjects: string;
 
     @ApiProperty()
     @IsString()
-    hasDifficultyWithTaskSequencingSchool: string;
+    hasDifficultyWithTaskSequencing: string;
 
     @ApiProperty()
     @IsString()
-    failsToCompleteMultiStepTasksSchool: string;
+    failsToCompleteMultiStepTasks: string;
 
     @ApiProperty()
     @IsString()
-    strugglesToImitateDemonstrationsSchool: string;
+    strugglesToImitateDemonstrations: string;
 
     @ApiProperty()
     @IsString()
-    hasDifficultyCompletingTasksFromModelsSchool: string;
+    hasDifficultyCompletingTasksFromModels: string;
 
     @ApiProperty()
     @IsString()
-     limitedImaginationInPlaySchool: string;
+     limitedImaginationInPlay: string;
 
     @ApiProperty()
     @IsString()
-     repeatsSameActivitiesDuringRecessSchool: string;
+     repeatsSameActivitiesDuringRecess: string;
 
     @ApiProperty()
     @IsString()
-    disorganizedMaterialsAtDeskSchool: string;
+    disorganizedMaterialsAtDesk: string;
   }
 
 
@@ -287,22 +287,20 @@ export class CreateSensoryProcessingMeasureSchoolDto {
     @IsString()
     responsable: string;
 
-    @ApiProperty()
-    @IsString()
-    relationshipWithChild: string;
+  @ApiProperty()
+  @IsString()
+  //relationshipWithChild: string;
 
-    @ApiProperty()
-    @IsString()
-    patient: string;
+  @ApiProperty()
+  @IsString()
+  patient: string;
 
-    @ApiProperty()
-    @IsString()
-    gender: string;
+  @ApiProperty()
+  @IsString()
+  //gender: string;
 
-
-    @ApiProperty()
-    age: number;
-
+  @ApiProperty()
+  //age: number;
 
     @ApiProperty()
     bitrhDate: string;

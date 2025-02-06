@@ -1,18 +1,17 @@
 export interface IIntraverbalAssessment {
   _id?: string;
-  patient: string;
+  date: string | Date;
   doctor: string;
-  birthDate?: Date | string;
-  dataOfApplication?: Date | string;
-  diagonostic?: string;
-  group1?: IAnimalSounds;
-  group2?: INames;
-  group3?: ISimpleQuestionsPartOne;
-  group4?: ISimpleQuestionsPartTwo;
-  group5?: ICategories;
-  group6?: IAdjectives;
-  group7?: IMultipleQuestionsPartOne;
-  group8?: IMultipleQuestionsPartTwo;
+  patient: string;
+  //diagonostic?: string;
+  animalSounds: IAnimalSounds;
+  names: INames;
+  simpleQuestionsPartOne: ISimpleQuestionsPartOne;
+  simpleQuestionsPartTwo: ISimpleQuestionsPartTwo;
+  categories: ICategories;
+  adjectives: IAdjectives;
+  multipleQuestionsPartOne: IMultipleQuestionsPartOne;
+  multipleQuestionsPartTwo: IMultipleQuestionsPartTwo;
   totalScore?: number;
   classification?: string;
 }

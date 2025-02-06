@@ -1,43 +1,37 @@
 export interface IIncomeTablesPartOne {
-  recognizesAndIdentifiesLetters: ITable;
-  recognizesAndIdentifiesNumbers: ITable;
-  directedWriting: ITable;
-  spontaneousWriting: ITable;
-  readingAndWriting: ITable;
-  readingAndComprehension: ITable;
-  textProductionRecord: ITable;
-  textualStructuring: ITable;
-  oralTextProduction: ITable;
-  numbersGreaterMagnitude: ITable;
-  problemSolving: ITable;
+  recognizesAndIdentifiesLetters: string;
+  recognizesAndIdentifiesNumbers: string;
+  directedWriting: string;
+  spontaneousWriting: string;
+  readingAndWriting: string;
+  readingAndComprehension: string;
+  textProductionRecord: string;
+  textualStructuring: string;
+  oralTextProduction: string;
+  numbersGreaterMagnitude: string;
+  problemSolving: string;
 }
 
 export interface IIncomeTablesPartTwo {
-  bodyScheme: ITable;
-  sidePointing: ITable;
-  position: ITable;
-  direction: ITable;
-  space: ITable;
-  size: ITable;
-  quantity: ITable;
-  shape: ITable;
-  visualDiscrimination: ITable;
-  hearingDiscrimination: ITable;
-  verbalizationOfWords: ITable;
-  synthesisAnalysis: ITable;
-  fineMotorCoordination: ITable;
+  bodyScheme: string;
+  sidePointing: string;
+  position: string;
+  direction: string;
+  space: string;
+  size: string;
+  quantity: string;
+  shape: string;
+  visualDiscrimination: string;
+  hearingDiscrimination: string;
+  verbalizationOfWords: string;
+  synthesisAnalysis: string;
+  fineMotorCoordination: string;
 }
 
 export interface IIncomeTable {
   _id?: string;
-  GroupA: IIncomeTablesPartOne;
-  GroupB: IIncomeTablesPartTwo;
+  incomeTablesPartOne: IIncomeTablesPartOne;
+  incomeTablesPartTwo: IIncomeTablesPartTwo;
   patient: string;
   date: string | Date;
-}
-
-export interface ITable {
-  no: string;
-  inDevelopment: string;
-  yes: string;
 }

@@ -6,11 +6,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { AnamneseCerebralSchema } from 'src/entities/anamnesis-for-cerebral-palsy.entity';
 
 @Module({
-  imports: [
-      MongooseModule.forFeature([
-        { name: 'afcp', schema: AnamneseCerebralSchema }
-      ])
-    ],
+  imports: [MongooseModule.forFeature([{ name: 'afcp', schema: AnamneseCerebralSchema }])],
   controllers: [AfcpController],
   providers: [AnamnesisForCerebralPalsyService, AfcpRepository],
 })

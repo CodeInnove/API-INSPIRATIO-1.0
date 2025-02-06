@@ -6,36 +6,37 @@ export const IncomeTableSchema = new Schema({
     _id: { type: Schema.Types.ObjectId, required: true, auto: true },
     patient: { type: Schema.Types.ObjectId, ref: 'User', required: true },
     doctor: { type: Schema.Types.ObjectId, ref: 'User', required: true },
-    GroupA:{
-        recognizesAndIdentifiesLetters:{type: String, enum: ['sim', 'nao', 'desenvolvimento']},
-        recognizesAndIdentifiesNumbers:{type: String, enum: ['sim', 'nao', 'desenvolvimento']},
-        directedWriting:{ type: String, enum: ['sim', 'nao', 'desenvolvimento']},
-        spontaneousWriting:{type: String, enum: ['sim', 'nao', 'desenvolvimento']},
-        readingAndWriting:{type: String, enum: ['sim', 'nao', 'desenvolvimento']},
-        readingAndUnderstanding:{type: String, enum: ['sim', 'nao', 'desenvolvimento']},
-        textProductionRegistration:{type: String, enum: ['sim', 'nao', 'desenvolvimento']},
-        textualStructuring:{type: String, enum: ['sim', 'nao', 'desenvolvimento']},
-        oralTextProduction:{type: String, enum: ['sim', 'nao', 'desenvolvimento']},
-        largerNumbers:{type: String, enum: ['sim', 'nao', 'desenvolvimento']},
-        troubleshooting:{type: String, enum: ['sim', 'nao', 'desenvolvimento']},
+    date: { type: Date, required: true },
+    incomeTablesPartOne:{
+        recognizesAndIdentifiesLetters:{type: String,},
+        recognizesAndIdentifiesNumbers:{type: String,},
+        directedWriting:{type: String,},
+        spontaneousWriting:{type: String,},
+        readingAndWriting:{type: String,},
+        readingAndComprehension:{type: String,},
+        textProductionRecord:{type: String,},
+        textualStructuring:{type: String,},
+        oralTextProduction:{type: String,},
+        numbersGreaterMagnitude:{type: String,},
+        problemSolving:{type: String,},
     },
 
 
 
-    GroupB:{
-        bodyScheme:{type: String, enum: ['sim', 'nao', 'desenvolvimento']},
-        sidePointing:{type: String, enum: ['sim', 'nao', 'desenvolvimento']},
-        position:{type: String, enum: ['sim', 'nao', 'desenvolvimento']},
-        direction:{type: String, enum: ['sim', 'nao', 'desenvolvimento']},
-        space:{type: String, enum: ['sim', 'nao', 'desenvolvimento']},
-        size:{type: String, enum: ['sim', 'nao', 'desenvolvimento']},
-        quantity:{type: String, enum: ['sim', 'nao', 'desenvolvimento']},
-        shape:{type: String, enum: ['sim', 'nao', 'desenvolvimento']},
-        visualDiscrimination:{type: String, enum: ['sim', 'nao', 'desenvolvimento']},
-        hearingDiscrimination:{type: String, enum: ['sim', 'nao', 'desenvolvimento']},
-        verbalizationOfWords:{type: String, enum: ['sim', 'nao', 'desenvolvimento']},
-        synthesisAnalysis:{type: String, enum: ['sim', 'nao', 'desenvolvimento']},
-        fineMotorCoordination:{type: String, enum: ['sim', 'nao', 'desenvolvimento']}
+    incomeTablesPartTwo:{
+        bodyScheme:{type: String,},
+        sidePointing:{type: String,},
+        position:{type: String,},
+        direction:{type: String,},
+        space:{type: String,},
+        size:{type: String,},
+        quantity:{type: String,},
+        shape:{type: String,},
+        visualDiscrimination:{type: String,},
+        hearingDiscrimination:{type: String,},
+        verbalizationOfWords:{type: String,},
+        synthesisAnalysis:{type: String,},
+        fineMotorCoordination:{type: String,}
     }
 
 });

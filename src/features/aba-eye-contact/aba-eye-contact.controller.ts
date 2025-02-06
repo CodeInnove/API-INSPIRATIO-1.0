@@ -1,34 +1,35 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, Query } from '@nestjs/common';
 import { AbaEyeContactService } from './aba-eye-contact.service';
 import { CreateAbaEyeContactDto } from './dto/create-aba-eye-contact.dto';
 import { UpdateAbaEyeContactDto } from './dto/update-aba-eye-contact.dto';
+import { QueryAbaEyeContactDto } from './dto/query-aba-eye-contact.dto';
 
-@Controller('aba-eye-contact')
+@Controller('aba-eye-contacts')
 export class AbaEyeContactController {
   constructor(private readonly abaEyeContactService: AbaEyeContactService) {}
 
   @Post()
-  create(@Body() createAbaEyeContactDto: CreateAbaEyeContactDto) {
-    return this.abaEyeContactService.create(createAbaEyeContactDto);
+  async create(@Body() createAbaEyeContactDto: CreateAbaEyeContactDto) {
+    return await this.abaEyeContactService.create(createAbaEyeContactDto);
   }
 
   @Get()
-  findAll() {
-    return this.abaEyeContactService.findAll();
+  async findAll(@Query() query: QueryAbaEyeContactDto) {
+    return await this.abaEyeContactService.findAll(query);
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.abaEyeContactService.findOne(+id);
+  async findOne(@Param('id') id: string) {
+    return await this.abaEyeContactService.findOne(id);
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateAbaEyeContactDto: UpdateAbaEyeContactDto) {
-    return this.abaEyeContactService.update(+id, updateAbaEyeContactDto);
+  async update(@Param('id') id: string, @Body() updateAbaEyeContactDto: UpdateAbaEyeContactDto) {
+    return await this.abaEyeContactService.update(id, updateAbaEyeContactDto);
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.abaEyeContactService.remove(+id);
+  async remove(@Param('id') id: string) {
+    return await this.abaEyeContactService.remove(id);
   }
 }

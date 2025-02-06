@@ -19,8 +19,14 @@ export class AfcpRepository {
   }
 
   async findAll(options: QueryAfcpDto) {
-    const { dateEnd = null, dateInit = null, role = '' } = options;
-
+    const {
+      page = 1,
+      limit = 10,
+      dateEnd = null,
+      dateInit = null,
+      role = '',
+    } = options;
+    const skip = (page - 1) * limit;
     let query = {};
 
     if (role) {
@@ -39,15 +45,18 @@ export class AfcpRepository {
 
     const data = await this.afcpModel
       .find(query)
+      .skip(skip)
+      .limit(limit)
       .populate('doctor')
       .populate('patient')
       .populate('speciality')
       .lean()
       .exec();
 
-    const total = await this.afcpModel.countDocuments(query).exec();
-
-    return { data, total };
+      const total = await this.afcpModel.countDocuments(query).exec();
+      const pages = Math.ceil(total / limit);
+  
+      return { data, total, page: +page, pages };
   }
 
   async findByToken(token: string): Promise<IAnamnesisForCerebralPalsy> {

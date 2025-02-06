@@ -1,142 +1,143 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsNotEmpty, IsString, ValidateNested } from 'class-validator';
+import { IsNotEmpty, IsOptional, IsString, ValidateNested } from 'class-validator';
 import { Type } from 'class-transformer';
 
-class TableDTO {
-  @IsNotEmpty()
-  @ApiProperty()
-  no: string;
-
-  @IsNotEmpty()
-  @ApiProperty()
-  inDevelopment: string;
-
-  @IsNotEmpty()
-  @ApiProperty()
-  yes: string;
-}
 class incomeTablesPartOneDTO {
-  @ValidateNested()
-  @Type(() => TableDTO)
-  @ApiProperty({ type: TableDTO })
-  recognizesAndIdentifiesLetters: TableDTO;
-
-  @ValidateNested()
-  @Type(() => TableDTO)
-  @ApiProperty({ type: TableDTO })
-  recognizesAndIdentifiesNumbers: TableDTO;
-
-  @ValidateNested()
-  @Type(() => TableDTO)
-  @ApiProperty({ type: TableDTO })
-  directedWriting: TableDTO;
-
-  @ValidateNested()
-  @Type(() => TableDTO)
-  @ApiProperty({ type: TableDTO })
-  spontaneousWriting: TableDTO;
-
-  @ValidateNested()
-  @Type(() => TableDTO)
-  @ApiProperty({ type: TableDTO })
-  readingAndWriting: TableDTO;
-
-  @ValidateNested()
-  @Type(() => TableDTO)
-  @ApiProperty({ type: TableDTO })
-  readingAndUnderstanding: TableDTO;
-
-  @ValidateNested()
-  @Type(() => TableDTO)
-  @ApiProperty({ type: TableDTO })
-  textProductionRegistration: TableDTO;
-
-  @ValidateNested()
-  @Type(() => TableDTO)
-  @ApiProperty({ type: TableDTO })
-  textualStructuring: TableDTO;
-
-  @ValidateNested()
-  @Type(() => TableDTO)
-  @ApiProperty({ type: TableDTO })
-  oralTextProduction: TableDTO;
-
-  @ValidateNested()
-  @Type(() => TableDTO)
-  @ApiProperty({ type: TableDTO })
-  largerNumbers: TableDTO;
-
-  @ValidateNested()
-  @Type(() => TableDTO)
-  @ApiProperty({ type: TableDTO })
-  troubleshooting: TableDTO;
+  
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  recognizesAndIdentifiesLetters: string;
+  
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  recognizesAndIdentifiesNumbers: string;
+  
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  directedWriting: string;
+  
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  spontaneousWriting: string;
+  
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  readingAndWriting: string;
+  
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  readingAndComprehension: string;
+  
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  textProductionRecord: string;
+  
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  textualStructuring: string;
+  
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  oralTextProduction: string;
+  
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  numbersGreaterMagnitude: string;
+  
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  problemSolving: string;
 }
 
 class incomeTablesPartTwoDTO {
-  @ValidateNested()
-  @Type(() => TableDTO)
-  @ApiProperty({ type: TableDTO })
-  bodyScheme: TableDTO;
+  
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  bodyScheme: string;
 
-  @ValidateNested()
-  @Type(() => TableDTO)
-  @ApiProperty({ type: TableDTO })
-  sidePointing: TableDTO;
+  
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  sidePointing: string;
 
-  @ValidateNested()
-  @Type(() => TableDTO)
-  @ApiProperty({ type: TableDTO })
-  position: TableDTO;
+  
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  position: string;
 
-  @ValidateNested()
-  @Type(() => TableDTO)
-  @ApiProperty({ type: TableDTO })
-  direction: TableDTO;
+  
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  direction: string;
 
-  @ValidateNested()
-  @Type(() => TableDTO)
-  @ApiProperty({ type: TableDTO })
-  space: TableDTO;
+  
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  space: string;
 
-  @ValidateNested()
-  @Type(() => TableDTO)
-  @ApiProperty({ type: TableDTO })
-  size: TableDTO;
+  
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  size: string;
 
-  @ValidateNested()
-  @Type(() => TableDTO)
-  @ApiProperty({ type: TableDTO })
-  quantity: TableDTO;
+  
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  quantity: string;
 
-  @ValidateNested()
-  @Type(() => TableDTO)
-  @ApiProperty({ type: TableDTO })
-  shape: TableDTO;
+  
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  shape: string;
 
-  @ValidateNested()
-  @Type(() => TableDTO)
-  @ApiProperty({ type: TableDTO })
-  visualDiscrimination: TableDTO;
+  
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  visualDiscrimination: string;
 
-  @ValidateNested()
-  @Type(() => TableDTO)
-  @ApiProperty({ type: TableDTO })
-  hearingDiscrimination: TableDTO;
+  
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  hearingDiscrimination: string;
 
-  @ValidateNested()
-  @Type(() => TableDTO)
-  @ApiProperty({ type: TableDTO })
-  verbalizationOfWords: TableDTO;
+  
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  verbalizationOfWords: string;
 
-  @ValidateNested()
-  @Type(() => TableDTO)
-  @ApiProperty({ type: TableDTO })
-  synthesisAnalysis: TableDTO;
+  
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  synthesisAnalysis: string;
 
-  @ValidateNested()
-  @Type(() => TableDTO)
-  @ApiProperty({ type: TableDTO })
-  fineMotorCoordination: TableDTO;
+  
+  @ApiProperty()
+  @IsOptional()
+  @IsString()
+  fineMotorCoordination: string;
 }
 
 export class CreateTableDto {
@@ -148,13 +149,17 @@ export class CreateTableDto {
   @IsString()
   doctor: string;
 
+  @ApiProperty()
+  @IsString()
+  date: string;
+
   @ValidateNested()
   @Type(() => incomeTablesPartOneDTO)
   @ApiProperty({ type: incomeTablesPartOneDTO })
-  GroupA: incomeTablesPartOneDTO;
+  incomeTablesPartOne: incomeTablesPartOneDTO;
 
   @ValidateNested()
   @Type(() => incomeTablesPartTwoDTO)
   @ApiProperty({ type: incomeTablesPartTwoDTO })
-  GroupB: incomeTablesPartTwoDTO;
+  incomeTablesPartTwo: incomeTablesPartTwoDTO;
 }
