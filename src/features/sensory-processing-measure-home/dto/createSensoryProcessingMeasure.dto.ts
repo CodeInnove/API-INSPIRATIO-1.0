@@ -1,7 +1,7 @@
 import { ApiProperty } from "@nestjs/swagger";
 import { IsString, IsNumber, IsOptional } from "class-validator";
 
-export interface ScoreDto {
+export interface ScoreHomeDto {  // Renomeei para ScoreDto para consistência
     SOC: number;
     VIS: number;
     HEA: number;
@@ -15,319 +15,397 @@ export interface ScoreDto {
 class SocialParticipation {
     @ApiProperty()
     @IsString()
-    playsWithFriends: string;
+    @IsOptional() // Adicionado para tornar opcional
+    playsWithFriends?: string;
 
     @ApiProperty()
     @IsString()
-    interactsWithParents: string;
+    @IsOptional()
+    interactsWithParents?: string;
 
     @ApiProperty()
     @IsString()
-    sharesThings: string;
+    @IsOptional()
+    sharesThings?: string;
 
     @ApiProperty()
     @IsString()
-    maintainsConversation: string;
+    @IsOptional()
+    maintainsConversation?: string;
 
     @ApiProperty()
     @IsString()
-    maintainsEyeContact: string;
+    @IsOptional()
+    maintainsEyeContact?: string;
 
     @ApiProperty()
     @IsString()
-    joinsGames: string;
+    @IsOptional()
+    joinsGames?: string;
 
     @ApiProperty()
     @IsString()
-    participatesInMeals: string;
+    @IsOptional()
+    participatesInMeals?: string;
 
     @ApiProperty()
     @IsString()
-    participatesInFamilyOutings: string;
+    @IsOptional()
+    participatesInFamilyOutings?: string;
 
     @ApiProperty()
     @IsString()
-    participatesInFamilyGatherings: string;
+    @IsOptional()
+    participatesInFamilyGatherings?: string;
 
     @ApiProperty()
     @IsString()
-    participatesInFriendActivities: string;
+    @IsOptional()
+    participatesInFriendActivities?: string;
 }
 
 class Vision {
     @ApiProperty()
     @IsString()
-    botheredByLight: string;
+    @IsOptional()
+    botheredByLight?: string;
 
     @ApiProperty()
     @IsString()
-    difficultyFindingObjects: string;
+    @IsOptional()
+    difficultyFindingObjects?: string;
 
     @ApiProperty()
     @IsString()
-    closesOneEye: string;
+    @IsOptional()
+    closesOneEye?: string;
 
     @ApiProperty()
     @IsString()
-    botheredByVisualStimuli: string;
+    @IsOptional()
+    botheredByVisualStimuli?: string;
 
     @ApiProperty()
     @IsString()
-    difficultyFollowingObjects: string;
+    @IsOptional()
+    difficultyFollowingObjects?: string;
 
     @ApiProperty()
     @IsString()
-    difficultyIdentifyingObjects: string;
+    @IsOptional()
+    difficultyIdentifyingObjects?: string;
 
     @ApiProperty()
     @IsString()
-    enjoysWatchingMovingObjects: string;
+    @IsOptional()
+    enjoysWatchingMovingObjects?: string;
 
 
     @ApiProperty()
     @IsString()
-    walksIntoObjects: string;
+    @IsOptional()
+    walksIntoObjects?: string;
 
     @ApiProperty()
     @IsString()
-    enjoysSwitchingLights: string;
+    @IsOptional()
+    enjoysSwitchingLights?: string;
 
     @ApiProperty()
     @IsString()
-    dislikesCertainLights: string;
+    @IsOptional()
+    dislikesCertainLights?: string;
 
     @ApiProperty()
     @IsString()
-    usesPeripheralVision: string;
+    @IsOptional()
+    usesPeripheralVision?: string;
 }
+
+// Classes Hearing, Touch, SmellAndTaste, BodyAwareness, BalanceAndMovement, PlanningAndIdeation...
+// (Adicione @IsOptional() a todas as propriedades string destas classes)
 
 class Hearing {
     @ApiProperty()
     @IsString()
-    botheredByNormalSounds: string;
+    @IsOptional()
+    botheredByNormalSounds?: string;
 
     @ApiProperty()
     @IsString()
-    reactsNegativelyToLoudNoises: string;
+    @IsOptional()
+    reactsNegativelyToLoudNoises?: string;
 
     @ApiProperty()
     @IsString()
-    seemsNotToHearCertainSounds: string;
+    @IsOptional()
+    seemsNotToHearCertainSounds?: string;
 
     @ApiProperty()
     @IsString()
-    intenseInterestInUnnoticedSounds: string;
+    @IsOptional()
+    intenseInterestInUnnoticedSounds?: string;
 
     @ApiProperty()
     @IsString()
-    scaredByUnexpectedSounds: string;
+    @IsOptional()
+    scaredByUnexpectedSounds?: string;
 
     @ApiProperty()
     @IsString()
-    distractedByBackgroundNoise: string;
+    @IsOptional()
+    distractedByBackgroundNoise?: string;
 
     @ApiProperty()
     @IsString()
-    enjoysMakingRepetitiveNoises: string;
+    @IsOptional()
+    enjoysMakingRepetitiveNoises?: string;
 
     @ApiProperty()
     @IsString()
-    botheredByHighPitchedSounds: string;
+    @IsOptional()
+    botheredByHighPitchedSounds?: string;
 }
 
 class Touch {
     @ApiProperty()
     @IsString()
-    withdrawsFromLightTouch: string;
+    @IsOptional()
+    withdrawsFromLightTouch?: string;
 
     @ApiProperty()
     @IsString()
-    doesNotNoticeBeingTouched: string;
+    @IsOptional()
+    doesNotNoticeBeingTouched?: string;
 
     @ApiProperty()
     @IsString()
-    botheredByNewClothes: string;
+    @IsOptional()
+    botheredByNewClothes?: string;
 
     @ApiProperty()
     @IsString()
-    prefersTouchingOverBeingTouched: string;
+    @IsOptional()
+    prefersTouchingOverBeingTouched?: string;
 
     @ApiProperty()
     @IsString()
-    botheredByNailCutting: string;
+    @IsOptional()
+    botheredByNailCutting?: string;
 
     @ApiProperty()
     @IsString()
-    botheredByFaceTouch: string;
+    @IsOptional()
+    botheredByFaceTouch?: string;
 
     @ApiProperty()
     @IsString()
-    avoidsMessyActivities: string;
+    @IsOptional()
+    avoidsMessyActivities?: string;
 
     @ApiProperty()
     @IsString()
-    highPainTolerance: string;
+    @IsOptional()
+    highPainTolerance?: string;
 
     @ApiProperty()
     @IsString()
-    dislikesToothbrushing: string;
-
-
-    @ApiProperty()
-    @IsString()
-    enjoysPainfulSensations: string;
+    @IsOptional()
+    dislikesToothbrushing?: string;
 
 
     @ApiProperty()
     @IsString()
-    difficultyFindingThingsByTouch: string;
+    @IsOptional()
+    enjoysPainfulSensations?: string;
+
+
+    @ApiProperty()
+    @IsString()
+    @IsOptional()
+    difficultyFindingThingsByTouch?: string;
 }
 
 class SmellAndTaste {
     @ApiProperty()
     @IsString()
-    triesInedibleItems: string;
+    @IsOptional()
+    triesInedibleItems?: string;
 
     @ApiProperty()
     @IsString()
-    gagsAtUnlikedFoods: string;
+    @IsOptional()
+    gagsAtUnlikedFoods?: string;
 
     @ApiProperty()
     @IsString()
-    enjoysSmellingObjects: string;
+    @IsOptional()
+    enjoysSmellingObjects?: string;
 
     @ApiProperty()
     @IsString()
-    discomfortWithSmells: string;
+    @IsOptional()
+    discomfortWithSmells?: string;
 
     @ApiProperty()
     @IsString()
-    ignoresStrongOdors: string;
+    @IsOptional()
+    ignoresStrongOdors?: string;
 }
 
 class BodyAwareness {
     @ApiProperty()
     @IsString()
-    gripsObjectsTooTightly: string;
+    @IsOptional()
+    gripsObjectsTooTightly?: string;
 
     @ApiProperty()
     @IsString()
-    seeksPushingAndPulling: string;
+    @IsOptional()
+    seeksPushingAndPulling?: string;
 
     @ApiProperty()
     @IsString()
-    unsureOfBodyMovements: string;
+    @IsOptional()
+    unsureOfBodyMovements?: string;
 
     @ApiProperty()
     @IsString()
-    holdsObjectsTooLoosely: string;
+    @IsOptional()
+    holdsObjectsTooLoosely?: string;
 
     @ApiProperty()
     @IsString()
-    exertsExcessiveForce: string;
+    @IsOptional()
+    exertsExcessiveForce?: string;
 
     @ApiProperty()
     @IsString()
-    jumpsFrequently: string;
+    @IsOptional()
+    jumpsFrequently?: string;
 
     @ApiProperty()
     @IsString()
-    petsAnimalsTooHard: string;
+    @IsOptional()
+    petsAnimalsTooHard?: string;
 
     @ApiProperty()
     @IsString()
-    pushesOtherChildren: string;
+    @IsOptional()
+    pushesOtherChildren?: string;
 
     @ApiProperty()
     @IsString()
-    chewsObjects: string;
+    @IsOptional()
+    chewsObjects?: string;
 
     @ApiProperty()
     @IsString()
-    breaksObjectsFromForce: string;
+    @IsOptional()
+    breaksObjectsFromForce?: string;
 }
 
 class BalanceAndMovement {
     @ApiProperty()
     @IsString()
-    exaggeratedFearOfMovement: string;
+    @IsOptional()
+    exaggeratedFearOfMovement?: string;
 
     @ApiProperty()
     @IsString()
-    goodBalance: string;
+    @IsOptional()
+    goodBalance?: string;
 
     @ApiProperty()
     @IsString()
-    avoidsBalanceActivities: string;
+    @IsOptional()
+    avoidsBalanceActivities?: string;
 
     @ApiProperty()
     @IsString()
-    fallsFromChair: string;
+    @IsOptional()
+    fallsFromChair?: string;
 
     @ApiProperty()
     @IsString()
-    poorBodyControlWhenFalling: string;
+    @IsOptional()
+    poorBodyControlWhenFalling?: string;
     @ApiProperty()
     @IsString()
-    doesNotGetDizzy: string;
+    @IsOptional()
+    doesNotGetDizzy?: string;
 
     @ApiProperty()
     @IsString()
-    spinsBodyFrequently: string;
+    @IsOptional()
+    spinsBodyFrequently?: string;
 
     @ApiProperty()
     @IsString()
-    distressedByHeadTilting: string;
+    @IsOptional()
+    distressedByHeadTilting?: string;
 
     @ApiProperty()
     @IsString()
-    clumsyMotorCoordination: string;
+    @IsOptional()
+    clumsyMotorCoordination?: string;
 
     @ApiProperty()
     @IsString()
-    fearOfElevators: string;
+    @IsOptional()
+    fearOfElevators?: string;
 
     @ApiProperty()
     @IsString()
-    leansOnObjects: string;
+    @IsOptional()
+    leansOnObjects?: string;
 }
 
 class PlanningAndIdeation {
     @ApiProperty()
     @IsString()
-    inconsistentDailyTasks: string;
+    @IsOptional()
+    inconsistentDailyTasks?: string;
 
     @ApiProperty()
     @IsString()
-    difficultyCarryingMultipleObjects: string;
+    @IsOptional()
+    difficultyCarryingMultipleObjects?: string;
 
     @ApiProperty()
     @IsString()
-    confusionOrganizingMaterials: string;
+    @IsOptional()
+    confusionOrganizingMaterials?: string;
 
     @ApiProperty()
     @IsString()
-    troubleSequentialTasks: string;
+    @IsOptional()
+    troubleSequentialTasks?: string;
 
     @ApiProperty()
     @IsString()
-    difficultyCompletingMultiStepTasks: string;
+    @IsOptional()
+    difficultyCompletingMultiStepTasks?: string;
 
     @ApiProperty()
     @IsString()
-    troubleImitatingActions: string;
+    @IsOptional()
+    troubleImitatingActions?: string;
 
     @ApiProperty()
     @IsString()
-    difficultyCopyingModels: string;
+    @IsOptional()
+    difficultyCopyingModels?: string;
 
     @ApiProperty()
     @IsString()
-    troubleGeneratingActivityIdeas: string;
+    @IsOptional()
+    troubleGeneratingActivityIdeas?: string;
 
     @ApiProperty()
     @IsString()
-    repeatsSameActivities: string;
+    @IsOptional()
+    repeatsSameActivities?: string;
 }
 
 
@@ -358,11 +436,8 @@ export class CreateSensoryProcessingMeasureHomeDto {
 
     @ApiProperty()
     @IsString()
-    //bitrhDate: string;
+    birthDate: string;
 
-    @ApiProperty()
-    @IsString()
-    //ethnicity: string;
 
     @ApiProperty()
     @IsString()
@@ -374,29 +449,36 @@ export class CreateSensoryProcessingMeasureHomeDto {
 
 
     @ApiProperty()
-    participationSocial: SocialParticipation;
+    @IsOptional()
+    participationSocial?: SocialParticipation;
 
     @ApiProperty()
-    vision: Vision;
+    @IsOptional()
+    vision?: Vision;
 
     @ApiProperty()
-    hearing: Hearing;
+    @IsOptional()
+    hearing?: Hearing;
 
     @ApiProperty()
-    touch: Touch;
+    @IsOptional()
+    touch?: Touch;
 
     @ApiProperty()
-    smellAndTaste: SmellAndTaste;
+    @IsOptional()
+    smellAndTaste?: SmellAndTaste;
 
     @ApiProperty()
-    bodyAwareness: BodyAwareness;
+    @IsOptional()
+    bodyAwareness?: BodyAwareness;
 
     @ApiProperty()
-    balanceAndMovement: BalanceAndMovement;
+    @IsOptional()
+    balanceAndMovement?: BalanceAndMovement;
 
     @ApiProperty()
-    planningAndIdeation: PlanningAndIdeation;
-    
+    @IsOptional()
+    planningAndIdeation?: PlanningAndIdeation;
     @ApiProperty()
-    scores: ScoreDto;
+    scoresHome?: ScoreHomeDto; // Renomeado e movido para dentro do DTO principal
 }

@@ -5,7 +5,7 @@ import { UpdateSensoryProcessingMeasureDto } from './dto/updateSensoryProcessing
 import { ApiTags } from '@nestjs/swagger';
 import { QuerySpmHomeDto } from './dto/querySensoryProcessingMeasure.dto';
 
-@ApiTags('SPM Hom')
+@ApiTags('SPM Home')
 @Controller('sensory-processing-measure')
 export class SensoryProcessingMeasureController {
   constructor(private readonly sensoryProcessingMeasureService: SensoryProcessingMeasureService) {}

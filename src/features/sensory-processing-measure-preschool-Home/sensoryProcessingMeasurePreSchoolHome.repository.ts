@@ -80,11 +80,6 @@ export class SpmPreSchoolHomeRepository {
 
   async findById(id: string): Promise<ISensoryProcessingMeasurePreschoolEntity> {
     return this.spmPreSchoolHomeModel.findById(id)
-      .populate('patients')
-      .populate('doctors')
-      .populate('responsible')
-      .populate('speciality')
-      .select('Consultation')
       .lean()
       .exec();
   }

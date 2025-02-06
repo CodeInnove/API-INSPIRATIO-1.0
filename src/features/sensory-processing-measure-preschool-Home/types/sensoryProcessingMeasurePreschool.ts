@@ -1,12 +1,4 @@
-export enum Ethnicity {
-  AMERICAN_INDIAN_ALASKA_NATIVE = 'American Indian/Alaska Native',
-  ASIAN = 'Asian',
-  BLACK_AFRICAN_AMERICAN = 'Black/African American',
-  HISPANIC_LATINO = 'Hispanic/Latino',
-  NATIVE_HAWAIIAN_PACIFIC_ISLANDER = 'Native Hawaiian/Pacific Islander',
-  WHITE = 'White',
-  OTHER = 'Other',
-}
+
 
 export interface ISocialParticipationPreSchool {
   playsWithFriendsPreSchool: 'N' | 'O' | 'F' | 'S';
@@ -114,9 +106,8 @@ export interface ISpmpSchool {
   patient: string;
   gender: 'M' | 'F';
   age: number;
-  birthDate: string;
-  ethnicity: Ethnicity;
-  date: string;
+  birthDate: string | Date;
+  date: string | Date;
   comment?: string;
   scores: {
       SOC: number;

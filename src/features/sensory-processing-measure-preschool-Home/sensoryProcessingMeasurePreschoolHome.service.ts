@@ -2,11 +2,9 @@ import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { CreateSensoryProcessingMeasurePreschoolDto, ScoreDto } from './dto/createSensoryProcessingMeasurePreschool.dto';
 import { SpmPreSchoolHomeRepository } from './sensoryProcessingMeasurePreSchoolHome.repository';
 import { ISensoryProcessingMeasurePreschoolEntity } from 'src/entities/sensoryProcessingMeasurePreschoolHome.entity';
-import { Ethnicity, ISpmpSchool } from './types/sensoryProcessingMeasurePreschool';
 import { UpdateSensoryProcessingMeasurePreschoolDto } from './dto/updateSensoryProcessingMeasurePreschool.dto';
 import { QuerySpmPreSchoolHomeDto } from './dto/querySensoryProcessingMeasurePreschool.dto';
 
-type SpmpData = Omit<ISpmpSchool, 'scores'> & { scores: { [key: string]: number } }
 
 @Injectable()
 export class SensoryProcessingMeasurePreschoolService {
@@ -14,134 +12,68 @@ export class SensoryProcessingMeasurePreschoolService {
         private readonly spmPreSchoolHomeRepository: SpmPreSchoolHomeRepository,
     ) { }
 
-    private scoreMap = { 'N': 1, 'O': 2, 'F': 3, 'S': 4 };
-
-   private calculateScores(data: CreateSensoryProcessingMeasurePreschoolDto | UpdateSensoryProcessingMeasurePreschoolDto): ScoreDto {
-        const scores = { SOC: 0, VIS: 0, HEA: 0, TOU: 0, ITEMS: 0, BOD: 0, BAL: 0, PLA: 0 };
-
-        const sumScores = (category: keyof typeof scores, values: any) => {
-            if(values) {
-              for (const key in values) {
-                 if (typeof values[key] === 'string') {
-                    scores[category] += this.scoreMap[values[key]] || 0;
-                   }
-              }
-           }
-        };
-        
-    sumScores('SOC', data.participationSocialPreSchool);
-    sumScores('VIS', data.visionPreSchool);
-    sumScores('HEA', data.hearingPreSchool);
-    sumScores('TOU', data.touchPreSchool);
-    sumScores('ITEMS', data.smellAndTastePreSchool);
-    sumScores('BOD', data.bodyAwarenessPreSchool);
-    sumScores('BAL', data.balanceAndMovementPreSchool);
-    sumScores('PLA', data.planningAndIdeationPreSchool);
-
-        return scores as ScoreDto;
-    }
-
-    private transformProperties<T>(obj: Record<string, any> | undefined): T | undefined {
-        if (!obj) {
-            return undefined;
-        }
-        const transformed: Record<string, 'N' | 'O' | 'F' | 'S'> = {};
-        for (const key in obj) {
-          if (obj.hasOwnProperty(key) && typeof obj[key] === 'string' && ['N', 'O', 'F', 'S'].includes(obj[key])) {
-            transformed[key] = obj[key] as 'N' | 'O' | 'F' | 'S';
-          }
-        }
-        return transformed as T;
-    }
-
- private transformDtoToSpmp(data: CreateSensoryProcessingMeasurePreschoolDto): CreateSensoryProcessingMeasurePreschoolDto {
-        const { participationSocialPreSchool, visionPreSchool, hearingPreSchool, touchPreSchool, smellAndTastePreSchool, bodyAwarenessPreSchool, balanceAndMovementPreSchool, planningAndIdeationPreSchool, birthDate, doctor, responsable, relationshipWithChild, patient, date, age, ethnicity, gender, comment, ...rest } = data;
-          const scores = this.calculateScores(data);
-          return {
-             ...rest,
-            birthDate: birthDate,
-            ethnicity: ethnicity as Ethnicity,
-            gender: gender as 'M' | 'F',
-            doctor: doctor,
-            responsable: responsable,
-            relationshipWithChild: relationshipWithChild,
-            patient: patient,
-            date: date,
-            age: age,
-            comment: comment,
-            scores: {
-                SOC: scores.SOC,
-                VIS: scores.VIS,
-                HEA: scores.HEA,
-                TOU: scores.TOU,
-                ITEMS: scores.ITEMS,
-                BOD: scores.BOD,
-                BAL: scores.BAL,
-                PLA: scores.PLA,
-                },
-            participationSocialPreSchool: this.transformProperties(participationSocialPreSchool),
-            visionPreSchool: this.transformProperties(visionPreSchool),
-            hearingPreSchool: this.transformProperties(hearingPreSchool),
-            touchPreSchool: this.transformProperties(touchPreSchool),
-            smellAndTastePreSchool: this.transformProperties(smellAndTastePreSchool),
-            bodyAwarenessPreSchool: this.transformProperties(bodyAwarenessPreSchool),
-            balanceAndMovementPreSchool: this.transformProperties(balanceAndMovementPreSchool),
-            planningAndIdeationPreSchool: this.transformProperties(planningAndIdeationPreSchool),
-            
-        }
-    }
-
-
-    private transformUpdateDtoToSpmp(data: UpdateSensoryProcessingMeasurePreschoolDto): UpdateSensoryProcessingMeasurePreschoolDto {
-      const { participationSocialPreSchool, 
-        visionPreSchool, hearingPreSchool, 
-        touchPreSchool, 
-        smellAndTastePreSchool, 
-        bodyAwarenessPreSchool, 
-        balanceAndMovementPreSchool, 
-        planningAndIdeationPreSchool,
-         birthDate, doctor, responsable,
-          relationshipWithChild, patient,
-           date, age, ethnicity, gender, 
-           comment, ...rest } = data;
-       const scores = this.calculateScores(data);
-        return {
-            ...rest,
-            birthDate: birthDate,
-            ethnicity: ethnicity as Ethnicity,
-             gender: gender as 'M' | 'F',
-            doctor: doctor,
-            responsable: responsable,
-            relationshipWithChild: relationshipWithChild,
-            patient: patient,
-              date: date,
-             age: age,
-              comment: comment,
-              scores: {
-                    SOC: scores.SOC,
-                    VIS: scores.VIS,
-                    HEA: scores.HEA,
-                    TOU: scores.TOU,
-                    ITEMS: scores.ITEMS,
-                    BOD: scores.BOD,
-                    BAL: scores.BAL,
-                    PLA: scores.PLA
-                },
-            participationSocialPreSchool: this.transformProperties(participationSocialPreSchool),
-            visionPreSchool: this.transformProperties(visionPreSchool),
-            hearingPreSchool: this.transformProperties(hearingPreSchool),
-            touchPreSchool: this.transformProperties(touchPreSchool),
-            smellAndTastePreSchool: this.transformProperties(smellAndTastePreSchool),
-            bodyAwarenessPreSchool: this.transformProperties(bodyAwarenessPreSchool),
-            balanceAndMovementPreSchool: this.transformProperties(balanceAndMovementPreSchool),
-            planningAndIdeationPreSchool: this.transformProperties(planningAndIdeationPreSchool),
-        }
-    }
+      private scoreMap = { 'N': 1, 'O': 2, 'F': 3, 'S': 4 };
+     
+         private calculateScoresSpmHome(data: CreateSensoryProcessingMeasurePreschoolDto | UpdateSensoryProcessingMeasurePreschoolDto): ScoreDto {
+             const scores: ScoreDto = {
+                 SOC: 0, VIS: 0, HEA: 0, TOU: 0, ITEMS: 0, BOD: 0, BAL: 0, PLA: 0
+             };
+     
+             const sumScores = (category: keyof ScoreDto, values: any) => {
+                 if (values) {
+                     for (const key in values) {
+                         if (typeof values[key] === 'string') {
+                             scores[category] += this.scoreMap[values[key]] || 0;
+                         }
+                     }
+                 }
+             };
+     
+             sumScores('SOC', data.participationSocialPreSchool);
+             sumScores('VIS', data.visionPreSchool);
+             sumScores('HEA', data.hearingPreSchool);
+             sumScores('TOU', data.touchPreSchool);
+             sumScores('ITEMS', data.smellAndTastePreSchool);
+             sumScores('BOD', data.bodyAwarenessPreSchool);
+             sumScores('BAL', data.balanceAndMovementPreSchool);
+             sumScores('PLA', data.planningAndIdeationPreSchool);
+     
+             return scores;
+         }
+     
+         private transformPropertiesSpmSchool<T>(obj: Record<string, any> | undefined): T | undefined {
+             if (!obj) return undefined;
+     
+             const transformed: Record<string, 'N' | 'O' | 'F' | 'S'> = {};
+             for (const key in obj) {
+                 if (obj.hasOwnProperty(key) && typeof obj[key] === 'string' && ['N', 'O', 'F', 'S'].includes(obj[key])) {
+                     transformed[key] = obj[key] as 'N' | 'O' | 'F' | 'S';
+                 }
+             }
+             return transformed as T;
+         }
+     
+         private transformDtoToSpmHomePreSchool(data: CreateSensoryProcessingMeasurePreschoolDto): CreateSensoryProcessingMeasurePreschoolDto {
+             const scores = this.calculateScoresSpmHome(data);
+     
+             return {
+                 ...data,
+                 scores,
+                 participationSocialPreSchool: this.transformPropertiesSpmSchool(data.participationSocialPreSchool),
+                 visionPreSchool: this.transformPropertiesSpmSchool(data.visionPreSchool),
+                 hearingPreSchool: this.transformPropertiesSpmSchool(data.hearingPreSchool),
+                 touchPreSchool: this.transformPropertiesSpmSchool(data.touchPreSchool),
+                 smellAndTastePreSchool: this.transformPropertiesSpmSchool(data.smellAndTastePreSchool),
+                 bodyAwarenessPreSchool: this.transformPropertiesSpmSchool(data.bodyAwarenessPreSchool),
+                 balanceAndMovementPreSchool: this.transformPropertiesSpmSchool(data.balanceAndMovementPreSchool),
+                 planningAndIdeationPreSchool: this.transformPropertiesSpmSchool(data.planningAndIdeationPreSchool),
+             };
+         }
 
 
     async create(data: CreateSensoryProcessingMeasurePreschoolDto): Promise<ISensoryProcessingMeasurePreschoolEntity> {
         try {
-            const spmpData = this.transformDtoToSpmp(data);
+            const spmpData = this.transformDtoToSpmHomePreSchool(data);
             return await this.spmPreSchoolHomeRepository.create(spmpData);
         } catch (error) {
             throw new HttpException(error, HttpStatus.BAD_REQUEST);
@@ -166,8 +98,23 @@ export class SensoryProcessingMeasurePreschoolService {
 
     async update(id: string, update: UpdateSensoryProcessingMeasurePreschoolDto): Promise<ISensoryProcessingMeasurePreschoolEntity> {
         try {
-            const spmpData = this.transformUpdateDtoToSpmp(update);
-            return await this.spmPreSchoolHomeRepository.update(id, spmpData);
+           //  Buscar os dados atuais no banco para preencher valores ausentes
+                         const existingRecord = await this.spmPreSchoolHomeRepository.findById(id);
+                         if (!existingRecord) {
+                             throw new HttpException('Registro não encontrado', HttpStatus.NOT_FOUND);
+                         }
+                 
+                         //  Garantir que as propriedades obrigatórias sempre tenham um valor
+                         const completeUpdate: CreateSensoryProcessingMeasurePreschoolDto = {
+                             ...existingRecord.toObject(), // Mantém os valores atuais do banco
+                             ...update, // Substitui apenas os campos enviados na atualização
+                         };
+                 
+                         // Transformar os dados e atualizar no banco
+                         const spmpData = this.transformDtoToSpmHomePreSchool(completeUpdate);
+                         const updatedRecord = await this.spmPreSchoolHomeRepository.update(id, spmpData);
+                 
+                         return updatedRecord.toObject();
         } catch (error) {
             throw new HttpException(error, HttpStatus.BAD_REQUEST);
         }

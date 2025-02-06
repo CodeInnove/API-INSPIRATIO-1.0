@@ -1,8 +1,9 @@
-import { Controller, Get, Post, Body, Param, Delete, Put } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param, Delete, Put, Query } from '@nestjs/common';
 import { SensoryProcessingMeasureSchoolPreschoolService } from './sensoryProcessingMeasureSchoolPreSchool.service';
 import { CreateSensoryProcessingMeasureSchoolPreschoolDto } from './dto/createSensoryProcessingMeasureSchoolPreSchool.dto';
 import { UpdateSensoryProcessingMeasureSchoolPreschoolDto } from './dto/updateSensoryProcessingMeasureSchoolPreSchool.dto';
 import { ApiTags } from '@nestjs/swagger';
+import { QuerySpmSchoolPreSchoolDto } from './dto/querySensoryProcessingMeasureSchoolPreSchool.dto';
 
 @ApiTags('SPM PreSchool School')
 @Controller('sensory-processing-measure-PreSchool-School')
@@ -15,13 +16,13 @@ export class SensoryProcessingMeasureSchoolPreschoolController {
   }
 
   @Get()
-  async findAll() {
-    return await this.sensoryProcessingMeasureSchool.findAll();
+  async findAll(@Query() query: QuerySpmSchoolPreSchoolDto) {
+    return await this.sensoryProcessingMeasureSchool.findAll(query);
   }
 
   @Get(':id')
-  async findOne(@Param('id') id: string) {
-    return await this.sensoryProcessingMeasureSchool.findOne(id);
+  async findById(@Param('id') id: string) {
+    return await this.sensoryProcessingMeasureSchool.findById (id);
   }
 
   @Put(':id')

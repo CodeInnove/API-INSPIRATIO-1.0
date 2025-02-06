@@ -1,6 +1,18 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { IsString } from 'class-validator';
 
+
+export interface ScoreSchoolPreSchoolDto {  // Renomeei para ScoreDto para consistência
+  SOC: number;
+  VIS: number;
+  HEA: number;
+  TOU: number;
+  ITEMS: number;
+  BOD: number;
+  BAL: number;
+  PLA: number;
+}
+
 export class ParticipationSocialSchoolPreSchoolDto {
     @ApiProperty()
     @IsString()
@@ -315,13 +327,16 @@ export class ParticipationSocialSchoolPreSchoolDto {
 
 
 export class CreateSensoryProcessingMeasureSchoolPreschoolDto {
-  @ApiProperty()
-  @IsString()
-  doctor: string;
-  
-  @ApiProperty()
-  @IsString()
-  //responsable: string;
+    @ApiProperty()
+    date: string;
+
+    @ApiProperty()
+    @IsString()
+    doctor: string;
+
+    @ApiProperty()
+    @IsString()
+    responsable: string;
 
   @ApiProperty()
   @IsString()
@@ -338,16 +353,12 @@ export class CreateSensoryProcessingMeasureSchoolPreschoolDto {
   @ApiProperty()
   //age: number;
 
-  @ApiProperty()
-  //bitrhDate: string;
+    @ApiProperty()
+    bitrhDate: string;
 
-  @ApiProperty()
-  //ethnicity: string;
+    @ApiProperty()
+    comment: string;
 
-  @ApiProperty()
-  date: string;
-
-    
     @ApiProperty()
     participationSocialSpmsps: ParticipationSocialSchoolPreSchoolDto;
     @ApiProperty()
@@ -364,4 +375,7 @@ export class CreateSensoryProcessingMeasureSchoolPreschoolDto {
     balanceAndMovementSpmsps: BalanceAndMovementSchoolPreSchoolDto;
     @ApiProperty()
     planningAndIdeationSpmsps: PlanningAndIdeationSchoolPreSchoolDto;
+
+    @ApiProperty()
+    scoresSchoolPreSchool: ScoreSchoolPreSchoolDto
 }

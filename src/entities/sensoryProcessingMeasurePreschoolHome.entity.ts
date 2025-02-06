@@ -1,5 +1,4 @@
 import { Schema, Document } from 'mongoose';
-import { Ethnicity } from 'src/features/sensory-processing-measure-home/types/sensoryProcessingMeasure';
 import { ISpmpSchool } from 'src/features/sensory-processing-measure-preschool-Home/types/sensoryProcessingMeasurePreschool';
 
 
@@ -13,7 +12,6 @@ export const SensoryProcessingMeasurePreschoolSchema = new Schema({
   gender: { type: String, required: false, enum: ['M', 'F'] },
   age: { type: Number, required: false},
   birthDate: { type: String, required: false},
-  ethnicity: { type: String, required: false, enum: Ethnicity },
   comment: { type: String, required: false },
   participationSocialPreSchool: { 
     playsWithFriendsPreSchool: { type: String, required: false, enum: ['N', 'O', 'F', 'S']},

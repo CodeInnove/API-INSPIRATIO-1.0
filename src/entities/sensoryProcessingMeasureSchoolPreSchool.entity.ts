@@ -1,6 +1,5 @@
 import { Schema, Document } from 'mongoose';
-import { Ethnicity } from 'src/features/sensory-processing-measure-school-preschool/types/sensoryProcessingMeasureSchoolPreSchool';
-import { ISpmsps } from 'src/features/sensory-processing-measure-school-preschool/types/spmsps';
+import { ISpmPreSchool } from 'src/features/sensory-processing-measure-school-preschool/types/sensoryProcessingMeasureSchoolPreSchool'; 
 
 export const SensoryProcessingMeasureSchoolPreSchoolSchema = new Schema({
   _id: { type: Schema.Types.ObjectId, required: true, auto: true },
@@ -8,11 +7,11 @@ export const SensoryProcessingMeasureSchoolPreSchoolSchema = new Schema({
   //responsable: { type: Schema.Types.ObjectId, required: true, ref: 'User' },
   //relationshipWithChild: { type: String, required: false},
   patient: { type: Schema.Types.ObjectId, required: true, ref: 'User' },
-  //gender: { type: String, required: false, enum: ['M', 'F'] },
-  //age: { type: Number, required: false},
-  //bitrhDate: { type: String, required: false},
-  //ethnicity: { type: String, required: false, enum: Ethnicity },
+  gender: { type: String, required: false, enum: ['M', 'F'] },
+  age: { type: Number, required: false},
+  bitrhDate: { type: String, required: false},
   date: { type: String, required: true, },
+  comment: { type: String, required: false },
   participationSocialSpmsps: {
     participatesInGamesAndActivitiesSchoolPreSchool: { type: String, required: false},
     waitsForTurnSchoolPreSchool: { type: String, required: false},
@@ -92,17 +91,27 @@ export const SensoryProcessingMeasureSchoolPreSchoolSchema = new Schema({
     difficultyWithRhythmicBodyMovementsSchoolPreSchool: { type: String, required: false},
   },
   planningAndIdeationSpmsps: { 
-    overlyFocusedOnIndividualActivitiesSchoolPreSchool: { type: String, required: false},
-    strugglesToGenerateNewIdeasInPlaySchoolPreSchool: { type: String, required: false},
-    repeatsActivitiesWithoutChangingThemSchoolPreSchool: { type: String, required: false},
-    needsRealObjectsToPlaySchoolPreSchool: { type: String, required: false},
-    strugglesToImitateActionsCorrectlySchoolPreSchool: { type: String, required: false},
-    playsWithOwnGamesAvoidingImitationSchoolPreSchool: { type: String, required: false},
-    strugglesToCopyAdultsOrPeersInBuildingActivitiesSchoolPreSchool: { type: String, required: false},
-    hasDifficultyUsingBothHandsForTasksSchoolPreSchool: { type: String, required: false},
-    cannotCompleteMultistepTasksSchoolPreSchool: { type: String, required: false},
-    strugglesWithRoutineSequencesSchoolPreSchool: { type: String, required: false},
+    overlyFocusedOnIndividualActivitiesSchoolPreSchool: { type: String, required: false, enum: ['N', 'O', 'F', 'S']},
+    strugglesToGenerateNewIdeasInPlaySchoolPreSchool: { type: String, required: false, enum: ['N', 'O', 'F', 'S']},
+    repeatsActivitiesWithoutChangingThemSchoolPreSchool: { type: String, required: false, enum: ['N', 'O', 'F', 'S']},
+    needsRealObjectsToPlaySchoolPreSchool: { type: String, required: false, enum: ['N', 'O', 'F', 'S']},
+    strugglesToImitateActionsCorrectlySchoolPreSchool: { type: String, required: false, enum: ['N', 'O', 'F', 'S']},
+    playsWithOwnGamesAvoidingImitationSchoolPreSchool: { type: String, required: false, enum: ['N', 'O', 'F', 'S']},
+    strugglesToCopyAdultsOrPeersInBuildingActivitiesSchoolPreSchool: { type: String, required: false, enum: ['N', 'O', 'F', 'S']},
+    hasDifficultyUsingBothHandsForTasksSchoolPreSchool: { type: String, required: false, enum: ['N', 'O', 'F', 'S']},
+    cannotCompleteMultistepTasksSchoolPreSchool: { type: String, required: false, enum: ['N', 'O', 'F', 'S']},
+    strugglesWithRoutineSequencesSchoolPreSchool: { type: String, required: false, enum: ['N', 'O', 'F', 'S']},
   },
+  scoresSchoolPreSchool: {
+    SOC: { type: Number, default: 0 },
+    VIS: { type: Number, default: 0 },
+    HEA: { type: Number, default: 0 },
+    TOU: { type: Number, default: 0 },
+    ITEMS: { type: Number, default: 0 },
+    BOD: { type: Number, default: 0 },
+    BAL: { type: Number, default: 0 },
+    PLA: { type: Number, default: 0 },
+},
 });
 
-export interface ISensoryProcessingMeasureSchoolPreSchoolEntity extends Omit<ISpmsps, '_id'>, Document {}
+export interface ISensoryProcessingMeasureSchoolPreSchoolEntity extends Omit<ISpmPreSchool, '_id'>, Document {}

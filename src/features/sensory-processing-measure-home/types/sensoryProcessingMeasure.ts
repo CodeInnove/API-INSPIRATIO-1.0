@@ -1,12 +1,4 @@
-export enum Ethnicity {
-  AMERICAN_INDIAN_ALASKA_NATIVE = 'American Indian/Alaska Native',
-  ASIAN = 'Asian',
-  BLACK_AFRICAN_AMERICAN = 'Black/African American',
-  HISPANIC_LATINO = 'Hispanic/Latino',
-  NATIVE_HAWAIIAN_PACIFIC_ISLANDER = 'Native Hawaiian/Pacific Islander',
-  WHITE = 'White',
-  OTHER = 'Other',
-}
+
 
 export interface IParticipationSocial {
   playsWithFriends: 'N' | 'O' | 'F' | 'S';
@@ -117,10 +109,9 @@ export interface ISpmpHome {
   gender: 'M' | 'F';
   age: number;
   birthDate: string;
-  ethnicity: Ethnicity;
   date: string;
   comment?: string;
-    scores: {
+  scoresHome: {
       SOC: number;
       VIS: number;
       HEA: number;

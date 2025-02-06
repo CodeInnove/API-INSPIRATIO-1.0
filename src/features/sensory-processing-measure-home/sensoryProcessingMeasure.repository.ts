@@ -2,17 +2,17 @@ import { Injectable } from "@nestjs/common";
 import { InjectModel } from "@nestjs/mongoose";
 import { Model } from "mongoose";
 import { CreateSensoryProcessingMeasureHomeDto } from "./dto/createSensoryProcessingMeasure.dto";
-import { ISensoryProcessingMeasureEntity } from "src/entities/sensoryProcessingMeasureHome.entity";
+import { ISpmHomeEntity } from "src/entities/sensoryProcessingMeasureHome.entity";
 import { UpdateSensoryProcessingMeasureDto } from "./dto/updateSensoryProcessingMeasure.dto";
 import { QuerySpmHomeDto } from "./dto/querySensoryProcessingMeasure.dto";
 
 @Injectable()
 export class SpmHomeRepository {
   constructor(
-    @InjectModel('SPMHome') private readonly spmHomeModel: Model<ISensoryProcessingMeasureEntity>
+    @InjectModel('SPMHome') private readonly spmHomeModel: Model<ISpmHomeEntity>
   ) {}
 
-  async create(data: CreateSensoryProcessingMeasureHomeDto): Promise<ISensoryProcessingMeasureEntity> {
+  async create(data: CreateSensoryProcessingMeasureHomeDto): Promise<ISpmHomeEntity> {
     return await this.spmHomeModel.create(data);
   }
 
@@ -77,22 +77,17 @@ export class SpmHomeRepository {
     return { data, total, page: +page, pages };
   }
 
- async findById(id: string): Promise<ISensoryProcessingMeasureEntity> {
+ async findById(id: string): Promise<ISpmHomeEntity> {
      return this.spmHomeModel.findById(id)
-       .populate('patients')
-       .populate('doctors')
-       .populate('responsible')
-       .populate('speciality')
-       .select('Consultation')
        .lean()
        .exec();
    }
 
-  async update(id: string, data: UpdateSensoryProcessingMeasureDto): Promise<ISensoryProcessingMeasureEntity> {
+  async update(id: string, data: UpdateSensoryProcessingMeasureDto): Promise<ISpmHomeEntity> {
     return await this.spmHomeModel.findByIdAndUpdate(id, data, { new: true }).exec();
   }
 
-  async delete(id: string): Promise<ISensoryProcessingMeasureEntity> {
+  async delete(id: string): Promise<ISpmHomeEntity> {
     return await this.spmHomeModel.findByIdAndDelete(id).exec();
   }
 }
