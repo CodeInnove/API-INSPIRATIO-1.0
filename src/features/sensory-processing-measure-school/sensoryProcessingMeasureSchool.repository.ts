@@ -72,15 +72,10 @@ export class SpmSchoolRepository {
     
         return { data, total, page: +page, pages };
       }
-  QuerySpmSchoolDto
+
 
   async findById(id: string): Promise<ISensoryProcessingMeasureSchoolEntity> {
     return this.spmSchoolModel.findById(id)
-      .populate('patients')
-      .populate('doctors')
-      .populate('responsible')
-      .populate('speciality')
-      .select('Consultation')
       .lean()
       .exec();
   }

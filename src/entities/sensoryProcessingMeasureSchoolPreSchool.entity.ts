@@ -1,6 +1,5 @@
 import { Schema, Document } from 'mongoose';
-import { Ethnicity } from 'src/features/sensory-processing-measure-school-preschool/types/sensoryProcessingMeasureSchoolPreSchool';
-import { ISpmsps } from 'src/features/sensory-processing-measure-school-preschool/types/spmsps';
+import { ISpmPreSchool } from 'src/features/sensory-processing-measure-school-preschool/types/sensoryProcessingMeasureSchoolPreSchool'; 
 
 export const SensoryProcessingMeasureSchoolPreSchoolSchema = new Schema({
   _id: { type: Schema.Types.ObjectId, required: true, auto: true },
@@ -11,8 +10,8 @@ export const SensoryProcessingMeasureSchoolPreSchoolSchema = new Schema({
   gender: { type: String, required: false, enum: ['M', 'F'] },
   age: { type: Number, required: false},
   bitrhDate: { type: String, required: false},
-  ethnicity: { type: String, required: false, enum: Ethnicity },
   date: { type: String, required: true, },
+  comment: { type: String, required: false },
   participationSocialSpmsps: {
     participatesInGamesAndActivitiesSchoolPreSchool: { type: String, required: false, enum: ['N', 'O', 'F', 'S']},
     waitsForTurnSchoolPreSchool: { type: String, required: false, enum: ['N', 'O', 'F', 'S']},
@@ -103,6 +102,16 @@ export const SensoryProcessingMeasureSchoolPreSchoolSchema = new Schema({
     cannotCompleteMultistepTasksSchoolPreSchool: { type: String, required: false, enum: ['N', 'O', 'F', 'S']},
     strugglesWithRoutineSequencesSchoolPreSchool: { type: String, required: false, enum: ['N', 'O', 'F', 'S']},
   },
+  scoresSchoolPreSchool: {
+    SOC: { type: Number, default: 0 },
+    VIS: { type: Number, default: 0 },
+    HEA: { type: Number, default: 0 },
+    TOU: { type: Number, default: 0 },
+    ITEMS: { type: Number, default: 0 },
+    BOD: { type: Number, default: 0 },
+    BAL: { type: Number, default: 0 },
+    PLA: { type: Number, default: 0 },
+},
 });
 
-export interface ISensoryProcessingMeasureSchoolPreSchoolEntity extends Omit<ISpmsps, '_id'>, Document {}
+export interface ISensoryProcessingMeasureSchoolPreSchoolEntity extends Omit<ISpmPreSchool, '_id'>, Document {}

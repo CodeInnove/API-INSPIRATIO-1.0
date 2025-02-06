@@ -12,7 +12,6 @@ export const SensoryProcessingMeasurePreschoolSchema = new Schema({
   gender: { type: String, required: false, enum: ['M', 'F'] },
   age: { type: Number, required: false},
   birthDate: { type: String, required: false},
-
   comment: { type: String, required: false },
   participationSocialPreSchool: { 
     playsWithFriendsPreSchool: { type: String, required: false, enum: ['N', 'O', 'F', 'S']},

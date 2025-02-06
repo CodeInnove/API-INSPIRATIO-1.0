@@ -1,12 +1,4 @@
-export enum Ethnicity {
-  AMERICAN_INDIAN_ALASKA_NATIVE = 'American Indian/Alaska Native',
-  ASIAN = 'Asian',
-  BLACK_AFRICAN_AMERICAN = 'Black/African American',
-  HISPANIC_LATINO = 'Hispanic/Latino',
-  NATIVE_HAWAIIAN_PACIFIC_ISLANDER = 'Native Hawaiian/Pacific Islander',
-  WHITE = 'White',
-  OTHER = 'Other',
-}
+
   
   export interface IParticipationSocialSchoolPreSchool {
     participatesInGamesAndActivitiesSchoolPreSchool: string;
@@ -106,3 +98,32 @@ export enum Ethnicity {
     strugglesWithRoutineSequencesSchoolPreSchool: string;
   }
   
+
+  export interface ISpmPreSchool {
+    doctor: string;
+    responsable: string;
+    relationshipWithChild: string;
+    patient: string;
+    gender: string;
+    bitrhDate: string;
+    date: string;
+    comment?: string;
+    scoresSchoolPreSchool: {
+      SOC: number;
+      VIS: number;
+      HEA: number;
+      TOU: number;
+      ITEMS: number;
+      BOD: number;
+      BAL: number;
+      PLA: number;
+    };
+    participationSocialSpmsps: IParticipationSocialSchoolPreSchool;
+    visionSpmsps: IVisionSchoolPreSchool;
+    hearingSpmsps: IHearingSchoolPreSchool;
+    touchSpmsps: ITouchSchoolPreSchool;
+    smellAndTasteSpmsps: ISmellAndTasteSchoolPreSchool;
+    bodyAwarenessSpmsps: IBodyAwarenessSchoolPreSchool;
+    balanceAndMovementSpmsps: IBalanceAndMovementSchoolPreSchool;
+    planningAndIdeationSpmsps: IPlanningAndIdeationSchoolPreSchool;
+  };

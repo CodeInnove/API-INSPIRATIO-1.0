@@ -1,6 +1,18 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { IsString } from 'class-validator';
 
+
+export interface ScoreSchoolPreSchoolDto {  // Renomeei para ScoreDto para consistência
+  SOC: number;
+  VIS: number;
+  HEA: number;
+  TOU: number;
+  ITEMS: number;
+  BOD: number;
+  BAL: number;
+  PLA: number;
+}
+
 export class ParticipationSocialSchoolPreSchoolDto {
     @ApiProperty()
     @IsString()
@@ -316,6 +328,9 @@ export class ParticipationSocialSchoolPreSchoolDto {
 
 export class CreateSensoryProcessingMeasureSchoolPreschoolDto {
     @ApiProperty()
+    date: string;
+
+    @ApiProperty()
     @IsString()
     doctor: string;
 
@@ -343,15 +358,9 @@ export class CreateSensoryProcessingMeasureSchoolPreschoolDto {
     @ApiProperty()
     bitrhDate: string;
 
-
     @ApiProperty()
-    @IsString()
-    ethnicity: string;
+    comment: string;
 
-    @ApiProperty()
-    date: string;
-
-    
     @ApiProperty()
     participationSocialSpmsps: ParticipationSocialSchoolPreSchoolDto;
     @ApiProperty()
@@ -368,4 +377,7 @@ export class CreateSensoryProcessingMeasureSchoolPreschoolDto {
     balanceAndMovementSpmsps: BalanceAndMovementSchoolPreSchoolDto;
     @ApiProperty()
     planningAndIdeationSpmsps: PlanningAndIdeationSchoolPreSchoolDto;
+
+    @ApiProperty()
+    scoresSchoolPreSchool: ScoreSchoolPreSchoolDto
 }

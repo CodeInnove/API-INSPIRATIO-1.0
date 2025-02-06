@@ -361,10 +361,6 @@ export class CreateSensoryProcessingMeasurePreschoolDto {
 
   @ApiProperty()
   @IsString()
-  ethnicity: string;
-
-  @ApiProperty()
-  @IsString()
   date: string;
 
     @ApiProperty()

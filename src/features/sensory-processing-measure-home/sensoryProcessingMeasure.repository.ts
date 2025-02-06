@@ -79,11 +79,6 @@ export class SpmHomeRepository {
 
  async findById(id: string): Promise<ISpmHomeEntity> {
      return this.spmHomeModel.findById(id)
-       .populate('patients')
-       .populate('doctors')
-       .populate('responsible')
-       .populate('speciality')
-       .select('Consultation')
        .lean()
        .exec();
    }
